@@ -1,0 +1,98 @@
+plugins {
+    id "fabric-loom" version "${loom_version}"
+    id "maven-publish"
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
+
+repositories {
+    // Loom supplies the repositories required for Minecraft and Fabric.
+    // Add third-party repositories only when a dependency requires one.
+}
+
+sourceSets {
+    // Pure format code shared by the runtime and the build-time compiler.
+    main {
+        java.srcDir "src/shared/java"
+        resources.srcDir "$buildDir/generated/decimation-resources"
+    }
+
+    // Standalone build-time compiler. It deliberately does not depend on
+    // Minecraft/Fabric classes.
+    assetCompiler {
+        java.srcDirs = ["tools/asset-compiler/src/main/java", "src/shared/java"]
+    }
+}
+
+loom {
+    splitEnvironmentSourceSets()
+
+    mods {
+        "decimation" {
+            sourceSet sourceSets.main
+            sourceSet sourceSets.client
+        }
+    }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+}
+
+def generatedDecimationResources = layout.buildDirectory.dir("generated/decimation-resources")
+
+tasks.register("compileAssets", JavaExec) {
+    group = "decimation"
+    description = "Compile Decimation authoring content into runtime assets."
+
+    dependsOn tasks.named(sourceSets.assetCompiler.classesTaskName)
+    classpath = sourceSets.assetCompiler.runtimeClasspath
+    mainClass = "dev.decimation.tools.assets.AssetCompilerMain"
+
+    args file("content").absolutePath, generatedDecimationResources.get().asFile.absolutePath
+
+    inputs.dir("content")
+    outputs.dir(generatedDecimationResources)
+}
+
+processResources {
+    dependsOn tasks.named("compileAssets")
+    inputs.property "version", project.version
+
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 17
+    options.encoding = "UTF-8"
+}
+
+java {
+    withSourcesJar()
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+jar {
+    from("LICENSE") {
+        rename { "${it}_${project.base.archivesName.get()}" }
+    }
+}
+
+publishing {
+    publications {
+        create("mavenJava", MavenPublication) {
+            from components.java
+        }
+    }
+}
