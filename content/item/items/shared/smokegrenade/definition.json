@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/smokegrenade",
+  "type": "item",
+  "assets": [
+    "textures/item/smokegrenade.png",
+    "textures/model/smokegrenade.png"
+  ],
+  "legacy_sources": [
+    "textures/items/smokegrenade.png",
+    "textures/model/entities/projectile/smokegrenade.png"
+  ]
+}

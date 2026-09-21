@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/makarov_mag",
+  "type": "item",
+  "assets": [
+    "textures/item/makarovMag.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/mag/makarovMag.png"
+  ]
+}

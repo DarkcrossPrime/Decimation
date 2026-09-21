@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "mob/model/placeable",
+  "type": "mob",
+  "assets": [
+    "textures/model/fueltrail.png"
+  ],
+  "legacy_sources": [
+    "textures/model/entities/placeable/fueltrail.png"
+  ]
+}

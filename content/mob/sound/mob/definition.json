@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "mob/sound/mob",
+  "type": "mob",
+  "assets": [
+    "sounds/impact5.ogg"
+  ],
+  "legacy_sources": [
+    "sounds/mob/impact5.ogg"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/metal_1",
+  "type": "block",
+  "assets": [
+    "textures/metal_1.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/metal_1.png"
+  ]
+}

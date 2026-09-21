@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/backpacks/item_chest_rig_snow",
+  "type": "visual",
+  "assets": [
+    "textures/model/ItemChestRig_Snow.png"
+  ],
+  "legacy_sources": [
+    "textures/model/backpacks/ItemChestRig_Snow.png"
+  ]
+}

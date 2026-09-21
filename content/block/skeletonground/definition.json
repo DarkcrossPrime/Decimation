@@ -1,0 +1,13 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/skeletonground",
+  "type": "block",
+  "assets": [
+    "models/skeletonground.mtl",
+    "models/skeletonground.obj"
+  ],
+  "legacy_sources": [
+    "models/props/skeletonground.bmodel"
+  ]
+}

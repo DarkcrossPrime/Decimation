@@ -1,0 +1,17 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/fireaxe",
+  "type": "item",
+  "assets": [
+    "models/fireaxe.mtl",
+    "models/fireaxe.obj",
+    "textures/item/fireaxe.png",
+    "textures/model/fireaxe.png"
+  ],
+  "legacy_sources": [
+    "models/items/fireaxe.bmodel",
+    "textures/items/fireaxe.png",
+    "textures/model/items/fireaxe.png"
+  ]
+}

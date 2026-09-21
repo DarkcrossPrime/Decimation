@@ -1,0 +1,18 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/partyhorn",
+  "type": "item",
+  "assets": [
+    "sounds/horn0.ogg",
+    "sounds/horn1.ogg",
+    "textures/item/partyhorn.png",
+    "textures/model/partyhorn.png"
+  ],
+  "legacy_sources": [
+    "sounds/items/partyhorn/horn0.ogg",
+    "sounds/items/partyhorn/horn1.ogg",
+    "textures/items/partyhorn.png",
+    "textures/model/items/partyhorn.png"
+  ]
+}

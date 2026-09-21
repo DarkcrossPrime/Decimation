@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/kit_metalwall",
+  "type": "item",
+  "assets": [
+    "textures/item/kit_metalwall.png"
+  ],
+  "legacy_sources": [
+    "textures/items/kit_metalwall.png"
+  ]
+}

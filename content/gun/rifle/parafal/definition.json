@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/parafal",
+  "type": "gun",
+  "assets": [
+    "animations/parafal_fire.danim.json",
+    "animations/parafal_rack.danim.json",
+    "animations/parafal_reload1.danim.json",
+    "animations/parafal_slide_back.danim.json",
+    "models/parafal.mtl",
+    "models/parafal.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/parafal.png",
+    "textures/model/parafal.png"
+  ],
+  "legacy_sources": [
+    "animations/parafal/parafalFire.anib",
+    "animations/parafal/parafalRack.anib",
+    "animations/parafal/parafalReload1.anib",
+    "animations/parafal/parafalSlideBack.anib",
+    "models/guns/rifle/parafal.bmodel",
+    "sounds/guns/rifle/parafal/fire.ogg",
+    "sounds/guns/rifle/parafal/fire_distant.ogg",
+    "sounds/guns/rifle/parafal/fire_suppressed.ogg",
+    "sounds/guns/rifle/parafal/magIn.ogg",
+    "sounds/guns/rifle/parafal/magOut.ogg",
+    "sounds/guns/rifle/parafal/rack.ogg",
+    "textures/items/gun/rifle/parafal.png",
+    "textures/model/guns/rifle/parafal/parafal.png"
+  ]
+}

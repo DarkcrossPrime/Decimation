@@ -1,0 +1,15 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "armor/full/nypd2",
+  "type": "armor",
+  "assets": [
+    "models/nypd2.mtl",
+    "models/nypd2.obj",
+    "textures/model/nypd2.png"
+  ],
+  "legacy_sources": [
+    "models/armor/full/nypd2.bmodel",
+    "textures/model/armor/nypd2.png"
+  ]
+}

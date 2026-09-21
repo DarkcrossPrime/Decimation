@@ -1,0 +1,15 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/barrel",
+  "type": "block",
+  "assets": [
+    "models/barrel.mtl",
+    "models/barrel.obj",
+    "textures/model/barrel.png"
+  ],
+  "legacy_sources": [
+    "models/props/barrel.bmodel",
+    "textures/model/blocks/props/barrel.png"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "armor/mask/gas_mask",
+  "type": "armor",
+  "assets": [
+    "models/gas_mask.mtl",
+    "models/gas_mask.obj",
+    "textures/item/gasmask.png",
+    "textures/model/gasmask.png"
+  ],
+  "legacy_sources": [
+    "models/armor/mask/gasMask.bmodel",
+    "textures/items/mask/gasmask.png",
+    "textures/model/masks/gasmask.png"
+  ]
+}

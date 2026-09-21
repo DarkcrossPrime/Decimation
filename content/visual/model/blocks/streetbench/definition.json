@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/streetbench",
+  "type": "visual",
+  "assets": [
+    "textures/model/streetbench.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/props/streetbench.png"
+  ]
+}

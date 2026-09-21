@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/ammo_7_62x54mmrrounds_box",
+  "type": "item",
+  "assets": [
+    "textures/item/ammo_7_62x54mmrrounds_box.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/box/ammo_7_62x54mmrrounds_box.png"
+  ]
+}

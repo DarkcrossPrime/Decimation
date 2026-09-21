@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/smg/stenmk2",
+  "type": "gun",
+  "assets": [
+    "animations/stenmk2_fire.danim.json",
+    "animations/stenmk2_rack.danim.json",
+    "animations/stenmk2_reload1.danim.json",
+    "animations/stenmk2_slide_back.danim.json",
+    "models/stenmk2.mtl",
+    "models/stenmk2.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/stenmk2.png",
+    "textures/model/stenmk2.png"
+  ],
+  "legacy_sources": [
+    "animations/stenmk2/stenmk2Fire.anib",
+    "animations/stenmk2/stenmk2Rack.anib",
+    "animations/stenmk2/stenmk2Reload1.anib",
+    "animations/stenmk2/stenmk2SlideBack.anib",
+    "models/guns/smg/stenmk2.bmodel",
+    "sounds/guns/smg/stenmk2/fire.ogg",
+    "sounds/guns/smg/stenmk2/fire_distant.ogg",
+    "sounds/guns/smg/stenmk2/fire_suppressed.ogg",
+    "sounds/guns/smg/stenmk2/magIn.ogg",
+    "sounds/guns/smg/stenmk2/magOut.ogg",
+    "sounds/guns/smg/stenmk2/rack.ogg",
+    "textures/items/gun/smg/stenmk2.png",
+    "textures/model/guns/smg/stenmk2/stenmk2.png"
+  ]
+}

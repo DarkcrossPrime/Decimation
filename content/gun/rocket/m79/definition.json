@@ -1,0 +1,39 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rocket/m79",
+  "type": "gun",
+  "assets": [
+    "animations/m79_fire.danim.json",
+    "animations/m79_rack.danim.json",
+    "animations/m79_reload1.danim.json",
+    "animations/m79_slide_back.danim.json",
+    "models/m79.mtl",
+    "models/m79.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/insert_shell.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/m79.png",
+    "textures/model/m79.png"
+  ],
+  "legacy_sources": [
+    "animations/m79/m79Fire.anib",
+    "animations/m79/m79Rack.anib",
+    "animations/m79/m79Reload1.anib",
+    "animations/m79/m79SlideBack.anib",
+    "models/guns/rocket/m79.bmodel",
+    "sounds/guns/rocket/m79/fire.ogg",
+    "sounds/guns/rocket/m79/fire_distant.ogg",
+    "sounds/guns/rocket/m79/fire_suppressed.ogg",
+    "sounds/guns/rocket/m79/insert_shell.ogg",
+    "sounds/guns/rocket/m79/magIn.ogg",
+    "sounds/guns/rocket/m79/magOut.ogg",
+    "sounds/guns/rocket/m79/rack.ogg",
+    "textures/items/gun/rocket/m79.png",
+    "textures/model/guns/rocket/m79/m79.png"
+  ]
+}

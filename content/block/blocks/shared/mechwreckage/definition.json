@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/mechwreckage",
+  "type": "block",
+  "assets": [
+    "textures/mechwreckage.png",
+    "textures/model/mechwreckage.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/mechwreckage.png",
+    "textures/model/blocks/props/mechwreckage.png"
+  ]
+}

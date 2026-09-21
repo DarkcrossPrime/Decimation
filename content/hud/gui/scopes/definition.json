@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "hud/gui/scopes",
+  "type": "hud",
+  "assets": [
+    "textures/scope.png"
+  ],
+  "legacy_sources": [
+    "textures/gui/scopes/scope.png"
+  ]
+}

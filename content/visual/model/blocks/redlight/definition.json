@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/redlight",
+  "type": "visual",
+  "assets": [
+    "textures/model/redlight.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/props/redlight.png"
+  ]
+}

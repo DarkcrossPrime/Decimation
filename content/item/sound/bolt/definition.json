@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/sound/bolt",
+  "type": "item",
+  "assets": [
+    "sounds/hit.ogg"
+  ],
+  "legacy_sources": [
+    "sounds/items/bolt/hit.ogg"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "hud/sound/menu",
+  "type": "hud",
+  "assets": [
+    "sounds/article_hover0.ogg",
+    "sounds/article_hover1.ogg",
+    "sounds/button_hover.ogg",
+    "sounds/button_press.ogg",
+    "sounds/download.ogg",
+    "sounds/intro.ogg",
+    "sounds/music0.ogg",
+    "sounds/notification_close.ogg",
+    "sounds/notification_open.ogg",
+    "sounds/outro.ogg",
+    "sounds/update.ogg"
+  ],
+  "legacy_sources": [
+    "sounds/gui/menu/article_hover0.ogg",
+    "sounds/gui/menu/article_hover1.ogg",
+    "sounds/gui/menu/button_hover.ogg",
+    "sounds/gui/menu/button_press.ogg",
+    "sounds/gui/menu/download.ogg",
+    "sounds/gui/menu/intro.ogg",
+    "sounds/gui/menu/music0.ogg",
+    "sounds/gui/menu/notification_close.ogg",
+    "sounds/gui/menu/notification_open.ogg",
+    "sounds/gui/menu/outro.ogg",
+    "sounds/gui/menu/update.ogg"
+  ]
+}

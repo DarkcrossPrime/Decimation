@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/mg/rpd",
+  "type": "gun",
+  "assets": [
+    "animations/rpd_fire.danim.json",
+    "animations/rpd_rack.danim.json",
+    "animations/rpd_reload1.danim.json",
+    "animations/rpd_slide_back.danim.json",
+    "models/rpd.mtl",
+    "models/rpd.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/rpd.png",
+    "textures/model/rpd.png"
+  ],
+  "legacy_sources": [
+    "animations/rpd/rpdFire.anib",
+    "animations/rpd/rpdRack.anib",
+    "animations/rpd/rpdReload1.anib",
+    "animations/rpd/rpdSlideBack.anib",
+    "models/guns/mg/rpd.bmodel",
+    "sounds/guns/mg/rpd/fire.ogg",
+    "sounds/guns/mg/rpd/fire_distant.ogg",
+    "sounds/guns/mg/rpd/fire_suppressed.ogg",
+    "sounds/guns/mg/rpd/magIn.ogg",
+    "sounds/guns/mg/rpd/magOut.ogg",
+    "sounds/guns/mg/rpd/rack.ogg",
+    "textures/items/gun/mg/rpd.png",
+    "textures/model/guns/mg/rpd/rpd.png"
+  ]
+}

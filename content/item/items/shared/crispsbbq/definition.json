@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/crispsbbq",
+  "type": "item",
+  "assets": [
+    "textures/item/crispsbbq.png"
+  ],
+  "legacy_sources": [
+    "textures/items/crispsbbq.png"
+  ]
+}

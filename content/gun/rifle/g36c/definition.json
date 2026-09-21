@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/g36c",
+  "type": "gun",
+  "assets": [
+    "animations/g36c_fire.danim.json",
+    "animations/g36c_rack.danim.json",
+    "animations/g36c_reload1.danim.json",
+    "animations/g36c_slide_back.danim.json",
+    "models/g36c.mtl",
+    "models/g36c.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/g36c.png",
+    "textures/model/g36c.png"
+  ],
+  "legacy_sources": [
+    "animations/g36c/g36cFire.anib",
+    "animations/g36c/g36cRack.anib",
+    "animations/g36c/g36cReload1.anib",
+    "animations/g36c/g36cSlideBack.anib",
+    "models/guns/rifle/g36c.bmodel",
+    "sounds/guns/rifle/g36c/fire.ogg",
+    "sounds/guns/rifle/g36c/fire_distant.ogg",
+    "sounds/guns/rifle/g36c/fire_suppressed.ogg",
+    "sounds/guns/rifle/g36c/magIn.ogg",
+    "sounds/guns/rifle/g36c/magOut.ogg",
+    "sounds/guns/rifle/g36c/rack.ogg",
+    "textures/items/gun/rifle/g36c.png",
+    "textures/model/guns/rifle/g36c/g36c.png"
+  ]
+}

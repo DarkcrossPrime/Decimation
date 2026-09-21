@@ -1,0 +1,17 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "attachment/grip/laser",
+  "type": "attachment",
+  "assets": [
+    "models/laser.mtl",
+    "models/laser.obj",
+    "textures/item/laser.png",
+    "textures/model/laser.png"
+  ],
+  "legacy_sources": [
+    "models/attachments/grip/laser.bmodel",
+    "textures/items/attach/laser.png",
+    "textures/model/attachments/grip/laser.png"
+  ]
+}

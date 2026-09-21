@@ -1,0 +1,68 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/famas",
+  "type": "gun",
+  "weapon": {
+    "registry_id": "famas",
+    "display_name": "FAMAS",
+    "mechanism": "hitscan",
+    "ammo": {
+      "item": "famas_mag",
+      "capacity": 30,
+      "chamber_capacity": 1,
+      "spawn_loaded": true
+    },
+    "fire_modes": ["semi", "burst", "automatic"],
+    "burst_size": 3,
+    "rate_of_fire": 1000,
+    "reload_ticks": 57,
+    "ballistics": {
+      "damage": 7.0,
+      "range": 150.0,
+      "falloff_start": 42.0,
+      "minimum_multiplier": 0.5,
+      "head_multiplier": 1.8,
+      "penetration_count": 1,
+      "penetration_retention": 0.68
+    },
+    "handling": {
+      "hip_spread": 2.5,
+      "ads_spread": 0.28,
+      "ads_ticks": 6,
+      "recoil_pitch": 1.25,
+      "recoil_yaw": 0.55
+    }
+  },
+  "assets": [
+    "animations/famas_fire.danim.json",
+    "animations/famas_rack.danim.json",
+    "animations/famas_reload1.danim.json",
+    "animations/famas_slide_back.danim.json",
+    "models/famas.mtl",
+    "models/famas.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/famas.png",
+    "textures/model/famas.png"
+  ],
+  "legacy_sources": [
+    "animations/famas/famasFire.anib",
+    "animations/famas/famasRack.anib",
+    "animations/famas/famasReload1.anib",
+    "animations/famas/famasSlideBack.anib",
+    "models/guns/rifle/famas.bmodel",
+    "sounds/guns/rifle/famas/fire.ogg",
+    "sounds/guns/rifle/famas/fire_distant.ogg",
+    "sounds/guns/rifle/famas/fire_suppressed.ogg",
+    "sounds/guns/rifle/famas/magIn.ogg",
+    "sounds/guns/rifle/famas/magOut.ogg",
+    "sounds/guns/rifle/famas/rack.ogg",
+    "textures/items/gun/rifle/famas.png",
+    "textures/model/guns/rifle/famas/famas.png"
+  ]
+}

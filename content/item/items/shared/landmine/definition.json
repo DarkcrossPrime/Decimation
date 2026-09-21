@@ -1,0 +1,16 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/landmine",
+  "type": "item",
+  "assets": [
+    "sounds/landmine.ogg",
+    "textures/item/landmine.png",
+    "textures/model/landmine.png"
+  ],
+  "legacy_sources": [
+    "sounds/entity/landmine.ogg",
+    "textures/items/landmine.png",
+    "textures/model/entities/placeable/landmine.png"
+  ]
+}

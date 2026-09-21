@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/sound/airlock",
+  "type": "block",
+  "assets": [
+    "sounds/alarm.ogg",
+    "sounds/mob/mech/alarm.ogg"
+  ],
+  "legacy_sources": [
+    "sounds/blocks/airlock/alarm.ogg",
+    "sounds/mob/mech/alarm.ogg"
+  ]
+}

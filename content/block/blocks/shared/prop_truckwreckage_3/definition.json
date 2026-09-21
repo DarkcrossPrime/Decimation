@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/prop_truckwreckage_3",
+  "type": "block",
+  "assets": [
+    "textures/prop_truckwreckage_3.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/prop_truckwreckage_3.png"
+  ]
+}

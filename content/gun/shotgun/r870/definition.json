@@ -1,0 +1,35 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/shotgun/r870",
+  "type": "gun",
+  "assets": [
+    "animations/r870_fire.danim.json",
+    "animations/r870_rack.danim.json",
+    "animations/r870_reload1.danim.json",
+    "models/r870.mtl",
+    "models/r870.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/insert_shell.ogg",
+    "sounds/pump.ogg",
+    "sounds/pump_back.ogg",
+    "textures/item/r870.png",
+    "textures/model/r870.png"
+  ],
+  "legacy_sources": [
+    "animations/r870/r870Fire.anib",
+    "animations/r870/r870Rack.anib",
+    "animations/r870/r870Reload1.anib",
+    "models/guns/shotgun/r870.bmodel",
+    "sounds/guns/shotgun/r870/fire.ogg",
+    "sounds/guns/shotgun/r870/fire_distant.ogg",
+    "sounds/guns/shotgun/r870/fire_suppressed.ogg",
+    "sounds/guns/shotgun/r870/insert_shell.ogg",
+    "sounds/guns/shotgun/r870/pump.ogg",
+    "sounds/guns/shotgun/r870/pump_back.ogg",
+    "textures/items/gun/shotgun/r870.png",
+    "textures/model/guns/shotgun/r870/r870.png"
+  ]
+}

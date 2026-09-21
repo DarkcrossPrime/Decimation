@@ -1,0 +1,13 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/woodchair",
+  "type": "block",
+  "assets": [
+    "models/woodchair.mtl",
+    "models/woodchair.obj"
+  ],
+  "legacy_sources": [
+    "models/props/woodchair.bmodel"
+  ]
+}

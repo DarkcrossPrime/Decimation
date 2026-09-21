@@ -1,0 +1,20 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "mob/model/mob/bird",
+  "type": "mob",
+  "assets": [
+    "textures/model/bird_0.png",
+    "textures/model/bird_1.png",
+    "textures/model/bird_2.png",
+    "textures/model/bird_3.png",
+    "textures/model/bird_4.png"
+  ],
+  "legacy_sources": [
+    "textures/model/entities/mob/bird/bird_0.png",
+    "textures/model/entities/mob/bird/bird_1.png",
+    "textures/model/entities/mob/bird/bird_2.png",
+    "textures/model/entities/mob/bird/bird_3.png",
+    "textures/model/entities/mob/bird/bird_4.png"
+  ]
+}

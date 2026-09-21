@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/mg/m60",
+  "type": "gun",
+  "assets": [
+    "animations/m60_fire.danim.json",
+    "animations/m60_rack.danim.json",
+    "animations/m60_reload1.danim.json",
+    "animations/m60_slide_back.danim.json",
+    "models/m60.mtl",
+    "models/m60.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/m60.png",
+    "textures/model/m60.png"
+  ],
+  "legacy_sources": [
+    "animations/m60/m60Fire.anib",
+    "animations/m60/m60Rack.anib",
+    "animations/m60/m60Reload1.anib",
+    "animations/m60/m60SlideBack.anib",
+    "models/guns/mg/m60.bmodel",
+    "sounds/guns/mg/m60/fire.ogg",
+    "sounds/guns/mg/m60/fire_distant.ogg",
+    "sounds/guns/mg/m60/fire_suppressed.ogg",
+    "sounds/guns/mg/m60/magIn.ogg",
+    "sounds/guns/mg/m60/magOut.ogg",
+    "sounds/guns/mg/m60/rack.ogg",
+    "textures/items/gun/mg/m60.png",
+    "textures/model/guns/mg/m60/m60.png"
+  ]
+}

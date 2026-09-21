@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/pistol/makarov",
+  "type": "gun",
+  "assets": [
+    "animations/makarov_fire.danim.json",
+    "animations/makarov_rack.danim.json",
+    "animations/makarov_reload1.danim.json",
+    "animations/makarov_slide_back.danim.json",
+    "models/makarov.mtl",
+    "models/makarov.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/makarov.png",
+    "textures/model/makarov.png"
+  ],
+  "legacy_sources": [
+    "animations/makarov/makarovFire.anib",
+    "animations/makarov/makarovRack.anib",
+    "animations/makarov/makarovReload1.anib",
+    "animations/makarov/makarovSlideBack.anib",
+    "models/guns/pistol/makarov.bmodel",
+    "sounds/guns/pistol/makarov/fire.ogg",
+    "sounds/guns/pistol/makarov/fire_distant.ogg",
+    "sounds/guns/pistol/makarov/fire_suppressed.ogg",
+    "sounds/guns/pistol/makarov/magIn.ogg",
+    "sounds/guns/pistol/makarov/magOut.ogg",
+    "sounds/guns/pistol/makarov/rack.ogg",
+    "textures/items/gun/pistol/makarov.png",
+    "textures/model/guns/pistol/makarov/makarov.png"
+  ]
+}

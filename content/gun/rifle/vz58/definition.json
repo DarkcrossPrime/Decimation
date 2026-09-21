@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/vz58",
+  "type": "gun",
+  "assets": [
+    "animations/vz58_fire.danim.json",
+    "animations/vz58_rack.danim.json",
+    "animations/vz58_reload1.danim.json",
+    "animations/vz58_slide_back.danim.json",
+    "models/vz58.mtl",
+    "models/vz58.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/vz58.png",
+    "textures/model/vz58.png"
+  ],
+  "legacy_sources": [
+    "animations/vz58/vz58Fire.anib",
+    "animations/vz58/vz58Rack.anib",
+    "animations/vz58/vz58Reload1.anib",
+    "animations/vz58/vz58SlideBack.anib",
+    "models/guns/rifle/vz58.bmodel",
+    "sounds/guns/rifle/vz58/fire.ogg",
+    "sounds/guns/rifle/vz58/fire_distant.ogg",
+    "sounds/guns/rifle/vz58/fire_suppressed.ogg",
+    "sounds/guns/rifle/vz58/magIn.ogg",
+    "sounds/guns/rifle/vz58/magOut.ogg",
+    "sounds/guns/rifle/vz58/rack.ogg",
+    "textures/items/gun/rifle/vz58.png",
+    "textures/model/guns/rifle/vz58/vz58.png"
+  ]
+}

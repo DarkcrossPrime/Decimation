@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/syringe_empty",
+  "type": "item",
+  "assets": [
+    "textures/item/syringe_empty.png"
+  ],
+  "legacy_sources": [
+    "textures/items/syringe_empty.png"
+  ]
+}

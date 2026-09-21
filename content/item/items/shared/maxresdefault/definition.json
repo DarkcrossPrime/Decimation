@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/maxresdefault",
+  "type": "item",
+  "assets": [
+    "textures/item/maxresdefault.jpg"
+  ],
+  "legacy_sources": [
+    "textures/items/maxresdefault.jpg"
+  ]
+}

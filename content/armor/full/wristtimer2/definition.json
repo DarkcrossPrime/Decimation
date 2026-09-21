@@ -1,0 +1,15 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "armor/full/wristtimer2",
+  "type": "armor",
+  "assets": [
+    "models/wristtimer2.mtl",
+    "models/wristtimer2.obj",
+    "textures/model/wristtimer2.png"
+  ],
+  "legacy_sources": [
+    "models/armor/full/wristtimer2.bmodel",
+    "textures/model/armor/wristtimer2.png"
+  ]
+}

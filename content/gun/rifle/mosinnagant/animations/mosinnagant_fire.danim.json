@@ -1,0 +1,329 @@
+{
+  "format": "decimation:danim",
+  "version": 1,
+  "source": "mosinnagantFire.anib",
+  "static": false,
+  "length": 19,
+  "hand": 1,
+  "frames": [
+    {
+      "index": 0,
+      "transforms": {
+        "OffHand": {
+          "position": [
+            -1.600003,
+            -5.960464e-08,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 1,
+      "skip": true
+    },
+    {
+      "index": 2,
+      "skip": true
+    },
+    {
+      "index": 3,
+      "transforms": {
+        "OffHand": {
+          "position": [
+            0,
+            0,
+            -0.5
+          ],
+          "rotation": [
+            -15,
+            0,
+            5
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            -2,
+            5,
+            5
+          ]
+        }
+      }
+    },
+    {
+      "index": 4,
+      "skip": true
+    },
+    {
+      "index": 5,
+      "skip": true
+    },
+    {
+      "index": 6,
+      "transforms": {
+        "bolt1": {
+          "position": [
+            0,
+            -0.4499993,
+            0.9
+          ],
+          "rotation": [
+            -90,
+            0,
+            0
+          ]
+        },
+        "bolt3": {
+          "position": [
+            -0.5,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "OffHand": {
+          "position": [
+            -2,
+            0,
+            0
+          ],
+          "rotation": [
+            -8,
+            7,
+            20
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            -7,
+            7,
+            7
+          ]
+        }
+      },
+      "shake": 1.2,
+      "sound": "Rack"
+    },
+    {
+      "index": 7,
+      "skip": true
+    },
+    {
+      "index": 8,
+      "skip": true
+    },
+    {
+      "index": 9,
+      "skip": true
+    },
+    {
+      "index": 10,
+      "transforms": {
+        "bolt3": {
+          "position": [
+            -3,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "bolt1": {
+          "position": [
+            -3,
+            -0.4499993,
+            0.9
+          ],
+          "rotation": [
+            -90,
+            0,
+            0
+          ]
+        },
+        "OffHand": {
+          "position": [
+            -4.199998,
+            0.9,
+            0
+          ],
+          "rotation": [
+            -4,
+            7,
+            20
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            -5,
+            7,
+            5
+          ]
+        }
+      },
+      "directives": [
+        "SPAWNBULLET"
+      ]
+    },
+    {
+      "index": 11,
+      "skip": true
+    },
+    {
+      "index": 12,
+      "skip": true
+    },
+    {
+      "index": 13,
+      "skip": true
+    },
+    {
+      "index": 14,
+      "transforms": {
+        "bolt1": {
+          "position": [
+            0,
+            -0.4499993,
+            0.9
+          ],
+          "rotation": [
+            -90,
+            0,
+            0
+          ]
+        },
+        "OffHand": {
+          "position": [
+            0.200006,
+            0.9,
+            0
+          ],
+          "rotation": [
+            -6,
+            10,
+            20
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            -7,
+            7,
+            7
+          ]
+        }
+      }
+    },
+    {
+      "index": 15,
+      "skip": true
+    },
+    {
+      "index": 16,
+      "skip": true
+    },
+    {
+      "index": 17,
+      "transforms": {
+        "OffHand": {
+          "position": [
+            0.200006,
+            0,
+            0.5
+          ],
+          "rotation": [
+            -15,
+            5,
+            7
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            -2,
+            5,
+            5
+          ]
+        }
+      }
+    },
+    {
+      "index": 18,
+      "transforms": {
+        "OffHand": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    }
+  ],
+  "directives": [
+    "NO-Y HIP"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/mpt76",
+  "type": "gun",
+  "assets": [
+    "animations/mpt76_fire.danim.json",
+    "animations/mpt76_rack.danim.json",
+    "animations/mpt76_reload1.danim.json",
+    "animations/mpt76_slide_back.danim.json",
+    "models/mpt76.mtl",
+    "models/mpt76.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/mpt76.png",
+    "textures/model/mpt76.png"
+  ],
+  "legacy_sources": [
+    "animations/mpt76/mpt76Fire.anib",
+    "animations/mpt76/mpt76Rack.anib",
+    "animations/mpt76/mpt76Reload1.anib",
+    "animations/mpt76/mpt76SlideBack.anib",
+    "models/guns/rifle/mpt76.bmodel",
+    "sounds/guns/rifle/mpt76/fire.ogg",
+    "sounds/guns/rifle/mpt76/fire_distant.ogg",
+    "sounds/guns/rifle/mpt76/fire_suppressed.ogg",
+    "sounds/guns/rifle/mpt76/magIn.ogg",
+    "sounds/guns/rifle/mpt76/magOut.ogg",
+    "sounds/guns/rifle/mpt76/rack.ogg",
+    "textures/items/gun/rifle/mpt76.png",
+    "textures/model/guns/rifle/mpt76/mpt76.png"
+  ]
+}

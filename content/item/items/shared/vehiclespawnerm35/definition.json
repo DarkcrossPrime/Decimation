@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/vehiclespawnerm35",
+  "type": "item",
+  "assets": [
+    "textures/item/vehiclespawnerm35.png"
+  ],
+  "legacy_sources": [
+    "textures/items/vehiclespawnerm35.png"
+  ]
+}

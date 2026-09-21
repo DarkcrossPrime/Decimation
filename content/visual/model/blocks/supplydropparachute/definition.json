@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/supplydropparachute",
+  "type": "visual",
+  "assets": [
+    "textures/model/supplydropparachute.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/supplydropparachute.png"
+  ]
+}

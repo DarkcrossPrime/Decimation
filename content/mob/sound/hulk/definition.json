@@ -1,0 +1,20 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "mob/sound/hulk",
+  "type": "mob",
+  "assets": [
+    "sounds/idle3.ogg",
+    "sounds/infected/idle3.ogg",
+    "sounds/soldier/hazmat/idle3.ogg",
+    "sounds/soldier/idle3.ogg",
+    "sounds/trader/idle3.ogg"
+  ],
+  "legacy_sources": [
+    "sounds/mob/infected/hulk/idle3.ogg",
+    "sounds/mob/infected/idle3.ogg",
+    "sounds/mob/soldier/hazmat/idle3.ogg",
+    "sounds/mob/soldier/idle3.ogg",
+    "sounds/mob/trader/idle3.ogg"
+  ]
+}

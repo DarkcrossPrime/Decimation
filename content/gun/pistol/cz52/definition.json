@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/pistol/cz52",
+  "type": "gun",
+  "assets": [
+    "animations/cz52_fire.danim.json",
+    "animations/cz52_rack.danim.json",
+    "animations/cz52_reload1.danim.json",
+    "animations/cz52_slide_back.danim.json",
+    "models/cz52.mtl",
+    "models/cz52.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/cz52.png",
+    "textures/model/cz52.png"
+  ],
+  "legacy_sources": [
+    "animations/cz52/cz52Fire.anib",
+    "animations/cz52/cz52Rack.anib",
+    "animations/cz52/cz52Reload1.anib",
+    "animations/cz52/cz52SlideBack.anib",
+    "models/guns/pistol/cz52.bmodel",
+    "sounds/guns/pistol/cz52/fire.ogg",
+    "sounds/guns/pistol/cz52/fire_distant.ogg",
+    "sounds/guns/pistol/cz52/fire_suppressed.ogg",
+    "sounds/guns/pistol/cz52/magIn.ogg",
+    "sounds/guns/pistol/cz52/magOut.ogg",
+    "sounds/guns/pistol/cz52/rack.ogg",
+    "textures/items/gun/pistol/cz52.png",
+    "textures/model/guns/pistol/cz52/cz52.png"
+  ]
+}

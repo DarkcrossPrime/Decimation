@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/roadslab_stopline3",
+  "type": "block",
+  "assets": [
+    "textures/roadslab_stopline3.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/roadslab_stopline3.png"
+  ]
+}

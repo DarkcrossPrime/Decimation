@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/soundblock_morsecode_bukovka",
+  "type": "block",
+  "assets": [
+    "textures/soundblock_morsecode_bukovka.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/soundblock_morsecode_bukovka.png"
+  ]
+}

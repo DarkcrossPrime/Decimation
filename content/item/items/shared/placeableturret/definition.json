@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/placeableturret",
+  "type": "item",
+  "assets": [
+    "textures/item/placeableturret.png"
+  ],
+  "legacy_sources": [
+    "textures/items/placeableturret.png"
+  ]
+}

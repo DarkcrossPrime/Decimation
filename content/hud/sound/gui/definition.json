@@ -1,0 +1,18 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "hud/sound/gui",
+  "type": "hud",
+  "assets": [
+    "sounds/note0.ogg",
+    "sounds/note1.ogg",
+    "sounds/note2.ogg",
+    "sounds/notedrone.ogg"
+  ],
+  "legacy_sources": [
+    "sounds/gui/note0.ogg",
+    "sounds/gui/note1.ogg",
+    "sounds/gui/note2.ogg",
+    "sounds/gui/notedrone.ogg"
+  ]
+}

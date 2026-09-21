@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/hazardbarrier",
+  "type": "visual",
+  "assets": [
+    "textures/model/hazardbarrier.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/props/hazardbarrier.png"
+  ]
+}

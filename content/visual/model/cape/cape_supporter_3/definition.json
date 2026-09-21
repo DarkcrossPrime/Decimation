@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/cape/cape_supporter_3",
+  "type": "visual",
+  "assets": [
+    "textures/model/cape_supporter_3.png"
+  ],
+  "legacy_sources": [
+    "textures/model/cape/cape_supporter_3.png"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "ambiance/sound/indoors",
+  "type": "ambiance",
+  "assets": [
+    "sounds/indoors1.ogg",
+    "sounds/indoors2.ogg",
+    "sounds/indoors3.ogg",
+    "sounds/indoors4.ogg",
+    "sounds/indoors5.ogg",
+    "sounds/indoors6.ogg",
+    "sounds/indoors7.ogg"
+  ],
+  "legacy_sources": [
+    "sounds/environment/ambience/indoors/indoors1.ogg",
+    "sounds/environment/ambience/indoors/indoors2.ogg",
+    "sounds/environment/ambience/indoors/indoors3.ogg",
+    "sounds/environment/ambience/indoors/indoors4.ogg",
+    "sounds/environment/ambience/indoors/indoors5.ogg",
+    "sounds/environment/ambience/indoors/indoors6.ogg",
+    "sounds/environment/ambience/indoors/indoors7.ogg"
+  ]
+}

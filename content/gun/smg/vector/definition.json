@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/smg/vector",
+  "type": "gun",
+  "assets": [
+    "animations/vector_fire.danim.json",
+    "animations/vector_rack.danim.json",
+    "animations/vector_reload1.danim.json",
+    "animations/vector_slide_back.danim.json",
+    "models/vector.mtl",
+    "models/vector.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/vector.png",
+    "textures/model/vector.png"
+  ],
+  "legacy_sources": [
+    "animations/vector/vectorFire.anib",
+    "animations/vector/vectorRack.anib",
+    "animations/vector/vectorReload1.anib",
+    "animations/vector/vectorSlideBack.anib",
+    "models/guns/smg/vector.bmodel",
+    "sounds/guns/smg/vector/fire.ogg",
+    "sounds/guns/smg/vector/fire_distant.ogg",
+    "sounds/guns/smg/vector/fire_suppressed.ogg",
+    "sounds/guns/smg/vector/magIn.ogg",
+    "sounds/guns/smg/vector/magOut.ogg",
+    "sounds/guns/smg/vector/rack.ogg",
+    "textures/items/gun/smg/vector.png",
+    "textures/model/guns/smg/vector/vector.png"
+  ]
+}

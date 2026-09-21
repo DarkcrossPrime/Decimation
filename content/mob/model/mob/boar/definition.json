@@ -1,0 +1,22 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "mob/model/mob/boar",
+  "type": "mob",
+  "assets": [
+    "sounds/hurt1.ogg",
+    "sounds/hurt2.ogg",
+    "sounds/hurt3.ogg",
+    "sounds/hurt4.ogg",
+    "sounds/hurt5.ogg",
+    "textures/model/boar.png"
+  ],
+  "legacy_sources": [
+    "sounds/mob/boar/hurt1.ogg",
+    "sounds/mob/boar/hurt2.ogg",
+    "sounds/mob/boar/hurt3.ogg",
+    "sounds/mob/boar/hurt4.ogg",
+    "sounds/mob/boar/hurt5.ogg",
+    "textures/model/entities/mob/boar/boar.png"
+  ]
+}

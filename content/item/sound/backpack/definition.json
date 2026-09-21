@@ -1,0 +1,16 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/sound/backpack",
+  "type": "item",
+  "assets": [
+    "sounds/zip1.ogg",
+    "sounds/zip2.ogg",
+    "sounds/zip3.ogg"
+  ],
+  "legacy_sources": [
+    "sounds/items/backpack/zip1.ogg",
+    "sounds/items/backpack/zip2.ogg",
+    "sounds/items/backpack/zip3.ogg"
+  ]
+}

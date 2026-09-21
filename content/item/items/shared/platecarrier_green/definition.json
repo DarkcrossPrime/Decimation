@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/platecarrier_green",
+  "type": "item",
+  "assets": [
+    "textures/item/platecarrier_green.png"
+  ],
+  "legacy_sources": [
+    "textures/items/platecarrier_green.png"
+  ]
+}

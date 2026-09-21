@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/armor/marinecoatmedical",
+  "type": "item",
+  "assets": [
+    "textures/item/marinecoatmedical.png"
+  ],
+  "legacy_sources": [
+    "textures/items/armor/marinecoatmedical.png"
+  ]
+}

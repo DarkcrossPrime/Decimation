@@ -1,0 +1,19 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/militaryradio",
+  "type": "block",
+  "assets": [
+    "models/militaryradio.mtl",
+    "models/militaryradio.obj",
+    "sounds/chatter.ogg",
+    "sounds/chatter2.ogg",
+    "textures/model/militaryradio.png"
+  ],
+  "legacy_sources": [
+    "models/props/militaryradio.bmodel",
+    "sounds/blocks/militaryradio/chatter.ogg",
+    "sounds/blocks/militaryradio/chatter2.ogg",
+    "textures/model/blocks/props/militaryradio.png"
+  ]
+}

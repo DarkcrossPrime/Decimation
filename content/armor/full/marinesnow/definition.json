@@ -1,0 +1,15 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "armor/full/marinesnow",
+  "type": "armor",
+  "assets": [
+    "models/marinesnow.mtl",
+    "models/marinesnow.obj",
+    "textures/model/marinesnow.png"
+  ],
+  "legacy_sources": [
+    "models/armor/full/marinesnow.bmodel",
+    "textures/model/armor/marinesnow.png"
+  ]
+}

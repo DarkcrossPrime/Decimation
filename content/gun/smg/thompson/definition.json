@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/smg/thompson",
+  "type": "gun",
+  "assets": [
+    "animations/thompson_fire.danim.json",
+    "animations/thompson_rack.danim.json",
+    "animations/thompson_reload1.danim.json",
+    "animations/thompson_slide_back.danim.json",
+    "models/thompson.mtl",
+    "models/thompson.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/thompson.png",
+    "textures/model/thompson.png"
+  ],
+  "legacy_sources": [
+    "animations/thompson/thompsonFire.anib",
+    "animations/thompson/thompsonRack.anib",
+    "animations/thompson/thompsonReload1.anib",
+    "animations/thompson/thompsonSlideBack.anib",
+    "models/guns/smg/thompson.bmodel",
+    "sounds/guns/smg/thompson/fire.ogg",
+    "sounds/guns/smg/thompson/fire_distant.ogg",
+    "sounds/guns/smg/thompson/fire_suppressed.ogg",
+    "sounds/guns/smg/thompson/magIn.ogg",
+    "sounds/guns/smg/thompson/magOut.ogg",
+    "sounds/guns/smg/thompson/rack.ogg",
+    "textures/items/gun/smg/thompson.png",
+    "textures/model/guns/smg/thompson/thompson.png"
+  ]
+}

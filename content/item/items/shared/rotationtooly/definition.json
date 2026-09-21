@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/rotationtooly",
+  "type": "item",
+  "assets": [
+    "textures/item/rotationtooly.png"
+  ],
+  "legacy_sources": [
+    "textures/items/rotationtooly.png"
+  ]
+}

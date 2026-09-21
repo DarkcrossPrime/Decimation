@@ -1,0 +1,15 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/radiotower",
+  "type": "block",
+  "assets": [
+    "models/radiotower.mtl",
+    "models/radiotower.obj",
+    "textures/model/radiotower.png"
+  ],
+  "legacy_sources": [
+    "models/props/radiotower.bmodel",
+    "textures/model/blocks/props/radiotower.png"
+  ]
+}

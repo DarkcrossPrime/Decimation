@@ -1,0 +1,266 @@
+{
+  "format": "decimation:danim",
+  "version": 1,
+  "source": "coltRack.anib",
+  "static": false,
+  "length": 11,
+  "hand": 0,
+  "frames": [
+    {
+      "index": 0,
+      "transforms": {
+        "gun1": {
+          "position": [
+            -1.9,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "OffHand": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            10,
+            20,
+            25
+          ]
+        }
+      }
+    },
+    {
+      "index": 1,
+      "skip": true
+    },
+    {
+      "index": 2,
+      "skip": true
+    },
+    {
+      "index": 3,
+      "transforms": {
+        "gun1": {
+          "position": [
+            -1.9,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "OffHand": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            25,
+            0
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            10,
+            15
+          ]
+        }
+      }
+    },
+    {
+      "index": 4,
+      "skip": true
+    },
+    {
+      "index": 5,
+      "skip": true
+    },
+    {
+      "index": 6,
+      "transforms": {
+        "gun1": {
+          "position": [
+            -1.9,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "OffHand": {
+          "position": [
+            0.4,
+            0,
+            -0.5
+          ],
+          "rotation": [
+            0,
+            40,
+            0
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "shake": 1.2,
+      "sound": "Rack"
+    },
+    {
+      "index": 7,
+      "transforms": {
+        "gun1": {
+          "position": [
+            -1.9,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "OffHand": {
+          "position": [
+            -0.4000001,
+            0,
+            -0.5
+          ],
+          "rotation": [
+            0,
+            40,
+            0
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 8,
+      "skip": true
+    },
+    {
+      "index": 9,
+      "transforms": {
+        "gun1": {
+          "position": [
+            -0.4000009,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "OffHand": {
+          "position": [
+            -0.4000001,
+            0,
+            -0.5
+          ],
+          "rotation": [
+            10,
+            25,
+            0
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 10,
+      "transforms": {
+        "OffHand": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    }
+  ]
+}

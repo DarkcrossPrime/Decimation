@@ -1,0 +1,15 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/officechair",
+  "type": "block",
+  "assets": [
+    "models/officechair.mtl",
+    "models/officechair.obj",
+    "textures/model/officechair.png"
+  ],
+  "legacy_sources": [
+    "models/props/officechair.bmodel",
+    "textures/model/blocks/props/officechair.png"
+  ]
+}

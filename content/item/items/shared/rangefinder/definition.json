@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/rangefinder",
+  "type": "item",
+  "assets": [
+    "textures/item/rangefinder.png",
+    "textures/model/rangefinder.png"
+  ],
+  "legacy_sources": [
+    "textures/items/rangefinder.png",
+    "textures/model/items/rangefinder.png"
+  ]
+}

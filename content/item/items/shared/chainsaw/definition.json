@@ -1,0 +1,24 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/chainsaw",
+  "type": "item",
+  "assets": [
+    "sounds/attack1.ogg",
+    "sounds/attack2.ogg",
+    "sounds/attack3.ogg",
+    "sounds/start.ogg",
+    "sounds/stop.ogg",
+    "textures/item/chainsaw.png",
+    "textures/model/chainsaw.png"
+  ],
+  "legacy_sources": [
+    "sounds/items/chainsaw/attack1.ogg",
+    "sounds/items/chainsaw/attack2.ogg",
+    "sounds/items/chainsaw/attack3.ogg",
+    "sounds/items/chainsaw/start.ogg",
+    "sounds/items/chainsaw/stop.ogg",
+    "textures/items/chainsaw.png",
+    "textures/model/items/chainsaw.png"
+  ]
+}

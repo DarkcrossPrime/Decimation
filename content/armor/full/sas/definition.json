@@ -1,0 +1,15 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "armor/full/sas",
+  "type": "armor",
+  "assets": [
+    "models/sas.mtl",
+    "models/sas.obj",
+    "textures/model/sas.png"
+  ],
+  "legacy_sources": [
+    "models/armor/full/sas.bmodel",
+    "textures/model/armor/sas.png"
+  ]
+}

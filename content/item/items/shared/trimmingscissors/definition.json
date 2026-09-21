@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/trimmingscissors",
+  "type": "item",
+  "assets": [
+    "textures/item/trimmingscissors.png"
+  ],
+  "legacy_sources": [
+    "textures/items/trimmingscissors.png"
+  ]
+}

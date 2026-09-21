@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/sound/keycard",
+  "type": "block",
+  "assets": [
+    "sounds/fail.ogg",
+    "sounds/success.ogg"
+  ],
+  "legacy_sources": [
+    "sounds/blocks/keycard/fail.ogg",
+    "sounds/blocks/keycard/success.ogg"
+  ]
+}

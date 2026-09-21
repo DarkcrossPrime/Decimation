@@ -1,0 +1,13 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/wreckage_var1",
+  "type": "block",
+  "assets": [
+    "models/wreckage_var1.mtl",
+    "models/wreckage_var1.obj"
+  ],
+  "legacy_sources": [
+    "models/props/wreckage_var1.bmodel"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/galil_mag",
+  "type": "item",
+  "assets": [
+    "textures/item/galilMag.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/mag/galilMag.png"
+  ]
+}

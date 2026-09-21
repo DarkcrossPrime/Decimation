@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/armor/sascoat",
+  "type": "item",
+  "assets": [
+    "textures/item/sascoat.png"
+  ],
+  "legacy_sources": [
+    "textures/items/armor/sascoat.png"
+  ]
+}

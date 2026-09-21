@@ -1,0 +1,17 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "armor/vest/suicidevest",
+  "type": "armor",
+  "assets": [
+    "models/suicidevest.mtl",
+    "models/suicidevest.obj",
+    "textures/item/suicidevest.png",
+    "textures/model/suicidevest.png"
+  ],
+  "legacy_sources": [
+    "models/armor/vest/suicidevest.bmodel",
+    "textures/items/vest/suicidevest.png",
+    "textures/model/vests/suicidevest.png"
+  ]
+}

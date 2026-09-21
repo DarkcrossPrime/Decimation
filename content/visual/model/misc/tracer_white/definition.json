@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/misc/tracer_white",
+  "type": "visual",
+  "assets": [
+    "textures/model/tracer_white.png"
+  ],
+  "legacy_sources": [
+    "textures/model/misc/tracer_white.png"
+  ]
+}

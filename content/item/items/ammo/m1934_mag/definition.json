@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/m1934_mag",
+  "type": "item",
+  "assets": [
+    "textures/item/m1934Mag.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/mag/m1934Mag.png"
+  ]
+}

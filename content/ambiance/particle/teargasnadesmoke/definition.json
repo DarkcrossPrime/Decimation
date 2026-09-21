@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "ambiance/particle/teargasnadesmoke",
+  "type": "ambiance",
+  "assets": [
+    "textures/teargasnadesmoke.png"
+  ],
+  "legacy_sources": [
+    "textures/particle/teargasnadesmoke.png"
+  ]
+}

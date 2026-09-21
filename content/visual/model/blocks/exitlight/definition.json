@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/exitlight",
+  "type": "visual",
+  "assets": [
+    "sounds/idle.ogg",
+    "textures/model/exitlight.png"
+  ],
+  "legacy_sources": [
+    "sounds/blocks/exitlight/idle.ogg",
+    "textures/model/blocks/props/exitlight.png"
+  ]
+}

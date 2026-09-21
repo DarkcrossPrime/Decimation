@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/cannedblackberry",
+  "type": "item",
+  "assets": [
+    "textures/item/cannedblackberry.png"
+  ],
+  "legacy_sources": [
+    "textures/items/cannedblackberry.png"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/armor/casual4vest",
+  "type": "item",
+  "assets": [
+    "textures/item/casual4vest.png"
+  ],
+  "legacy_sources": [
+    "textures/items/armor/casual4vest.png"
+  ]
+}

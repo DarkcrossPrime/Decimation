@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/jng90",
+  "type": "gun",
+  "assets": [
+    "animations/jng90_fire.danim.json",
+    "animations/jng90_rack.danim.json",
+    "animations/jng90_reload1.danim.json",
+    "animations/jng90_slide_back.danim.json",
+    "models/jng90.mtl",
+    "models/jng90.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/jng90.png",
+    "textures/model/jng90.png"
+  ],
+  "legacy_sources": [
+    "animations/jng90/jng90Fire.anib",
+    "animations/jng90/jng90Rack.anib",
+    "animations/jng90/jng90Reload1.anib",
+    "animations/jng90/jng90SlideBack.anib",
+    "models/guns/rifle/jng90.bmodel",
+    "sounds/guns/rifle/jng90/fire.ogg",
+    "sounds/guns/rifle/jng90/fire_distant.ogg",
+    "sounds/guns/rifle/jng90/fire_suppressed.ogg",
+    "sounds/guns/rifle/jng90/magIn.ogg",
+    "sounds/guns/rifle/jng90/magOut.ogg",
+    "sounds/guns/rifle/jng90/rack.ogg",
+    "textures/items/gun/rifle/jng90.png",
+    "textures/model/guns/rifle/jng90/jng90.png"
+  ]
+}

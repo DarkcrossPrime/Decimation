@@ -1,0 +1,18 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/propellertrap",
+  "type": "block",
+  "assets": [
+    "sounds/swing.ogg",
+    "textures/propellertrap.png",
+    "textures/item/propellertrap.png",
+    "textures/model/propellertrap.png"
+  ],
+  "legacy_sources": [
+    "sounds/entity/propellertrap/swing.ogg",
+    "textures/blocks/propellertrap.png",
+    "textures/items/propellertrap.png",
+    "textures/model/entities/world/propellertrap.png"
+  ]
+}

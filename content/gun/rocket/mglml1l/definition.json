@@ -1,0 +1,39 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rocket/mglml1l",
+  "type": "gun",
+  "assets": [
+    "animations/mglml1l_fire.danim.json",
+    "animations/mglml1l_rack.danim.json",
+    "animations/mglml1l_reload1.danim.json",
+    "animations/mglml1l_slide_back.danim.json",
+    "models/mglml1l.mtl",
+    "models/mglml1l.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/insert_shell.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/mglml1l.png",
+    "textures/model/mglml1l.png"
+  ],
+  "legacy_sources": [
+    "animations/mglml1l/mglml1lFire.anib",
+    "animations/mglml1l/mglml1lRack.anib",
+    "animations/mglml1l/mglml1lReload1.anib",
+    "animations/mglml1l/mglml1lSlideBack.anib",
+    "models/guns/rocket/mglml1l.bmodel",
+    "sounds/guns/rocket/mglml1l/fire.ogg",
+    "sounds/guns/rocket/mglml1l/fire_distant.ogg",
+    "sounds/guns/rocket/mglml1l/fire_suppressed.ogg",
+    "sounds/guns/rocket/mglml1l/insert_shell.ogg",
+    "sounds/guns/rocket/mglml1l/magIn.ogg",
+    "sounds/guns/rocket/mglml1l/magOut.ogg",
+    "sounds/guns/rocket/mglml1l/rack.ogg",
+    "textures/items/gun/rocket/mglml1l.png",
+    "textures/model/guns/rocket/mglml1l/mglml1l.png"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/armor/saspants",
+  "type": "item",
+  "assets": [
+    "textures/item/saspants.png"
+  ],
+  "legacy_sources": [
+    "textures/items/armor/saspants.png"
+  ]
+}

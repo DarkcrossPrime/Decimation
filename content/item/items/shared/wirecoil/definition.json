@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/wirecoil",
+  "type": "item",
+  "assets": [
+    "textures/item/wirecoil.png"
+  ],
+  "legacy_sources": [
+    "textures/items/wirecoil.png"
+  ]
+}

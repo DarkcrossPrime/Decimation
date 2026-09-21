@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/prop_streetbin",
+  "type": "block",
+  "assets": [
+    "textures/prop_streetbin.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/prop_streetbin.png"
+  ]
+}

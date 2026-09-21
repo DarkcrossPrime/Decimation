@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/l85a1",
+  "type": "gun",
+  "assets": [
+    "animations/l85a1_fire.danim.json",
+    "animations/l85a1_rack.danim.json",
+    "animations/l85a1_reload1.danim.json",
+    "animations/l85a1_slide_back.danim.json",
+    "models/l85a1.mtl",
+    "models/l85a1.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/l85a1.png",
+    "textures/model/l85a1.png"
+  ],
+  "legacy_sources": [
+    "animations/l85a1/l85a1Fire.anib",
+    "animations/l85a1/l85a1Rack.anib",
+    "animations/l85a1/l85a1Reload1.anib",
+    "animations/l85a1/l85a1SlideBack.anib",
+    "models/guns/rifle/l85a1.bmodel",
+    "sounds/guns/rifle/l85a1/fire.ogg",
+    "sounds/guns/rifle/l85a1/fire_distant.ogg",
+    "sounds/guns/rifle/l85a1/fire_suppressed.ogg",
+    "sounds/guns/rifle/l85a1/magIn.ogg",
+    "sounds/guns/rifle/l85a1/magOut.ogg",
+    "sounds/guns/rifle/l85a1/rack.ogg",
+    "textures/items/gun/rifle/l85a1.png",
+    "textures/model/guns/rifle/l85a1/l85a1.png"
+  ]
+}

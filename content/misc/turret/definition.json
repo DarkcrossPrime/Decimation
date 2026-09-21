@@ -1,0 +1,30 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "misc/turret",
+  "type": "misc",
+  "assets": [
+    "models/turret_head.mtl",
+    "models/turret_head.obj",
+    "models/turret_stand.mtl",
+    "models/turret_stand.obj",
+    "sounds/detect.ogg",
+    "sounds/empty.ogg",
+    "sounds/move.ogg",
+    "sounds/searching.ogg",
+    "sounds/shoot.ogg",
+    "textures/item/turret.png",
+    "textures/model/turret.png"
+  ],
+  "legacy_sources": [
+    "models/misc/turretHead.bmodel",
+    "models/misc/turretStand.bmodel",
+    "sounds/entity/turret/detect.ogg",
+    "sounds/entity/turret/empty.ogg",
+    "sounds/entity/turret/move.ogg",
+    "sounds/entity/turret/searching.ogg",
+    "sounds/entity/turret/shoot.ogg",
+    "textures/items/turret.png",
+    "textures/model/entities/world/turret.png"
+  ]
+}

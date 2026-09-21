@@ -1,0 +1,13 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/bodybag",
+  "type": "block",
+  "assets": [
+    "models/bodybag.mtl",
+    "models/bodybag.obj"
+  ],
+  "legacy_sources": [
+    "models/props/bodybag.bmodel"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "attachment/sight/reddot",
+  "type": "attachment",
+  "assets": [
+    "models/reddot.mtl",
+    "models/reddot.obj",
+    "textures/item/reddot.png",
+    "textures/model/attachments/sight/reddot.png",
+    "textures/model/guns/scopes/reddot.png",
+    "textures/particle/reddot.png"
+  ],
+  "legacy_sources": [
+    "models/attachments/sight/reddot.bmodel",
+    "textures/items/attach/reddot.png",
+    "textures/model/attachments/sight/reddot.png",
+    "textures/model/guns/scopes/reddot.png",
+    "textures/particle/reddot.png"
+  ]
+}

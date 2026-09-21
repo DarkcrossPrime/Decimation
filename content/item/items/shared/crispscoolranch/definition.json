@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/crispscoolranch",
+  "type": "item",
+  "assets": [
+    "textures/item/crispscoolranch.png"
+  ],
+  "legacy_sources": [
+    "textures/items/crispscoolranch.png"
+  ]
+}

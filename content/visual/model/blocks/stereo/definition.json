@@ -1,0 +1,30 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/stereo",
+  "type": "visual",
+  "assets": [
+    "sounds/music1.ogg",
+    "sounds/music2.ogg",
+    "sounds/music3.ogg",
+    "sounds/music4.ogg",
+    "sounds/tuning1.ogg",
+    "sounds/tuning2.ogg",
+    "sounds/tuning3.ogg",
+    "sounds/tuning4.ogg",
+    "sounds/tuning5.ogg",
+    "textures/model/stereo.png"
+  ],
+  "legacy_sources": [
+    "sounds/blocks/stereo/music1.ogg",
+    "sounds/blocks/stereo/music2.ogg",
+    "sounds/blocks/stereo/music3.ogg",
+    "sounds/blocks/stereo/music4.ogg",
+    "sounds/blocks/stereo/tuning1.ogg",
+    "sounds/blocks/stereo/tuning2.ogg",
+    "sounds/blocks/stereo/tuning3.ogg",
+    "sounds/blocks/stereo/tuning4.ogg",
+    "sounds/blocks/stereo/tuning5.ogg",
+    "textures/model/blocks/props/stereo.png"
+  ]
+}

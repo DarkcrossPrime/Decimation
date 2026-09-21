@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/glock17_mag",
+  "type": "item",
+  "assets": [
+    "textures/item/glock17Mag.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/mag/glock17Mag.png"
+  ]
+}

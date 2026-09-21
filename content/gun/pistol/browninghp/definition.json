@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/pistol/browninghp",
+  "type": "gun",
+  "assets": [
+    "animations/browninghp_fire.danim.json",
+    "animations/browninghp_rack.danim.json",
+    "animations/browninghp_reload1.danim.json",
+    "animations/browninghp_slide_back.danim.json",
+    "models/browninghp.mtl",
+    "models/browninghp.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/browninghp.png",
+    "textures/model/browninghp.png"
+  ],
+  "legacy_sources": [
+    "animations/browninghp/browninghpFire.anib",
+    "animations/browninghp/browninghpRack.anib",
+    "animations/browninghp/browninghpReload1.anib",
+    "animations/browninghp/browninghpSlideBack.anib",
+    "models/guns/pistol/browninghp.bmodel",
+    "sounds/guns/pistol/browninghp/fire.ogg",
+    "sounds/guns/pistol/browninghp/fire_distant.ogg",
+    "sounds/guns/pistol/browninghp/fire_suppressed.ogg",
+    "sounds/guns/pistol/browninghp/magIn.ogg",
+    "sounds/guns/pistol/browninghp/magOut.ogg",
+    "sounds/guns/pistol/browninghp/rack.ogg",
+    "textures/items/gun/pistol/browninghp.png",
+    "textures/model/guns/pistol/browninghp/browninghp.png"
+  ]
+}

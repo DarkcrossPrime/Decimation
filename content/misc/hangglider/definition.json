@@ -1,0 +1,13 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "misc/hangglider",
+  "type": "misc",
+  "assets": [
+    "models/hangglider.mtl",
+    "models/hangglider.obj"
+  ],
+  "legacy_sources": [
+    "models/misc/hangglider.bmodel"
+  ]
+}

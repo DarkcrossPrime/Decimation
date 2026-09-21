@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "ambiance/particle/bulletsmoke",
+  "type": "ambiance",
+  "assets": [
+    "textures/bulletsmoke1.png",
+    "textures/bulletsmoke2.png"
+  ],
+  "legacy_sources": [
+    "textures/particle/bulletsmoke1.png",
+    "textures/particle/bulletsmoke2.png"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/aks74",
+  "type": "gun",
+  "assets": [
+    "animations/aks74_fire.danim.json",
+    "animations/aks74_rack.danim.json",
+    "animations/aks74_reload1.danim.json",
+    "animations/aks74_slide_back.danim.json",
+    "models/aks74.mtl",
+    "models/aks74.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/aks74.png",
+    "textures/model/aks74.png"
+  ],
+  "legacy_sources": [
+    "animations/aks74/aks74Fire.anib",
+    "animations/aks74/aks74Rack.anib",
+    "animations/aks74/aks74Reload1.anib",
+    "animations/aks74/aks74SlideBack.anib",
+    "models/guns/rifle/aks74.bmodel",
+    "sounds/guns/rifle/aks74/fire.ogg",
+    "sounds/guns/rifle/aks74/fire_distant.ogg",
+    "sounds/guns/rifle/aks74/fire_suppressed.ogg",
+    "sounds/guns/rifle/aks74/magIn.ogg",
+    "sounds/guns/rifle/aks74/magOut.ogg",
+    "sounds/guns/rifle/aks74/rack.ogg",
+    "textures/items/gun/rifle/aks74.png",
+    "textures/model/guns/rifle/aks74/aks74.png"
+  ]
+}

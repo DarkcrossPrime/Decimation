@@ -1,0 +1,17 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "armor/full/capred",
+  "type": "armor",
+  "assets": [
+    "models/capred.mtl",
+    "models/capred.obj",
+    "textures/item/capred.png",
+    "textures/model/capred.png"
+  ],
+  "legacy_sources": [
+    "models/armor/full/capred.bmodel",
+    "textures/items/armor/capred.png",
+    "textures/model/armor/capred.png"
+  ]
+}

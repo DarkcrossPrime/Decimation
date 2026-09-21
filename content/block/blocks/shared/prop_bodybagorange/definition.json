@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/prop_bodybagorange",
+  "type": "block",
+  "assets": [
+    "textures/prop_bodybagorange.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/prop_bodybagorange.png"
+  ]
+}

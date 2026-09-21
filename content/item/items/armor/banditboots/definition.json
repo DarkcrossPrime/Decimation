@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/armor/banditboots",
+  "type": "item",
+  "assets": [
+    "textures/item/banditboots.png"
+  ],
+  "legacy_sources": [
+    "textures/items/armor/banditboots.png"
+  ]
+}

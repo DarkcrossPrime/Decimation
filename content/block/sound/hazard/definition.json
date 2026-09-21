@@ -1,0 +1,32 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/sound/hazard",
+  "type": "block",
+  "assets": [
+    "sounds/idle.ogg",
+    "sounds/blocks/light/idle.ogg",
+    "sounds/blocks/vendingmachine/idle.ogg",
+    "sounds/blocks/vent/idle.ogg",
+    "sounds/blocks/washingmachine/idle.ogg",
+    "sounds/items/chainsaw/idle.ogg",
+    "sounds/vehicle/atv/idle.ogg",
+    "sounds/vehicle/btr70/idle.ogg",
+    "sounds/vehicle/buggy/idle.ogg",
+    "sounds/vehicle/hummer/idle.ogg",
+    "sounds/vehicle/m35/idle.ogg"
+  ],
+  "legacy_sources": [
+    "sounds/blocks/hazard/idle.ogg",
+    "sounds/blocks/light/idle.ogg",
+    "sounds/blocks/vendingmachine/idle.ogg",
+    "sounds/blocks/vent/idle.ogg",
+    "sounds/blocks/washingmachine/idle.ogg",
+    "sounds/items/chainsaw/idle.ogg",
+    "sounds/vehicle/atv/idle.ogg",
+    "sounds/vehicle/btr70/idle.ogg",
+    "sounds/vehicle/buggy/idle.ogg",
+    "sounds/vehicle/hummer/idle.ogg",
+    "sounds/vehicle/m35/idle.ogg"
+  ]
+}

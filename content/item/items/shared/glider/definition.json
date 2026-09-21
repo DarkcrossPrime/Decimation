@@ -1,0 +1,16 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/glider",
+  "type": "item",
+  "assets": [
+    "sounds/glide.ogg",
+    "textures/item/glider.png",
+    "textures/model/glider.png"
+  ],
+  "legacy_sources": [
+    "sounds/items/glider/glide.ogg",
+    "textures/items/glider.png",
+    "textures/model/misc/glider.png"
+  ]
+}

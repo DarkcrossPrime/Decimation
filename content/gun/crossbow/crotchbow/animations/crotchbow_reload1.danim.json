@@ -1,0 +1,651 @@
+{
+  "format": "decimation:danim",
+  "version": 1,
+  "source": "crotchbowReload1.anib",
+  "static": false,
+  "length": 57,
+  "hand": 0,
+  "frames": [
+    {
+      "index": 0,
+      "transforms": {
+        "ammoModel0": {
+          "position": [
+            0,
+            3000,
+            -2
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "OffHand": {
+          "position": [
+            -9.536743e-07,
+            -0.08000183,
+            9.536743e-07
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 1,
+      "skip": true
+    },
+    {
+      "index": 2,
+      "skip": true
+    },
+    {
+      "index": 3,
+      "skip": true
+    },
+    {
+      "index": 4,
+      "skip": true
+    },
+    {
+      "index": 5,
+      "transforms": {
+        "ammoModel0": {
+          "position": [
+            0,
+            3000,
+            -2
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "OffHand": {
+          "position": [
+            -9.536743e-07,
+            -0.08000183,
+            9.536743e-07
+          ],
+          "rotation": [
+            -15,
+            5,
+            35
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            10,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 6,
+      "skip": true
+    },
+    {
+      "index": 7,
+      "skip": true
+    },
+    {
+      "index": 8,
+      "skip": true
+    },
+    {
+      "index": 9,
+      "skip": true
+    },
+    {
+      "index": 10,
+      "transforms": {
+        "ammoModel0": {
+          "position": [
+            0,
+            3,
+            -2
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "OffHand": {
+          "position": [
+            -1,
+            1.920001,
+            1.4
+          ],
+          "rotation": [
+            -35,
+            5,
+            35
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            10,
+            0,
+            7
+          ]
+        }
+      },
+      "shake": 1.2
+    },
+    {
+      "index": 11,
+      "skip": true
+    },
+    {
+      "index": 12,
+      "skip": true
+    },
+    {
+      "index": 13,
+      "skip": true
+    },
+    {
+      "index": 14,
+      "skip": true
+    },
+    {
+      "index": 15,
+      "transforms": {
+        "ammoModel0": {
+          "position": [
+            -0.6999979,
+            7.500002,
+            -3.8
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "OffHand": {
+          "position": [
+            0.6999989,
+            4.90001,
+            0.980001
+          ],
+          "rotation": [
+            -35,
+            5,
+            50
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            -5,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "index": 16,
+      "skip": true
+    },
+    {
+      "index": 17,
+      "skip": true
+    },
+    {
+      "index": 18,
+      "skip": true
+    },
+    {
+      "index": 19,
+      "skip": true
+    },
+    {
+      "index": 20,
+      "transforms": {
+        "ammoModel0": {
+          "position": [
+            -3.399999,
+            170.2,
+            -6.599997
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "OffHand": {
+          "position": [
+            3.100002,
+            12.80001,
+            -1.219998
+          ],
+          "rotation": [
+            -50,
+            5,
+            70
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            -6,
+            13
+          ]
+        }
+      },
+      "action": "switch"
+    },
+    {
+      "index": 21,
+      "skip": true
+    },
+    {
+      "index": 22,
+      "skip": true
+    },
+    {
+      "index": 23,
+      "skip": true
+    },
+    {
+      "index": 24,
+      "skip": true
+    },
+    {
+      "index": 25,
+      "transforms": {
+        "ammoModel0": {
+          "position": [
+            -4.1,
+            160.7,
+            -5.499998
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "OffHand": {
+          "position": [
+            2.600001,
+            12.20001,
+            0.480001
+          ],
+          "rotation": [
+            -50,
+            5,
+            70
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            -3,
+            13
+          ]
+        }
+      }
+    },
+    {
+      "index": 26,
+      "skip": true
+    },
+    {
+      "index": 27,
+      "skip": true
+    },
+    {
+      "index": 28,
+      "skip": true
+    },
+    {
+      "index": 29,
+      "skip": true
+    },
+    {
+      "index": 30,
+      "transforms": {
+        "ammoModel0": {
+          "position": [
+            -1.2,
+            9.399998,
+            -6.2
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "OffHand": {
+          "position": [
+            3.300007,
+            6.6,
+            -1.219999
+          ],
+          "rotation": [
+            -35,
+            5,
+            60
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            5,
+            0,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "index": 31,
+      "skip": true
+    },
+    {
+      "index": 32,
+      "skip": true
+    },
+    {
+      "index": 33,
+      "skip": true
+    },
+    {
+      "index": 34,
+      "skip": true
+    },
+    {
+      "index": 35,
+      "transforms": {
+        "ammoModel0": {
+          "position": [
+            -1.199999,
+            7000.5,
+            0.800002
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "OffHand": {
+          "position": [
+            1.299998,
+            -1.7,
+            1.58
+          ],
+          "rotation": [
+            -35,
+            5,
+            50
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            7,
+            0,
+            15
+          ]
+        }
+      }
+    },
+    {
+      "index": 36,
+      "skip": true
+    },
+    {
+      "index": 37,
+      "skip": true
+    },
+    {
+      "index": 38,
+      "skip": true
+    },
+    {
+      "index": 39,
+      "skip": true
+    },
+    {
+      "index": 40,
+      "transforms": {
+        "ammoModel0": {
+          "position": [
+            0,
+            2000.6,
+            -2.5
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "OffHand": {
+          "position": [
+            -1.999999,
+            -12.2000027,
+            8.979999
+          ],
+          "rotation": [
+            -35,
+            5,
+            15
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            9,
+            -3,
+            10
+          ]
+        }
+      },
+      "action": "load",
+      "shake": 1.2,
+      "sound": "LoadShell"
+    },
+    {
+      "index": 41,
+      "skip": true
+    },
+    {
+      "index": 42,
+      "skip": true
+    },
+    {
+      "index": 43,
+      "skip": true
+    },
+    {
+      "index": 44,
+      "skip": true
+    },
+    {
+      "index": 45,
+      "transforms": {
+        "OffHand": {
+          "position": [
+            -4.099997,
+            -14.599997,
+            14.079998
+          ],
+          "rotation": [
+            -35,
+            5,
+            15
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            7,
+            -5,
+            5
+          ]
+        }
+      }
+    },
+    {
+      "index": 46,
+      "skip": true
+    },
+    {
+      "index": 47,
+      "skip": true
+    },
+    {
+      "index": 48,
+      "skip": true
+    },
+    {
+      "index": 49,
+      "skip": true
+    },
+    {
+      "index": 50,
+      "transforms": {
+        "OffHand": {
+          "position": [
+            0,
+            -5,
+            7
+          ],
+          "rotation": [
+            -20,
+            0,
+            5
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            5,
+            -3,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 51,
+      "skip": true
+    },
+    {
+      "index": 52,
+      "skip": true
+    },
+    {
+      "index": 53,
+      "skip": true
+    },
+    {
+      "index": 54,
+      "skip": true
+    },
+    {
+      "index": 55,
+      "transforms": {
+        "OffHand": {
+          "position": [
+            -9.536743e-07,
+            -0.08000183,
+            9.536743e-07
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 56,
+      "skip": true
+    }
+  ]
+}

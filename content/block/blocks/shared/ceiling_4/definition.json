@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/ceiling_4",
+  "type": "block",
+  "assets": [
+    "textures/ceiling_4.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/ceiling_4.png"
+  ]
+}

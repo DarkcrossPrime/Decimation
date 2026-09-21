@@ -1,0 +1,30 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "entity/sound/mortar",
+  "type": "entity",
+  "assets": [
+    "sounds/deploy.ogg",
+    "sounds/fire.ogg",
+    "sounds/fire_distant1.ogg",
+    "sounds/fire_distant2.ogg",
+    "sounds/fire_distant3.ogg",
+    "sounds/prepare.ogg",
+    "sounds/shell/fire.ogg",
+    "sounds/guns/mg/m249/fire.ogg",
+    "sounds/guns/shotgun/crossbow/fire.ogg",
+    "sounds/items/parachute/deploy.ogg"
+  ],
+  "legacy_sources": [
+    "sounds/entity/mortar/deploy.ogg",
+    "sounds/entity/mortar/fire.ogg",
+    "sounds/entity/mortar/fire_distant1.ogg",
+    "sounds/entity/mortar/fire_distant2.ogg",
+    "sounds/entity/mortar/fire_distant3.ogg",
+    "sounds/entity/mortar/prepare.ogg",
+    "sounds/entity/shell/fire.ogg",
+    "sounds/guns/mg/m249/fire.ogg",
+    "sounds/guns/shotgun/crossbow/fire.ogg",
+    "sounds/items/parachute/deploy.ogg"
+  ]
+}

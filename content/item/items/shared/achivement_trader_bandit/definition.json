@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/achivement_trader_bandit",
+  "type": "item",
+  "assets": [
+    "textures/item/achivement_trader_bandit.png"
+  ],
+  "legacy_sources": [
+    "textures/items/achivement_trader_bandit.png"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/armor/hazmatcoat",
+  "type": "item",
+  "assets": [
+    "textures/item/hazmatcoat.png"
+  ],
+  "legacy_sources": [
+    "textures/items/armor/hazmatcoat.png"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "vehicle/hummer",
+  "type": "vehicle",
+  "assets": [
+    "models/hummer.mtl",
+    "models/hummer.obj",
+    "sounds/horn.ogg",
+    "sounds/throttle.ogg",
+    "textures/model/hummer.png"
+  ],
+  "legacy_sources": [
+    "models/vehicles/hummer.bmodel",
+    "sounds/vehicle/hummer/horn.ogg",
+    "sounds/vehicle/hummer/throttle.ogg",
+    "textures/model/entities/vehicle/hummer.png"
+  ]
+}

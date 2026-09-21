@@ -1,0 +1,15 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "backpack/duffle_bag",
+  "type": "backpack",
+  "assets": [
+    "models/duffle_bag.mtl",
+    "models/duffle_bag.obj",
+    "textures/item/dufflebag.png"
+  ],
+  "legacy_sources": [
+    "models/backpacks/duffleBag.bmodel",
+    "textures/items/dufflebag.png"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "attachment/barrel/shotgun_suppressor",
+  "type": "attachment",
+  "assets": [
+    "models/shotgun_suppressor.mtl",
+    "models/shotgun_suppressor.obj",
+    "textures/item/shotgunSuppressor.png",
+    "textures/model/shotgunSuppressor.png"
+  ],
+  "legacy_sources": [
+    "models/attachments/barrel/shotgunSuppressor.bmodel",
+    "textures/items/attach/shotgunSuppressor.png",
+    "textures/model/attachments/barrel/shotgunSuppressor.png"
+  ]
+}

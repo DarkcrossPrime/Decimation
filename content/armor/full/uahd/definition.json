@@ -1,0 +1,15 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "armor/full/uahd",
+  "type": "armor",
+  "assets": [
+    "models/uahd.mtl",
+    "models/uahd.obj",
+    "textures/model/uahd.png"
+  ],
+  "legacy_sources": [
+    "models/armor/full/uahd.bmodel",
+    "textures/model/armor/uahd.png"
+  ]
+}

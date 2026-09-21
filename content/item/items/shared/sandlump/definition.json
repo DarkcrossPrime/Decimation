@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/sandlump",
+  "type": "item",
+  "assets": [
+    "textures/item/sandlump.png"
+  ],
+  "legacy_sources": [
+    "textures/items/sandlump.png"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/present2",
+  "type": "visual",
+  "assets": [
+    "textures/model/present2.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/props/present2.png"
+  ]
+}

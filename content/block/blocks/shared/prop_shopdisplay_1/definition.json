@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/prop_shopdisplay_1",
+  "type": "block",
+  "assets": [
+    "textures/prop_shopdisplay_1.png",
+    "textures/item/prop_shopdisplay_1.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/prop_shopdisplay_1.png",
+    "textures/items/prop_shopdisplay_1.png"
+  ]
+}

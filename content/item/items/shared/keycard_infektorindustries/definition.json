@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/keycard_infektorindustries",
+  "type": "item",
+  "assets": [
+    "textures/item/keycard_infektorindustries.png"
+  ],
+  "legacy_sources": [
+    "textures/items/keycard_infektorindustries.png"
+  ]
+}

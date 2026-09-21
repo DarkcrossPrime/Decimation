@@ -1,0 +1,15 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/missilelauncher",
+  "type": "block",
+  "assets": [
+    "models/missilelauncher.mtl",
+    "models/missilelauncher.obj",
+    "textures/model/missilelauncher.png"
+  ],
+  "legacy_sources": [
+    "models/props/missilelauncher.bmodel",
+    "textures/model/blocks/props/missilelauncher.png"
+  ]
+}

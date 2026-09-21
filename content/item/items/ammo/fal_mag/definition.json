@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/fal_mag",
+  "type": "item",
+  "assets": [
+    "textures/item/falMag.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/mag/falMag.png"
+  ]
+}

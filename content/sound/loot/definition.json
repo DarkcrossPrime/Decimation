@@ -1,0 +1,16 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "sound/sound/loot",
+  "type": "sound",
+  "assets": [
+    "sounds/garbage.ogg",
+    "sounds/metal.ogg",
+    "sounds/wood.ogg"
+  ],
+  "legacy_sources": [
+    "sounds/misc/loot/garbage.ogg",
+    "sounds/misc/loot/metal.ogg",
+    "sounds/misc/loot/wood.ogg"
+  ]
+}

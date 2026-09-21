@@ -1,0 +1,35 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/shotgun/spas12",
+  "type": "gun",
+  "assets": [
+    "animations/spas12_fire.danim.json",
+    "animations/spas12_rack.danim.json",
+    "animations/spas12_reload1.danim.json",
+    "models/spas12.mtl",
+    "models/spas12.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/insert_shell.ogg",
+    "sounds/pump.ogg",
+    "sounds/pump_back.ogg",
+    "textures/item/spas12.png",
+    "textures/model/spas12.png"
+  ],
+  "legacy_sources": [
+    "animations/spas12/spas12Fire.anib",
+    "animations/spas12/spas12Rack.anib",
+    "animations/spas12/spas12Reload1.anib",
+    "models/guns/shotgun/spas12.bmodel",
+    "sounds/guns/shotgun/spas12/fire.ogg",
+    "sounds/guns/shotgun/spas12/fire_distant.ogg",
+    "sounds/guns/shotgun/spas12/fire_suppressed.ogg",
+    "sounds/guns/shotgun/spas12/insert_shell.ogg",
+    "sounds/guns/shotgun/spas12/pump.ogg",
+    "sounds/guns/shotgun/spas12/pump_back.ogg",
+    "textures/items/gun/shotgun/spas12.png",
+    "textures/model/guns/shotgun/spas12/spas12.png"
+  ]
+}

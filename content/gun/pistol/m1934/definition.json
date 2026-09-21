@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/pistol/m1934",
+  "type": "gun",
+  "assets": [
+    "animations/m1934_fire.danim.json",
+    "animations/m1934_rack.danim.json",
+    "animations/m1934_reload1.danim.json",
+    "animations/m1934_slide_back.danim.json",
+    "models/m1934.mtl",
+    "models/m1934.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/m1934.png",
+    "textures/model/m1934.png"
+  ],
+  "legacy_sources": [
+    "animations/m1934/m1934Fire.anib",
+    "animations/m1934/m1934Rack.anib",
+    "animations/m1934/m1934Reload1.anib",
+    "animations/m1934/m1934SlideBack.anib",
+    "models/guns/pistol/m1934.bmodel",
+    "sounds/guns/pistol/m1934/fire.ogg",
+    "sounds/guns/pistol/m1934/fire_distant.ogg",
+    "sounds/guns/pistol/m1934/fire_suppressed.ogg",
+    "sounds/guns/pistol/m1934/magIn.ogg",
+    "sounds/guns/pistol/m1934/magOut.ogg",
+    "sounds/guns/pistol/m1934/rack.ogg",
+    "textures/items/gun/pistol/m1934.png",
+    "textures/model/guns/pistol/m1934/m1934.png"
+  ]
+}

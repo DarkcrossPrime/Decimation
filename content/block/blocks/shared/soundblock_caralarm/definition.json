@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/soundblock_caralarm",
+  "type": "block",
+  "assets": [
+    "textures/soundblock_caralarm.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/soundblock_caralarm.png"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/armor/marinebluehelm",
+  "type": "item",
+  "assets": [
+    "textures/item/marinebluehelm.png"
+  ],
+  "legacy_sources": [
+    "textures/items/armor/marinebluehelm.png"
+  ]
+}

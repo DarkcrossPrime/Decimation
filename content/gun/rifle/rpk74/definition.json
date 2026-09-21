@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/rpk74",
+  "type": "gun",
+  "assets": [
+    "animations/rpk74_fire.danim.json",
+    "animations/rpk74_rack.danim.json",
+    "animations/rpk74_reload1.danim.json",
+    "animations/rpk74_slide_back.danim.json",
+    "models/rpk74.mtl",
+    "models/rpk74.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/rpk74.png",
+    "textures/model/rpk74.png"
+  ],
+  "legacy_sources": [
+    "animations/rpk74/rpk74Fire.anib",
+    "animations/rpk74/rpk74Rack.anib",
+    "animations/rpk74/rpk74Reload1.anib",
+    "animations/rpk74/rpk74SlideBack.anib",
+    "models/guns/rifle/rpk74.bmodel",
+    "sounds/guns/rifle/rpk74/fire.ogg",
+    "sounds/guns/rifle/rpk74/fire_distant.ogg",
+    "sounds/guns/rifle/rpk74/fire_suppressed.ogg",
+    "sounds/guns/rifle/rpk74/magIn.ogg",
+    "sounds/guns/rifle/rpk74/magOut.ogg",
+    "sounds/guns/rifle/rpk74/rack.ogg",
+    "textures/items/gun/rifle/rpk74.png",
+    "textures/model/guns/rifle/rpk74/rpk74.png"
+  ]
+}

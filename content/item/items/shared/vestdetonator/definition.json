@@ -1,0 +1,18 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/vestdetonator",
+  "type": "item",
+  "assets": [
+    "sounds/beep.ogg",
+    "sounds/click.ogg",
+    "textures/item/vestdetonator.png",
+    "textures/model/vestdetonator.png"
+  ],
+  "legacy_sources": [
+    "sounds/items/vestdetonator/beep.ogg",
+    "sounds/items/vestdetonator/click.ogg",
+    "textures/items/vestdetonator.png",
+    "textures/model/items/vestdetonator.png"
+  ]
+}

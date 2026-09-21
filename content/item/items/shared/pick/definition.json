@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/pick",
+  "type": "item",
+  "assets": [
+    "textures/item/pick.png",
+    "textures/model/pick.png"
+  ],
+  "legacy_sources": [
+    "textures/items/pick.png",
+    "textures/model/items/pick.png"
+  ]
+}

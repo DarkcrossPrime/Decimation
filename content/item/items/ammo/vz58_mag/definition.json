@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/vz58_mag",
+  "type": "item",
+  "assets": [
+    "textures/item/vz58Mag.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/mag/vz58Mag.png"
+  ]
+}

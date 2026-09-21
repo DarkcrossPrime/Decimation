@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/smg/mp5a3",
+  "type": "gun",
+  "assets": [
+    "animations/mp5a3_fire.danim.json",
+    "animations/mp5a3_rack.danim.json",
+    "animations/mp5a3_reload1.danim.json",
+    "animations/mp5a3_slide_back.danim.json",
+    "models/mp5a3.mtl",
+    "models/mp5a3.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/mp5a3.png",
+    "textures/model/mp5a3.png"
+  ],
+  "legacy_sources": [
+    "animations/mp5a3/mp5a3Fire.anib",
+    "animations/mp5a3/mp5a3Rack.anib",
+    "animations/mp5a3/mp5a3Reload1.anib",
+    "animations/mp5a3/mp5a3SlideBack.anib",
+    "models/guns/smg/mp5a3.bmodel",
+    "sounds/guns/smg/mp5a3/fire.ogg",
+    "sounds/guns/smg/mp5a3/fire_distant.ogg",
+    "sounds/guns/smg/mp5a3/fire_suppressed.ogg",
+    "sounds/guns/smg/mp5a3/magIn.ogg",
+    "sounds/guns/smg/mp5a3/magOut.ogg",
+    "sounds/guns/smg/mp5a3/rack.ogg",
+    "textures/items/gun/smg/mp5a3.png",
+    "textures/model/guns/smg/mp5a3/mp5a3.png"
+  ]
+}

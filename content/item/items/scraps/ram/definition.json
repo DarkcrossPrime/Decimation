@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/scraps/ram",
+  "type": "item",
+  "assets": [
+    "textures/item/ram.png"
+  ],
+  "legacy_sources": [
+    "textures/items/scraps/monitor/ram.png"
+  ]
+}

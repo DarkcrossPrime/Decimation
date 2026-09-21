@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/ammo_50bmgrounds_box",
+  "type": "item",
+  "assets": [
+    "textures/item/ammo_50bmgrounds_box.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/box/ammo_50bmgrounds_box.png"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "armor/full/marineblack",
+  "type": "armor",
+  "assets": [
+    "models/marineblack.mtl",
+    "models/marineblack.obj",
+    "textures/model/marineblack.png"
+  ],
+  "legacy_sources": [
+    "models/armor/full/marineblack.bmodel",
+    "textures/model/armor/marineblack.png"
+  ]
+}

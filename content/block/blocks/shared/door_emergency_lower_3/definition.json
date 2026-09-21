@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/door_emergency_lower_3",
+  "type": "block",
+  "assets": [
+    "textures/door_emergency_lower_3.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/door_emergency_lower_3.png"
+  ]
+}

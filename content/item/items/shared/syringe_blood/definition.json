@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/syringe_blood",
+  "type": "item",
+  "assets": [
+    "textures/item/syringe_blood.png"
+  ],
+  "legacy_sources": [
+    "textures/items/syringe_blood.png"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "entity/sound/entity",
+  "type": "entity",
+  "assets": [
+    "sounds/barbedwire1.ogg",
+    "sounds/barbedwire2.ogg",
+    "sounds/barbedwire3.ogg",
+    "sounds/barbedwire4.ogg",
+    "sounds/barbedwirepliers.ogg",
+    "sounds/ignite1.ogg",
+    "sounds/ignite2.ogg"
+  ],
+  "legacy_sources": [
+    "sounds/entity/barbedwire1.ogg",
+    "sounds/entity/barbedwire2.ogg",
+    "sounds/entity/barbedwire3.ogg",
+    "sounds/entity/barbedwire4.ogg",
+    "sounds/entity/barbedwirepliers.ogg",
+    "sounds/entity/ignite1.ogg",
+    "sounds/entity/ignite2.ogg"
+  ]
+}

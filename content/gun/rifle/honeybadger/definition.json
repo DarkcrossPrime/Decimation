@@ -1,0 +1,67 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/honeybadger",
+  "type": "gun",
+  "weapon": {
+    "registry_id": "honeybadger",
+    "display_name": "AAC Honey Badger PDW",
+    "mechanism": "hitscan",
+    "ammo": {
+      "item": "honey_badger_mag",
+      "capacity": 20,
+      "chamber_capacity": 1,
+      "spawn_loaded": true
+    },
+    "fire_modes": ["semi", "automatic"],
+    "rate_of_fire": 800,
+    "reload_ticks": 57,
+    "ballistics": {
+      "damage": 8.0,
+      "range": 110.0,
+      "falloff_start": 28.0,
+      "minimum_multiplier": 0.45,
+      "head_multiplier": 1.75,
+      "penetration_count": 1,
+      "penetration_retention": 0.62
+    },
+    "handling": {
+      "hip_spread": 2.2,
+      "ads_spread": 0.35,
+      "ads_ticks": 5,
+      "recoil_pitch": 1.1,
+      "recoil_yaw": 0.45
+    }
+  },
+  "assets": [
+    "animations/honeybadger_fire.danim.json",
+    "animations/honeybadger_rack.danim.json",
+    "animations/honeybadger_reload1.danim.json",
+    "animations/honeybadger_slide_back.danim.json",
+    "models/honeybadger.mtl",
+    "models/honeybadger.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/honeybadger.png",
+    "textures/model/honeybadger.png"
+  ],
+  "legacy_sources": [
+    "animations/honeybadger/honeybadgerFire.anib",
+    "animations/honeybadger/honeybadgerRack.anib",
+    "animations/honeybadger/honeybadgerReload1.anib",
+    "animations/honeybadger/honeybadgerSlideBack.anib",
+    "models/guns/rifle/honeybadger.bmodel",
+    "sounds/guns/rifle/honeybadger/fire.ogg",
+    "sounds/guns/rifle/honeybadger/fire_distant.ogg",
+    "sounds/guns/rifle/honeybadger/fire_suppressed.ogg",
+    "sounds/guns/rifle/honeybadger/magIn.ogg",
+    "sounds/guns/rifle/honeybadger/magOut.ogg",
+    "sounds/guns/rifle/honeybadger/rack.ogg",
+    "textures/items/gun/rifle/honeybadger.png",
+    "textures/model/guns/rifle/honeybadger/honeybadger.png"
+  ]
+}

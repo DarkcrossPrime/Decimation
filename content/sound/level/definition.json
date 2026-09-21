@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "sound/sound/level",
+  "type": "sound",
+  "assets": [
+    "sounds/levelup.ogg"
+  ],
+  "legacy_sources": [
+    "sounds/misc/level/levelup.ogg"
+  ]
+}

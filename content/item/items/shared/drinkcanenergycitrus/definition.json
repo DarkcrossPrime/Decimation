@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/drinkcanenergycitrus",
+  "type": "item",
+  "assets": [
+    "textures/item/drinkcanenergycitrus.png"
+  ],
+  "legacy_sources": [
+    "textures/items/drinkcanenergycitrus.png"
+  ]
+}

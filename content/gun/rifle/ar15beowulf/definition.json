@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/ar15beowulf",
+  "type": "gun",
+  "assets": [
+    "animations/ar15beowulf_fire.danim.json",
+    "animations/ar15beowulf_rack.danim.json",
+    "animations/ar15beowulf_reload1.danim.json",
+    "animations/ar15beowulf_slide_back.danim.json",
+    "models/ar15beowulf.mtl",
+    "models/ar15beowulf.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/ar15beowulf.png",
+    "textures/model/ar15beowulf.png"
+  ],
+  "legacy_sources": [
+    "animations/ar15beowulf/ar15beowulfFire.anib",
+    "animations/ar15beowulf/ar15beowulfRack.anib",
+    "animations/ar15beowulf/ar15beowulfReload1.anib",
+    "animations/ar15beowulf/ar15beowulfSlideBack.anib",
+    "models/guns/rifle/ar15beowulf.bmodel",
+    "sounds/guns/rifle/ar15beowulf/fire.ogg",
+    "sounds/guns/rifle/ar15beowulf/fire_distant.ogg",
+    "sounds/guns/rifle/ar15beowulf/fire_suppressed.ogg",
+    "sounds/guns/rifle/ar15beowulf/magIn.ogg",
+    "sounds/guns/rifle/ar15beowulf/magOut.ogg",
+    "sounds/guns/rifle/ar15beowulf/rack.ogg",
+    "textures/items/gun/rifle/ar15beowulf.png",
+    "textures/model/guns/rifle/ar15beowulf/ar15beowulf.png"
+  ]
+}

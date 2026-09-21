@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/rag_dirty",
+  "type": "item",
+  "assets": [
+    "textures/item/rag_dirty.png"
+  ],
+  "legacy_sources": [
+    "textures/items/rag_dirty.png"
+  ]
+}

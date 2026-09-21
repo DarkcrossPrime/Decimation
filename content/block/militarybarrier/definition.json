@@ -1,0 +1,15 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/militarybarrier",
+  "type": "block",
+  "assets": [
+    "models/militarybarrier.mtl",
+    "models/militarybarrier.obj",
+    "textures/model/militarybarrier.png"
+  ],
+  "legacy_sources": [
+    "models/props/militarybarrier.bmodel",
+    "textures/model/blocks/props/militarybarrier.png"
+  ]
+}

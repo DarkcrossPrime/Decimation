@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/acidpit",
+  "type": "visual",
+  "assets": [
+    "sounds/use.ogg",
+    "textures/model/acidpit.png"
+  ],
+  "legacy_sources": [
+    "sounds/blocks/acidpit/use.ogg",
+    "textures/model/blocks/props/acidpit.png"
+  ]
+}

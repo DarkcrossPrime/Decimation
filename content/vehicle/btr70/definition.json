@@ -1,0 +1,22 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "vehicle/btr70",
+  "type": "vehicle",
+  "assets": [
+    "models/btr70.mtl",
+    "models/btr70.obj",
+    "models/btr70turret.mtl",
+    "models/btr70turret.obj",
+    "sounds/horn.ogg",
+    "sounds/throttle.ogg",
+    "textures/model/btr70.png"
+  ],
+  "legacy_sources": [
+    "models/vehicles/btr70.bmodel",
+    "models/vehicles/btr70turret.bmodel",
+    "sounds/vehicle/btr70/horn.ogg",
+    "sounds/vehicle/btr70/throttle.ogg",
+    "textures/model/entities/vehicle/btr70.png"
+  ]
+}

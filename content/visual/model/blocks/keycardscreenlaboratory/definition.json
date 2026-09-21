@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/keycardscreenlaboratory",
+  "type": "visual",
+  "assets": [
+    "textures/model/keycardscreenlaboratory.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/props/keycardscreenlaboratory.png"
+  ]
+}

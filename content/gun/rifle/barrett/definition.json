@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/barrett",
+  "type": "gun",
+  "assets": [
+    "animations/barrett_fire.danim.json",
+    "animations/barrett_rack.danim.json",
+    "animations/barrett_reload1.danim.json",
+    "animations/barrett_slide_back.danim.json",
+    "models/barrett.mtl",
+    "models/barrett.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/barrett.png",
+    "textures/model/barrett.png"
+  ],
+  "legacy_sources": [
+    "animations/barrett/barrettFire.anib",
+    "animations/barrett/barrettRack.anib",
+    "animations/barrett/barrettReload1.anib",
+    "animations/barrett/barrettSlideBack.anib",
+    "models/guns/rifle/barrett.bmodel",
+    "sounds/guns/rifle/barrett/fire.ogg",
+    "sounds/guns/rifle/barrett/fire_distant.ogg",
+    "sounds/guns/rifle/barrett/fire_suppressed.ogg",
+    "sounds/guns/rifle/barrett/magIn.ogg",
+    "sounds/guns/rifle/barrett/magOut.ogg",
+    "sounds/guns/rifle/barrett/rack.ogg",
+    "textures/items/gun/rifle/barrett.png",
+    "textures/model/guns/rifle/barrett/barrett.png"
+  ]
+}

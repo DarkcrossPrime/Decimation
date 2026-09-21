@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "ambiance/particle/bloodinfected",
+  "type": "ambiance",
+  "assets": [
+    "textures/bloodinfected.png"
+  ],
+  "legacy_sources": [
+    "textures/particle/bloodinfected.png"
+  ]
+}

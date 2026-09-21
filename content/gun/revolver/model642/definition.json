@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/revolver/model642",
+  "type": "gun",
+  "assets": [
+    "animations/model642_fire.danim.json",
+    "animations/model642_rack.danim.json",
+    "animations/model642_reload1.danim.json",
+    "animations/model642_slide_back.danim.json",
+    "models/model642.mtl",
+    "models/model642.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/model642.png",
+    "textures/model/model642.png"
+  ],
+  "legacy_sources": [
+    "animations/model642/model642Fire.anib",
+    "animations/model642/model642Rack.anib",
+    "animations/model642/model642Reload1.anib",
+    "animations/model642/model642SlideBack.anib",
+    "models/guns/revolver/model642.bmodel",
+    "sounds/guns/revolver/model642/fire.ogg",
+    "sounds/guns/revolver/model642/fire_distant.ogg",
+    "sounds/guns/revolver/model642/fire_suppressed.ogg",
+    "sounds/guns/revolver/model642/magIn.ogg",
+    "sounds/guns/revolver/model642/magOut.ogg",
+    "sounds/guns/revolver/model642/rack.ogg",
+    "textures/items/gun/revolver/model642.png",
+    "textures/model/guns/revolver/model642/model642.png"
+  ]
+}

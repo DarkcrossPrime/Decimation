@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/scraps/capacitors",
+  "type": "item",
+  "assets": [
+    "textures/item/capacitors.png"
+  ],
+  "legacy_sources": [
+    "textures/items/scraps/monitor/capacitors.png"
+  ]
+}

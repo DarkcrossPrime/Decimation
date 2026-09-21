@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/pistol/aps",
+  "type": "gun",
+  "assets": [
+    "animations/aps_fire.danim.json",
+    "animations/aps_rack.danim.json",
+    "animations/aps_reload1.danim.json",
+    "animations/aps_slide_back.danim.json",
+    "models/aps.mtl",
+    "models/aps.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/aps.png",
+    "textures/model/aps.png"
+  ],
+  "legacy_sources": [
+    "animations/aps/apsFire.anib",
+    "animations/aps/apsRack.anib",
+    "animations/aps/apsReload1.anib",
+    "animations/aps/apsSlideBack.anib",
+    "models/guns/pistol/aps.bmodel",
+    "sounds/guns/pistol/aps/fire.ogg",
+    "sounds/guns/pistol/aps/fire_distant.ogg",
+    "sounds/guns/pistol/aps/fire_suppressed.ogg",
+    "sounds/guns/pistol/aps/magIn.ogg",
+    "sounds/guns/pistol/aps/magOut.ogg",
+    "sounds/guns/pistol/aps/rack.ogg",
+    "textures/items/gun/pistol/aps.png",
+    "textures/model/guns/pistol/aps/aps.png"
+  ]
+}

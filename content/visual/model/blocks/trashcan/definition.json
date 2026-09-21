@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/trashcan",
+  "type": "visual",
+  "assets": [
+    "textures/model/trashcan.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/props/trashcan.png"
+  ]
+}

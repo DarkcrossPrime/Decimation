@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/infectedflesh",
+  "type": "item",
+  "assets": [
+    "textures/item/infectedflesh.png"
+  ],
+  "legacy_sources": [
+    "textures/items/infectedflesh.png"
+  ]
+}

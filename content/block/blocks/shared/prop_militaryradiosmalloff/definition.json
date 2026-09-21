@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/prop_militaryradiosmalloff",
+  "type": "block",
+  "assets": [
+    "textures/prop_militaryradiosmalloff.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/prop_militaryradiosmalloff.png"
+  ]
+}

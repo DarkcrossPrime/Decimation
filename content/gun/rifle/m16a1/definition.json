@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/m16a1",
+  "type": "gun",
+  "assets": [
+    "animations/m16a1_fire.danim.json",
+    "animations/m16a1_rack.danim.json",
+    "animations/m16a1_reload1.danim.json",
+    "animations/m16a1_slide_back.danim.json",
+    "models/m16a1.mtl",
+    "models/m16a1.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/m16a1.png",
+    "textures/model/m16a1.png"
+  ],
+  "legacy_sources": [
+    "animations/m16a1/m16a1Fire.anib",
+    "animations/m16a1/m16a1Rack.anib",
+    "animations/m16a1/m16a1Reload1.anib",
+    "animations/m16a1/m16a1SlideBack.anib",
+    "models/guns/rifle/m16a1.bmodel",
+    "sounds/guns/rifle/m16a1/fire.ogg",
+    "sounds/guns/rifle/m16a1/fire_distant.ogg",
+    "sounds/guns/rifle/m16a1/fire_suppressed.ogg",
+    "sounds/guns/rifle/m16a1/magIn.ogg",
+    "sounds/guns/rifle/m16a1/magOut.ogg",
+    "sounds/guns/rifle/m16a1/rack.ogg",
+    "textures/items/gun/rifle/m16a1.png",
+    "textures/model/guns/rifle/m16a1/m16a1.png"
+  ]
+}

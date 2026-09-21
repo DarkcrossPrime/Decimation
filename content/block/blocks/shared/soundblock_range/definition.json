@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/soundblock_range",
+  "type": "block",
+  "assets": [
+    "textures/soundblock_range.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/soundblock_range.png"
+  ]
+}

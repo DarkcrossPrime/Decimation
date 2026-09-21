@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/scraps/gun_powder",
+  "type": "item",
+  "assets": [
+    "textures/item/gun_powder.png"
+  ],
+  "legacy_sources": [
+    "textures/items/scraps/military/gun_powder.png"
+  ]
+}

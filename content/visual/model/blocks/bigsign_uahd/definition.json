@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/bigsign_uahd",
+  "type": "visual",
+  "assets": [
+    "textures/model/bigsign_uahd.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/props/bigsign_uahd.png"
+  ]
+}

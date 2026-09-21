@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/gui/earth_scorches",
+  "type": "visual",
+  "assets": [
+    "textures/model/earth_scorches.png"
+  ],
+  "legacy_sources": [
+    "textures/model/gui/earth_scorches.png"
+  ]
+}

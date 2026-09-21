@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/roadsign_parking",
+  "type": "visual",
+  "assets": [
+    "textures/model/roadsign_parking.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/props/roadsign_parking.png"
+  ]
+}

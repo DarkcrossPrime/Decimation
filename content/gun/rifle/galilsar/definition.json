@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/galilsar",
+  "type": "gun",
+  "assets": [
+    "animations/galilsar_fire.danim.json",
+    "animations/galilsar_rack.danim.json",
+    "animations/galilsar_reload1.danim.json",
+    "animations/galilsar_slide_back.danim.json",
+    "models/galilsar.mtl",
+    "models/galilsar.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/galilsar.png",
+    "textures/model/galilsar.png"
+  ],
+  "legacy_sources": [
+    "animations/galilsar/galilsarFire.anib",
+    "animations/galilsar/galilsarRack.anib",
+    "animations/galilsar/galilsarReload1.anib",
+    "animations/galilsar/galilsarSlideBack.anib",
+    "models/guns/rifle/galilsar.bmodel",
+    "sounds/guns/rifle/galilsar/fire.ogg",
+    "sounds/guns/rifle/galilsar/fire_distant.ogg",
+    "sounds/guns/rifle/galilsar/fire_suppressed.ogg",
+    "sounds/guns/rifle/galilsar/magIn.ogg",
+    "sounds/guns/rifle/galilsar/magOut.ogg",
+    "sounds/guns/rifle/galilsar/rack.ogg",
+    "textures/items/gun/rifle/galilsar.png",
+    "textures/model/guns/rifle/galilsar/galilsar.png"
+  ]
+}

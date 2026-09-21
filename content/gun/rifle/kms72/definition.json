@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/kms72",
+  "type": "gun",
+  "assets": [
+    "animations/kms72_fire.danim.json",
+    "animations/kms72_rack.danim.json",
+    "animations/kms72_reload1.danim.json",
+    "animations/kms72_slide_back.danim.json",
+    "models/kms72.mtl",
+    "models/kms72.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/kms72.png",
+    "textures/model/kms72.png"
+  ],
+  "legacy_sources": [
+    "animations/kms72/kms72Fire.anib",
+    "animations/kms72/kms72Rack.anib",
+    "animations/kms72/kms72Reload1.anib",
+    "animations/kms72/kms72SlideBack.anib",
+    "models/guns/rifle/kms72.bmodel",
+    "sounds/guns/rifle/kms72/fire.ogg",
+    "sounds/guns/rifle/kms72/fire_distant.ogg",
+    "sounds/guns/rifle/kms72/fire_suppressed.ogg",
+    "sounds/guns/rifle/kms72/magIn.ogg",
+    "sounds/guns/rifle/kms72/magOut.ogg",
+    "sounds/guns/rifle/kms72/rack.ogg",
+    "textures/items/gun/rifle/kms72.png",
+    "textures/model/guns/rifle/kms72/kms72.png"
+  ]
+}

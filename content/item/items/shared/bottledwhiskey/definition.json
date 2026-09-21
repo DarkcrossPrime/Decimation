@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/bottledwhiskey",
+  "type": "item",
+  "assets": [
+    "textures/item/bottledwhiskey.png"
+  ],
+  "legacy_sources": [
+    "textures/items/bottledwhiskey.png"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/barrett_mag",
+  "type": "item",
+  "assets": [
+    "textures/item/barrettMag.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/mag/barrettMag.png"
+  ]
+}

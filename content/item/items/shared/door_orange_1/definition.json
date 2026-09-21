@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/door_orange_1",
+  "type": "item",
+  "assets": [
+    "textures/item/door_orange_1.png"
+  ],
+  "legacy_sources": [
+    "textures/items/door_orange_1.png"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/ammo_12gaugerounds_box",
+  "type": "item",
+  "assets": [
+    "textures/item/ammo_12gaugerounds_box.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/box/ammo_12gaugerounds_box.png"
+  ]
+}

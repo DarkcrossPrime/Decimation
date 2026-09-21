@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/hammer",
+  "type": "item",
+  "assets": [
+    "textures/item/hammer.png",
+    "textures/model/hammer.png"
+  ],
+  "legacy_sources": [
+    "textures/items/hammer.png",
+    "textures/model/items/hammer.png"
+  ]
+}

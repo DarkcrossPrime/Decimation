@@ -1,0 +1,15 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/streetlight",
+  "type": "block",
+  "assets": [
+    "models/streetlight.mtl",
+    "models/streetlight.obj",
+    "textures/model/streetlight.png"
+  ],
+  "legacy_sources": [
+    "models/props/streetlight.bmodel",
+    "textures/model/blocks/props/streetlight.png"
+  ]
+}

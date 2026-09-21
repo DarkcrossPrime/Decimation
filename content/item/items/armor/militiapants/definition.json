@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/armor/militiapants",
+  "type": "item",
+  "assets": [
+    "textures/item/militiapants.png"
+  ],
+  "legacy_sources": [
+    "textures/items/armor/militiapants.png"
+  ]
+}

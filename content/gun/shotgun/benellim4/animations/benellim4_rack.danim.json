@@ -1,0 +1,142 @@
+{
+  "format": "decimation:danim",
+  "version": 1,
+  "source": "benellim4Rack.anib",
+  "static": false,
+  "length": 11,
+  "hand": 0,
+  "frames": [
+    {
+      "index": 0,
+      "transforms": {
+        "OffHand": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            5,
+            5,
+            0
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            -25,
+            5,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 1,
+      "skip": true
+    },
+    {
+      "index": 2,
+      "skip": true
+    },
+    {
+      "index": 3,
+      "skip": true
+    },
+    {
+      "index": 4,
+      "skip": true
+    },
+    {
+      "index": 5,
+      "transforms": {
+        "pumpModel0": {
+          "position": [
+            -4.500003,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "OffHand": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            35
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "sound": "Pump"
+    },
+    {
+      "index": 6,
+      "skip": true
+    },
+    {
+      "index": 7,
+      "skip": true
+    },
+    {
+      "index": 8,
+      "skip": true
+    },
+    {
+      "index": 9,
+      "skip": true
+    },
+    {
+      "index": 10,
+      "transforms": {
+        "OffHand": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            10
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    }
+  ]
+}

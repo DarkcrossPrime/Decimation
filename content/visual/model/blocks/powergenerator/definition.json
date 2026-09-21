@@ -1,0 +1,16 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/powergenerator",
+  "type": "visual",
+  "assets": [
+    "sounds/charge.ogg",
+    "sounds/engine.ogg",
+    "textures/model/powergenerator.png"
+  ],
+  "legacy_sources": [
+    "sounds/blocks/powergenerator/charge.ogg",
+    "sounds/blocks/powergenerator/engine.ogg",
+    "textures/model/blocks/props/powergenerator.png"
+  ]
+}

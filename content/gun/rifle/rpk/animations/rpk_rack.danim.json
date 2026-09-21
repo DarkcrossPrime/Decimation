@@ -1,0 +1,443 @@
+{
+  "format": "decimation:danim",
+  "version": 1,
+  "source": "rpkRack.anib",
+  "static": false,
+  "length": 19,
+  "hand": 1,
+  "frames": [
+    {
+      "index": 0,
+      "transforms": {
+        "slideModel0": {
+          "position": [
+            -2.399998,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "slideModel1": {
+          "position": [
+            -2.399998,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "slideModel2": {
+          "position": [
+            -2.399998,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "slideModel3": {
+          "position": [
+            -2.399998,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "slideModel4": {
+          "position": [
+            -2.399998,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "slideModel5": {
+          "position": [
+            -2.399998,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "OffHand": {
+          "position": [
+            4.768372e-06,
+            0,
+            0
+          ],
+          "rotation": [
+            -5,
+            0,
+            0
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            10,
+            0,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "index": 1,
+      "skip": true
+    },
+    {
+      "index": 2,
+      "skip": true
+    },
+    {
+      "index": 3,
+      "transforms": {
+        "slideModel0": {
+          "position": [
+            -2.399998,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "slideModel1": {
+          "position": [
+            -2.399998,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "slideModel2": {
+          "position": [
+            -2.399998,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "slideModel3": {
+          "position": [
+            -2.399998,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "slideModel4": {
+          "position": [
+            -2.399998,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "slideModel5": {
+          "position": [
+            -2.399998,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "OffHand": {
+          "position": [
+            3.200006,
+            0,
+            0
+          ],
+          "rotation": [
+            -15,
+            0,
+            10
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            5,
+            0,
+            5
+          ]
+        }
+      }
+    },
+    {
+      "index": 4,
+      "skip": true
+    },
+    {
+      "index": 5,
+      "skip": true
+    },
+    {
+      "index": 6,
+      "transforms": {
+        "gunModel102": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "gunModel103": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "slideModel0": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "OffHand": {
+          "position": [
+            3.200006,
+            0,
+            -2.499998
+          ],
+          "rotation": [
+            -10,
+            0,
+            10
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "shake": 1.2,
+      "sound": "Rack"
+    },
+    {
+      "index": 7,
+      "skip": true
+    },
+    {
+      "index": 8,
+      "skip": true
+    },
+    {
+      "index": 9,
+      "transforms": {
+        "OffHand": {
+          "position": [
+            3.200006,
+            0,
+            -2.499998
+          ],
+          "rotation": [
+            0,
+            0,
+            10
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 10,
+      "skip": true
+    },
+    {
+      "index": 11,
+      "skip": true
+    },
+    {
+      "index": 12,
+      "transforms": {
+        "OffHand": {
+          "position": [
+            4.800004,
+            0,
+            -2.499998
+          ],
+          "rotation": [
+            0,
+            0,
+            10
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 13,
+      "skip": true
+    },
+    {
+      "index": 14,
+      "skip": true
+    },
+    {
+      "index": 15,
+      "transforms": {
+        "OffHand": {
+          "position": [
+            3.300005,
+            0,
+            -0.799999
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 16,
+      "skip": true
+    },
+    {
+      "index": 17,
+      "skip": true
+    },
+    {
+      "index": 18,
+      "transforms": {
+        "OffHand": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    }
+  ]
+}

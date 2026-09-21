@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "mob/model/world",
+  "type": "mob",
+  "assets": [
+    "textures/model/turret_placeable.png",
+    "textures/model/turret_rogue.png"
+  ],
+  "legacy_sources": [
+    "textures/model/entities/world/turret_placeable.png",
+    "textures/model/entities/world/turret_rogue.png"
+  ]
+}

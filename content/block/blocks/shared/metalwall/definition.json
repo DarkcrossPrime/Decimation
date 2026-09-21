@@ -1,0 +1,16 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/metalwall",
+  "type": "block",
+  "assets": [
+    "sounds/place1.ogg",
+    "sounds/place2.ogg",
+    "textures/metalwall.png"
+  ],
+  "legacy_sources": [
+    "sounds/items/kits/metalwall/place1.ogg",
+    "sounds/items/kits/metalwall/place2.ogg",
+    "textures/blocks/metalwall.png"
+  ]
+}

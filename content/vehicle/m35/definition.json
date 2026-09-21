@@ -1,0 +1,21 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "vehicle/m35",
+  "type": "vehicle",
+  "assets": [
+    "models/m35.mtl",
+    "models/m35.obj",
+    "sounds/horn.ogg",
+    "sounds/reverse.ogg",
+    "sounds/throttle.ogg",
+    "textures/model/m35.png"
+  ],
+  "legacy_sources": [
+    "models/vehicles/m35.bmodel",
+    "sounds/vehicle/m35/horn.ogg",
+    "sounds/vehicle/m35/reverse.ogg",
+    "sounds/vehicle/m35/throttle.ogg",
+    "textures/model/entities/vehicle/m35.png"
+  ]
+}

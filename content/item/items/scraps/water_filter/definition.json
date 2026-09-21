@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/scraps/water_filter",
+  "type": "item",
+  "assets": [
+    "textures/item/water_filter.png"
+  ],
+  "legacy_sources": [
+    "textures/items/scraps/water_filter.png"
+  ]
+}

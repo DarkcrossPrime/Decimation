@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/stungrenade",
+  "type": "item",
+  "assets": [
+    "textures/item/stungrenade.png",
+    "textures/model/stungrenade.png"
+  ],
+  "legacy_sources": [
+    "textures/items/stungrenade.png",
+    "textures/model/entities/projectile/stungrenade.png"
+  ]
+}

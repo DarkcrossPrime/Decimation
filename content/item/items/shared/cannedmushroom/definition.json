@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/cannedmushroom",
+  "type": "item",
+  "assets": [
+    "textures/item/cannedmushroom.png"
+  ],
+  "legacy_sources": [
+    "textures/items/cannedmushroom.png"
+  ]
+}

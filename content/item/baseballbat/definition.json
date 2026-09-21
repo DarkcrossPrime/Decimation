@@ -1,0 +1,17 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/baseballbat",
+  "type": "item",
+  "assets": [
+    "models/baseballbat.mtl",
+    "models/baseballbat.obj",
+    "textures/item/baseballbat.png",
+    "textures/model/baseballbat.png"
+  ],
+  "legacy_sources": [
+    "models/items/baseballbat.bmodel",
+    "textures/items/baseballbat.png",
+    "textures/model/items/baseballbat.png"
+  ]
+}

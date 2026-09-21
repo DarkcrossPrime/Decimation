@@ -1,0 +1,18 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "ambiance/particle/explosionsmoke",
+  "type": "ambiance",
+  "assets": [
+    "textures/explosionsmoke1.png",
+    "textures/explosionsmoke2.png",
+    "textures/explosionsmoke3.png",
+    "textures/explosionsmoke4.png"
+  ],
+  "legacy_sources": [
+    "textures/particle/explosionsmoke1.png",
+    "textures/particle/explosionsmoke2.png",
+    "textures/particle/explosionsmoke3.png",
+    "textures/particle/explosionsmoke4.png"
+  ]
+}

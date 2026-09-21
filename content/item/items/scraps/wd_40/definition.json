@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/scraps/wd_40",
+  "type": "item",
+  "assets": [
+    "textures/item/wd_40.png"
+  ],
+  "legacy_sources": [
+    "textures/items/scraps/wd_40.png"
+  ]
+}

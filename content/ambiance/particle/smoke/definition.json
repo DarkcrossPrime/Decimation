@@ -1,0 +1,32 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "ambiance/particle/smoke",
+  "type": "ambiance",
+  "assets": [
+    "textures/smoke0.png",
+    "textures/smoke1.png",
+    "textures/smoke10.png",
+    "textures/smoke2.png",
+    "textures/smoke3.png",
+    "textures/smoke4.png",
+    "textures/smoke5.png",
+    "textures/smoke6.png",
+    "textures/smoke7.png",
+    "textures/smoke8.png",
+    "textures/smoke9.png"
+  ],
+  "legacy_sources": [
+    "textures/particle/smoke/smoke0.png",
+    "textures/particle/smoke/smoke1.png",
+    "textures/particle/smoke/smoke10.png",
+    "textures/particle/smoke/smoke2.png",
+    "textures/particle/smoke/smoke3.png",
+    "textures/particle/smoke/smoke4.png",
+    "textures/particle/smoke/smoke5.png",
+    "textures/particle/smoke/smoke6.png",
+    "textures/particle/smoke/smoke7.png",
+    "textures/particle/smoke/smoke8.png",
+    "textures/particle/smoke/smoke9.png"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "hud/gui/title",
+  "type": "hud",
+  "assets": [
+    "textures/mojang.png"
+  ],
+  "legacy_sources": [
+    "textures/gui/title/mojang.png"
+  ]
+}

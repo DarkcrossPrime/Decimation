@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/ammo_46mm_grenaderounds_bullet",
+  "type": "item",
+  "assets": [
+    "textures/item/ammo_46mmGrenaderounds_bullet.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/bullet/ammo_46mmGrenaderounds_bullet.png"
+  ]
+}

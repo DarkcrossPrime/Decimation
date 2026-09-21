@@ -1,0 +1,26 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "ambiance/sound/weather",
+  "type": "ambiance",
+  "assets": [
+    "sounds/rain1.ogg",
+    "sounds/rain2.ogg",
+    "sounds/rain3.ogg",
+    "sounds/rain4.ogg",
+    "sounds/thunder1.ogg",
+    "sounds/thunder2.ogg",
+    "sounds/thunder3.ogg",
+    "sounds/thunder4.ogg"
+  ],
+  "legacy_sources": [
+    "sounds/environment/weather/rain1.ogg",
+    "sounds/environment/weather/rain2.ogg",
+    "sounds/environment/weather/rain3.ogg",
+    "sounds/environment/weather/rain4.ogg",
+    "sounds/environment/weather/thunder1.ogg",
+    "sounds/environment/weather/thunder2.ogg",
+    "sounds/environment/weather/thunder3.ogg",
+    "sounds/environment/weather/thunder4.ogg"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/lyepacket",
+  "type": "item",
+  "assets": [
+    "textures/item/lyepacket.png"
+  ],
+  "legacy_sources": [
+    "textures/items/lyepacket.png"
+  ]
+}

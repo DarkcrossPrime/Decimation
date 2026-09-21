@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "ambiance/particle/embers",
+  "type": "ambiance",
+  "assets": [
+    "textures/embers.png",
+    "textures/embers2.png"
+  ],
+  "legacy_sources": [
+    "textures/particle/embers.png",
+    "textures/particle/embers2.png"
+  ]
+}

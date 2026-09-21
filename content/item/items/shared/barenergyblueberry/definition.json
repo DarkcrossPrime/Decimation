@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/barenergyblueberry",
+  "type": "item",
+  "assets": [
+    "textures/item/barenergyblueberry.png"
+  ],
+  "legacy_sources": [
+    "textures/items/barenergyblueberry.png"
+  ]
+}

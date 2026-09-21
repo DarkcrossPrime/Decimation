@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/punjisticks",
+  "type": "item",
+  "assets": [
+    "textures/item/punjisticks.png",
+    "textures/model/punjisticks.png"
+  ],
+  "legacy_sources": [
+    "textures/items/punjisticks.png",
+    "textures/model/entities/placeable/punjisticks.png"
+  ]
+}

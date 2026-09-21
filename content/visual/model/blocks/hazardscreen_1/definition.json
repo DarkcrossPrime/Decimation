@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/hazardscreen_1",
+  "type": "visual",
+  "assets": [
+    "textures/model/hazardscreen_1.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/props/hazardscreen_1.png"
+  ]
+}

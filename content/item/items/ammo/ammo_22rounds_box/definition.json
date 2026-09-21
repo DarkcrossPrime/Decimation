@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/ammo_22rounds_box",
+  "type": "item",
+  "assets": [
+    "textures/item/ammo_22rounds_box.png",
+    "textures/model/ammo_22rounds_box.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/box/ammo_22rounds_box.png",
+    "textures/model/items/ammo_22rounds_box.png"
+  ]
+}

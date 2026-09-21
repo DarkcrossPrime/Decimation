@@ -1,0 +1,16 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/campfire",
+  "type": "item",
+  "assets": [
+    "sounds/campfire.ogg",
+    "textures/item/campfire.png",
+    "textures/model/campfire.png"
+  ],
+  "legacy_sources": [
+    "sounds/entity/campfire.ogg",
+    "textures/items/campfire.png",
+    "textures/model/entities/placeable/campfire.png"
+  ]
+}

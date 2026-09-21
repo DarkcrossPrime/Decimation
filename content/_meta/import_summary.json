@@ -1,0 +1,32 @@
+{
+  "format": "decimation:import_summary",
+  "version": 1,
+  "objects": 1290,
+  "statistics": {
+    "animation_frames": 7473,
+    "danim_json": 386,
+    "jpg": 1,
+    "mcmeta": 8,
+    "model_parts": 25219,
+    "model_quads": 151356,
+    "model_vertices": 201808,
+    "mtl": 232,
+    "obj": 232,
+    "ogg": 1523,
+    "png": 2490,
+    "synthetic_frames": 14
+  },
+  "missing_sound_sources": [
+    "entity/mortar/conceal",
+    "gui/menu/music_battlegrounds",
+    "items/rocket/hit",
+    "mob/human/beep",
+    "mob/human/clap7",
+    "vehicle/btr70/reverse"
+  ],
+  "duplicate_groups": 139,
+  "excluded_legacy_files": [
+    "models/armor/vest/testvest.obj",
+    "models/armor/vest/testvest.obj.mtl"
+  ]
+}

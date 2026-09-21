@@ -1,0 +1,39 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rocket/rpg18",
+  "type": "gun",
+  "assets": [
+    "animations/rpg18_fire.danim.json",
+    "animations/rpg18_rack.danim.json",
+    "animations/rpg18_reload1.danim.json",
+    "animations/rpg18_slide_back.danim.json",
+    "models/rpg18.mtl",
+    "models/rpg18.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/insert_shell.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/rpg18.png",
+    "textures/model/rpg18.png"
+  ],
+  "legacy_sources": [
+    "animations/rpg18/rpg18Fire.anib",
+    "animations/rpg18/rpg18Rack.anib",
+    "animations/rpg18/rpg18Reload1.anib",
+    "animations/rpg18/rpg18SlideBack.anib",
+    "models/guns/rocket/rpg18.bmodel",
+    "sounds/guns/rocket/rpg18/fire.ogg",
+    "sounds/guns/rocket/rpg18/fire_distant.ogg",
+    "sounds/guns/rocket/rpg18/fire_suppressed.ogg",
+    "sounds/guns/rocket/rpg18/insert_shell.ogg",
+    "sounds/guns/rocket/rpg18/magIn.ogg",
+    "sounds/guns/rocket/rpg18/magOut.ogg",
+    "sounds/guns/rocket/rpg18/rack.ogg",
+    "textures/items/gun/rocket/rpg18.png",
+    "textures/model/guns/rocket/rpg18/rpg18.png"
+  ]
+}

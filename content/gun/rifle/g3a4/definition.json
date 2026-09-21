@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/g3a4",
+  "type": "gun",
+  "assets": [
+    "animations/g3a4_fire.danim.json",
+    "animations/g3a4_rack.danim.json",
+    "animations/g3a4_reload1.danim.json",
+    "animations/g3a4_slide_back.danim.json",
+    "models/g3a4.mtl",
+    "models/g3a4.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/g3a4.png",
+    "textures/model/g3a4.png"
+  ],
+  "legacy_sources": [
+    "animations/g3a4/g3a4Fire.anib",
+    "animations/g3a4/g3a4Rack.anib",
+    "animations/g3a4/g3a4Reload1.anib",
+    "animations/g3a4/g3a4SlideBack.anib",
+    "models/guns/rifle/g3a4.bmodel",
+    "sounds/guns/rifle/g3a4/fire.ogg",
+    "sounds/guns/rifle/g3a4/fire_distant.ogg",
+    "sounds/guns/rifle/g3a4/fire_suppressed.ogg",
+    "sounds/guns/rifle/g3a4/magIn.ogg",
+    "sounds/guns/rifle/g3a4/magOut.ogg",
+    "sounds/guns/rifle/g3a4/rack.ogg",
+    "textures/items/gun/rifle/g3a4.png",
+    "textures/model/guns/rifle/g3a4/g3a4.png"
+  ]
+}

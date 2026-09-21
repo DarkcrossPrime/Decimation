@@ -1,0 +1,71 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/crossbow/crotchbow",
+  "type": "gun",
+  "weapon": {
+    "registry_id": "crotchbow",
+    "display_name": "TAC-15 Crossbow",
+    "mechanism": "projectile",
+    "ammo": {
+      "item": "ammo_boltrounds_bullet",
+      "capacity": 0,
+      "chamber_capacity": 1,
+      "spawn_loaded": true
+    },
+    "fire_modes": ["semi"],
+    "rate_of_fire": 60,
+    "reload_ticks": 57,
+    "ballistics": {
+      "damage": 14.0,
+      "range": 120.0,
+      "falloff_start": 120.0,
+      "minimum_multiplier": 1.0,
+      "head_multiplier": 1.5,
+      "penetration_count": 0,
+      "penetration_retention": 1.0,
+      "projectile_speed": 3.15,
+      "projectile_divergence": 0.15
+    },
+    "handling": {
+      "hip_spread": 3.0,
+      "ads_spread": 0.1,
+      "ads_ticks": 8,
+      "recoil_pitch": 2.2,
+      "recoil_yaw": 0.2
+    }
+  },
+  "assets": [
+    "animations/crotchbow_fire.danim.json",
+    "animations/crotchbow_rack.danim.json",
+    "animations/crotchbow_reload1.danim.json",
+    "animations/crotchbow_slide_back.danim.json",
+    "models/crotchbow.mtl",
+    "models/crotchbow.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/insert_shell.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/crotchbow.png",
+    "textures/model/crotchbow.png"
+  ],
+  "legacy_sources": [
+    "animations/crotchbow/crotchbowFire.anib",
+    "animations/crotchbow/crotchbowRack.anib",
+    "animations/crotchbow/crotchbowReload1.anib",
+    "animations/crotchbow/crotchbowSlideBack.anib",
+    "models/guns/crossbow/crotchbow.bmodel",
+    "sounds/guns/crossbow/crotchbow/fire.ogg",
+    "sounds/guns/crossbow/crotchbow/fire_distant.ogg",
+    "sounds/guns/crossbow/crotchbow/fire_suppressed.ogg",
+    "sounds/guns/crossbow/crotchbow/insert_shell.ogg",
+    "sounds/guns/crossbow/crotchbow/magIn.ogg",
+    "sounds/guns/crossbow/crotchbow/magOut.ogg",
+    "sounds/guns/crossbow/crotchbow/rack.ogg",
+    "textures/items/gun/crossbow/crotchbow.png",
+    "textures/model/guns/crossbow/crotchbow/crotchbow.png"
+  ]
+}

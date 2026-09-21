@@ -1,0 +1,18 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/bandage",
+  "type": "item",
+  "assets": [
+    "sounds/use1.ogg",
+    "sounds/use2.ogg",
+    "sounds/use3.ogg",
+    "textures/item/bandage.png"
+  ],
+  "legacy_sources": [
+    "sounds/items/bandage/use1.ogg",
+    "sounds/items/bandage/use2.ogg",
+    "sounds/items/bandage/use3.ogg",
+    "textures/items/bandage.png"
+  ]
+}

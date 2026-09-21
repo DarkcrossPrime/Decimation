@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "mob/model/mob/mech",
+  "type": "mob",
+  "assets": [
+    "textures/model/mech0.png",
+    "textures/model/mech1.png"
+  ],
+  "legacy_sources": [
+    "textures/model/entities/mob/mech/mech0.png",
+    "textures/model/entities/mob/mech/mech1.png"
+  ]
+}

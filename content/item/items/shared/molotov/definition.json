@@ -1,0 +1,18 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/molotov",
+  "type": "item",
+  "assets": [
+    "sounds/explode_stereo.ogg",
+    "sounds/flame.ogg",
+    "textures/item/molotov.png",
+    "textures/model/molotov.png"
+  ],
+  "legacy_sources": [
+    "sounds/items/molotov/explode_stereo.ogg",
+    "sounds/items/molotov/flame.ogg",
+    "textures/items/molotov.png",
+    "textures/model/entities/projectile/molotov.png"
+  ]
+}

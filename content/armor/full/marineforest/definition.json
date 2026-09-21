@@ -1,0 +1,15 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "armor/full/marineforest",
+  "type": "armor",
+  "assets": [
+    "models/marineforest.mtl",
+    "models/marineforest.obj",
+    "textures/model/marineforest.png"
+  ],
+  "legacy_sources": [
+    "models/armor/full/marineforest.bmodel",
+    "textures/model/armor/marineforest.png"
+  ]
+}

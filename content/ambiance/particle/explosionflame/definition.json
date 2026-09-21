@@ -1,0 +1,18 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "ambiance/particle/explosionflame",
+  "type": "ambiance",
+  "assets": [
+    "textures/explosionflame1.png",
+    "textures/explosionflame2.png",
+    "textures/explosionflame3.png",
+    "textures/explosionflame4.png"
+  ],
+  "legacy_sources": [
+    "textures/particle/explosionflame1.png",
+    "textures/particle/explosionflame2.png",
+    "textures/particle/explosionflame3.png",
+    "textures/particle/explosionflame4.png"
+  ]
+}

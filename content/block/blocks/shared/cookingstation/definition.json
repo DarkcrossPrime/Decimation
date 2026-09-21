@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/cookingstation",
+  "type": "block",
+  "assets": [
+    "textures/cookingstation.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/cookingstation.png"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/scraps/flashdrive",
+  "type": "item",
+  "assets": [
+    "textures/item/flashdrive.png"
+  ],
+  "legacy_sources": [
+    "textures/items/scraps/monitor/flashdrive.png"
+  ]
+}

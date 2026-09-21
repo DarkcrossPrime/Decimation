@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/achivement_condition_infected",
+  "type": "item",
+  "assets": [
+    "textures/item/achivement_condition_infected.png"
+  ],
+  "legacy_sources": [
+    "textures/items/achivement_condition_infected.png"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/cardboardboxes2",
+  "type": "block",
+  "assets": [
+    "models/cardboardboxes2.mtl",
+    "models/cardboardboxes2.obj",
+    "textures/model/cardboardboxes2.png"
+  ],
+  "legacy_sources": [
+    "models/props/cardboardboxes2.bmodel",
+    "textures/model/blocks/props/cardboardboxes2.png"
+  ]
+}

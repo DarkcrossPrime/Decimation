@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/m4a4_mag",
+  "type": "item",
+  "assets": [
+    "textures/item/m4a4Mag.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/mag/m4a4Mag.png"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "entity/sound/round",
+  "type": "entity",
+  "assets": [
+    "sounds/explode1.ogg",
+    "sounds/explode2.ogg",
+    "sounds/explode3.ogg",
+    "sounds/explode_distant1.ogg",
+    "sounds/explode_distant2.ogg",
+    "sounds/explode_distant3.ogg",
+    "sounds/fall1.ogg",
+    "sounds/fall2.ogg",
+    "sounds/fall3.ogg",
+    "sounds/fall_distant1.ogg",
+    "sounds/fall_distant2.ogg",
+    "sounds/fall_distant3.ogg"
+  ],
+  "legacy_sources": [
+    "sounds/entity/mortar/round/explode1.ogg",
+    "sounds/entity/mortar/round/explode2.ogg",
+    "sounds/entity/mortar/round/explode3.ogg",
+    "sounds/entity/mortar/round/explode_distant1.ogg",
+    "sounds/entity/mortar/round/explode_distant2.ogg",
+    "sounds/entity/mortar/round/explode_distant3.ogg",
+    "sounds/entity/mortar/round/fall1.ogg",
+    "sounds/entity/mortar/round/fall2.ogg",
+    "sounds/entity/mortar/round/fall3.ogg",
+    "sounds/entity/mortar/round/fall_distant1.ogg",
+    "sounds/entity/mortar/round/fall_distant2.ogg",
+    "sounds/entity/mortar/round/fall_distant3.ogg"
+  ]
+}

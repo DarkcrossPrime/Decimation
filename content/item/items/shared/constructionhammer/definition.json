@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/constructionhammer",
+  "type": "item",
+  "assets": [
+    "textures/item/constructionhammer.png"
+  ],
+  "legacy_sources": [
+    "textures/items/constructionhammer.png"
+  ]
+}

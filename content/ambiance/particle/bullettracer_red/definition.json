@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "ambiance/particle/bullettracer_red",
+  "type": "ambiance",
+  "assets": [
+    "textures/bullettracer_red.png"
+  ],
+  "legacy_sources": [
+    "textures/particle/bullettracer_red.png"
+  ]
+}

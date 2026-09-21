@@ -1,0 +1,17 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "attachment/barrel/pistol_suppressor",
+  "type": "attachment",
+  "assets": [
+    "models/pistol_suppressor.mtl",
+    "models/pistol_suppressor.obj",
+    "textures/item/pistolSuppressor.png",
+    "textures/model/pistolSuppressor.png"
+  ],
+  "legacy_sources": [
+    "models/attachments/barrel/pistolSuppressor.bmodel",
+    "textures/items/attach/pistolSuppressor.png",
+    "textures/model/attachments/barrel/pistolSuppressor.png"
+  ]
+}

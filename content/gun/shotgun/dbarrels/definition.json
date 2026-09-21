@@ -1,0 +1,35 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/shotgun/dbarrels",
+  "type": "gun",
+  "assets": [
+    "animations/dbarrels_fire.danim.json",
+    "animations/dbarrels_rack.danim.json",
+    "animations/dbarrels_reload1.danim.json",
+    "models/dbarrels.mtl",
+    "models/dbarrels.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/insert_shell.ogg",
+    "sounds/pump.ogg",
+    "sounds/pump_back.ogg",
+    "textures/item/dbarrels.png",
+    "textures/model/dbarrels.png"
+  ],
+  "legacy_sources": [
+    "animations/dbarrels/dbarrelsFire.anib",
+    "animations/dbarrels/dbarrelsRack.anib",
+    "animations/dbarrels/dbarrelsReload1.anib",
+    "models/guns/shotgun/dbarrels.bmodel",
+    "sounds/guns/shotgun/dbarrels/fire.ogg",
+    "sounds/guns/shotgun/dbarrels/fire_distant.ogg",
+    "sounds/guns/shotgun/dbarrels/fire_suppressed.ogg",
+    "sounds/guns/shotgun/dbarrels/insert_shell.ogg",
+    "sounds/guns/shotgun/dbarrels/pump.ogg",
+    "sounds/guns/shotgun/dbarrels/pump_back.ogg",
+    "textures/items/gun/shotgun/dbarrels.png",
+    "textures/model/guns/shotgun/dbarrels/dbarrels.png"
+  ]
+}

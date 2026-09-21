@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/bottledirnbru",
+  "type": "item",
+  "assets": [
+    "textures/item/bottledirnbru.png"
+  ],
+  "legacy_sources": [
+    "textures/items/bottledirnbru.png"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/sign_decimunition",
+  "type": "visual",
+  "assets": [
+    "textures/model/sign_decimunition.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/props/sign_decimunition.png"
+  ]
+}

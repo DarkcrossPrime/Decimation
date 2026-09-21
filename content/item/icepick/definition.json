@@ -1,0 +1,17 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/icepick",
+  "type": "item",
+  "assets": [
+    "models/icepick.mtl",
+    "models/icepick.obj",
+    "textures/item/icepick.png",
+    "textures/model/icepick.png"
+  ],
+  "legacy_sources": [
+    "models/items/icepick.bmodel",
+    "textures/items/icepick.png",
+    "textures/model/items/icepick.png"
+  ]
+}

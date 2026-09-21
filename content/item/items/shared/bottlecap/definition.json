@@ -1,0 +1,18 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/bottlecap",
+  "type": "item",
+  "assets": [
+    "sounds/drop.ogg",
+    "sounds/pickup.ogg",
+    "sounds/pickupgold.ogg",
+    "textures/item/bottlecap.png"
+  ],
+  "legacy_sources": [
+    "sounds/misc/bottlecap/drop.ogg",
+    "sounds/misc/bottlecap/pickup.ogg",
+    "sounds/misc/bottlecap/pickupgold.ogg",
+    "textures/items/bottlecap.png"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/ak12_mag",
+  "type": "item",
+  "assets": [
+    "textures/item/ak12Mag.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/mag/ak12Mag.png"
+  ]
+}

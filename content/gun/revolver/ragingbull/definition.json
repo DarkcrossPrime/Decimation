@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/revolver/ragingbull",
+  "type": "gun",
+  "assets": [
+    "animations/ragingbull_fire.danim.json",
+    "animations/ragingbull_rack.danim.json",
+    "animations/ragingbull_reload1.danim.json",
+    "animations/ragingbull_slide_back.danim.json",
+    "models/ragingbull.mtl",
+    "models/ragingbull.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/ragingbull.png",
+    "textures/model/ragingbull.png"
+  ],
+  "legacy_sources": [
+    "animations/ragingbull/ragingbullFire.anib",
+    "animations/ragingbull/ragingbullRack.anib",
+    "animations/ragingbull/ragingbullReload1.anib",
+    "animations/ragingbull/ragingbullSlideBack.anib",
+    "models/guns/revolver/ragingbull.bmodel",
+    "sounds/guns/revolver/ragingbull/fire.ogg",
+    "sounds/guns/revolver/ragingbull/fire_distant.ogg",
+    "sounds/guns/revolver/ragingbull/fire_suppressed.ogg",
+    "sounds/guns/revolver/ragingbull/magIn.ogg",
+    "sounds/guns/revolver/ragingbull/magOut.ogg",
+    "sounds/guns/revolver/ragingbull/rack.ogg",
+    "textures/items/gun/revolver/ragingbull.png",
+    "textures/model/guns/revolver/ragingbull/ragingbull.png"
+  ]
+}

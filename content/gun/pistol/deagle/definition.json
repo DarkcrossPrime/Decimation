@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/pistol/deagle",
+  "type": "gun",
+  "assets": [
+    "animations/deagle_fire.danim.json",
+    "animations/deagle_rack.danim.json",
+    "animations/deagle_reload1.danim.json",
+    "animations/deagle_slide_back.danim.json",
+    "models/deagle.mtl",
+    "models/deagle.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/deagle.png",
+    "textures/model/deagle.png"
+  ],
+  "legacy_sources": [
+    "animations/deagle/deagleFire.anib",
+    "animations/deagle/deagleRack.anib",
+    "animations/deagle/deagleReload1.anib",
+    "animations/deagle/deagleSlideBack.anib",
+    "models/guns/pistol/deagle.bmodel",
+    "sounds/guns/pistol/deagle/fire.ogg",
+    "sounds/guns/pistol/deagle/fire_distant.ogg",
+    "sounds/guns/pistol/deagle/fire_suppressed.ogg",
+    "sounds/guns/pistol/deagle/magIn.ogg",
+    "sounds/guns/pistol/deagle/magOut.ogg",
+    "sounds/guns/pistol/deagle/rack.ogg",
+    "textures/items/gun/pistol/deagle.png",
+    "textures/model/guns/pistol/deagle/deagle.png"
+  ]
+}

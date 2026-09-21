@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/sandbagstack_beige",
+  "type": "block",
+  "assets": [
+    "textures/sandbagstack_beige.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/sandbagstack_beige.png"
+  ]
+}

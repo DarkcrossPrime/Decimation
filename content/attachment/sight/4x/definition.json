@@ -1,0 +1,19 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "attachment/sight/4x",
+  "type": "attachment",
+  "assets": [
+    "models/4x.mtl",
+    "models/4x.obj",
+    "textures/item/4x.png",
+    "textures/model/attachments/sight/4x.png",
+    "textures/model/guns/scopes/4x.png"
+  ],
+  "legacy_sources": [
+    "models/attachments/sight/4x.bmodel",
+    "textures/items/attach/4x.png",
+    "textures/model/attachments/sight/4x.png",
+    "textures/model/guns/scopes/4x.png"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/kar98k_mag",
+  "type": "item",
+  "assets": [
+    "textures/item/kar98kMag.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/mag/kar98kMag.png"
+  ]
+}

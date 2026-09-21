@@ -1,0 +1,15 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/wreckagemilitary3",
+  "type": "block",
+  "assets": [
+    "models/wreckagemilitary3.mtl",
+    "models/wreckagemilitary3.obj",
+    "textures/model/wreckagemilitary3.png"
+  ],
+  "legacy_sources": [
+    "models/props/wreckagemilitary3.bmodel",
+    "textures/model/blocks/props/wreckagemilitary3.png"
+  ]
+}

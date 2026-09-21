@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/flatscreentv_game",
+  "type": "visual",
+  "assets": [
+    "textures/model/flatscreentv_game.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/props/flatscreentv_game.png"
+  ]
+}

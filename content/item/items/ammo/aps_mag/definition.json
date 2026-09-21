@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/aps_mag",
+  "type": "item",
+  "assets": [
+    "textures/item/apsMag.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/mag/apsMag.png"
+  ]
+}

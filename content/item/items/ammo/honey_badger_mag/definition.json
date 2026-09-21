@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/honey_badger_mag",
+  "type": "item",
+  "assets": [
+    "textures/item/honeyBadgerMag.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/mag/honeyBadgerMag.png"
+  ]
+}

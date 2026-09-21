@@ -1,0 +1,15 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/baseballbatnails",
+  "type": "item",
+  "assets": [
+    "models/baseballbatnails.mtl",
+    "models/baseballbatnails.obj",
+    "textures/item/baseballbatnails.png"
+  ],
+  "legacy_sources": [
+    "models/items/baseballbatnails.bmodel",
+    "textures/items/baseballbatnails.png"
+  ]
+}

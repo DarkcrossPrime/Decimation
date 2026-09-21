@@ -1,0 +1,21 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "armor/mask/nv_goggles",
+  "type": "armor",
+  "assets": [
+    "models/nv_goggles.mtl",
+    "models/nv_goggles.obj",
+    "sounds/toggle.ogg",
+    "sounds/toggleoff.ogg",
+    "textures/item/nvgoggles.png",
+    "textures/model/nvgoggles.png"
+  ],
+  "legacy_sources": [
+    "models/armor/mask/nvGoggles.bmodel",
+    "sounds/items/nvgoggles/toggle.ogg",
+    "sounds/items/nvgoggles/toggleoff.ogg",
+    "textures/items/mask/nvgoggles.png",
+    "textures/model/masks/nvgoggles.png"
+  ]
+}

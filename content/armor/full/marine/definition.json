@@ -1,0 +1,15 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "armor/full/marine",
+  "type": "armor",
+  "assets": [
+    "models/marine.mtl",
+    "models/marine.obj",
+    "textures/model/marine.png"
+  ],
+  "legacy_sources": [
+    "models/armor/full/marine.bmodel",
+    "textures/model/armor/marine.png"
+  ]
+}

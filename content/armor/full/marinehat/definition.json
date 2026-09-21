@@ -1,0 +1,17 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "armor/full/marinehat",
+  "type": "armor",
+  "assets": [
+    "models/marinehat.mtl",
+    "models/marinehat.obj",
+    "textures/item/marinehat.png",
+    "textures/model/marinehat.png"
+  ],
+  "legacy_sources": [
+    "models/armor/full/marinehat.bmodel",
+    "textures/items/armor/marinehat.png",
+    "textures/model/armor/marinehat.png"
+  ]
+}

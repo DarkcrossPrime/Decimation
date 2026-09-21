@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/m60_mag",
+  "type": "item",
+  "assets": [
+    "textures/item/m60Mag.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/mag/m60Mag.png"
+  ]
+}

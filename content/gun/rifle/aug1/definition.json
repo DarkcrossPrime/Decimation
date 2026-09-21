@@ -1,0 +1,39 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/aug1",
+  "type": "gun",
+  "assets": [
+    "animations/aug1_fire.danim.json",
+    "animations/aug1_rack.danim.json",
+    "animations/aug1_reload1.danim.json",
+    "animations/aug1_slide_back.danim.json",
+    "models/aug1.mtl",
+    "models/aug1.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/aug1.png",
+    "textures/model/aug1.png",
+    "textures/model/aug1_fury.png"
+  ],
+  "legacy_sources": [
+    "animations/aug1/aug1Fire.anib",
+    "animations/aug1/aug1Rack.anib",
+    "animations/aug1/aug1Reload1.anib",
+    "animations/aug1/aug1SlideBack.anib",
+    "models/guns/rifle/aug1.bmodel",
+    "sounds/guns/rifle/aug1/fire.ogg",
+    "sounds/guns/rifle/aug1/fire_distant.ogg",
+    "sounds/guns/rifle/aug1/fire_suppressed.ogg",
+    "sounds/guns/rifle/aug1/magIn.ogg",
+    "sounds/guns/rifle/aug1/magOut.ogg",
+    "sounds/guns/rifle/aug1/rack.ogg",
+    "textures/items/gun/rifle/aug1.png",
+    "textures/model/guns/rifle/aug1/aug1.png",
+    "textures/model/guns/rifle/aug1/aug1_fury.png"
+  ]
+}

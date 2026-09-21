@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/hangingplayer3",
+  "type": "visual",
+  "assets": [
+    "textures/model/hangingplayer3.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/props/hangingplayer3.png"
+  ]
+}

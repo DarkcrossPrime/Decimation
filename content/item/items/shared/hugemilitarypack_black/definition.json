@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/hugemilitarypack_black",
+  "type": "item",
+  "assets": [
+    "textures/item/hugemilitarypack_black.png"
+  ],
+  "legacy_sources": [
+    "textures/items/hugemilitarypack_black.png"
+  ]
+}

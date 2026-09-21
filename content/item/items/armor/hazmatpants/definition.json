@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/armor/hazmatpants",
+  "type": "item",
+  "assets": [
+    "textures/item/hazmatpants.png"
+  ],
+  "legacy_sources": [
+    "textures/items/armor/hazmatpants.png"
+  ]
+}

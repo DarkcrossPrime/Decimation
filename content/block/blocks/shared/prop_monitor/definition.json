@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/prop_monitor",
+  "type": "block",
+  "assets": [
+    "textures/prop_monitor.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/prop_monitor.png"
+  ]
+}

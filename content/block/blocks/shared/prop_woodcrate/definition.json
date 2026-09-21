@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/prop_woodcrate",
+  "type": "block",
+  "assets": [
+    "textures/prop_woodcrate.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/prop_woodcrate.png"
+  ]
+}

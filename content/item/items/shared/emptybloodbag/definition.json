@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/emptybloodbag",
+  "type": "item",
+  "assets": [
+    "textures/item/emptybloodbag.png"
+  ],
+  "legacy_sources": [
+    "textures/items/emptybloodbag.png"
+  ]
+}

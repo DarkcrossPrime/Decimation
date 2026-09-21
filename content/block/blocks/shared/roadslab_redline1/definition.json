@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/roadslab_redline1",
+  "type": "block",
+  "assets": [
+    "textures/roadslab_redline1.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/roadslab_redline1.png"
+  ]
+}

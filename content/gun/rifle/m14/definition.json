@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/m14",
+  "type": "gun",
+  "assets": [
+    "animations/m14_fire.danim.json",
+    "animations/m14_rack.danim.json",
+    "animations/m14_reload1.danim.json",
+    "animations/m14_slide_back.danim.json",
+    "models/m14.mtl",
+    "models/m14.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/m14.png",
+    "textures/model/m14.png"
+  ],
+  "legacy_sources": [
+    "animations/m14/m14Fire.anib",
+    "animations/m14/m14Rack.anib",
+    "animations/m14/m14Reload1.anib",
+    "animations/m14/m14SlideBack.anib",
+    "models/guns/rifle/m14.bmodel",
+    "sounds/guns/rifle/m14/fire.ogg",
+    "sounds/guns/rifle/m14/fire_distant.ogg",
+    "sounds/guns/rifle/m14/fire_suppressed.ogg",
+    "sounds/guns/rifle/m14/magIn.ogg",
+    "sounds/guns/rifle/m14/magOut.ogg",
+    "sounds/guns/rifle/m14/rack.ogg",
+    "textures/items/gun/rifle/m14.png",
+    "textures/model/guns/rifle/m14/m14.png"
+  ]
+}

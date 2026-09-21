@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/policebaton",
+  "type": "item",
+  "assets": [
+    "textures/item/policebaton.png",
+    "textures/model/policebaton.png"
+  ],
+  "legacy_sources": [
+    "textures/items/policebaton.png",
+    "textures/model/items/policebaton.png"
+  ]
+}

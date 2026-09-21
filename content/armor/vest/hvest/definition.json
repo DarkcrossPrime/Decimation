@@ -1,0 +1,13 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "armor/vest/hvest",
+  "type": "armor",
+  "assets": [
+    "models/hvest.mtl",
+    "models/hvest.obj"
+  ],
+  "legacy_sources": [
+    "models/armor/vest/hvest.bmodel"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/smg/kp31",
+  "type": "gun",
+  "assets": [
+    "animations/kp31_fire.danim.json",
+    "animations/kp31_rack.danim.json",
+    "animations/kp31_reload1.danim.json",
+    "animations/kp31_slide_back.danim.json",
+    "models/kp31.mtl",
+    "models/kp31.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/kp31.png",
+    "textures/model/kp31.png"
+  ],
+  "legacy_sources": [
+    "animations/kp31/kp31Fire.anib",
+    "animations/kp31/kp31Rack.anib",
+    "animations/kp31/kp31Reload1.anib",
+    "animations/kp31/kp31SlideBack.anib",
+    "models/guns/smg/kp31.bmodel",
+    "sounds/guns/smg/kp31/fire.ogg",
+    "sounds/guns/smg/kp31/fire_distant.ogg",
+    "sounds/guns/smg/kp31/fire_suppressed.ogg",
+    "sounds/guns/smg/kp31/magIn.ogg",
+    "sounds/guns/smg/kp31/magOut.ogg",
+    "sounds/guns/smg/kp31/rack.ogg",
+    "textures/items/gun/smg/kp31.png",
+    "textures/model/guns/smg/kp31/kp31.png"
+  ]
+}

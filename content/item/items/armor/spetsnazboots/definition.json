@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/armor/spetsnazboots",
+  "type": "item",
+  "assets": [
+    "textures/item/spetsnazboots.png"
+  ],
+  "legacy_sources": [
+    "textures/items/armor/spetsnazboots.png"
+  ]
+}

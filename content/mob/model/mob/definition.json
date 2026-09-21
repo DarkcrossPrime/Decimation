@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "mob/model/mob",
+  "type": "mob",
+  "assets": [
+    "textures/model/1029384756.png"
+  ],
+  "legacy_sources": [
+    "textures/model/entities/mob/1029384756.png"
+  ]
+}

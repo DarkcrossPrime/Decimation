@@ -1,0 +1,13 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/truckwreckage",
+  "type": "block",
+  "assets": [
+    "models/truckwreckage.mtl",
+    "models/truckwreckage.obj"
+  ],
+  "legacy_sources": [
+    "models/props/truckwreckage.bmodel"
+  ]
+}

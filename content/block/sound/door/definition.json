@@ -1,0 +1,28 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/sound/door",
+  "type": "block",
+  "assets": [
+    "sounds/locked.ogg",
+    "sounds/open_metal1.ogg",
+    "sounds/open_metal2.ogg",
+    "sounds/open_metal3.ogg",
+    "sounds/open_scrap1.ogg",
+    "sounds/open_scrap2.ogg",
+    "sounds/open_wood1.ogg",
+    "sounds/open_wood2.ogg",
+    "sounds/open_wood3.ogg"
+  ],
+  "legacy_sources": [
+    "sounds/blocks/door/locked.ogg",
+    "sounds/blocks/door/open_metal1.ogg",
+    "sounds/blocks/door/open_metal2.ogg",
+    "sounds/blocks/door/open_metal3.ogg",
+    "sounds/blocks/door/open_scrap1.ogg",
+    "sounds/blocks/door/open_scrap2.ogg",
+    "sounds/blocks/door/open_wood1.ogg",
+    "sounds/blocks/door/open_wood2.ogg",
+    "sounds/blocks/door/open_wood3.ogg"
+  ]
+}

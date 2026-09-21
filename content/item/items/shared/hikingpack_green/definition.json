@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/hikingpack_green",
+  "type": "item",
+  "assets": [
+    "textures/item/hikingpack_green.png"
+  ],
+  "legacy_sources": [
+    "textures/items/hikingpack_green.png"
+  ]
+}

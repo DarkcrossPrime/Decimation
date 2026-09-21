@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/guns/enfieldno2",
+  "type": "visual",
+  "assets": [
+    "textures/model/enfieldno2.png"
+  ],
+  "legacy_sources": [
+    "textures/model/guns/revolver/enfieldno2/enfieldno2.png"
+  ]
+}

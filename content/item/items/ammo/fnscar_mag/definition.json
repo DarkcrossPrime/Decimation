@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/fnscar_mag",
+  "type": "item",
+  "assets": [
+    "textures/item/fnscarMag.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/mag/fnscarMag.png"
+  ]
+}

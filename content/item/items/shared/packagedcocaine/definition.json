@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/packagedcocaine",
+  "type": "item",
+  "assets": [
+    "textures/item/packagedcocaine.png"
+  ],
+  "legacy_sources": [
+    "textures/items/packagedcocaine.png"
+  ]
+}

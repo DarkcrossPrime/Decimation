@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/prop_stretcher",
+  "type": "block",
+  "assets": [
+    "textures/prop_stretcher.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/prop_stretcher.png"
+  ]
+}

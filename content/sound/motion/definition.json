@@ -1,0 +1,20 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "sound/sound/motion",
+  "type": "sound",
+  "assets": [
+    "sounds/fall_scream1.ogg",
+    "sounds/fall_scream2.ogg",
+    "sounds/falling1.ogg",
+    "sounds/falling2.ogg",
+    "sounds/falling3.ogg"
+  ],
+  "legacy_sources": [
+    "sounds/misc/motion/fall_scream1.ogg",
+    "sounds/misc/motion/fall_scream2.ogg",
+    "sounds/misc/motion/falling1.ogg",
+    "sounds/misc/motion/falling2.ogg",
+    "sounds/misc/motion/falling3.ogg"
+  ]
+}

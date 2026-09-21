@@ -1,0 +1,15 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "armor/full/militia",
+  "type": "armor",
+  "assets": [
+    "models/militia.mtl",
+    "models/militia.obj",
+    "textures/model/militia.png"
+  ],
+  "legacy_sources": [
+    "models/armor/full/militia.bmodel",
+    "textures/model/armor/militia.png"
+  ]
+}

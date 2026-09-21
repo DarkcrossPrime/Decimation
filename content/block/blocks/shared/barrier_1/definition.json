@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/barrier_1",
+  "type": "block",
+  "assets": [
+    "textures/barrier_1.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/barrier_1.png"
+  ]
+}

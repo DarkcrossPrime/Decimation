@@ -1,0 +1,498 @@
+{
+  "format": "decimation:danim",
+  "version": 1,
+  "source": "cz52Reload1.anib",
+  "static": false,
+  "length": 46,
+  "hand": 0,
+  "frames": [
+    {
+      "index": 0,
+      "transforms": {
+        "OffHand": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 1,
+      "skip": true
+    },
+    {
+      "index": 2,
+      "skip": true
+    },
+    {
+      "index": 3,
+      "skip": true
+    },
+    {
+      "index": 4,
+      "skip": true
+    },
+    {
+      "index": 5,
+      "transforms": {
+        "OffHand": {
+          "position": [
+            0,
+            1.8,
+            0
+          ],
+          "rotation": [
+            -15,
+            0,
+            25
+          ]
+        },
+        "Model": {
+          "position": [
+            1,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            10
+          ]
+        }
+      },
+      "shake": 1.2,
+      "sound": "MagOut"
+    },
+    {
+      "index": 6,
+      "skip": true
+    },
+    {
+      "index": 7,
+      "skip": true
+    },
+    {
+      "index": 8,
+      "skip": true
+    },
+    {
+      "index": 9,
+      "skip": true
+    },
+    {
+      "index": 10,
+      "transforms": {
+        "OffHand": {
+          "position": [
+            0,
+            3.9,
+            0
+          ],
+          "rotation": [
+            -15,
+            0,
+            35
+          ]
+        },
+        "Model": {
+          "position": [
+            2,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            -10,
+            20
+          ]
+        }
+      }
+    },
+    {
+      "index": 11,
+      "skip": true
+    },
+    {
+      "index": 12,
+      "skip": true
+    },
+    {
+      "index": 13,
+      "skip": true
+    },
+    {
+      "index": 14,
+      "skip": true
+    },
+    {
+      "index": 15,
+      "transforms": {
+        "Clip": {
+          "position": [
+            -4.099999,
+            10.1,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            1.907349e-06
+          ]
+        },
+        "OffHand": {
+          "position": [
+            0.7,
+            11.20001,
+            0
+          ],
+          "rotation": [
+            -15,
+            0,
+            35
+          ]
+        },
+        "Model": {
+          "position": [
+            2,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            25
+          ]
+        }
+      },
+      "action": "switch"
+    },
+    {
+      "index": 16,
+      "skip": true
+    },
+    {
+      "index": 17,
+      "skip": true
+    },
+    {
+      "index": 18,
+      "skip": true
+    },
+    {
+      "index": 19,
+      "skip": true
+    },
+    {
+      "index": 20,
+      "transforms": {
+        "Clip": {
+          "position": [
+            -7.400002,
+            17.3,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            1.907349e-06
+          ]
+        },
+        "OffHand": {
+          "position": [
+            0,
+            18.4,
+            0
+          ],
+          "rotation": [
+            -15,
+            0,
+            35
+          ]
+        },
+        "Model": {
+          "position": [
+            2,
+            0,
+            0
+          ],
+          "rotation": [
+            -5,
+            0,
+            20
+          ]
+        }
+      }
+    },
+    {
+      "index": 21,
+      "skip": true
+    },
+    {
+      "index": 22,
+      "skip": true
+    },
+    {
+      "index": 23,
+      "skip": true
+    },
+    {
+      "index": 24,
+      "skip": true
+    },
+    {
+      "index": 25,
+      "transforms": {
+        "Clip": {
+          "position": [
+            -7.400002,
+            17.3,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            1.907349e-06
+          ]
+        },
+        "OffHand": {
+          "position": [
+            0,
+            16,
+            0
+          ],
+          "rotation": [
+            -15,
+            0,
+            35
+          ]
+        },
+        "Model": {
+          "position": [
+            2,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            10,
+            20
+          ]
+        }
+      }
+    },
+    {
+      "index": 26,
+      "skip": true
+    },
+    {
+      "index": 27,
+      "skip": true
+    },
+    {
+      "index": 28,
+      "skip": true
+    },
+    {
+      "index": 29,
+      "skip": true
+    },
+    {
+      "index": 30,
+      "transforms": {
+        "Clip": {
+          "position": [
+            -4.000003,
+            9.099998,
+            -2
+          ],
+          "rotation": [
+            0,
+            0,
+            1.907349e-06
+          ]
+        },
+        "OffHand": {
+          "position": [
+            0,
+            8.2,
+            0
+          ],
+          "rotation": [
+            -15,
+            0,
+            35
+          ]
+        },
+        "Model": {
+          "position": [
+            2,
+            0,
+            0
+          ],
+          "rotation": [
+            10,
+            20,
+            25
+          ]
+        }
+      },
+      "action": "load",
+      "sound": "MagIn"
+    },
+    {
+      "index": 31,
+      "skip": true
+    },
+    {
+      "index": 32,
+      "skip": true
+    },
+    {
+      "index": 33,
+      "skip": true
+    },
+    {
+      "index": 34,
+      "skip": true
+    },
+    {
+      "index": 35,
+      "transforms": {
+        "OffHand": {
+          "position": [
+            0,
+            2,
+            0
+          ],
+          "rotation": [
+            -15,
+            0,
+            35
+          ]
+        },
+        "Model": {
+          "position": [
+            1,
+            0,
+            0
+          ],
+          "rotation": [
+            10,
+            20,
+            35
+          ]
+        }
+      },
+      "action": "try_bolt"
+    },
+    {
+      "index": 36,
+      "skip": true
+    },
+    {
+      "index": 37,
+      "skip": true
+    },
+    {
+      "index": 38,
+      "skip": true
+    },
+    {
+      "index": 39,
+      "skip": true
+    },
+    {
+      "index": 40,
+      "transforms": {
+        "OffHand": {
+          "position": [
+            0,
+            1.5,
+            0
+          ],
+          "rotation": [
+            -5,
+            0,
+            20
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            10,
+            20
+          ]
+        }
+      }
+    },
+    {
+      "index": 41,
+      "skip": true
+    },
+    {
+      "index": 42,
+      "skip": true
+    },
+    {
+      "index": 43,
+      "skip": true
+    },
+    {
+      "index": 44,
+      "skip": true
+    },
+    {
+      "index": 45,
+      "transforms": {
+        "OffHand": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    }
+  ]
+}

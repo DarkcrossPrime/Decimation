@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/mg/minigun",
+  "type": "gun",
+  "assets": [
+    "animations/minigun_fire.danim.json",
+    "animations/minigun_rack.danim.json",
+    "animations/minigun_reload1.danim.json",
+    "animations/minigun_slide_back.danim.json",
+    "models/minigun.mtl",
+    "models/minigun.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/minigun.png",
+    "textures/model/minigun.png"
+  ],
+  "legacy_sources": [
+    "animations/minigun/minigunFire.anib",
+    "animations/minigun/minigunRack.anib",
+    "animations/minigun/minigunReload1.anib",
+    "animations/minigun/minigunSlideBack.anib",
+    "models/guns/mg/minigun.bmodel",
+    "sounds/guns/mg/minigun/fire.ogg",
+    "sounds/guns/mg/minigun/fire_distant.ogg",
+    "sounds/guns/mg/minigun/fire_suppressed.ogg",
+    "sounds/guns/mg/minigun/magIn.ogg",
+    "sounds/guns/mg/minigun/magOut.ogg",
+    "sounds/guns/mg/minigun/rack.ogg",
+    "textures/items/gun/mg/minigun.png",
+    "textures/model/guns/mg/minigun/minigun.png"
+  ]
+}

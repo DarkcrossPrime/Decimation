@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/smg/thompsoni",
+  "type": "gun",
+  "assets": [
+    "animations/thompsoni_fire.danim.json",
+    "animations/thompsoni_rack.danim.json",
+    "animations/thompsoni_reload1.danim.json",
+    "animations/thompsoni_slide_back.danim.json",
+    "models/thompsoni.mtl",
+    "models/thompsoni.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/thompsoni.png",
+    "textures/model/thompsoni.png"
+  ],
+  "legacy_sources": [
+    "animations/thompsoni/thompsoniFire.anib",
+    "animations/thompsoni/thompsoniRack.anib",
+    "animations/thompsoni/thompsoniReload1.anib",
+    "animations/thompsoni/thompsoniSlideBack.anib",
+    "models/guns/smg/thompsoni.bmodel",
+    "sounds/guns/smg/thompsoni/fire.ogg",
+    "sounds/guns/smg/thompsoni/fire_distant.ogg",
+    "sounds/guns/smg/thompsoni/fire_suppressed.ogg",
+    "sounds/guns/smg/thompsoni/magIn.ogg",
+    "sounds/guns/smg/thompsoni/magOut.ogg",
+    "sounds/guns/smg/thompsoni/rack.ogg",
+    "textures/items/gun/smg/thompsoni.png",
+    "textures/model/guns/smg/thompsoni/thompsoni.png"
+  ]
+}

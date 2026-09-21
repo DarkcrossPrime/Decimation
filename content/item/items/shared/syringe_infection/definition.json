@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/syringe_infection",
+  "type": "item",
+  "assets": [
+    "textures/item/syringe_infection.png"
+  ],
+  "legacy_sources": [
+    "textures/items/syringe_infection.png"
+  ]
+}

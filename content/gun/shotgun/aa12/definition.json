@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/shotgun/aa12",
+  "type": "gun",
+  "assets": [
+    "animations/aa12_fire.danim.json",
+    "animations/aa12_rack.danim.json",
+    "animations/aa12_reload1.danim.json",
+    "animations/aa12_slide_back.danim.json",
+    "models/aa12.mtl",
+    "models/aa12.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/aa12.png",
+    "textures/model/aa12.png"
+  ],
+  "legacy_sources": [
+    "animations/aa12/aa12Fire.anib",
+    "animations/aa12/aa12Rack.anib",
+    "animations/aa12/aa12Reload1.anib",
+    "animations/aa12/aa12SlideBack.anib",
+    "models/guns/shotgun/aa12.bmodel",
+    "sounds/guns/shotgun/aa12/fire.ogg",
+    "sounds/guns/shotgun/aa12/fire_distant.ogg",
+    "sounds/guns/shotgun/aa12/fire_suppressed.ogg",
+    "sounds/guns/shotgun/aa12/magIn.ogg",
+    "sounds/guns/shotgun/aa12/magOut.ogg",
+    "sounds/guns/shotgun/aa12/rack.ogg",
+    "textures/items/gun/shotgun/aa12.png",
+    "textures/model/guns/shotgun/aa12/aa12.png"
+  ]
+}

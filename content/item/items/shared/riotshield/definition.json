@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/riotshield",
+  "type": "item",
+  "assets": [
+    "textures/item/riotshield.png",
+    "textures/model/riotshield.png"
+  ],
+  "legacy_sources": [
+    "textures/items/riotshield.png",
+    "textures/model/items/riotshield.png"
+  ]
+}

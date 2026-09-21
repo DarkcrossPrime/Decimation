@@ -1,0 +1,15 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "armor/full/marinesnowmedical",
+  "type": "armor",
+  "assets": [
+    "models/marinesnowmedical.mtl",
+    "models/marinesnowmedical.obj",
+    "textures/model/marinesnowmedical.png"
+  ],
+  "legacy_sources": [
+    "models/armor/full/marinesnowmedical.bmodel",
+    "textures/model/armor/marinesnowmedical.png"
+  ]
+}

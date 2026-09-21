@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/cricketbat",
+  "type": "item",
+  "assets": [
+    "textures/item/cricketbat.png",
+    "textures/model/cricketbat.png"
+  ],
+  "legacy_sources": [
+    "textures/items/cricketbat.png",
+    "textures/model/items/cricketbat.png"
+  ]
+}

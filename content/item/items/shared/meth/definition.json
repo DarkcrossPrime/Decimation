@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/meth",
+  "type": "item",
+  "assets": [
+    "textures/item/meth.png"
+  ],
+  "legacy_sources": [
+    "textures/items/meth.png"
+  ]
+}

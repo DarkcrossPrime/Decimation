@@ -1,0 +1,43 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/acr",
+  "type": "gun",
+  "assets": [
+    "animations/acr_fire.danim.json",
+    "animations/acr_rack.danim.json",
+    "animations/acr_reload1.danim.json",
+    "animations/acr_slide_back.danim.json",
+    "models/acr.mtl",
+    "models/acr.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/acr.png",
+    "textures/model/acr.png",
+    "textures/model/acr_black.png",
+    "textures/model/acr_pinkpower.png",
+    "textures/model/acr_silver.png"
+  ],
+  "legacy_sources": [
+    "animations/acr/acrFire.anib",
+    "animations/acr/acrRack.anib",
+    "animations/acr/acrReload1.anib",
+    "animations/acr/acrSlideBack.anib",
+    "models/guns/rifle/acr.bmodel",
+    "sounds/guns/rifle/acr/fire.ogg",
+    "sounds/guns/rifle/acr/fire_distant.ogg",
+    "sounds/guns/rifle/acr/fire_suppressed.ogg",
+    "sounds/guns/rifle/acr/magIn.ogg",
+    "sounds/guns/rifle/acr/magOut.ogg",
+    "sounds/guns/rifle/acr/rack.ogg",
+    "textures/items/gun/rifle/acr.png",
+    "textures/model/guns/rifle/acr/acr.png",
+    "textures/model/guns/rifle/acr/acr_black.png",
+    "textures/model/guns/rifle/acr/acr_pinkpower.png",
+    "textures/model/guns/rifle/acr/acr_silver.png"
+  ]
+}

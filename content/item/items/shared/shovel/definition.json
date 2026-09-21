@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/shovel",
+  "type": "item",
+  "assets": [
+    "textures/item/shovel.png",
+    "textures/model/shovel.png"
+  ],
+  "legacy_sources": [
+    "textures/items/shovel.png",
+    "textures/model/items/shovel.png"
+  ]
+}

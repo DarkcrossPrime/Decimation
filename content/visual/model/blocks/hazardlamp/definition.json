@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/hazardlamp",
+  "type": "visual",
+  "assets": [
+    "textures/model/hazardlamp.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/props/hazardlamp.png"
+  ]
+}

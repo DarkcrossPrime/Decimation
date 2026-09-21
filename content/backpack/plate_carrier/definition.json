@@ -1,0 +1,13 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "backpack/plate_carrier",
+  "type": "backpack",
+  "assets": [
+    "models/plate_carrier.mtl",
+    "models/plate_carrier.obj"
+  ],
+  "legacy_sources": [
+    "models/backpacks/plateCarrier.bmodel"
+  ]
+}

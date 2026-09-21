@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/shopdisplay_1",
+  "type": "visual",
+  "assets": [
+    "textures/model/shopdisplay_1.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/props/shopdisplay_1.png"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/ceilingvent_corner",
+  "type": "visual",
+  "assets": [
+    "textures/model/ceilingvent_corner.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/props/ceilingvent_corner.png"
+  ]
+}

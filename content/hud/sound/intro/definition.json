@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "hud/sound/intro",
+  "type": "hud",
+  "assets": [
+    "sounds/decimation.ogg"
+  ],
+  "legacy_sources": [
+    "sounds/gui/intro/decimation.ogg"
+  ]
+}

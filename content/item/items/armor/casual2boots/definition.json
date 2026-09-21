@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/armor/casual2boots",
+  "type": "item",
+  "assets": [
+    "textures/item/casual2boots.png"
+  ],
+  "legacy_sources": [
+    "textures/items/armor/casual2boots.png"
+  ]
+}

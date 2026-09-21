@@ -1,0 +1,17 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "armor/full/hoodie4",
+  "type": "armor",
+  "assets": [
+    "models/hoodie4.mtl",
+    "models/hoodie4.obj",
+    "textures/item/hoodie4.png",
+    "textures/model/hoodie4.png"
+  ],
+  "legacy_sources": [
+    "models/armor/full/hoodie4.bmodel",
+    "textures/items/armor/hoodie4.png",
+    "textures/model/armor/hoodie4.png"
+  ]
+}

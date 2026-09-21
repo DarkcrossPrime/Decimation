@@ -1,0 +1,20 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "vehicle/sound/vehicle",
+  "type": "vehicle",
+  "assets": [
+    "sounds/engineoff.ogg",
+    "sounds/engineon.ogg",
+    "sounds/lights_off.ogg",
+    "sounds/lights_on.ogg",
+    "sounds/tireScreech.ogg"
+  ],
+  "legacy_sources": [
+    "sounds/vehicle/engineoff.ogg",
+    "sounds/vehicle/engineon.ogg",
+    "sounds/vehicle/lights_off.ogg",
+    "sounds/vehicle/lights_on.ogg",
+    "sounds/vehicle/tireScreech.ogg"
+  ]
+}

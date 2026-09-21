@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/ammo_7_92x57mmrounds_bullet",
+  "type": "item",
+  "assets": [
+    "textures/item/ammo_7_92x57mmrounds_bullet.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/bullet/ammo_7_92x57mmrounds_bullet.png"
+  ]
+}

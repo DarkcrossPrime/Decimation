@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/120mm_mortarround",
+  "type": "item",
+  "assets": [
+    "textures/item/120mm_mortarround.png"
+  ],
+  "legacy_sources": [
+    "textures/items/120mm_mortarround.png"
+  ]
+}

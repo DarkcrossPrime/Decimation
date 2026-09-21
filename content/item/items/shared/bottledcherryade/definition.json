@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/bottledcherryade",
+  "type": "item",
+  "assets": [
+    "textures/item/bottledcherryade.png"
+  ],
+  "legacy_sources": [
+    "textures/items/bottledcherryade.png"
+  ]
+}

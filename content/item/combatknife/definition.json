@@ -1,0 +1,17 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/combatknife",
+  "type": "item",
+  "assets": [
+    "models/combatknife.mtl",
+    "models/combatknife.obj",
+    "textures/item/combatknife.png",
+    "textures/model/combatknife.png"
+  ],
+  "legacy_sources": [
+    "models/items/combatknife.bmodel",
+    "textures/items/combatknife.png",
+    "textures/model/items/combatknife.png"
+  ]
+}

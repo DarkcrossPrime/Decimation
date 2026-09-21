@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/items/c4detonator",
+  "type": "visual",
+  "assets": [
+    "textures/model/c4detonator.png"
+  ],
+  "legacy_sources": [
+    "textures/model/items/c4detonator.png"
+  ]
+}

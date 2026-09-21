@@ -1,0 +1,17 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "attachment/barrel/mg_suppressor",
+  "type": "attachment",
+  "assets": [
+    "models/mg_suppressor.mtl",
+    "models/mg_suppressor.obj",
+    "textures/item/mgSuppressor.png",
+    "textures/model/mgSuppressor.png"
+  ],
+  "legacy_sources": [
+    "models/attachments/barrel/mgSuppressor.bmodel",
+    "textures/items/attach/mgSuppressor.png",
+    "textures/model/attachments/barrel/mgSuppressor.png"
+  ]
+}

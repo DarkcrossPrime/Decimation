@@ -1,0 +1,18 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "ambiance/particle/muzzlesmoke",
+  "type": "ambiance",
+  "assets": [
+    "textures/muzzlesmoke1.png",
+    "textures/muzzlesmoke2.png",
+    "textures/muzzlesmoke3.png",
+    "textures/muzzlesmoke4.png"
+  ],
+  "legacy_sources": [
+    "textures/particle/muzzlesmoke1.png",
+    "textures/particle/muzzlesmoke2.png",
+    "textures/particle/muzzlesmoke3.png",
+    "textures/particle/muzzlesmoke4.png"
+  ]
+}

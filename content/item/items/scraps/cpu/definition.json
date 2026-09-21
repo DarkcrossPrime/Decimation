@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/scraps/cpu",
+  "type": "item",
+  "assets": [
+    "textures/item/cpu.png"
+  ],
+  "legacy_sources": [
+    "textures/items/scraps/monitor/cpu.png"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/cantrap",
+  "type": "visual",
+  "assets": [
+    "sounds/tinhit0.ogg",
+    "sounds/tinhit1.ogg",
+    "sounds/tinhit2.ogg",
+    "sounds/tinhit3.ogg",
+    "textures/model/cantrap.png"
+  ],
+  "legacy_sources": [
+    "sounds/blocks/cantrap/tinhit0.ogg",
+    "sounds/blocks/cantrap/tinhit1.ogg",
+    "sounds/blocks/cantrap/tinhit2.ogg",
+    "sounds/blocks/cantrap/tinhit3.ogg",
+    "textures/model/blocks/props/cantrap.png"
+  ]
+}

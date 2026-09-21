@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/guns/cover",
+  "type": "visual",
+  "assets": [
+    "textures/model/cover.png"
+  ],
+  "legacy_sources": [
+    "textures/model/guns/scopes/cover.png"
+  ]
+}

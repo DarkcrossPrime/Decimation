@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/pistol/glock17",
+  "type": "gun",
+  "assets": [
+    "animations/glock17_fire.danim.json",
+    "animations/glock17_rack.danim.json",
+    "animations/glock17_reload1.danim.json",
+    "animations/glock17_slide_back.danim.json",
+    "models/glock17.mtl",
+    "models/glock17.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/glock17.png",
+    "textures/model/glock17.png"
+  ],
+  "legacy_sources": [
+    "animations/glock17/glock17Fire.anib",
+    "animations/glock17/glock17Rack.anib",
+    "animations/glock17/glock17Reload1.anib",
+    "animations/glock17/glock17SlideBack.anib",
+    "models/guns/pistol/glock17.bmodel",
+    "sounds/guns/pistol/glock17/fire.ogg",
+    "sounds/guns/pistol/glock17/fire_distant.ogg",
+    "sounds/guns/pistol/glock17/fire_suppressed.ogg",
+    "sounds/guns/pistol/glock17/magIn.ogg",
+    "sounds/guns/pistol/glock17/magOut.ogg",
+    "sounds/guns/pistol/glock17/rack.ogg",
+    "textures/items/gun/pistol/glock17.png",
+    "textures/model/guns/pistol/glock17/glock17.png"
+  ]
+}

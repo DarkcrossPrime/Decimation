@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "ambiance/weather/skyboxtemplate",
+  "type": "ambiance",
+  "assets": [
+    "textures/skyboxtemplate.png"
+  ],
+  "legacy_sources": [
+    "textures/weather/skyboxtemplate.png"
+  ]
+}

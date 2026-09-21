@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/sound/worklight",
+  "type": "block",
+  "assets": [
+    "sounds/engine.ogg"
+  ],
+  "legacy_sources": [
+    "sounds/blocks/worklight/engine.ogg"
+  ]
+}

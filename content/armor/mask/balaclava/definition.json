@@ -1,0 +1,17 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "armor/mask/balaclava",
+  "type": "armor",
+  "assets": [
+    "models/balaclava.mtl",
+    "models/balaclava.obj",
+    "textures/item/balaclava.png",
+    "textures/model/balaclava.png"
+  ],
+  "legacy_sources": [
+    "models/armor/mask/balaclava.bmodel",
+    "textures/items/mask/balaclava.png",
+    "textures/model/masks/balaclava.png"
+  ]
+}

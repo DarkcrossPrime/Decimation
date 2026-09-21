@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/armor/ghillieboots",
+  "type": "item",
+  "assets": [
+    "textures/item/ghillieboots.png"
+  ],
+  "legacy_sources": [
+    "textures/items/armor/ghillieboots.png"
+  ]
+}

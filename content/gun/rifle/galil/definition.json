@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/galil",
+  "type": "gun",
+  "assets": [
+    "animations/galil_fire.danim.json",
+    "animations/galil_rack.danim.json",
+    "animations/galil_reload1.danim.json",
+    "animations/galil_slide_back.danim.json",
+    "models/galil.mtl",
+    "models/galil.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/galil.png",
+    "textures/model/galil.png"
+  ],
+  "legacy_sources": [
+    "animations/galil/galilFire.anib",
+    "animations/galil/galilRack.anib",
+    "animations/galil/galilReload1.anib",
+    "animations/galil/galilSlideBack.anib",
+    "models/guns/rifle/galil.bmodel",
+    "sounds/guns/rifle/galil/fire.ogg",
+    "sounds/guns/rifle/galil/fire_distant.ogg",
+    "sounds/guns/rifle/galil/fire_suppressed.ogg",
+    "sounds/guns/rifle/galil/magIn.ogg",
+    "sounds/guns/rifle/galil/magOut.ogg",
+    "sounds/guns/rifle/galil/rack.ogg",
+    "textures/items/gun/rifle/galil.png",
+    "textures/model/guns/rifle/galil/galil.png"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/scraps/gas_analyzer",
+  "type": "item",
+  "assets": [
+    "textures/item/gas_analyzer.png"
+  ],
+  "legacy_sources": [
+    "textures/items/scraps/military/gas_analyzer.png"
+  ]
+}

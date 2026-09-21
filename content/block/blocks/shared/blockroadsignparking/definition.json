@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/blockroadsignparking",
+  "type": "block",
+  "assets": [
+    "textures/blockroadsignparking.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/blockroadsignparking.png"
+  ]
+}

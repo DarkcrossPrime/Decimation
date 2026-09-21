@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/fal",
+  "type": "gun",
+  "assets": [
+    "animations/fal_fire.danim.json",
+    "animations/fal_rack.danim.json",
+    "animations/fal_reload1.danim.json",
+    "animations/fal_slide_back.danim.json",
+    "models/fal.mtl",
+    "models/fal.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/fal.png",
+    "textures/model/fal.png"
+  ],
+  "legacy_sources": [
+    "animations/fal/falFire.anib",
+    "animations/fal/falRack.anib",
+    "animations/fal/falReload1.anib",
+    "animations/fal/falSlideBack.anib",
+    "models/guns/rifle/fal.bmodel",
+    "sounds/guns/rifle/fal/fire.ogg",
+    "sounds/guns/rifle/fal/fire_distant.ogg",
+    "sounds/guns/rifle/fal/fire_suppressed.ogg",
+    "sounds/guns/rifle/fal/magIn.ogg",
+    "sounds/guns/rifle/fal/magOut.ogg",
+    "sounds/guns/rifle/fal/rack.ogg",
+    "textures/items/gun/rifle/fal.png",
+    "textures/model/guns/rifle/fal/fal.png"
+  ]
+}

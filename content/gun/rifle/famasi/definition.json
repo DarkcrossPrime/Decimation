@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/famasi",
+  "type": "gun",
+  "assets": [
+    "animations/famasi_fire.danim.json",
+    "animations/famasi_rack.danim.json",
+    "animations/famasi_reload1.danim.json",
+    "animations/famasi_slide_back.danim.json",
+    "models/famasi.mtl",
+    "models/famasi.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/famasi.png",
+    "textures/model/famasi.png"
+  ],
+  "legacy_sources": [
+    "animations/famasi/famasiFire.anib",
+    "animations/famasi/famasiRack.anib",
+    "animations/famasi/famasiReload1.anib",
+    "animations/famasi/famasiSlideBack.anib",
+    "models/guns/rifle/famasi.bmodel",
+    "sounds/guns/rifle/famasi/fire.ogg",
+    "sounds/guns/rifle/famasi/fire_distant.ogg",
+    "sounds/guns/rifle/famasi/fire_suppressed.ogg",
+    "sounds/guns/rifle/famasi/magIn.ogg",
+    "sounds/guns/rifle/famasi/magOut.ogg",
+    "sounds/guns/rifle/famasi/rack.ogg",
+    "textures/items/gun/rifle/famasi.png",
+    "textures/model/guns/rifle/famasi/famasi.png"
+  ]
+}

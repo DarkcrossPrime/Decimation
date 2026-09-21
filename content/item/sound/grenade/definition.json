@@ -1,0 +1,26 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/sound/grenade",
+  "type": "item",
+  "assets": [
+    "sounds/bounce1.ogg",
+    "sounds/bounce2.ogg",
+    "sounds/bounce3.ogg",
+    "sounds/bounce4.ogg",
+    "sounds/throw0.ogg",
+    "sounds/throw1.ogg",
+    "sounds/throw2.ogg",
+    "sounds/throw3.ogg"
+  ],
+  "legacy_sources": [
+    "sounds/items/grenade/bounce1.ogg",
+    "sounds/items/grenade/bounce2.ogg",
+    "sounds/items/grenade/bounce3.ogg",
+    "sounds/items/grenade/bounce4.ogg",
+    "sounds/items/grenade/throw0.ogg",
+    "sounds/items/grenade/throw1.ogg",
+    "sounds/items/grenade/throw2.ogg",
+    "sounds/items/grenade/throw3.ogg"
+  ]
+}

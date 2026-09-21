@@ -1,0 +1,16 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/supplydropradio",
+  "type": "item",
+  "assets": [
+    "sounds/error.ogg",
+    "textures/item/supplydropradio.png",
+    "textures/model/supplydropradio.png"
+  ],
+  "legacy_sources": [
+    "sounds/items/supplydropradio/error.ogg",
+    "textures/items/supplydropradio.png",
+    "textures/model/items/supplydropradio.png"
+  ]
+}

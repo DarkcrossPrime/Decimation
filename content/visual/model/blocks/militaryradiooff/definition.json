@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/militaryradiooff",
+  "type": "visual",
+  "assets": [
+    "textures/model/militaryradiooff.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/props/militaryradiooff.png"
+  ]
+}

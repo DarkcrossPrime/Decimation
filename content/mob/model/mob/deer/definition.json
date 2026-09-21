@@ -1,0 +1,18 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "mob/model/mob/deer",
+  "type": "mob",
+  "assets": [
+    "sounds/hurt1.ogg",
+    "sounds/hurt2.ogg",
+    "sounds/hurt3.ogg",
+    "textures/model/deer.png"
+  ],
+  "legacy_sources": [
+    "sounds/mob/deer/hurt1.ogg",
+    "sounds/mob/deer/hurt2.ogg",
+    "sounds/mob/deer/hurt3.ogg",
+    "textures/model/entities/mob/deer/deer.png"
+  ]
+}

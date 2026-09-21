@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/armor/sasboots",
+  "type": "item",
+  "assets": [
+    "textures/item/sasboots.png"
+  ],
+  "legacy_sources": [
+    "textures/items/armor/sasboots.png"
+  ]
+}

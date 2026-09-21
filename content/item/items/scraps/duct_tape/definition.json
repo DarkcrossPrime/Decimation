@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/scraps/duct_tape",
+  "type": "item",
+  "assets": [
+    "textures/item/duct_tape.png"
+  ],
+  "legacy_sources": [
+    "textures/items/scraps/duct_tape.png"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/m1garand",
+  "type": "gun",
+  "assets": [
+    "animations/m1garand_fire.danim.json",
+    "animations/m1garand_rack.danim.json",
+    "animations/m1garand_reload1.danim.json",
+    "animations/m1garand_slide_back.danim.json",
+    "models/m1garand.mtl",
+    "models/m1garand.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/ping.ogg",
+    "sounds/rack.ogg",
+    "textures/item/m1garand.png",
+    "textures/model/m1garand.png"
+  ],
+  "legacy_sources": [
+    "animations/m1garand/m1garandFire.anib",
+    "animations/m1garand/m1garandRack.anib",
+    "animations/m1garand/m1garandReload1.anib",
+    "animations/m1garand/m1garandSlideBack.anib",
+    "models/guns/rifle/m1garand.bmodel",
+    "sounds/guns/rifle/m1garand/fire.ogg",
+    "sounds/guns/rifle/m1garand/fire_distant.ogg",
+    "sounds/guns/rifle/m1garand/fire_suppressed.ogg",
+    "sounds/guns/rifle/m1garand/magIn.ogg",
+    "sounds/guns/rifle/m1garand/magOut.ogg",
+    "sounds/guns/rifle/m1garand/ping.ogg",
+    "sounds/guns/rifle/m1garand/rack.ogg",
+    "textures/items/gun/rifle/m1garand.png",
+    "textures/model/guns/rifle/m1garand/m1garand.png"
+  ]
+}

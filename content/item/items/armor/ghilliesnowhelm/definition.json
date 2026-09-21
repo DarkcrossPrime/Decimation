@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/armor/ghilliesnowhelm",
+  "type": "item",
+  "assets": [
+    "textures/item/ghilliesnowhelm.png"
+  ],
+  "legacy_sources": [
+    "textures/items/armor/ghilliesnowhelm.png"
+  ]
+}

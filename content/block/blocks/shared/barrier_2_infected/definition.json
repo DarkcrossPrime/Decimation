@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/barrier_2_infected",
+  "type": "block",
+  "assets": [
+    "textures/barrier_2_infected.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/barrier_2_infected.png"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/acr_mag",
+  "type": "item",
+  "assets": [
+    "textures/item/acrMag.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/mag/acrMag.png"
+  ]
+}

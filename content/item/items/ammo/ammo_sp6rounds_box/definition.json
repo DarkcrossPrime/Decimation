@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/ammo_sp6rounds_box",
+  "type": "item",
+  "assets": [
+    "textures/item/ammo_sp6rounds_box.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/box/ammo_sp6rounds_box.png"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/cookeddeer",
+  "type": "item",
+  "assets": [
+    "textures/item/cookeddeer.png"
+  ],
+  "legacy_sources": [
+    "textures/items/cookeddeer.png"
+  ]
+}

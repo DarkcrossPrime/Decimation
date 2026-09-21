@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/stone_7",
+  "type": "block",
+  "assets": [
+    "textures/stone_7.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/stone_7.png"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/light",
+  "type": "visual",
+  "assets": [
+    "sounds/flicker1.ogg",
+    "sounds/flicker2.ogg",
+    "sounds/flicker3.ogg",
+    "sounds/flicker4.ogg",
+    "textures/model/light.png"
+  ],
+  "legacy_sources": [
+    "sounds/blocks/light/flicker1.ogg",
+    "sounds/blocks/light/flicker2.ogg",
+    "sounds/blocks/light/flicker3.ogg",
+    "sounds/blocks/light/flicker4.ogg",
+    "textures/model/blocks/props/light.png"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "armor/vest/testvest",
+  "type": "armor",
+  "assets": [
+    "models/testvest.mtl",
+    "models/testvest.obj",
+    "textures/model/testvest.png"
+  ],
+  "legacy_sources": [
+    "models/armor/vest/testvest.bmodel",
+    "textures/model/vests/testvest.png"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "entity/sound/vehicle",
+  "type": "entity",
+  "assets": [
+    "sounds/door_close.ogg",
+    "sounds/door_open.ogg"
+  ],
+  "legacy_sources": [
+    "sounds/entity/vehicle/door_close.ogg",
+    "sounds/entity/vehicle/door_open.ogg"
+  ]
+}

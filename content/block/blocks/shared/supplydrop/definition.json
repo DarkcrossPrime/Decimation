@@ -1,0 +1,32 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/supplydrop",
+  "type": "block",
+  "assets": [
+    "sounds/drop.ogg",
+    "sounds/drop0.ogg",
+    "sounds/drop1.ogg",
+    "sounds/drop2.ogg",
+    "sounds/drop3.ogg",
+    "sounds/open0.ogg",
+    "sounds/open1.ogg",
+    "sounds/open2.ogg",
+    "sounds/open3.ogg",
+    "textures/supplydrop.png",
+    "textures/model/supplydrop.png"
+  ],
+  "legacy_sources": [
+    "sounds/blocks/supplydrop/drop.ogg",
+    "sounds/blocks/supplydrop/drop0.ogg",
+    "sounds/blocks/supplydrop/drop1.ogg",
+    "sounds/blocks/supplydrop/drop2.ogg",
+    "sounds/blocks/supplydrop/drop3.ogg",
+    "sounds/blocks/supplydrop/open0.ogg",
+    "sounds/blocks/supplydrop/open1.ogg",
+    "sounds/blocks/supplydrop/open2.ogg",
+    "sounds/blocks/supplydrop/open3.ogg",
+    "textures/blocks/supplydrop.png",
+    "textures/model/blocks/supplydrop.png"
+  ]
+}

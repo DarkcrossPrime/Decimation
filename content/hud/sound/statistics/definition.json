@@ -1,0 +1,36 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "hud/sound/statistics",
+  "type": "hud",
+  "assets": [
+    "sounds/close.ogg",
+    "sounds/open.ogg",
+    "sounds/gui/tip/close.ogg",
+    "sounds/gui/tip/open.ogg",
+    "sounds/guns/shared/echo/close/echo0.ogg",
+    "sounds/guns/shared/echo/close/echo1.ogg",
+    "sounds/guns/shared/echo/close/echo2.ogg",
+    "sounds/items/bottle/open.ogg",
+    "sounds/items/can/open.ogg",
+    "sounds/items/packet/open.ogg",
+    "sounds/items/supplydropradio/open.ogg",
+    "sounds/items/syringe/open.ogg",
+    "sounds/items/tin/open.ogg"
+  ],
+  "legacy_sources": [
+    "sounds/gui/statistics/close.ogg",
+    "sounds/gui/statistics/open.ogg",
+    "sounds/gui/tip/close.ogg",
+    "sounds/gui/tip/open.ogg",
+    "sounds/guns/shared/echo/close/echo0.ogg",
+    "sounds/guns/shared/echo/close/echo1.ogg",
+    "sounds/guns/shared/echo/close/echo2.ogg",
+    "sounds/items/bottle/open.ogg",
+    "sounds/items/can/open.ogg",
+    "sounds/items/packet/open.ogg",
+    "sounds/items/supplydropradio/open.ogg",
+    "sounds/items/syringe/open.ogg",
+    "sounds/items/tin/open.ogg"
+  ]
+}

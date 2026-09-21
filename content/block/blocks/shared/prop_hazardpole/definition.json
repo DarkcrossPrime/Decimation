@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/prop_hazardpole",
+  "type": "block",
+  "assets": [
+    "textures/prop_hazardpole.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/prop_hazardpole.png"
+  ]
+}

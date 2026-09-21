@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/cannedblueberry",
+  "type": "item",
+  "assets": [
+    "textures/item/cannedblueberry.png"
+  ],
+  "legacy_sources": [
+    "textures/items/cannedblueberry.png"
+  ]
+}

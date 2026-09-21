@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/m110",
+  "type": "gun",
+  "assets": [
+    "animations/m110_fire.danim.json",
+    "animations/m110_rack.danim.json",
+    "animations/m110_reload1.danim.json",
+    "animations/m110_slide_back.danim.json",
+    "models/m110.mtl",
+    "models/m110.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/m110.png",
+    "textures/model/m110.png"
+  ],
+  "legacy_sources": [
+    "animations/m110/m110Fire.anib",
+    "animations/m110/m110Rack.anib",
+    "animations/m110/m110Reload1.anib",
+    "animations/m110/m110SlideBack.anib",
+    "models/guns/rifle/m110.bmodel",
+    "sounds/guns/rifle/m110/fire.ogg",
+    "sounds/guns/rifle/m110/fire_distant.ogg",
+    "sounds/guns/rifle/m110/fire_suppressed.ogg",
+    "sounds/guns/rifle/m110/magIn.ogg",
+    "sounds/guns/rifle/m110/magOut.ogg",
+    "sounds/guns/rifle/m110/rack.ogg",
+    "textures/items/gun/rifle/m110.png",
+    "textures/model/guns/rifle/m110/m110.png"
+  ]
+}

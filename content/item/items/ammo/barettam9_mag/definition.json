@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/barettam9_mag",
+  "type": "item",
+  "assets": [
+    "textures/item/barettam9Mag.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/mag/barettam9Mag.png"
+  ]
+}

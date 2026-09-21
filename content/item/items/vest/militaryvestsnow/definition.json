@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/vest/militaryvestsnow",
+  "type": "item",
+  "assets": [
+    "textures/item/militaryvestsnow.png",
+    "textures/model/militaryvestsnow.png"
+  ],
+  "legacy_sources": [
+    "textures/items/vest/militaryvestsnow.png",
+    "textures/model/vests/militaryvestsnow.png"
+  ]
+}

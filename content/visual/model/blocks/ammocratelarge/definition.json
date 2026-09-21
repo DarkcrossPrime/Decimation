@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/ammocratelarge",
+  "type": "visual",
+  "assets": [
+    "textures/model/ammocratelarge.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/props/ammocratelarge.png"
+  ]
+}

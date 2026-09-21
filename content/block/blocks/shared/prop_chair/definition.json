@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/prop_chair",
+  "type": "block",
+  "assets": [
+    "textures/prop_chair.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/prop_chair.png"
+  ]
+}

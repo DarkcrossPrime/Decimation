@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/elevatorbutton",
+  "type": "block",
+  "assets": [
+    "textures/elevatorbutton.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/elevatorbutton.png"
+  ]
+}

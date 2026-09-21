@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/p90_mag",
+  "type": "item",
+  "assets": [
+    "textures/item/p90Mag.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/mag/p90Mag.png"
+  ]
+}

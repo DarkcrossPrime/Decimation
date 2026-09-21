@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/akms",
+  "type": "gun",
+  "assets": [
+    "animations/akms_fire.danim.json",
+    "animations/akms_rack.danim.json",
+    "animations/akms_reload1.danim.json",
+    "animations/akms_slide_back.danim.json",
+    "models/akms.mtl",
+    "models/akms.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/akms.png",
+    "textures/model/akms.png"
+  ],
+  "legacy_sources": [
+    "animations/akms/akmsFire.anib",
+    "animations/akms/akmsRack.anib",
+    "animations/akms/akmsReload1.anib",
+    "animations/akms/akmsSlideBack.anib",
+    "models/guns/rifle/akms.bmodel",
+    "sounds/guns/rifle/akms/fire.ogg",
+    "sounds/guns/rifle/akms/fire_distant.ogg",
+    "sounds/guns/rifle/akms/fire_suppressed.ogg",
+    "sounds/guns/rifle/akms/magIn.ogg",
+    "sounds/guns/rifle/akms/magOut.ogg",
+    "sounds/guns/rifle/akms/rack.ogg",
+    "textures/items/gun/rifle/akms.png",
+    "textures/model/guns/rifle/akms/akms.png"
+  ]
+}

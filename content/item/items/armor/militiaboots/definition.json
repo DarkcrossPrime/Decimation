@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/armor/militiaboots",
+  "type": "item",
+  "assets": [
+    "textures/item/militiaboots.png"
+  ],
+  "legacy_sources": [
+    "textures/items/armor/militiaboots.png"
+  ]
+}

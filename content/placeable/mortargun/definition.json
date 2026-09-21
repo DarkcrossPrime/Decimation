@@ -1,0 +1,17 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "placeable/mortargun",
+  "type": "placeable",
+  "assets": [
+    "models/mortargun.mtl",
+    "models/mortargun.obj",
+    "textures/item/mortargun.png",
+    "textures/model/mortargun.png"
+  ],
+  "legacy_sources": [
+    "models/placeable/mortargun.bmodel",
+    "textures/items/mortargun.png",
+    "textures/model/entities/placeable/mortargun.png"
+  ]
+}

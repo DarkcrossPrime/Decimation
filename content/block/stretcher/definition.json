@@ -1,0 +1,15 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/stretcher",
+  "type": "block",
+  "assets": [
+    "models/stretcher.mtl",
+    "models/stretcher.obj",
+    "textures/model/stretcher.png"
+  ],
+  "legacy_sources": [
+    "models/props/stretcher.bmodel",
+    "textures/model/blocks/props/stretcher.png"
+  ]
+}

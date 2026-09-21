@@ -1,0 +1,17 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "armor/full/capmaga",
+  "type": "armor",
+  "assets": [
+    "models/capmaga.mtl",
+    "models/capmaga.obj",
+    "textures/item/capmaga.png",
+    "textures/model/capmaga.png"
+  ],
+  "legacy_sources": [
+    "models/armor/full/capmaga.bmodel",
+    "textures/items/armor/capmaga.png",
+    "textures/model/armor/capmaga.png"
+  ]
+}

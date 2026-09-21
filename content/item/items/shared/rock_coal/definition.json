@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/rock_coal",
+  "type": "item",
+  "assets": [
+    "textures/item/rock_coal.png"
+  ],
+  "legacy_sources": [
+    "textures/items/rock_coal.png"
+  ]
+}

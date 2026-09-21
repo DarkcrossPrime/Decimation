@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/cz52_mag",
+  "type": "item",
+  "assets": [
+    "textures/item/cz52Mag.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/mag/cz52Mag.png"
+  ]
+}

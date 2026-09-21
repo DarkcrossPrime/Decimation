@@ -1,0 +1,42 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "ambiance/sound/desert",
+  "type": "ambiance",
+  "assets": [
+    "sounds/day1.ogg",
+    "sounds/day2.ogg",
+    "sounds/day3.ogg",
+    "sounds/day4.ogg",
+    "sounds/forest/day1.ogg",
+    "sounds/forest/day2.ogg",
+    "sounds/forest/day3.ogg",
+    "sounds/forest/day4.ogg",
+    "sounds/plains/day1.ogg",
+    "sounds/plains/day2.ogg",
+    "sounds/plains/day3.ogg",
+    "sounds/plains/day4.ogg",
+    "sounds/snow/day1.ogg",
+    "sounds/snow/day2.ogg",
+    "sounds/snow/day3.ogg",
+    "sounds/snow/day4.ogg"
+  ],
+  "legacy_sources": [
+    "sounds/environment/biome/desert/day1.ogg",
+    "sounds/environment/biome/desert/day2.ogg",
+    "sounds/environment/biome/desert/day3.ogg",
+    "sounds/environment/biome/desert/day4.ogg",
+    "sounds/environment/biome/forest/day1.ogg",
+    "sounds/environment/biome/forest/day2.ogg",
+    "sounds/environment/biome/forest/day3.ogg",
+    "sounds/environment/biome/forest/day4.ogg",
+    "sounds/environment/biome/plains/day1.ogg",
+    "sounds/environment/biome/plains/day2.ogg",
+    "sounds/environment/biome/plains/day3.ogg",
+    "sounds/environment/biome/plains/day4.ogg",
+    "sounds/environment/biome/snow/day1.ogg",
+    "sounds/environment/biome/snow/day2.ogg",
+    "sounds/environment/biome/snow/day3.ogg",
+    "sounds/environment/biome/snow/day4.ogg"
+  ]
+}

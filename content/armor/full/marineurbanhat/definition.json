@@ -1,0 +1,17 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "armor/full/marineurbanhat",
+  "type": "armor",
+  "assets": [
+    "models/marineurbanhat.mtl",
+    "models/marineurbanhat.obj",
+    "textures/item/marineurbanhat.png",
+    "textures/model/marineurbanhat.png"
+  ],
+  "legacy_sources": [
+    "models/armor/full/marineurbanhat.bmodel",
+    "textures/items/armor/marineurbanhat.png",
+    "textures/model/armor/marineurbanhat.png"
+  ]
+}

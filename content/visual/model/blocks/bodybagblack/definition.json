@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/bodybagblack",
+  "type": "visual",
+  "assets": [
+    "textures/model/bodybagblack.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/props/bodybagblack.png"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/packagingpaper",
+  "type": "item",
+  "assets": [
+    "textures/item/packagingpaper.png"
+  ],
+  "legacy_sources": [
+    "textures/items/packagingpaper.png"
+  ]
+}

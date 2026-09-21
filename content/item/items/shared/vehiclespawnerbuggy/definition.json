@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/vehiclespawnerbuggy",
+  "type": "item",
+  "assets": [
+    "textures/item/vehiclespawnerbuggy.png"
+  ],
+  "legacy_sources": [
+    "textures/items/vehiclespawnerbuggy.png"
+  ]
+}

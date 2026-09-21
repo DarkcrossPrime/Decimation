@@ -1,0 +1,24 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "ambiance/particle/mud",
+  "type": "ambiance",
+  "assets": [
+    "textures/mud1.png",
+    "textures/mud2.png",
+    "textures/mud3.png",
+    "textures/mud4.png",
+    "textures/mud5.png",
+    "textures/mud6.png",
+    "textures/mud7.png"
+  ],
+  "legacy_sources": [
+    "textures/particle/mud/mud1.png",
+    "textures/particle/mud/mud2.png",
+    "textures/particle/mud/mud3.png",
+    "textures/particle/mud/mud4.png",
+    "textures/particle/mud/mud5.png",
+    "textures/particle/mud/mud6.png",
+    "textures/particle/mud/mud7.png"
+  ]
+}

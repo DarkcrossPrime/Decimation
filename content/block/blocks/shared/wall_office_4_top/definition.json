@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/wall_office_4_top",
+  "type": "block",
+  "assets": [
+    "textures/wall_office_4_top.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/wall_office_4_top.png"
+  ]
+}

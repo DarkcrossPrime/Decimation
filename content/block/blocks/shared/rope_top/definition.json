@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/rope_top",
+  "type": "block",
+  "assets": [
+    "textures/rope_top.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/rope_top.png"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/wreckagemilitary2",
+  "type": "visual",
+  "assets": [
+    "textures/model/wreckagemilitary2.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/props/wreckagemilitary2.png"
+  ]
+}

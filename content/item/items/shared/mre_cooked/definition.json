@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/mre_cooked",
+  "type": "item",
+  "assets": [
+    "textures/item/mre_cooked.png"
+  ],
+  "legacy_sources": [
+    "textures/items/mre_cooked.png"
+  ]
+}

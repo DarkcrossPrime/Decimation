@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/guns/hunter_camo",
+  "type": "visual",
+  "assets": [
+    "textures/model/HunterCamo.png"
+  ],
+  "legacy_sources": [
+    "textures/model/guns/camoteplate/HunterCamo.png"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/cocaplant",
+  "type": "block",
+  "assets": [
+    "textures/cocaplant.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/cocaplant.png"
+  ]
+}

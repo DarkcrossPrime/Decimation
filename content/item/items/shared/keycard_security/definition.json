@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/keycard_security",
+  "type": "item",
+  "assets": [
+    "textures/item/keycard_security.png"
+  ],
+  "legacy_sources": [
+    "textures/items/keycard_security.png"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/scraps/gas_mask_filter",
+  "type": "item",
+  "assets": [
+    "textures/item/gas_mask_filter.png"
+  ],
+  "legacy_sources": [
+    "textures/items/scraps/military/gas_mask_filter.png"
+  ]
+}

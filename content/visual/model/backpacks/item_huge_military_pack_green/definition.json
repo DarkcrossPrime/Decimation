@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/backpacks/item_huge_military_pack_green",
+  "type": "visual",
+  "assets": [
+    "textures/model/ItemHugeMilitaryPack_Green.png"
+  ],
+  "legacy_sources": [
+    "textures/model/backpacks/ItemHugeMilitaryPack_Green.png"
+  ]
+}

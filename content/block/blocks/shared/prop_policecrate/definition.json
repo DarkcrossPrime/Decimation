@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/prop_policecrate",
+  "type": "block",
+  "assets": [
+    "textures/prop_policecrate.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/prop_policecrate.png"
+  ]
+}

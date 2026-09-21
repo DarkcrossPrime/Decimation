@@ -1,0 +1,26 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "ambiance/particle/signalsmoke",
+  "type": "ambiance",
+  "assets": [
+    "textures/signalsmokegreen1.png",
+    "textures/signalsmokegreen2.png",
+    "textures/signalsmokegreen3.png",
+    "textures/signalsmokegreen4.png",
+    "textures/signalsmokered1.png",
+    "textures/signalsmokered2.png",
+    "textures/signalsmokered3.png",
+    "textures/signalsmokered4.png"
+  ],
+  "legacy_sources": [
+    "textures/particle/signalsmoke/signalsmokegreen1.png",
+    "textures/particle/signalsmoke/signalsmokegreen2.png",
+    "textures/particle/signalsmoke/signalsmokegreen3.png",
+    "textures/particle/signalsmoke/signalsmokegreen4.png",
+    "textures/particle/signalsmoke/signalsmokered1.png",
+    "textures/particle/signalsmoke/signalsmokered2.png",
+    "textures/particle/signalsmoke/signalsmokered3.png",
+    "textures/particle/signalsmoke/signalsmokered4.png"
+  ]
+}

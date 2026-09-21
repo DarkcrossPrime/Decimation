@@ -1,0 +1,43 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/ak12",
+  "type": "gun",
+  "assets": [
+    "animations/ak12_fire.danim.json",
+    "animations/ak12_rack.danim.json",
+    "animations/ak12_reload1.danim.json",
+    "animations/ak12_slide_back.danim.json",
+    "models/ak12.mtl",
+    "models/ak12.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/ak12.png",
+    "textures/model/ak12.png",
+    "textures/model/ak12_black.png",
+    "textures/model/ak12_marble.png",
+    "textures/model/ak12_virtual.png"
+  ],
+  "legacy_sources": [
+    "animations/ak12/ak12Fire.anib",
+    "animations/ak12/ak12Rack.anib",
+    "animations/ak12/ak12Reload1.anib",
+    "animations/ak12/ak12SlideBack.anib",
+    "models/guns/rifle/ak12.bmodel",
+    "sounds/guns/rifle/ak12/fire.ogg",
+    "sounds/guns/rifle/ak12/fire_distant.ogg",
+    "sounds/guns/rifle/ak12/fire_suppressed.ogg",
+    "sounds/guns/rifle/ak12/magIn.ogg",
+    "sounds/guns/rifle/ak12/magOut.ogg",
+    "sounds/guns/rifle/ak12/rack.ogg",
+    "textures/items/gun/rifle/ak12.png",
+    "textures/model/guns/rifle/ak12/ak12.png",
+    "textures/model/guns/rifle/ak12/ak12_black.png",
+    "textures/model/guns/rifle/ak12/ak12_marble.png",
+    "textures/model/guns/rifle/ak12/ak12_virtual.png"
+  ]
+}

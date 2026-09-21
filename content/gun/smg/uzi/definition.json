@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/smg/uzi",
+  "type": "gun",
+  "assets": [
+    "animations/uzi_fire.danim.json",
+    "animations/uzi_rack.danim.json",
+    "animations/uzi_reload1.danim.json",
+    "animations/uzi_slide_back.danim.json",
+    "models/uzi.mtl",
+    "models/uzi.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/uzi.png",
+    "textures/model/uzi.png"
+  ],
+  "legacy_sources": [
+    "animations/uzi/uziFire.anib",
+    "animations/uzi/uziRack.anib",
+    "animations/uzi/uziReload1.anib",
+    "animations/uzi/uziSlideBack.anib",
+    "models/guns/smg/uzi.bmodel",
+    "sounds/guns/smg/uzi/fire.ogg",
+    "sounds/guns/smg/uzi/fire_distant.ogg",
+    "sounds/guns/smg/uzi/fire_suppressed.ogg",
+    "sounds/guns/smg/uzi/magIn.ogg",
+    "sounds/guns/smg/uzi/magOut.ogg",
+    "sounds/guns/smg/uzi/rack.ogg",
+    "textures/items/gun/smg/uzi.png",
+    "textures/model/guns/smg/uzi/uzi.png"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/bandage_dirty",
+  "type": "item",
+  "assets": [
+    "textures/item/bandage_dirty.png"
+  ],
+  "legacy_sources": [
+    "textures/items/bandage_dirty.png"
+  ]
+}

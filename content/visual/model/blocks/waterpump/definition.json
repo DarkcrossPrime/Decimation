@@ -1,0 +1,20 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/waterpump",
+  "type": "visual",
+  "assets": [
+    "sounds/drip1.ogg",
+    "sounds/drip2.ogg",
+    "sounds/drip3.ogg",
+    "sounds/use.ogg",
+    "textures/model/waterpump.png"
+  ],
+  "legacy_sources": [
+    "sounds/blocks/waterpump/drip1.ogg",
+    "sounds/blocks/waterpump/drip2.ogg",
+    "sounds/blocks/waterpump/drip3.ogg",
+    "sounds/blocks/waterpump/use.ogg",
+    "textures/model/blocks/props/waterpump.png"
+  ]
+}

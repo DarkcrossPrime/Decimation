@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/spraycan",
+  "type": "item",
+  "assets": [
+    "textures/item/spraycan.png"
+  ],
+  "legacy_sources": [
+    "textures/items/spraycan.png"
+  ]
+}

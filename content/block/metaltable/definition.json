@@ -1,0 +1,15 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/metaltable",
+  "type": "block",
+  "assets": [
+    "models/metaltable.mtl",
+    "models/metaltable.obj",
+    "textures/model/metaltable.png"
+  ],
+  "legacy_sources": [
+    "models/props/metaltable.bmodel",
+    "textures/model/blocks/props/metaltable.png"
+  ]
+}

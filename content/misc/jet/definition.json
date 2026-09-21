@@ -1,0 +1,15 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "misc/jet",
+  "type": "misc",
+  "assets": [
+    "models/jet.mtl",
+    "models/jet.obj",
+    "textures/model/jet.png"
+  ],
+  "legacy_sources": [
+    "models/misc/jet.bmodel",
+    "textures/model/misc/jet.png"
+  ]
+}

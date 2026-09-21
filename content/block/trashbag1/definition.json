@@ -1,0 +1,13 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/trashbag1",
+  "type": "block",
+  "assets": [
+    "models/trashbag1.mtl",
+    "models/trashbag1.obj"
+  ],
+  "legacy_sources": [
+    "models/props/trashbag1.bmodel"
+  ]
+}

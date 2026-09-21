@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/famasi_mag",
+  "type": "item",
+  "assets": [
+    "textures/item/famasiMag.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/mag/famasiMag.png"
+  ]
+}

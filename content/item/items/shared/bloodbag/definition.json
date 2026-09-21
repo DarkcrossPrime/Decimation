@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/bloodbag",
+  "type": "item",
+  "assets": [
+    "textures/item/bloodbag.png"
+  ],
+  "legacy_sources": [
+    "textures/items/bloodbag.png"
+  ]
+}

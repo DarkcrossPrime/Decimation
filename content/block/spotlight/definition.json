@@ -1,0 +1,15 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/spotlight",
+  "type": "block",
+  "assets": [
+    "models/spotlight.mtl",
+    "models/spotlight.obj",
+    "textures/model/spotlight.png"
+  ],
+  "legacy_sources": [
+    "models/props/spotlight.bmodel",
+    "textures/model/blocks/props/spotlight.png"
+  ]
+}

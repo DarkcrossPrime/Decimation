@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/thompsoni_mag",
+  "type": "item",
+  "assets": [
+    "textures/item/thompsoniMag.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/mag/thompsoniMag.png"
+  ]
+}

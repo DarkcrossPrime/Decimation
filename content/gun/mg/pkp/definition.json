@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/mg/pkp",
+  "type": "gun",
+  "assets": [
+    "animations/pkp_fire.danim.json",
+    "animations/pkp_rack.danim.json",
+    "animations/pkp_reload1.danim.json",
+    "animations/pkp_slide_back.danim.json",
+    "models/pkp.mtl",
+    "models/pkp.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/pkp.png",
+    "textures/model/pkp.png"
+  ],
+  "legacy_sources": [
+    "animations/pkp/pkpFire.anib",
+    "animations/pkp/pkpRack.anib",
+    "animations/pkp/pkpReload1.anib",
+    "animations/pkp/pkpSlideBack.anib",
+    "models/guns/mg/pkp.bmodel",
+    "sounds/guns/mg/pkp/fire.ogg",
+    "sounds/guns/mg/pkp/fire_distant.ogg",
+    "sounds/guns/mg/pkp/fire_suppressed.ogg",
+    "sounds/guns/mg/pkp/magIn.ogg",
+    "sounds/guns/mg/pkp/magOut.ogg",
+    "sounds/guns/mg/pkp/rack.ogg",
+    "textures/items/gun/mg/pkp.png",
+    "textures/model/guns/mg/pkp/pkp.png"
+  ]
+}

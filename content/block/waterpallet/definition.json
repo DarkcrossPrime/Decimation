@@ -1,0 +1,15 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/waterpallet",
+  "type": "block",
+  "assets": [
+    "models/waterpallet.mtl",
+    "models/waterpallet.obj",
+    "textures/model/waterpallet.png"
+  ],
+  "legacy_sources": [
+    "models/props/waterpallet.bmodel",
+    "textures/model/blocks/props/waterpallet.png"
+  ]
+}

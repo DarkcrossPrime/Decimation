@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/sks",
+  "type": "gun",
+  "assets": [
+    "animations/sks_fire.danim.json",
+    "animations/sks_rack.danim.json",
+    "animations/sks_reload1.danim.json",
+    "animations/sks_slide_back.danim.json",
+    "models/sks.mtl",
+    "models/sks.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/sks.png",
+    "textures/model/sks.png"
+  ],
+  "legacy_sources": [
+    "animations/sks/sksFire.anib",
+    "animations/sks/sksRack.anib",
+    "animations/sks/sksReload1.anib",
+    "animations/sks/sksSlideBack.anib",
+    "models/guns/rifle/sks.bmodel",
+    "sounds/guns/rifle/sks/fire.ogg",
+    "sounds/guns/rifle/sks/fire_distant.ogg",
+    "sounds/guns/rifle/sks/fire_suppressed.ogg",
+    "sounds/guns/rifle/sks/magIn.ogg",
+    "sounds/guns/rifle/sks/magOut.ogg",
+    "sounds/guns/rifle/sks/rack.ogg",
+    "textures/items/gun/rifle/sks.png",
+    "textures/model/guns/rifle/sks/sks.png"
+  ]
+}

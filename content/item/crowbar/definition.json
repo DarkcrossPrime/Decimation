@@ -1,0 +1,17 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/crowbar",
+  "type": "item",
+  "assets": [
+    "models/crowbar.mtl",
+    "models/crowbar.obj",
+    "textures/item/crowbar.png",
+    "textures/model/crowbar.png"
+  ],
+  "legacy_sources": [
+    "models/items/crowbar.bmodel",
+    "textures/items/crowbar.png",
+    "textures/model/items/crowbar.png"
+  ]
+}

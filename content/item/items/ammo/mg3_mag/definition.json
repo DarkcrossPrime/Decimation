@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/mg3_mag",
+  "type": "item",
+  "assets": [
+    "textures/item/mg3Mag.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/mag/mg3Mag.png"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/draincleaner",
+  "type": "item",
+  "assets": [
+    "textures/item/draincleaner.png"
+  ],
+  "legacy_sources": [
+    "textures/items/draincleaner.png"
+  ]
+}

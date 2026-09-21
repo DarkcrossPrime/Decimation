@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/armor/hazmathelm",
+  "type": "item",
+  "assets": [
+    "textures/item/hazmathelm.png"
+  ],
+  "legacy_sources": [
+    "textures/items/armor/hazmathelm.png"
+  ]
+}

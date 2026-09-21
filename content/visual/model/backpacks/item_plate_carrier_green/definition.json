@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/backpacks/item_plate_carrier_green",
+  "type": "visual",
+  "assets": [
+    "textures/model/ItemPlateCarrier_Green.png"
+  ],
+  "legacy_sources": [
+    "textures/model/backpacks/ItemPlateCarrier_Green.png"
+  ]
+}

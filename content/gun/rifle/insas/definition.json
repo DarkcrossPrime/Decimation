@@ -1,0 +1,43 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/insas",
+  "type": "gun",
+  "assets": [
+    "animations/insas_fire.danim.json",
+    "animations/insas_rack.danim.json",
+    "animations/insas_reload1.danim.json",
+    "animations/insas_slide_back.danim.json",
+    "models/insas.mtl",
+    "models/insas.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/insas.png",
+    "textures/model/insas.png",
+    "textures/model/insas_blue.png",
+    "textures/model/insas_forest.png",
+    "textures/model/insas_red.png"
+  ],
+  "legacy_sources": [
+    "animations/insas/insasFire.anib",
+    "animations/insas/insasRack.anib",
+    "animations/insas/insasReload1.anib",
+    "animations/insas/insasSlideBack.anib",
+    "models/guns/rifle/insas.bmodel",
+    "sounds/guns/rifle/insas/fire.ogg",
+    "sounds/guns/rifle/insas/fire_distant.ogg",
+    "sounds/guns/rifle/insas/fire_suppressed.ogg",
+    "sounds/guns/rifle/insas/magIn.ogg",
+    "sounds/guns/rifle/insas/magOut.ogg",
+    "sounds/guns/rifle/insas/rack.ogg",
+    "textures/items/gun/rifle/insas.png",
+    "textures/model/guns/rifle/insas/insas.png",
+    "textures/model/guns/rifle/insas/insas_blue.png",
+    "textures/model/guns/rifle/insas/insas_forest.png",
+    "textures/model/guns/rifle/insas/insas_red.png"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/ak74",
+  "type": "gun",
+  "assets": [
+    "animations/ak74_fire.danim.json",
+    "animations/ak74_rack.danim.json",
+    "animations/ak74_reload1.danim.json",
+    "animations/ak74_slide_back.danim.json",
+    "models/ak74.mtl",
+    "models/ak74.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/ak74.png",
+    "textures/model/ak74.png",
+    "textures/model/ak74_future.png",
+    "textures/model/ak74_hunter.png",
+    "textures/model/ak74_redcog.png"
+  ],
+  "legacy_sources": [
+    "animations/ak74/ak74Fire.anib",
+    "animations/ak74/ak74Rack.anib",
+    "animations/ak74/ak74Reload1.anib",
+    "animations/ak74/ak74SlideBack.anib",
+    "models/guns/rifle/ak74.bmodel",
+    "sounds/guns/rifle/ak74/fire.ogg",
+    "sounds/guns/rifle/ak74/fire_distant.ogg",
+    "sounds/guns/rifle/ak74/fire_suppressed.ogg",
+    "sounds/guns/rifle/ak74/magIn.ogg",
+    "sounds/guns/rifle/ak74/magOut.ogg",
+    "sounds/guns/rifle/ak74/rack.ogg",
+    "textures/items/gun/rifle/ak74.png",
+    "textures/model/guns/rifle/ak74/ak74.png",
+    "textures/model/guns/rifle/ak74/ak74_future.png",
+    "textures/model/guns/rifle/ak74/ak74_hunter.png",
+    "textures/model/guns/rifle/ak74/ak74_redcog.png"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "attachment/grip/foregrip",
+  "type": "attachment",
+  "assets": [
+    "models/foregrip.mtl",
+    "models/foregrip.obj",
+    "textures/item/foregrip.png",
+    "textures/model/foregrip.png"
+  ],
+  "legacy_sources": [
+    "models/attachments/grip/foregrip.bmodel",
+    "textures/items/attach/foregrip.png",
+    "textures/model/attachments/grip/foregrip.png"
+  ]
+}

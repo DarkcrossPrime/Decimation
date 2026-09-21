@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/scraps/screwdriver",
+  "type": "item",
+  "assets": [
+    "textures/item/screwdriver.png"
+  ],
+  "legacy_sources": [
+    "textures/items/scraps/screwdriver.png"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/cone",
+  "type": "block",
+  "assets": [
+    "models/cone.mtl",
+    "models/cone.obj",
+    "textures/model/cone.png"
+  ],
+  "legacy_sources": [
+    "models/props/cone.bmodel",
+    "textures/model/blocks/props/cone.png"
+  ]
+}

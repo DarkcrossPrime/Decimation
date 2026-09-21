@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/rpk_mag",
+  "type": "item",
+  "assets": [
+    "textures/item/rpkMag.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/mag/rpkMag.png"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/signalgrenadegreen",
+  "type": "item",
+  "assets": [
+    "textures/item/signalgrenadegreen.png",
+    "textures/model/signalgrenadegreen.png"
+  ],
+  "legacy_sources": [
+    "textures/items/signalgrenadegreen.png",
+    "textures/model/entities/projectile/signalgrenadegreen.png"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/kp31_mag",
+  "type": "item",
+  "assets": [
+    "textures/item/kp31Mag.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/mag/kp31Mag.png"
+  ]
+}

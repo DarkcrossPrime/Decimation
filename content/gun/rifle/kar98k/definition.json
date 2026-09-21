@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/kar98k",
+  "type": "gun",
+  "assets": [
+    "animations/kar98k_fire.danim.json",
+    "animations/kar98k_rack.danim.json",
+    "animations/kar98k_reload1.danim.json",
+    "animations/kar98k_slide_back.danim.json",
+    "models/kar98k.mtl",
+    "models/kar98k.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/kar98k.png",
+    "textures/model/kar98k.png"
+  ],
+  "legacy_sources": [
+    "animations/kar98k/kar98kFire.anib",
+    "animations/kar98k/kar98kRack.anib",
+    "animations/kar98k/kar98kReload1.anib",
+    "animations/kar98k/kar98kSlideBack.anib",
+    "models/guns/rifle/kar98k.bmodel",
+    "sounds/guns/rifle/kar98k/fire.ogg",
+    "sounds/guns/rifle/kar98k/fire_distant.ogg",
+    "sounds/guns/rifle/kar98k/fire_suppressed.ogg",
+    "sounds/guns/rifle/kar98k/magIn.ogg",
+    "sounds/guns/rifle/kar98k/magOut.ogg",
+    "sounds/guns/rifle/kar98k/rack.ogg",
+    "textures/items/gun/rifle/kar98k.png",
+    "textures/model/guns/rifle/kar98k/kar98k.png"
+  ]
+}

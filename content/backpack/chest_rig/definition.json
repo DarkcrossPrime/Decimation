@@ -1,0 +1,13 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "backpack/chest_rig",
+  "type": "backpack",
+  "assets": [
+    "models/chest_rig.mtl",
+    "models/chest_rig.obj"
+  ],
+  "legacy_sources": [
+    "models/backpacks/chestRig.bmodel"
+  ]
+}

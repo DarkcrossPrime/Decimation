@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/bottledcoke",
+  "type": "item",
+  "assets": [
+    "textures/item/bottledcoke.png"
+  ],
+  "legacy_sources": [
+    "textures/items/bottledcoke.png"
+  ]
+}

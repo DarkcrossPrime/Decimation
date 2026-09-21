@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/prop_canfire",
+  "type": "block",
+  "assets": [
+    "textures/prop_canfire.png",
+    "textures/item/prop_canfire.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/prop_canfire.png",
+    "textures/items/prop_canfire.png"
+  ]
+}

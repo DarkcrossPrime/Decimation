@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/bicycle3",
+  "type": "visual",
+  "assets": [
+    "textures/model/bicycle3.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/props/bicycle3.png"
+  ]
+}

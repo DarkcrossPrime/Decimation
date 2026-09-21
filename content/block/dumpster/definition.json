@@ -1,0 +1,15 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/dumpster",
+  "type": "block",
+  "assets": [
+    "models/dumpster.mtl",
+    "models/dumpster.obj",
+    "textures/model/dumpster.png"
+  ],
+  "legacy_sources": [
+    "models/props/dumpster.bmodel",
+    "textures/model/blocks/props/dumpster.png"
+  ]
+}

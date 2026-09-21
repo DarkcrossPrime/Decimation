@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/demonflesh",
+  "type": "item",
+  "assets": [
+    "textures/item/demonflesh.png"
+  ],
+  "legacy_sources": [
+    "textures/items/demonflesh.png"
+  ]
+}

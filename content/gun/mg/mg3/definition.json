@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/mg/mg3",
+  "type": "gun",
+  "assets": [
+    "animations/mg3_fire.danim.json",
+    "animations/mg3_rack.danim.json",
+    "animations/mg3_reload1.danim.json",
+    "animations/mg3_slide_back.danim.json",
+    "models/mg3.mtl",
+    "models/mg3.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/mg3.png",
+    "textures/model/mg3.png"
+  ],
+  "legacy_sources": [
+    "animations/mg3/mg3Fire.anib",
+    "animations/mg3/mg3Rack.anib",
+    "animations/mg3/mg3Reload1.anib",
+    "animations/mg3/mg3SlideBack.anib",
+    "models/guns/mg/mg3.bmodel",
+    "sounds/guns/mg/mg3/fire.ogg",
+    "sounds/guns/mg/mg3/fire_distant.ogg",
+    "sounds/guns/mg/mg3/fire_suppressed.ogg",
+    "sounds/guns/mg/mg3/magIn.ogg",
+    "sounds/guns/mg/mg3/magOut.ogg",
+    "sounds/guns/mg/mg3/rack.ogg",
+    "textures/items/gun/mg/mg3.png",
+    "textures/model/guns/mg/mg3/mg3.png"
+  ]
+}

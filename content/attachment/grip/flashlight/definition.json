@@ -1,0 +1,21 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "attachment/grip/flashlight",
+  "type": "attachment",
+  "assets": [
+    "models/flashlight.mtl",
+    "models/flashlight.obj",
+    "textures/item/flashlight.png",
+    "textures/model/flashlight.png",
+    "textures/particle/flashlight.mcmeta",
+    "textures/particle/flashlight.png"
+  ],
+  "legacy_sources": [
+    "models/attachments/grip/flashlight.bmodel",
+    "textures/items/attach/flashlight.png",
+    "textures/model/attachments/grip/flashlight.png",
+    "textures/particle/flashlight.mcmeta",
+    "textures/particle/flashlight.png"
+  ]
+}

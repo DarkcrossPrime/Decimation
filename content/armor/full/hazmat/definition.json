@@ -1,0 +1,17 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "armor/full/hazmat",
+  "type": "armor",
+  "assets": [
+    "models/hazmat.mtl",
+    "models/hazmat.obj",
+    "sounds/death0.ogg",
+    "textures/model/hazmat.png"
+  ],
+  "legacy_sources": [
+    "models/armor/full/hazmat.bmodel",
+    "sounds/mob/soldier/hazmat/death0.ogg",
+    "textures/model/armor/hazmat.png"
+  ]
+}

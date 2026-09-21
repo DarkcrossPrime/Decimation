@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/reeses",
+  "type": "item",
+  "assets": [
+    "textures/item/reeses.png"
+  ],
+  "legacy_sources": [
+    "textures/items/reeses.png"
+  ]
+}

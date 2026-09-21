@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/ammo_itric_bolt_box",
+  "type": "item",
+  "assets": [
+    "textures/item/ammo_itric_bolt_box.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/box/ammo_itric_bolt_box.png"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/fraggrenade",
+  "type": "item",
+  "assets": [
+    "textures/item/fraggrenade.png",
+    "textures/model/fraggrenade.png"
+  ],
+  "legacy_sources": [
+    "textures/items/fraggrenade.png",
+    "textures/model/entities/projectile/fraggrenade.png"
+  ]
+}

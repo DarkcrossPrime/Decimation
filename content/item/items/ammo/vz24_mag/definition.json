@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/vz24_mag",
+  "type": "item",
+  "assets": [
+    "textures/item/vz24Mag.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/mag/vz24Mag.png"
+  ]
+}

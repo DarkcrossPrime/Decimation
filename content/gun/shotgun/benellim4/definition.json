@@ -1,0 +1,35 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/shotgun/benellim4",
+  "type": "gun",
+  "assets": [
+    "animations/benellim4_fire.danim.json",
+    "animations/benellim4_rack.danim.json",
+    "animations/benellim4_reload1.danim.json",
+    "models/benellim4.mtl",
+    "models/benellim4.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/insert_shell.ogg",
+    "sounds/pump.ogg",
+    "sounds/pump_back.ogg",
+    "textures/item/benellim4.png",
+    "textures/model/benellim4.png"
+  ],
+  "legacy_sources": [
+    "animations/benellim4/benellim4Fire.anib",
+    "animations/benellim4/benellim4Rack.anib",
+    "animations/benellim4/benellim4Reload1.anib",
+    "models/guns/shotgun/benellim4.bmodel",
+    "sounds/guns/shotgun/benellim4/fire.ogg",
+    "sounds/guns/shotgun/benellim4/fire_distant.ogg",
+    "sounds/guns/shotgun/benellim4/fire_suppressed.ogg",
+    "sounds/guns/shotgun/benellim4/insert_shell.ogg",
+    "sounds/guns/shotgun/benellim4/pump.ogg",
+    "sounds/guns/shotgun/benellim4/pump_back.ogg",
+    "textures/items/gun/shotgun/benellim4.png",
+    "textures/model/guns/shotgun/benellim4/benellim4.png"
+  ]
+}

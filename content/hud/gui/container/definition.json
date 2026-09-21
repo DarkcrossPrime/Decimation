@@ -1,0 +1,42 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "hud/gui/container",
+  "type": "hud",
+  "assets": [
+    "sounds/slot_click.ogg",
+    "sounds/slot_hover.ogg",
+    "textures/custominventory.png",
+    "textures/inventory.png",
+    "textures/slot/slot_backpack.png",
+    "textures/slot/slot_bank.png",
+    "textures/slot/slot_boots.png",
+    "textures/slot/slot_chestplate.png",
+    "textures/slot/slot_empty.png",
+    "textures/slot/slot_emptyg.png",
+    "textures/slot/slot_helmet.png",
+    "textures/slot/slot_leggings.png",
+    "textures/slot/slot_mask.png",
+    "textures/slot/slot_maskog.png",
+    "textures/slot/slot_vest.png",
+    "textures/ingame/inventory.png"
+  ],
+  "legacy_sources": [
+    "sounds/gui/inventory/slot_click.ogg",
+    "sounds/gui/inventory/slot_hover.ogg",
+    "textures/gui/container/custominventory.png",
+    "textures/gui/container/inventory.png",
+    "textures/gui/container/slot/slot_backpack.png",
+    "textures/gui/container/slot/slot_bank.png",
+    "textures/gui/container/slot/slot_boots.png",
+    "textures/gui/container/slot/slot_chestplate.png",
+    "textures/gui/container/slot/slot_empty.png",
+    "textures/gui/container/slot/slot_emptyg.png",
+    "textures/gui/container/slot/slot_helmet.png",
+    "textures/gui/container/slot/slot_leggings.png",
+    "textures/gui/container/slot/slot_mask.png",
+    "textures/gui/container/slot/slot_maskog.png",
+    "textures/gui/container/slot/slot_vest.png",
+    "textures/gui/ingame/inventory.png"
+  ]
+}

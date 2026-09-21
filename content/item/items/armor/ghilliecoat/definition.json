@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/armor/ghilliecoat",
+  "type": "item",
+  "assets": [
+    "textures/item/ghilliecoat.png"
+  ],
+  "legacy_sources": [
+    "textures/items/armor/ghilliecoat.png"
+  ]
+}

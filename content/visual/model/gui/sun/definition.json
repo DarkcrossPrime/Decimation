@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/gui/sun",
+  "type": "visual",
+  "assets": [
+    "textures/model/sun.png",
+    "textures/particle/sun.png"
+  ],
+  "legacy_sources": [
+    "textures/model/gui/sun.png",
+    "textures/particle/sun.png"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/powerpole",
+  "type": "visual",
+  "assets": [
+    "textures/model/powerpole.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/props/powerpole.png"
+  ]
+}

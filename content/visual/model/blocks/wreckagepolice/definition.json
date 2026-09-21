@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/wreckagepolice",
+  "type": "visual",
+  "assets": [
+    "textures/model/wreckagepolice.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/props/wreckagepolice.png"
+  ]
+}

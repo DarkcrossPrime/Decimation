@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/armor/nypdhelm",
+  "type": "item",
+  "assets": [
+    "textures/item/nypdhelm.png"
+  ],
+  "legacy_sources": [
+    "textures/items/armor/nypdhelm.png"
+  ]
+}

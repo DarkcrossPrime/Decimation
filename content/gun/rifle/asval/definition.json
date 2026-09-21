@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/asval",
+  "type": "gun",
+  "assets": [
+    "animations/asval_fire.danim.json",
+    "animations/asval_rack.danim.json",
+    "animations/asval_reload1.danim.json",
+    "animations/asval_slide_back.danim.json",
+    "models/asval.mtl",
+    "models/asval.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/asval.png",
+    "textures/model/asval.png"
+  ],
+  "legacy_sources": [
+    "animations/asval/asvalFire.anib",
+    "animations/asval/asvalRack.anib",
+    "animations/asval/asvalReload1.anib",
+    "animations/asval/asvalSlideBack.anib",
+    "models/guns/rifle/asval.bmodel",
+    "sounds/guns/rifle/asval/fire.ogg",
+    "sounds/guns/rifle/asval/fire_distant.ogg",
+    "sounds/guns/rifle/asval/fire_suppressed.ogg",
+    "sounds/guns/rifle/asval/magIn.ogg",
+    "sounds/guns/rifle/asval/magOut.ogg",
+    "sounds/guns/rifle/asval/rack.ogg",
+    "textures/items/gun/rifle/asval.png",
+    "textures/model/guns/rifle/asval/asval.png"
+  ]
+}

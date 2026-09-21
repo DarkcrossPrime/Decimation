@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/rpk",
+  "type": "gun",
+  "assets": [
+    "animations/rpk_fire.danim.json",
+    "animations/rpk_rack.danim.json",
+    "animations/rpk_reload1.danim.json",
+    "animations/rpk_slide_back.danim.json",
+    "models/rpk.mtl",
+    "models/rpk.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/rpk.png",
+    "textures/model/rpk.png"
+  ],
+  "legacy_sources": [
+    "animations/rpk/rpkFire.anib",
+    "animations/rpk/rpkRack.anib",
+    "animations/rpk/rpkReload1.anib",
+    "animations/rpk/rpkSlideBack.anib",
+    "models/guns/rifle/rpk.bmodel",
+    "sounds/guns/rifle/rpk/fire.ogg",
+    "sounds/guns/rifle/rpk/fire_distant.ogg",
+    "sounds/guns/rifle/rpk/fire_suppressed.ogg",
+    "sounds/guns/rifle/rpk/magIn.ogg",
+    "sounds/guns/rifle/rpk/magOut.ogg",
+    "sounds/guns/rifle/rpk/rack.ogg",
+    "textures/items/gun/rifle/rpk.png",
+    "textures/model/guns/rifle/rpk/rpk.png"
+  ]
+}

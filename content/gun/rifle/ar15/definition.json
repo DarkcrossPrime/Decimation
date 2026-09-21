@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/ar15",
+  "type": "gun",
+  "assets": [
+    "animations/ar15_fire.danim.json",
+    "animations/ar15_rack.danim.json",
+    "animations/ar15_reload1.danim.json",
+    "animations/ar15_slide_back.danim.json",
+    "models/ar15.mtl",
+    "models/ar15.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/ar15.png",
+    "textures/model/ar15.png"
+  ],
+  "legacy_sources": [
+    "animations/ar15/ar15Fire.anib",
+    "animations/ar15/ar15Rack.anib",
+    "animations/ar15/ar15Reload1.anib",
+    "animations/ar15/ar15SlideBack.anib",
+    "models/guns/rifle/ar15.bmodel",
+    "sounds/guns/rifle/ar15/fire.ogg",
+    "sounds/guns/rifle/ar15/fire_distant.ogg",
+    "sounds/guns/rifle/ar15/fire_suppressed.ogg",
+    "sounds/guns/rifle/ar15/magIn.ogg",
+    "sounds/guns/rifle/ar15/magOut.ogg",
+    "sounds/guns/rifle/ar15/rack.ogg",
+    "textures/items/gun/rifle/ar15.png",
+    "textures/model/guns/rifle/ar15/ar15.png"
+  ]
+}

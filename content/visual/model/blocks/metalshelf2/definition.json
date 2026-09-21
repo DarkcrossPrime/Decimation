@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/metalshelf2",
+  "type": "visual",
+  "assets": [
+    "textures/model/metalshelf2.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/props/metalshelf2.png"
+  ]
+}

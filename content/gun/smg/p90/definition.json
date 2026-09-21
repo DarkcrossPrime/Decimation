@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/smg/p90",
+  "type": "gun",
+  "assets": [
+    "animations/p90_fire.danim.json",
+    "animations/p90_rack.danim.json",
+    "animations/p90_reload1.danim.json",
+    "animations/p90_slide_back.danim.json",
+    "models/p90.mtl",
+    "models/p90.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/p90.png",
+    "textures/model/p90.png"
+  ],
+  "legacy_sources": [
+    "animations/p90/p90Fire.anib",
+    "animations/p90/p90Rack.anib",
+    "animations/p90/p90Reload1.anib",
+    "animations/p90/p90SlideBack.anib",
+    "models/guns/smg/p90.bmodel",
+    "sounds/guns/smg/p90/fire.ogg",
+    "sounds/guns/smg/p90/fire_distant.ogg",
+    "sounds/guns/smg/p90/fire_suppressed.ogg",
+    "sounds/guns/smg/p90/magIn.ogg",
+    "sounds/guns/smg/p90/magOut.ogg",
+    "sounds/guns/smg/p90/rack.ogg",
+    "textures/items/gun/smg/p90.png",
+    "textures/model/guns/smg/p90/p90.png"
+  ]
+}

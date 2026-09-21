@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/studiocamera",
+  "type": "visual",
+  "assets": [
+    "textures/model/studiocamera.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/props/studiocamera.png"
+  ]
+}

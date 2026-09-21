@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/metrorailing1",
+  "type": "visual",
+  "assets": [
+    "textures/model/metrorailing1.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/props/metrorailing1.png"
+  ]
+}

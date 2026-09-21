@@ -1,0 +1,7 @@
+newmtl mg_suppressor_material
+Ka 0.08 0.08 0.08
+Kd 0.55 0.58 0.62
+Ks 0.15 0.15 0.15
+Ns 24
+illum 2
+map_Kd ../textures/items/attach/mgSuppressor.png

@@ -1,0 +1,81 @@
+{
+  "format": "decimation:danim",
+  "version": 1,
+  "source": "mp40Fire.anib",
+  "static": false,
+  "length": 2,
+  "hand": 0,
+  "frames": [
+    {
+      "index": 0,
+      "transforms": {
+        "OffHand": {
+          "position": [
+            -9.536743e-07,
+            0.08000183,
+            9.536743e-07
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 1,
+      "transforms": {
+        "slideModel0": {
+          "position": [
+            -3,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "OffHand": {
+          "position": [
+            -9.536743e-07,
+            0.08000183,
+            9.536743e-07
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "action": "random"
+    }
+  ]
+}

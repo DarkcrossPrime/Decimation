@@ -1,0 +1,16 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "mob/model/projectile",
+  "type": "mob",
+  "assets": [
+    "textures/model/46mm.png",
+    "textures/model/c4package.png",
+    "textures/model/crossbow_bolt.png"
+  ],
+  "legacy_sources": [
+    "textures/model/entities/projectile/46mm.png",
+    "textures/model/entities/projectile/c4package.png",
+    "textures/model/entities/projectile/crossbow_bolt.png"
+  ]
+}

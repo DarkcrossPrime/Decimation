@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/kit_sandbagbeige",
+  "type": "item",
+  "assets": [
+    "textures/item/kit_sandbagbeige.png"
+  ],
+  "legacy_sources": [
+    "textures/items/kit_sandbagbeige.png"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/scraps/graphics_card_fixed",
+  "type": "item",
+  "assets": [
+    "textures/item/graphics_card_fixed.png"
+  ],
+  "legacy_sources": [
+    "textures/items/scraps/monitor/graphics_card_fixed.png"
+  ]
+}

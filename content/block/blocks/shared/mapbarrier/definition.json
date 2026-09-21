@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/mapbarrier",
+  "type": "block",
+  "assets": [
+    "textures/mapbarrier.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/mapbarrier.png"
+  ]
+}

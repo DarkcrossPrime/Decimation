@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/mg/m240",
+  "type": "gun",
+  "assets": [
+    "animations/m240_fire.danim.json",
+    "animations/m240_rack.danim.json",
+    "animations/m240_reload1.danim.json",
+    "animations/m240_slide_back.danim.json",
+    "models/m240.mtl",
+    "models/m240.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/m240.png",
+    "textures/model/m240.png"
+  ],
+  "legacy_sources": [
+    "animations/m240/m240Fire.anib",
+    "animations/m240/m240Rack.anib",
+    "animations/m240/m240Reload1.anib",
+    "animations/m240/m240SlideBack.anib",
+    "models/guns/mg/m240.bmodel",
+    "sounds/guns/mg/m240/fire.ogg",
+    "sounds/guns/mg/m240/fire_distant.ogg",
+    "sounds/guns/mg/m240/fire_suppressed.ogg",
+    "sounds/guns/mg/m240/magIn.ogg",
+    "sounds/guns/mg/m240/magOut.ogg",
+    "sounds/guns/mg/m240/rack.ogg",
+    "textures/items/gun/mg/m240.png",
+    "textures/model/guns/mg/m240/m240.png"
+  ]
+}

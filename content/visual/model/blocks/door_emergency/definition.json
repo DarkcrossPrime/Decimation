@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/door_emergency",
+  "type": "visual",
+  "assets": [
+    "textures/model/door_emergency.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/interactive/door_emergency.png"
+  ]
+}

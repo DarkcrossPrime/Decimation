@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/fnscarl",
+  "type": "gun",
+  "assets": [
+    "animations/fnscarl_fire.danim.json",
+    "animations/fnscarl_rack.danim.json",
+    "animations/fnscarl_reload1.danim.json",
+    "animations/fnscarl_slide_back.danim.json",
+    "models/fnscarl.mtl",
+    "models/fnscarl.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/fnscarl.png",
+    "textures/model/fnscarl.png"
+  ],
+  "legacy_sources": [
+    "animations/fnscarl/fnscarlFire.anib",
+    "animations/fnscarl/fnscarlRack.anib",
+    "animations/fnscarl/fnscarlReload1.anib",
+    "animations/fnscarl/fnscarlSlideBack.anib",
+    "models/guns/rifle/fnscarl.bmodel",
+    "sounds/guns/rifle/fnscarl/fire.ogg",
+    "sounds/guns/rifle/fnscarl/fire_distant.ogg",
+    "sounds/guns/rifle/fnscarl/fire_suppressed.ogg",
+    "sounds/guns/rifle/fnscarl/magIn.ogg",
+    "sounds/guns/rifle/fnscarl/magOut.ogg",
+    "sounds/guns/rifle/fnscarl/rack.ogg",
+    "textures/items/gun/rifle/fnscarl.png",
+    "textures/model/guns/rifle/fnscarl/fnscarl.png"
+  ]
+}

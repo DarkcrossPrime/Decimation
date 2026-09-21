@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/roadslab_yellowline2",
+  "type": "block",
+  "assets": [
+    "textures/roadslab_yellowline2.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/roadslab_yellowline2.png"
+  ]
+}

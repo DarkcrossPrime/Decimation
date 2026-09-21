@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/officechair2",
+  "type": "visual",
+  "assets": [
+    "textures/model/officechair2.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/props/officechair2.png"
+  ]
+}

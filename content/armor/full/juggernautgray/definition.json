@@ -1,0 +1,15 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "armor/full/juggernautgray",
+  "type": "armor",
+  "assets": [
+    "models/juggernautgray.mtl",
+    "models/juggernautgray.obj",
+    "textures/model/juggernautgray.png"
+  ],
+  "legacy_sources": [
+    "models/armor/full/juggernautgray.bmodel",
+    "textures/model/armor/juggernautgray.png"
+  ]
+}

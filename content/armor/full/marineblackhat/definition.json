@@ -1,0 +1,17 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "armor/full/marineblackhat",
+  "type": "armor",
+  "assets": [
+    "models/marineblackhat.mtl",
+    "models/marineblackhat.obj",
+    "textures/item/marineblackhat.png",
+    "textures/model/marineblackhat.png"
+  ],
+  "legacy_sources": [
+    "models/armor/full/marineblackhat.bmodel",
+    "textures/items/armor/marineblackhat.png",
+    "textures/model/armor/marineblackhat.png"
+  ]
+}

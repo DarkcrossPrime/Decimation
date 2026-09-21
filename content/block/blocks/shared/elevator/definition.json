@@ -1,0 +1,18 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/elevator",
+  "type": "block",
+  "assets": [
+    "sounds/beep.ogg",
+    "sounds/start.ogg",
+    "sounds/stop.ogg",
+    "textures/elevator.png"
+  ],
+  "legacy_sources": [
+    "sounds/blocks/elevator/beep.ogg",
+    "sounds/blocks/elevator/start.ogg",
+    "sounds/blocks/elevator/stop.ogg",
+    "textures/blocks/elevator.png"
+  ]
+}

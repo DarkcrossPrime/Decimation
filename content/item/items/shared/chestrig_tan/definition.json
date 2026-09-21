@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/chestrig_tan",
+  "type": "item",
+  "assets": [
+    "textures/item/chestrig_tan.png"
+  ],
+  "legacy_sources": [
+    "textures/items/chestrig_tan.png"
+  ]
+}

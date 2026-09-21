@@ -1,0 +1,17 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/machete",
+  "type": "item",
+  "assets": [
+    "models/machete.mtl",
+    "models/machete.obj",
+    "textures/item/machete.png",
+    "textures/model/machete.png"
+  ],
+  "legacy_sources": [
+    "models/items/machete.bmodel",
+    "textures/items/machete.png",
+    "textures/model/items/machete.png"
+  ]
+}

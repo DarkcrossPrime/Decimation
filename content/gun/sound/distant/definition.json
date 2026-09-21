@@ -1,0 +1,18 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/sound/distant",
+  "type": "gun",
+  "assets": [
+    "sounds/echo0.ogg",
+    "sounds/echo1.ogg",
+    "sounds/echo2.ogg",
+    "sounds/echo3.ogg"
+  ],
+  "legacy_sources": [
+    "sounds/guns/shared/echo/distant/echo0.ogg",
+    "sounds/guns/shared/echo/distant/echo1.ogg",
+    "sounds/guns/shared/echo/distant/echo2.ogg",
+    "sounds/guns/shared/echo/distant/echo3.ogg"
+  ]
+}

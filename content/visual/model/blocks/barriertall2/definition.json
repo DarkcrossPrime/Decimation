@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/barriertall2",
+  "type": "visual",
+  "assets": [
+    "textures/model/barriertall2.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/props/barriertall2.png"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "armor/full/marinefury",
+  "type": "armor",
+  "assets": [
+    "models/marinefury.mtl",
+    "models/marinefury.obj",
+    "textures/model/marinefury.png"
+  ],
+  "legacy_sources": [
+    "models/armor/full/marinefury.bmodel",
+    "textures/model/armor/marinefury.png"
+  ]
+}

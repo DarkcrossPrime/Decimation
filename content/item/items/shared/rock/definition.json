@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/rock",
+  "type": "item",
+  "assets": [
+    "textures/item/rock.png"
+  ],
+  "legacy_sources": [
+    "textures/items/rock.png"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/flagpoll_ussr",
+  "type": "visual",
+  "assets": [
+    "textures/model/flagpoll_ussr.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/props/flagpoll_ussr.png"
+  ]
+}

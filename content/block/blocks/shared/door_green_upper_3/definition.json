@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/door_green_upper_3",
+  "type": "block",
+  "assets": [
+    "textures/door_green_upper_3.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/door_green_upper_3.png"
+  ]
+}

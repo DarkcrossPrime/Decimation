@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/floor_tiles_1",
+  "type": "block",
+  "assets": [
+    "textures/floor_tiles_1.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/floor_tiles_1.png"
+  ]
+}

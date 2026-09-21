@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/attachments/acog",
+  "type": "visual",
+  "assets": [
+    "textures/model/acog.png"
+  ],
+  "legacy_sources": [
+    "textures/model/attachments/sight/acog.png"
+  ]
+}

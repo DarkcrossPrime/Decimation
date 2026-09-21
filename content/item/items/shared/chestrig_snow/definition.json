@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/chestrig_snow",
+  "type": "item",
+  "assets": [
+    "textures/item/chestrig_snow.png"
+  ],
+  "legacy_sources": [
+    "textures/items/chestrig_snow.png"
+  ]
+}

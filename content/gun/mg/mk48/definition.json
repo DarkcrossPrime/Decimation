@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/mg/mk48",
+  "type": "gun",
+  "assets": [
+    "animations/mk48_fire.danim.json",
+    "animations/mk48_rack.danim.json",
+    "animations/mk48_reload1.danim.json",
+    "animations/mk48_slide_back.danim.json",
+    "models/mk48.mtl",
+    "models/mk48.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/mk48.png",
+    "textures/model/mk48.png"
+  ],
+  "legacy_sources": [
+    "animations/mk48/mk48Fire.anib",
+    "animations/mk48/mk48Rack.anib",
+    "animations/mk48/mk48Reload1.anib",
+    "animations/mk48/mk48SlideBack.anib",
+    "models/guns/mg/mk48.bmodel",
+    "sounds/guns/mg/mk48/fire.ogg",
+    "sounds/guns/mg/mk48/fire_distant.ogg",
+    "sounds/guns/mg/mk48/fire_suppressed.ogg",
+    "sounds/guns/mg/mk48/magIn.ogg",
+    "sounds/guns/mg/mk48/magOut.ogg",
+    "sounds/guns/mg/mk48/rack.ogg",
+    "textures/items/gun/mg/mk48.png",
+    "textures/model/guns/mg/mk48/mk48.png"
+  ]
+}

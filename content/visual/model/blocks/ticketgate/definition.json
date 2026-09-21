@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/ticketgate",
+  "type": "visual",
+  "assets": [
+    "textures/model/ticketgate.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/props/ticketgate.png"
+  ]
+}

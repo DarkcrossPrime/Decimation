@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/concertinawire",
+  "type": "block",
+  "assets": [
+    "textures/concertinawire.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/concertinawire.png"
+  ]
+}

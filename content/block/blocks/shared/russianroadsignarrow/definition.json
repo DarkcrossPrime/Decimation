@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/russianroadsignarrow",
+  "type": "block",
+  "assets": [
+    "textures/russianroadsignarrow.png",
+    "textures/model/russianroadsignarrow.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/russianroadsignarrow.png",
+    "textures/model/blocks/props/russianroadsignarrow.png"
+  ]
+}

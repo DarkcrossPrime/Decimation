@@ -1,0 +1,6 @@
+newmtl huge_military_pack_material
+Ka 0.08 0.08 0.08
+Kd 0.55 0.58 0.62
+Ks 0.15 0.15 0.15
+Ns 24
+illum 2

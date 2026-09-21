@@ -1,0 +1,20 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/sound/ironsight",
+  "type": "gun",
+  "assets": [
+    "sounds/sight0.ogg",
+    "sounds/sight1.ogg",
+    "sounds/sight2.ogg",
+    "sounds/sight3.ogg",
+    "sounds/sight4.ogg"
+  ],
+  "legacy_sources": [
+    "sounds/guns/shared/ironsight/sight0.ogg",
+    "sounds/guns/shared/ironsight/sight1.ogg",
+    "sounds/guns/shared/ironsight/sight2.ogg",
+    "sounds/guns/shared/ironsight/sight3.ogg",
+    "sounds/guns/shared/ironsight/sight4.ogg"
+  ]
+}

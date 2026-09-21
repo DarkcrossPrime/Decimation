@@ -1,0 +1,19 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "attachment/sight/2x",
+  "type": "attachment",
+  "assets": [
+    "models/2x.mtl",
+    "models/2x.obj",
+    "textures/item/2x.png",
+    "textures/model/attachments/sight/2x.png",
+    "textures/model/guns/scopes/2x.png"
+  ],
+  "legacy_sources": [
+    "models/attachments/sight/2x.bmodel",
+    "textures/items/attach/2x.png",
+    "textures/model/attachments/sight/2x.png",
+    "textures/model/guns/scopes/2x.png"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/vz52",
+  "type": "gun",
+  "assets": [
+    "animations/vz52_fire.danim.json",
+    "animations/vz52_rack.danim.json",
+    "animations/vz52_reload1.danim.json",
+    "animations/vz52_slide_back.danim.json",
+    "models/vz52.mtl",
+    "models/vz52.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/vz52.png",
+    "textures/model/vz52.png"
+  ],
+  "legacy_sources": [
+    "animations/vz52/vz52Fire.anib",
+    "animations/vz52/vz52Rack.anib",
+    "animations/vz52/vz52Reload1.anib",
+    "animations/vz52/vz52SlideBack.anib",
+    "models/guns/rifle/vz52.bmodel",
+    "sounds/guns/rifle/vz52/fire.ogg",
+    "sounds/guns/rifle/vz52/fire_distant.ogg",
+    "sounds/guns/rifle/vz52/fire_suppressed.ogg",
+    "sounds/guns/rifle/vz52/magIn.ogg",
+    "sounds/guns/rifle/vz52/magOut.ogg",
+    "sounds/guns/rifle/vz52/rack.ogg",
+    "textures/items/gun/rifle/vz52.png",
+    "textures/model/guns/rifle/vz52/vz52.png"
+  ]
+}

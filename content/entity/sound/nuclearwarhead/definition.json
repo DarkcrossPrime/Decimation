@@ -1,0 +1,20 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "entity/sound/nuclearwarhead",
+  "type": "entity",
+  "assets": [
+    "sounds/explode.ogg",
+    "sounds/environment/explode.ogg",
+    "sounds/items/grenade/smoke/explode.ogg",
+    "sounds/items/grenade/stun/explode.ogg",
+    "sounds/items/molotov/explode.ogg"
+  ],
+  "legacy_sources": [
+    "sounds/entity/rocket/nuclearwarhead/explode.ogg",
+    "sounds/environment/explode.ogg",
+    "sounds/items/grenade/smoke/explode.ogg",
+    "sounds/items/grenade/stun/explode.ogg",
+    "sounds/items/molotov/explode.ogg"
+  ]
+}

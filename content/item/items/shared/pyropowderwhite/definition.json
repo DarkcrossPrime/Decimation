@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/pyropowderwhite",
+  "type": "item",
+  "assets": [
+    "textures/item/pyropowderwhite.png"
+  ],
+  "legacy_sources": [
+    "textures/items/pyropowderwhite.png"
+  ]
+}

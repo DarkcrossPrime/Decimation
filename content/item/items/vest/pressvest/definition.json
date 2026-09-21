@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/vest/pressvest",
+  "type": "item",
+  "assets": [
+    "textures/item/pressvest.png",
+    "textures/model/pressvest.png"
+  ],
+  "legacy_sources": [
+    "textures/items/vest/pressvest.png",
+    "textures/model/vests/pressvest.png"
+  ]
+}

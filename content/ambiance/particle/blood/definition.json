@@ -1,0 +1,16 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "ambiance/particle/blood",
+  "type": "ambiance",
+  "assets": [
+    "textures/blood.png",
+    "textures/bloodbayo.png",
+    "textures/infectedblood/bloodbayo.png"
+  ],
+  "legacy_sources": [
+    "textures/particle/blood.png",
+    "textures/particle/blood/bloodbayo.png",
+    "textures/particle/infectedblood/bloodbayo.png"
+  ]
+}

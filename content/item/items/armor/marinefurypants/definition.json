@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/armor/marinefurypants",
+  "type": "item",
+  "assets": [
+    "textures/item/marinefurypants.png"
+  ],
+  "legacy_sources": [
+    "textures/items/armor/marinefurypants.png"
+  ]
+}

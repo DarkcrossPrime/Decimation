@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/cannedlime",
+  "type": "item",
+  "assets": [
+    "textures/item/cannedlime.png"
+  ],
+  "legacy_sources": [
+    "textures/items/cannedlime.png"
+  ]
+}

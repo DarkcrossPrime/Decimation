@@ -1,0 +1,20 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/textures/foliage",
+  "type": "block",
+  "assets": [
+    "textures/blocks/leafmask_32_fine.png",
+    "textures/blocks/leafmask_32_full.png",
+    "textures/blocks/leafmask_32_jumbled.png",
+    "textures/blocks/leafmask_32_rough.png",
+    "textures/blocks/missing_leaf.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/foliage/leafmask_32_fine.png",
+    "textures/blocks/foliage/leafmask_32_full.png",
+    "textures/blocks/foliage/leafmask_32_jumbled.png",
+    "textures/blocks/foliage/leafmask_32_rough.png",
+    "textures/blocks/foliage/missing_leaf.png"
+  ]
+}

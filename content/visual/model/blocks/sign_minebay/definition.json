@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/sign_minebay",
+  "type": "visual",
+  "assets": [
+    "textures/model/sign_minebay.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/props/sign_minebay.png"
+  ]
+}

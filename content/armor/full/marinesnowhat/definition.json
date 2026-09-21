@@ -1,0 +1,17 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "armor/full/marinesnowhat",
+  "type": "armor",
+  "assets": [
+    "models/marinesnowhat.mtl",
+    "models/marinesnowhat.obj",
+    "textures/item/marinesnowhat.png",
+    "textures/model/marinesnowhat.png"
+  ],
+  "legacy_sources": [
+    "models/armor/full/marinesnowhat.bmodel",
+    "textures/items/armor/marinesnowhat.png",
+    "textures/model/armor/marinesnowhat.png"
+  ]
+}

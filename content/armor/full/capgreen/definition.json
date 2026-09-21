@@ -1,0 +1,17 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "armor/full/capgreen",
+  "type": "armor",
+  "assets": [
+    "models/capgreen.mtl",
+    "models/capgreen.obj",
+    "textures/item/capgreen.png",
+    "textures/model/capgreen.png"
+  ],
+  "legacy_sources": [
+    "models/armor/full/capgreen.bmodel",
+    "textures/items/armor/capgreen.png",
+    "textures/model/armor/capgreen.png"
+  ]
+}

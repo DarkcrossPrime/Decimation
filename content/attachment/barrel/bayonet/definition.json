@@ -1,0 +1,17 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "attachment/barrel/bayonet",
+  "type": "attachment",
+  "assets": [
+    "models/bayonet.mtl",
+    "models/bayonet.obj",
+    "textures/item/bayonet.png",
+    "textures/model/bayonet.png"
+  ],
+  "legacy_sources": [
+    "models/attachments/barrel/bayonet.bmodel",
+    "textures/items/attach/bayonet.png",
+    "textures/model/attachments/barrel/bayonet.png"
+  ]
+}

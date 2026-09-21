@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/roadsign_oneway",
+  "type": "visual",
+  "assets": [
+    "textures/model/roadsign_oneway.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/props/roadsign_oneway.png"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/mosinnagant",
+  "type": "gun",
+  "assets": [
+    "animations/mosinnagant_fire.danim.json",
+    "animations/mosinnagant_rack.danim.json",
+    "animations/mosinnagant_reload1.danim.json",
+    "animations/mosinnagant_slide_back.danim.json",
+    "models/mosinnagant.mtl",
+    "models/mosinnagant.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/mosinnagant.png",
+    "textures/model/mosinnagant.png"
+  ],
+  "legacy_sources": [
+    "animations/mosinnagant/mosinnagantFire.anib",
+    "animations/mosinnagant/mosinnagantRack.anib",
+    "animations/mosinnagant/mosinnagantReload1.anib",
+    "animations/mosinnagant/mosinnagantSlideBack.anib",
+    "models/guns/rifle/mosinnagant.bmodel",
+    "sounds/guns/rifle/mosinnagant/fire.ogg",
+    "sounds/guns/rifle/mosinnagant/fire_distant.ogg",
+    "sounds/guns/rifle/mosinnagant/fire_suppressed.ogg",
+    "sounds/guns/rifle/mosinnagant/magIn.ogg",
+    "sounds/guns/rifle/mosinnagant/magOut.ogg",
+    "sounds/guns/rifle/mosinnagant/rack.ogg",
+    "textures/items/gun/rifle/mosinnagant.png",
+    "textures/model/guns/rifle/mosinnagant/mosinnagant.png"
+  ]
+}

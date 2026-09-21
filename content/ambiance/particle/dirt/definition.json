@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "ambiance/particle/dirt",
+  "type": "ambiance",
+  "assets": [
+    "textures/dirt.png"
+  ],
+  "legacy_sources": [
+    "textures/particle/dirt.png"
+  ]
+}

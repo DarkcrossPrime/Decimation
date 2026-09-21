@@ -1,0 +1,17 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "attachment/barrel/ar_suppressor",
+  "type": "attachment",
+  "assets": [
+    "models/ar_suppressor.mtl",
+    "models/ar_suppressor.obj",
+    "textures/item/arSuppressor.png",
+    "textures/model/arSuppressor.png"
+  ],
+  "legacy_sources": [
+    "models/attachments/barrel/arSuppressor.bmodel",
+    "textures/items/attach/arSuppressor.png",
+    "textures/model/attachments/barrel/arSuppressor.png"
+  ]
+}

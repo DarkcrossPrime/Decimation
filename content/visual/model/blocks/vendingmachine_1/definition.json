@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/vendingmachine_1",
+  "type": "visual",
+  "assets": [
+    "textures/model/vendingmachine_1.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/props/vendingmachine_1.png"
+  ]
+}

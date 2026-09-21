@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/barbedwire",
+  "type": "item",
+  "assets": [
+    "textures/item/barbedwire.png",
+    "textures/model/barbedwire.png"
+  ],
+  "legacy_sources": [
+    "textures/items/barbedwire.png",
+    "textures/model/entities/placeable/barbedwire.png"
+  ]
+}

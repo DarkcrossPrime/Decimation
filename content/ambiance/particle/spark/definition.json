@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "ambiance/particle/spark",
+  "type": "ambiance",
+  "assets": [
+    "textures/spark.png"
+  ],
+  "legacy_sources": [
+    "textures/particle/spark.png"
+  ]
+}

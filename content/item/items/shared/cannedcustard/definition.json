@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/cannedcustard",
+  "type": "item",
+  "assets": [
+    "textures/item/cannedcustard.png"
+  ],
+  "legacy_sources": [
+    "textures/items/cannedcustard.png"
+  ]
+}

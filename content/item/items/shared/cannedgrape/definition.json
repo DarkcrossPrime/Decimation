@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/cannedgrape",
+  "type": "item",
+  "assets": [
+    "textures/item/cannedgrape.png"
+  ],
+  "legacy_sources": [
+    "textures/items/cannedgrape.png"
+  ]
+}

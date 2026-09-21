@@ -1,0 +1,15 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/newsstand1",
+  "type": "block",
+  "assets": [
+    "models/newsstand1.mtl",
+    "models/newsstand1.obj",
+    "textures/model/newsstand1.png"
+  ],
+  "legacy_sources": [
+    "models/props/newsstand1.bmodel",
+    "textures/model/blocks/props/newsstand1.png"
+  ]
+}

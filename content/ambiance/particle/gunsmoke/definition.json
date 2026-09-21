@@ -1,0 +1,34 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "ambiance/particle/gunsmoke",
+  "type": "ambiance",
+  "assets": [
+    "textures/gunsmoke1.mcmeta",
+    "textures/gunsmoke1.png",
+    "textures/gunsmoke2.mcmeta",
+    "textures/gunsmoke2.png",
+    "textures/gunsmoke3.mcmeta",
+    "textures/gunsmoke3.png",
+    "textures/gunsmoke4.mcmeta",
+    "textures/gunsmoke4.png",
+    "textures/gunsmoke5.mcmeta",
+    "textures/gunsmoke5.png",
+    "textures/gunsmoke6.mcmeta",
+    "textures/gunsmoke6.png"
+  ],
+  "legacy_sources": [
+    "textures/particle/gunsmoke1.mcmeta",
+    "textures/particle/gunsmoke1.png",
+    "textures/particle/gunsmoke2.mcmeta",
+    "textures/particle/gunsmoke2.png",
+    "textures/particle/gunsmoke3.mcmeta",
+    "textures/particle/gunsmoke3.png",
+    "textures/particle/gunsmoke4.mcmeta",
+    "textures/particle/gunsmoke4.png",
+    "textures/particle/gunsmoke5.mcmeta",
+    "textures/particle/gunsmoke5.png",
+    "textures/particle/gunsmoke6.mcmeta",
+    "textures/particle/gunsmoke6.png"
+  ]
+}

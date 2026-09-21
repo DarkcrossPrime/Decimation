@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/safezonesignexit",
+  "type": "block",
+  "assets": [
+    "textures/safezonesignexit.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/safezonesignexit.png"
+  ]
+}

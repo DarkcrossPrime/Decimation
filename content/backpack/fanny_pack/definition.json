@@ -1,0 +1,13 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "backpack/fanny_pack",
+  "type": "backpack",
+  "assets": [
+    "models/fanny_pack.mtl",
+    "models/fanny_pack.obj"
+  ],
+  "legacy_sources": [
+    "models/backpacks/fannyPack.bmodel"
+  ]
+}

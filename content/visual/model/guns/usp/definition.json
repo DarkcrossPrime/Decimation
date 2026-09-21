@@ -1,0 +1,24 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/guns/usp",
+  "type": "visual",
+  "assets": [
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/model/usp.png"
+  ],
+  "legacy_sources": [
+    "sounds/guns/pistol/usp/fire.ogg",
+    "sounds/guns/pistol/usp/fire_distant.ogg",
+    "sounds/guns/pistol/usp/fire_suppressed.ogg",
+    "sounds/guns/pistol/usp/magIn.ogg",
+    "sounds/guns/pistol/usp/magOut.ogg",
+    "sounds/guns/pistol/usp/rack.ogg",
+    "textures/model/guns/pistol/usp/usp.png"
+  ]
+}

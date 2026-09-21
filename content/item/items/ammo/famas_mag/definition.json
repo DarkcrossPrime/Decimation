@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/famas_mag",
+  "type": "item",
+  "assets": [
+    "textures/item/famasMag.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/mag/famasMag.png"
+  ]
+}

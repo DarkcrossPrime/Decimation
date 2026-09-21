@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/candycorn",
+  "type": "item",
+  "assets": [
+    "textures/item/candycorn.png"
+  ],
+  "legacy_sources": [
+    "textures/items/candycorn.png"
+  ]
+}

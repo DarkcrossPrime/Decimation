@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/armor/marinepants",
+  "type": "item",
+  "assets": [
+    "textures/item/marinepants.png"
+  ],
+  "legacy_sources": [
+    "textures/items/armor/marinepants.png"
+  ]
+}

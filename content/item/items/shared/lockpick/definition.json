@@ -1,0 +1,20 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/lockpick",
+  "type": "item",
+  "assets": [
+    "sounds/lockopen.ogg",
+    "sounds/pinfail.ogg",
+    "sounds/pinmatch1.ogg",
+    "sounds/pinmatch2.ogg",
+    "textures/item/lockpick.png"
+  ],
+  "legacy_sources": [
+    "sounds/items/lockpick/lockopen.ogg",
+    "sounds/items/lockpick/pinfail.ogg",
+    "sounds/items/lockpick/pinmatch1.ogg",
+    "sounds/items/lockpick/pinmatch2.ogg",
+    "textures/items/lockpick.png"
+  ]
+}

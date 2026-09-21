@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/tirestack",
+  "type": "visual",
+  "assets": [
+    "textures/model/tirestack.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/props/tirestack.png"
+  ]
+}

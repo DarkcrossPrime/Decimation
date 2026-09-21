@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/stenmk2_mag",
+  "type": "item",
+  "assets": [
+    "textures/item/stenmk2Mag.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/mag/stenmk2Mag.png"
+  ]
+}

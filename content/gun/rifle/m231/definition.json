@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/m231",
+  "type": "gun",
+  "assets": [
+    "animations/m231_fire.danim.json",
+    "animations/m231_rack.danim.json",
+    "animations/m231_reload1.danim.json",
+    "animations/m231_slide_back.danim.json",
+    "models/m231.mtl",
+    "models/m231.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/m231.png",
+    "textures/model/m231.png"
+  ],
+  "legacy_sources": [
+    "animations/m231/m231Fire.anib",
+    "animations/m231/m231Rack.anib",
+    "animations/m231/m231Reload1.anib",
+    "animations/m231/m231SlideBack.anib",
+    "models/guns/rifle/m231.bmodel",
+    "sounds/guns/rifle/m231/fire.ogg",
+    "sounds/guns/rifle/m231/fire_distant.ogg",
+    "sounds/guns/rifle/m231/fire_suppressed.ogg",
+    "sounds/guns/rifle/m231/magIn.ogg",
+    "sounds/guns/rifle/m231/magOut.ogg",
+    "sounds/guns/rifle/m231/rack.ogg",
+    "textures/items/gun/rifle/m231.png",
+    "textures/model/guns/rifle/m231/m231.png"
+  ]
+}

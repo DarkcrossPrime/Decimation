@@ -1,0 +1,13 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "backpack/hiking_pack",
+  "type": "backpack",
+  "assets": [
+    "models/hiking_pack.mtl",
+    "models/hiking_pack.obj"
+  ],
+  "legacy_sources": [
+    "models/backpacks/hikingPack.bmodel"
+  ]
+}

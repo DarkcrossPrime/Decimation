@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/chocolateapple",
+  "type": "item",
+  "assets": [
+    "textures/item/chocolateapple.png"
+  ],
+  "legacy_sources": [
+    "textures/items/chocolateapple.png"
+  ]
+}

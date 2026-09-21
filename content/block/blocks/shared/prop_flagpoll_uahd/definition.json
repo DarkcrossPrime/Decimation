@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/prop_flagpoll_uahd",
+  "type": "block",
+  "assets": [
+    "textures/prop_flagpoll_uahd.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/prop_flagpoll_uahd.png"
+  ]
+}

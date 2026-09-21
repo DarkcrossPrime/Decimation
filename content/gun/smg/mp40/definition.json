@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/smg/mp40",
+  "type": "gun",
+  "assets": [
+    "animations/mp40_fire.danim.json",
+    "animations/mp40_rack.danim.json",
+    "animations/mp40_reload1.danim.json",
+    "animations/mp40_slide_back.danim.json",
+    "models/mp40.mtl",
+    "models/mp40.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/mp40.png",
+    "textures/model/mp40.png"
+  ],
+  "legacy_sources": [
+    "animations/mp40/mp40Fire.anib",
+    "animations/mp40/mp40Rack.anib",
+    "animations/mp40/mp40Reload1.anib",
+    "animations/mp40/mp40SlideBack.anib",
+    "models/guns/smg/mp40.bmodel",
+    "sounds/guns/smg/mp40/fire.ogg",
+    "sounds/guns/smg/mp40/fire_distant.ogg",
+    "sounds/guns/smg/mp40/fire_suppressed.ogg",
+    "sounds/guns/smg/mp40/magIn.ogg",
+    "sounds/guns/smg/mp40/magOut.ogg",
+    "sounds/guns/smg/mp40/rack.ogg",
+    "textures/items/gun/smg/mp40.png",
+    "textures/model/guns/smg/mp40/mp40.png"
+  ]
+}

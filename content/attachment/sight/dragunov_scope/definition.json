@@ -1,0 +1,19 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "attachment/sight/dragunov_scope",
+  "type": "attachment",
+  "assets": [
+    "models/dragunov_scope.mtl",
+    "models/dragunov_scope.obj",
+    "textures/item/dragunovScope.png",
+    "textures/model/attachments/sight/dragunovScope.png",
+    "textures/model/guns/scopes/dragunovScope.png"
+  ],
+  "legacy_sources": [
+    "models/attachments/sight/dragunovScope.bmodel",
+    "textures/items/attach/dragunovScope.png",
+    "textures/model/attachments/sight/dragunovScope.png",
+    "textures/model/guns/scopes/dragunovScope.png"
+  ]
+}

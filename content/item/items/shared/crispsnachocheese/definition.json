@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/crispsnachocheese",
+  "type": "item",
+  "assets": [
+    "textures/item/crispsnachocheese.png"
+  ],
+  "legacy_sources": [
+    "textures/items/crispsnachocheese.png"
+  ]
+}

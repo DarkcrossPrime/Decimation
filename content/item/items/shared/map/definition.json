@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/map",
+  "type": "item",
+  "assets": [
+    "textures/item/map.png",
+    "textures/model/map.png"
+  ],
+  "legacy_sources": [
+    "textures/items/map.png",
+    "textures/model/items/map.png"
+  ]
+}

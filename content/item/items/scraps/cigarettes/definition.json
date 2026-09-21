@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/scraps/cigarettes",
+  "type": "item",
+  "assets": [
+    "textures/item/cigarettes.png"
+  ],
+  "legacy_sources": [
+    "textures/items/scraps/cigarettes.png"
+  ]
+}

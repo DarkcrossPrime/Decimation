@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/ammo_9mmrounds_box",
+  "type": "item",
+  "assets": [
+    "textures/item/ammo_9mmrounds_box.png",
+    "textures/model/ammo_9mmrounds_box.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/box/ammo_9mmrounds_box.png",
+    "textures/model/items/ammo_9mmrounds_box.png"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/skeletonwall",
+  "type": "block",
+  "assets": [
+    "models/skeletonwall.mtl",
+    "models/skeletonwall.obj"
+  ],
+  "legacy_sources": [
+    "models/props/skeletonwall.bmodel"
+  ]
+}

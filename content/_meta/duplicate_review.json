@@ -1,0 +1,1347 @@
+[
+  {
+    "sha256": "001ce154bb446a225ca2f83ec0d19f7b3453f1a429cc92d19e12b49a7e77b9e6",
+    "files": [
+      "gun/mg/mk48/sounds/guns/mg/mk48/rack.ogg",
+      "gun/sound/m249/sounds/guns/mg/m249/rack.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "02f75c922398b660adabd56396188b6f0d144e7728d01b81b7dbc55d6253b289",
+    "files": [
+      "gun/revolver/model642/sounds/guns/revolver/model642/fire_suppressed.ogg",
+      "gun/revolver/ragingbull/sounds/guns/revolver/ragingbull/fire_suppressed.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "06ab80d99c9a133101f665e187853a51d1aedc18fd3d3b24d5392dd3675d7460",
+    "files": [
+      "gun/mg/mk48/sounds/guns/mg/mk48/fire_suppressed.ogg",
+      "gun/sound/m249/sounds/guns/mg/m249/fire_suppressed.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "07e72be51aa42f39cdbda4009aa48bff944460a26b1a81721e1dfb7851c92de6",
+    "files": [
+      "gun/shotgun/benellim4/sounds/guns/shotgun/benellim4/fire_suppressed.ogg",
+      "gun/shotgun/dbarrel/sounds/guns/shotgun/dbarrel/fire_suppressed.ogg",
+      "gun/shotgun/dbarrels/sounds/guns/shotgun/dbarrels/fire_suppressed.ogg",
+      "gun/shotgun/ks23/sounds/guns/shotgun/ks23/fire_suppressed.ogg",
+      "gun/shotgun/r870/sounds/guns/shotgun/r870/fire_suppressed.ogg",
+      "gun/shotgun/spas12/sounds/guns/shotgun/spas12/fire_suppressed.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "0d22630fd31538973c9e1b6c84cbdcae77e0f01ed72cb437f449a668129d564f",
+    "files": [
+      "mob/model/mob/human/textures/model/entities/mob/human/blood8.png",
+      "mob/model/mob/human/textures/model/entities/mob/human/blood9.png"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "0e52c594fb39d79ee064c9e7069788e2495c2dae0840f05cc61e25d5157829bf",
+    "files": [
+      "gun/mg/mk48/sounds/guns/mg/mk48/magOut.ogg",
+      "gun/sound/m249/sounds/guns/mg/m249/magOut.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "0e6be4a510337d1f656b4839cfaba6e1b2861c0a36474a6c5862abcc2c9cd094",
+    "files": [
+      "gun/pistol/aps/sounds/guns/pistol/aps/fire_suppressed.ogg",
+      "gun/pistol/barettam9/sounds/guns/pistol/barettam9/fire_suppressed.ogg",
+      "gun/pistol/colt/sounds/guns/pistol/colt/fire_suppressed.ogg",
+      "gun/pistol/m1934/sounds/guns/pistol/m1934/fire_suppressed.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "11aa01d3a02c5b4b169c673754ba8f09902aa694900bb554f9cc2096454680af",
+    "files": [
+      "ambiance/sound/night/sounds/environment/ambience/night/night2.ogg",
+      "ambiance/sound/night/sounds/environment/biome/plains/night2.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "128881454dd53084fb14c299aa1eedfb44029e2ce6679c8b02f1eb93c8c4420b",
+    "files": [
+      "gun/rocket/m79/sounds/guns/rocket/m79/insert_shell.ogg",
+      "gun/rocket/mglml1l/sounds/guns/rocket/mglml1l/insert_shell.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "140a24f9e5d3891b70c421255a38144f35e6eae0987f5f38c9141311a1f332ce",
+    "files": [
+      "gun/rifle/acr/sounds/guns/rifle/acr/magOut.ogg",
+      "gun/rifle/aug1/sounds/guns/rifle/aug1/magOut.ogg",
+      "gun/rifle/aug3/sounds/guns/rifle/aug3/magOut.ogg",
+      "gun/rifle/aug3para/sounds/guns/rifle/aug3para/magOut.ogg",
+      "gun/rifle/famas/sounds/guns/rifle/famas/magOut.ogg",
+      "gun/rifle/m16a1/sounds/guns/rifle/m16a1/magOut.ogg",
+      "gun/rifle/m16a2/sounds/guns/rifle/m16a2/magOut.ogg",
+      "gun/rifle/m231/sounds/guns/rifle/m231/magOut.ogg",
+      "gun/rifle/m4a4/sounds/guns/rifle/m4a4/magOut.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "15d4e4fc9949e27914e0377978f378603e527f5971d581c43f1207cc5333991e",
+    "files": [
+      "ambiance/particle/bullettracer/textures/particle/bullettracer.png",
+      "ambiance/particle/bullettracer_red/textures/particle/bullettracer_red.png"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "16eab3c132e5cd0ca700a7efc7d9b88d7817e9fb0ba96043ae69835c6e2a48a7",
+    "files": [
+      "gun/rifle/vz58/sounds/guns/rifle/vz58/fire_suppressed.ogg",
+      "gun/rifle/xm177/sounds/guns/rifle/xm177/fire_suppressed.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "18cd00cc84fad227e6c54b4eff0a35900d2909ca6862fb8c86489f4af4d8af60",
+    "files": [
+      "gun/pistol/browninghp/sounds/guns/pistol/browninghp/fire_distant.ogg",
+      "gun/pistol/makarov/sounds/guns/pistol/makarov/fire_distant.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "1f5dacd67c20a0f5cd1b00fefde944d39462952ce733829c1f92d4c35d1ddfbb",
+    "files": [
+      "gun/revolver/model642/sounds/guns/revolver/model642/magOut.ogg",
+      "gun/revolver/ragingbull/sounds/guns/revolver/ragingbull/magOut.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "25068f561d31f51585c60ecc81c84c777b8912281b87f254d1a25328dac7bf9d",
+    "files": [
+      "ambiance/sound/night/sounds/environment/ambience/night/night6.ogg",
+      "ambiance/sound/night/sounds/environment/biome/plains/night6.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "26e292de293a9fcc9f50b6ed5facbabfa58a1a14122419da0ba0522e2d6df8cd",
+    "files": [
+      "gun/crossbow/crotchbow/sounds/guns/crossbow/crotchbow/fire_suppressed.ogg",
+      "gun/rifle/ak12/sounds/guns/rifle/ak12/fire_suppressed.ogg",
+      "gun/rifle/ak74/sounds/guns/rifle/ak74/fire_suppressed.ogg",
+      "gun/rifle/akm/sounds/guns/rifle/akm/fire_suppressed.ogg",
+      "gun/rifle/akms/sounds/guns/rifle/akms/fire_suppressed.ogg",
+      "gun/rifle/aks74u/sounds/guns/rifle/aks74u/fire_suppressed.ogg",
+      "gun/rifle/g36c/sounds/guns/rifle/g36c/fire_suppressed.ogg",
+      "gun/rifle/kms72/sounds/guns/rifle/kms72/fire_suppressed.ogg",
+      "gun/rifle/mpt76/sounds/guns/rifle/mpt76/fire_suppressed.ogg",
+      "gun/rifle/rpk/sounds/guns/rifle/rpk/fire_suppressed.ogg",
+      "gun/rifle/rpk74/sounds/guns/rifle/rpk74/fire_suppressed.ogg",
+      "gun/rocket/m79/sounds/guns/rocket/m79/fire_suppressed.ogg",
+      "gun/rocket/mglml1l/sounds/guns/rocket/mglml1l/fire_suppressed.ogg",
+      "gun/rocket/rpg18/sounds/guns/rocket/rpg18/fire_suppressed.ogg",
+      "gun/rocket/rpg7/sounds/guns/rocket/rpg7/fire_suppressed.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "2ad2fbc0696e7eae5517de0311f45cb80acd937fc796372544fb0681c68fe16c",
+    "files": [
+      "gun/rifle/galil/sounds/guns/rifle/galil/fire_suppressed.ogg",
+      "gun/rifle/galilsar/sounds/guns/rifle/galilsar/fire_suppressed.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "2bc76283de8242a0f94436bbbfc762ccf1d1685df3c379de19304469ba8c3d47",
+    "files": [
+      "gun/pistol/browninghp/sounds/guns/pistol/browninghp/magOut.ogg",
+      "gun/pistol/makarov/sounds/guns/pistol/makarov/magOut.ogg",
+      "visual/model/guns/usp/sounds/guns/pistol/usp/magOut.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "2e0bfd188ef0f3e00be2572286239ef6e873b3b1826d0971db69569f0c8a9197",
+    "files": [
+      "gun/rocket/rpg18/sounds/guns/rocket/rpg18/magOut.ogg",
+      "gun/rocket/rpg7/sounds/guns/rocket/rpg7/magOut.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "2e7ffcdde2902672f16efb0ab5e0db1a7030efcccb022f5f464d188755149a21",
+    "files": [
+      "ambiance/sound/evening/sounds/environment/ambience/evening/evening1.ogg",
+      "ambiance/sound/evening/sounds/environment/biome/plains/evening1.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "3139d77c97b631ba68eec81b479be6c1a49b87833ea242e4b8903189e9eb93f4",
+    "files": [
+      "mob/model/mob/human/textures/model/entities/mob/infected/bloater/details/body_6.png",
+      "mob/model/mob/human/textures/model/entities/mob/infected/bloater/details/body_7.png"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "353d5034c4295deeaca9bdb02275fc2c06c59518946f741d39be3469967686ef",
+    "files": [
+      "gun/rifle/fal/sounds/guns/rifle/fal/fire.ogg",
+      "gun/rifle/parafal/sounds/guns/rifle/parafal/fire.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "354280478ce3440cdd24af7491d825b7ec7fe10824089fe3edcdd511e912c0c9",
+    "files": [
+      "gun/rifle/l115a3/sounds/guns/rifle/l115a3/magOut.ogg",
+      "gun/rifle/mosinnagant/sounds/guns/rifle/mosinnagant/magOut.ogg",
+      "gun/rifle/sv98/sounds/guns/rifle/sv98/magOut.ogg",
+      "gun/rifle/svd/sounds/guns/rifle/svd/magOut.ogg",
+      "gun/rifle/vz52/sounds/guns/rifle/vz52/magOut.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "357d7a565b3b1c0150538a1e696d72ef3f51b4a48e6d592d45315bc218fc9c74",
+    "files": [
+      "gun/rifle/ar15/sounds/guns/rifle/ar15/fire_suppressed.ogg",
+      "gun/rifle/ar15beowulf/sounds/guns/rifle/ar15beowulf/fire_suppressed.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "375a0c37112e2e7742e3226ac2162b045ae122bd8e97774af21ba633aff983d5",
+    "files": [
+      "ambiance/sound/night/sounds/environment/ambience/night/night1.ogg",
+      "ambiance/sound/night/sounds/environment/biome/plains/night1.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "3a6ff34246a85cde1c0c18dab595318cc54d6fb603311292ebd22e8017f2d556",
+    "files": [
+      "ambiance/particle/gunsmoke/textures/particle/gunsmoke1.mcmeta",
+      "ambiance/particle/gunsmoke/textures/particle/gunsmoke2.mcmeta",
+      "ambiance/particle/gunsmoke/textures/particle/gunsmoke3.mcmeta",
+      "ambiance/particle/gunsmoke/textures/particle/gunsmoke4.mcmeta",
+      "ambiance/particle/gunsmoke/textures/particle/gunsmoke5.mcmeta",
+      "ambiance/particle/gunsmoke/textures/particle/gunsmoke6.mcmeta",
+      "attachment/grip/flashlight/textures/particle/flashlight.mcmeta",
+      "hud/gui/ingame/textures/gui/ingame/gasmaskblur.png.mcmeta"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "3fdaf8e8974b6bd5da4cc12d3503fe1f3bb79c085c28fff74af350e5dd949423",
+    "files": [
+      "gun/rifle/sks/sounds/guns/rifle/sks/fire_suppressed.ogg",
+      "gun/rifle/svt40/sounds/guns/rifle/svt40/fire_suppressed.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "48cd730ebc2e0acac2ddfa0bcc5cfdee811d389ba71c87d3ddeca8b959cb45b2",
+    "files": [
+      "block/blocks/shared/door_orange_lower_1/textures/blocks/door_orange_lower_1.png",
+      "block/blocks/shared/door_orange_lower_3/textures/blocks/door_orange_lower_3.png"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "49251e6ecefb08cfc28acfdaac47fc19b0d322be6a80a579fa7ecb8186f3b9d0",
+    "files": [
+      "gun/rifle/ak74/sounds/guns/rifle/ak74/magIn.ogg",
+      "gun/rifle/akm/sounds/guns/rifle/akm/magIn.ogg",
+      "gun/rifle/akms/sounds/guns/rifle/akms/magIn.ogg",
+      "gun/rifle/aks74/sounds/guns/rifle/aks74/magIn.ogg",
+      "gun/rifle/aks74u/sounds/guns/rifle/aks74u/magIn.ogg",
+      "gun/rifle/ar15/sounds/guns/rifle/ar15/magIn.ogg",
+      "gun/rifle/ar15beowulf/sounds/guns/rifle/ar15beowulf/magIn.ogg",
+      "gun/rifle/galil/sounds/guns/rifle/galil/magIn.ogg",
+      "gun/rifle/galilsar/sounds/guns/rifle/galilsar/magIn.ogg",
+      "gun/rifle/l85a1/sounds/guns/rifle/l85a1/magIn.ogg",
+      "gun/rifle/m110/sounds/guns/rifle/m110/magIn.ogg",
+      "gun/rifle/rpk/sounds/guns/rifle/rpk/magIn.ogg",
+      "gun/rifle/rpk74/sounds/guns/rifle/rpk74/magIn.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "4b1a9fd989c89fc239174ef6845b15cdd69cb3e103c75cc8b227deb5147157ea",
+    "files": [
+      "gun/mg/minigun/sounds/guns/mg/minigun/rack.ogg",
+      "gun/mg/pkp/sounds/guns/mg/pkp/rack.ogg",
+      "gun/mg/rpd/sounds/guns/mg/rpd/rack.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "4b1b07a98556951ba04000d982386bf963c3415db8ea203f3c67fc2e4495fcd9",
+    "files": [
+      "hud/gui/intro/textures/gui/intro/frame314.png",
+      "hud/gui/intro/textures/gui/intro/frame315.png"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "4b7b8bf881a9d2019825b32fa46b01d23cd9270f07bfd7e10fe8977ffb9bc7fc",
+    "files": [
+      "gun/mg/minigun/sounds/guns/mg/minigun/magOut.ogg",
+      "gun/mg/pkp/sounds/guns/mg/pkp/magOut.ogg",
+      "gun/mg/rpd/sounds/guns/mg/rpd/magOut.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "4fef4bd8ca9162f27b4af0ed7ef0a90d6a592a835d7794e2e13e0a2abbd6b9d3",
+    "files": [
+      "gun/rifle/sks/sounds/guns/rifle/sks/magOut.ogg",
+      "gun/rifle/svt40/sounds/guns/rifle/svt40/magOut.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "5019433db5936bcdb0f270644934613b976fab7daf4de6649818fe28b3153d15",
+    "files": [
+      "gun/rifle/fnscar/sounds/guns/rifle/fnscar/magOut.ogg",
+      "gun/rifle/fnscarl/sounds/guns/rifle/fnscarl/magOut.ogg",
+      "gun/rifle/fnscarsc/sounds/guns/rifle/fnscarsc/magOut.ogg",
+      "gun/rifle/fnscarssr/sounds/guns/rifle/fnscarssr/magOut.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "512dd1353fa1ee7e71e34730f6404e2d7e71d12016720c002f3d582f789ea0e0",
+    "files": [
+      "gun/shotgun/dbarrel/sounds/guns/shotgun/dbarrel/fire.ogg",
+      "gun/shotgun/dbarrels/sounds/guns/shotgun/dbarrels/fire.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "52f108f3f0f79a16b8e8768e80e6e90a4a59e355b4c82eaea0eb336ab6354ae5",
+    "files": [
+      "block/blocks/shared/blockroadsign20/textures/blocks/blockroadsign20.png",
+      "block/blocks/shared/blockroadsign30/textures/blocks/blockroadsign30.png",
+      "block/blocks/shared/blockroadsign40/textures/blocks/blockroadsign40.png",
+      "block/blocks/shared/blockroadsign50/textures/blocks/blockroadsign50.png",
+      "block/blocks/shared/blockroadsign60/textures/blocks/blockroadsign60.png"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "5594354ca872271ec7e041655bdc42a0a223d26489197e32d6efbc253c3e26a8",
+    "files": [
+      "visual/model/blocks/woodcrate/textures/model/blocks/props/woodcrate.png",
+      "visual/model/blocks/woodcrateopen/textures/model/blocks/props/woodcrateopen.png"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "5acdc0120d13fc2a86dfc0c6e9cb16ee20356defeee4ccfc1f80f96886b7fc25",
+    "files": [
+      "gun/rocket/m79/sounds/guns/rocket/m79/rack.ogg",
+      "gun/rocket/mglml1l/sounds/guns/rocket/mglml1l/rack.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "5d08648d663cbc41b27b98df3fee9be0ad73bfbf53d8e98b6fcfbde685cc603b",
+    "files": [
+      "gun/smg/ump45/sounds/guns/smg/ump45/fire_suppressed.ogg",
+      "gun/smg/uzi/sounds/guns/smg/uzi/fire_suppressed.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "5fbe2bbcd5ddc92df5c05f3013d15201404b4cda0e6e55ce7e11c6aa8c9ba114",
+    "files": [
+      "gun/shotgun/dbarrel/sounds/guns/shotgun/dbarrel/pump.ogg",
+      "gun/shotgun/dbarrels/sounds/guns/shotgun/dbarrels/pump.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "614e36cc58a1e0dcbe39220e0e561cf386a820b34b95a47f368ff053aa96455c",
+    "files": [
+      "block/blocks/shared/door_emergency_lower_1/textures/blocks/door_emergency_lower_1.png",
+      "block/blocks/shared/door_emergency_lower_2/textures/blocks/door_emergency_lower_2.png"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "6175f7fbe557610a86a0ea1a7ae0afb2366e9e9f6f8756fc2f484d571a3fa6c5",
+    "files": [
+      "gun/shotgun/benellim4/sounds/guns/shotgun/benellim4/pump.ogg",
+      "gun/shotgun/ks23/sounds/guns/shotgun/ks23/pump.ogg",
+      "gun/shotgun/r870/sounds/guns/shotgun/r870/pump.ogg",
+      "gun/shotgun/spas12/sounds/guns/shotgun/spas12/pump.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "63aa04933feee8f2000042e635893e1079741097dd51f04f4aa128cf14cd7946",
+    "files": [
+      "gun/rifle/g3a3/sounds/guns/rifle/g3a3/fire.ogg",
+      "gun/rifle/g3a4/sounds/guns/rifle/g3a4/fire.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "657e1a4864013fb0567290c2844dacef5f1245247a4599be72b3f1356db54ab3",
+    "files": [
+      "hud/gui/ingame/textures/gui/ingame/points/point_convenience.png",
+      "hud/gui/ingame/textures/gui/ingame/points/point_goldencaps.png"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "673128d9c02ffa055048015e8fa0f49f14cdbeff3e162b4042a8f45c491e284b",
+    "files": [
+      "gun/rocket/m79/sounds/guns/rocket/m79/fire.ogg",
+      "gun/rocket/mglml1l/sounds/guns/rocket/mglml1l/fire.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "6d2c58c061d644be9ce78b74e1f0600408cf4d7e41fd810ff7e29781aad62851",
+    "files": [
+      "gun/mg/m1919a6/sounds/guns/mg/m1919a6/fire_suppressed.ogg",
+      "gun/mg/m240/sounds/guns/mg/m240/fire_suppressed.ogg",
+      "gun/mg/m60/sounds/guns/mg/m60/fire_suppressed.ogg",
+      "gun/mg/mg3/sounds/guns/mg/mg3/fire_suppressed.ogg",
+      "gun/mg/pkm/sounds/guns/mg/pkm/fire_suppressed.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "702cec338d52284534edfb13a57606ce1a5c87912977c9546f8b9c244c23f37e",
+    "files": [
+      "gun/pistol/browninghp/sounds/guns/pistol/browninghp/magIn.ogg",
+      "gun/pistol/makarov/sounds/guns/pistol/makarov/magIn.ogg",
+      "visual/model/guns/usp/sounds/guns/pistol/usp/magIn.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "70a852e5fcc2792300934cca4139c58a3191dc5c7ef5796a3d2749d16903deb5",
+    "files": [
+      "hud/gui/tip/textures/model/blocks/props/radio1.png",
+      "visual/model/blocks/stereo/textures/model/blocks/props/stereo.png"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "7132c40a61988b5e127a4e1eec23981502a3579acc5ae3c7f346843a59793739",
+    "files": [
+      "gun/rifle/vz58/sounds/guns/rifle/vz58/fire_distant.ogg",
+      "gun/rifle/xm177/sounds/guns/rifle/xm177/fire_distant.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "713c9de24a28919f0a81c26b00c2c3cab6dd8298676adb76f126c57b21e275bf",
+    "files": [
+      "gun/rifle/g3a3/sounds/guns/rifle/g3a3/fire_suppressed.ogg",
+      "gun/rifle/g3a4/sounds/guns/rifle/g3a4/fire_suppressed.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "71aa41fae8f786c2a76fcb77dcc66c90a8b14a70e14030ed7c34cb7aa9b2261a",
+    "files": [
+      "ambiance/sound/evening/sounds/environment/ambience/evening/evening2.ogg",
+      "ambiance/sound/evening/sounds/environment/biome/plains/evening2.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "72ee445e191ea6c1a61b87e09b06cab1bfb2c6b17be0a1c5b95178d293a1ee10",
+    "files": [
+      "gun/rifle/acr/sounds/guns/rifle/acr/fire_distant.ogg",
+      "gun/rifle/aug1/sounds/guns/rifle/aug1/fire_distant.ogg",
+      "gun/rifle/aug3/sounds/guns/rifle/aug3/fire_distant.ogg",
+      "gun/rifle/aug3para/sounds/guns/rifle/aug3para/fire_distant.ogg",
+      "gun/rifle/m231/sounds/guns/rifle/m231/fire_distant.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "7339d5681d96dc2f135f753451bd03617ad7f68dc2b9edfa59bb0740a5efe9d8",
+    "files": [
+      "ambiance/sound/night/sounds/environment/ambience/night/night4.ogg",
+      "ambiance/sound/night/sounds/environment/biome/plains/night4.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "74ee33aa7b72ab78e32bdda7a41e555a6588189cba4195abee2f28e82efbba31",
+    "files": [
+      "gun/rifle/g3a3/sounds/guns/rifle/g3a3/magIn.ogg",
+      "gun/rifle/g3a4/sounds/guns/rifle/g3a4/magIn.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "7537f3eb045f40030d6691d08cbf83d6bebe037b8dd70e4cb6f7055f85090f0d",
+    "files": [
+      "ambiance/sound/night/sounds/environment/ambience/night/night5.ogg",
+      "ambiance/sound/night/sounds/environment/biome/plains/night5.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "768781c3bb65a7bbfa0bfbdfa61d3d36675a1b519690418d721d5b92b3e12ea6",
+    "files": [
+      "mob/model/mob/human/textures/model/entities/mob/human/blood6.png",
+      "mob/model/mob/human/textures/model/entities/mob/human/blood7.png"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "791d3dca86c21218d79deb849be9bd2ab2e2f5c3238e6bac275ecd959585332d",
+    "files": [
+      "gun/rifle/vz58/sounds/guns/rifle/vz58/rack.ogg",
+      "gun/rifle/xm177/sounds/guns/rifle/xm177/rack.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "7d6e58766332035842b44c74d46a4dc7e5b96abe47707d6ab5c8f5bda5caa91a",
+    "files": [
+      "gun/rifle/ak74/sounds/guns/rifle/ak74/rack.ogg",
+      "gun/rifle/akm/sounds/guns/rifle/akm/rack.ogg",
+      "gun/rifle/akms/sounds/guns/rifle/akms/rack.ogg",
+      "gun/rifle/aks74/sounds/guns/rifle/aks74/rack.ogg",
+      "gun/rifle/aks74u/sounds/guns/rifle/aks74u/rack.ogg",
+      "gun/rifle/ar15/sounds/guns/rifle/ar15/rack.ogg",
+      "gun/rifle/ar15beowulf/sounds/guns/rifle/ar15beowulf/rack.ogg",
+      "gun/rifle/galil/sounds/guns/rifle/galil/rack.ogg",
+      "gun/rifle/galilsar/sounds/guns/rifle/galilsar/rack.ogg",
+      "gun/rifle/l85a1/sounds/guns/rifle/l85a1/rack.ogg",
+      "gun/rifle/m110/sounds/guns/rifle/m110/rack.ogg",
+      "gun/rifle/rpk/sounds/guns/rifle/rpk/rack.ogg",
+      "gun/rifle/rpk74/sounds/guns/rifle/rpk74/rack.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "802d9fed08ca8de98d781a50a7afe4bd11c4578f51dd2069cb8a854277bbf49b",
+    "files": [
+      "gun/rifle/l115a3/sounds/guns/rifle/l115a3/magIn.ogg",
+      "gun/rifle/mosinnagant/sounds/guns/rifle/mosinnagant/magIn.ogg",
+      "gun/rifle/sv98/sounds/guns/rifle/sv98/magIn.ogg",
+      "gun/rifle/svd/sounds/guns/rifle/svd/magIn.ogg",
+      "gun/rifle/vz52/sounds/guns/rifle/vz52/magIn.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "80e30da308530bee3862d2a03c6edbedc3d83b65171d5156b21d64a087b32567",
+    "files": [
+      "gun/rifle/l115a3/sounds/guns/rifle/l115a3/rack.ogg",
+      "gun/rifle/mosinnagant/sounds/guns/rifle/mosinnagant/rack.ogg",
+      "gun/rifle/sv98/sounds/guns/rifle/sv98/rack.ogg",
+      "gun/rifle/svd/sounds/guns/rifle/svd/rack.ogg",
+      "gun/rifle/vz52/sounds/guns/rifle/vz52/rack.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "83e64f0685df45099ea9a87c13a8eec05c6c7d8e1d571acd5ab32dcba2ba9c37",
+    "files": [
+      "gun/rifle/ak74/sounds/guns/rifle/ak74/magOut.ogg",
+      "gun/rifle/akm/sounds/guns/rifle/akm/magOut.ogg",
+      "gun/rifle/akms/sounds/guns/rifle/akms/magOut.ogg",
+      "gun/rifle/aks74/sounds/guns/rifle/aks74/magOut.ogg",
+      "gun/rifle/aks74u/sounds/guns/rifle/aks74u/magOut.ogg",
+      "gun/rifle/ar15/sounds/guns/rifle/ar15/magOut.ogg",
+      "gun/rifle/galil/sounds/guns/rifle/galil/magOut.ogg",
+      "gun/rifle/galilsar/sounds/guns/rifle/galilsar/magOut.ogg",
+      "gun/rifle/l85a1/sounds/guns/rifle/l85a1/magOut.ogg",
+      "gun/rifle/m110/sounds/guns/rifle/m110/magOut.ogg",
+      "gun/rifle/rpk/sounds/guns/rifle/rpk/magOut.ogg",
+      "gun/rifle/rpk74/sounds/guns/rifle/rpk74/magOut.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "844fff6018ef2eb5fe45aa8a2f35293522772e48f64e8927fdd1e7e097741fc7",
+    "files": [
+      "gun/rifle/g3a3/sounds/guns/rifle/g3a3/magOut.ogg",
+      "gun/rifle/g3a4/sounds/guns/rifle/g3a4/magOut.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "84a20eb86dfa09278a52469cb02ea4aada33415aa12c920712ee97e19a415703",
+    "files": [
+      "attachment/sight/8x/textures/model/guns/scopes/8x.png",
+      "attachment/sight/dragunov_scope/textures/model/guns/scopes/dragunovScope.png"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "86ec5f7bcbdccc5f72ad6e43fc89b3a1cf7caaee3bac7110955747afb36fd026",
+    "files": [
+      "gun/shotgun/benellim4/sounds/guns/shotgun/benellim4/fire_distant.ogg",
+      "gun/shotgun/r870/sounds/guns/shotgun/r870/fire_distant.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "8771afdd79dd86da7cd3b65d43c837ec99748adb10ff391a54a543f3322f1260",
+    "files": [
+      "gun/mg/minigun/sounds/guns/mg/minigun/fire_suppressed.ogg",
+      "gun/mg/pkp/sounds/guns/mg/pkp/fire_suppressed.ogg",
+      "gun/mg/rpd/sounds/guns/mg/rpd/fire_suppressed.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "8a28631988eca47b927289a40893b29a830837daec5a1ad396757b23cb4af33a",
+    "files": [
+      "gun/smg/mp40/sounds/guns/smg/mp40/magIn.ogg",
+      "gun/smg/mp7/sounds/guns/smg/mp7/magIn.ogg",
+      "gun/smg/p90/sounds/guns/smg/p90/magIn.ogg",
+      "gun/smg/thompson/sounds/guns/smg/thompson/magIn.ogg",
+      "gun/smg/ump45/sounds/guns/smg/ump45/magIn.ogg",
+      "gun/smg/uzi/sounds/guns/smg/uzi/magIn.ogg",
+      "gun/smg/vz24/sounds/guns/smg/vz24/magIn.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "8afcb18a5d9305be3e75a02a2e122df933de63297a8fc37d47501cf53748d990",
+    "files": [
+      "gun/mg/m1919a6/sounds/guns/mg/m1919a6/magOut.ogg",
+      "gun/mg/m240/sounds/guns/mg/m240/magOut.ogg",
+      "gun/mg/m60/sounds/guns/mg/m60/magOut.ogg",
+      "gun/mg/pkm/sounds/guns/mg/pkm/magOut.ogg",
+      "gun/rifle/fnscarhamr/sounds/guns/rifle/fnscarhamr/magOut.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "8b482611be30077cc6a4d093b8203e958eaf4dddd2f6af3474f596efca7c3237",
+    "files": [
+      "block/blocks/shared/door_green_lower_1/textures/blocks/door_green_lower_1.png",
+      "block/blocks/shared/door_green_lower_3/textures/blocks/door_green_lower_3.png"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "8ba9131471ec893ca11632bd71caab033d30dfe716ef6e683ef8feb9025618b2",
+    "files": [
+      "gun/smg/mp40/sounds/guns/smg/mp40/rack.ogg",
+      "gun/smg/mp7/sounds/guns/smg/mp7/rack.ogg",
+      "gun/smg/p90/sounds/guns/smg/p90/rack.ogg",
+      "gun/smg/stenmk2/sounds/guns/smg/stenmk2/rack.ogg",
+      "gun/smg/thompson/sounds/guns/smg/thompson/rack.ogg",
+      "gun/smg/thompsoni/sounds/guns/smg/thompsoni/rack.ogg",
+      "gun/smg/ump45/sounds/guns/smg/ump45/rack.ogg",
+      "gun/smg/uzi/sounds/guns/smg/uzi/rack.ogg",
+      "gun/smg/vz24/sounds/guns/smg/vz24/rack.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "8ddb38b426c2c957c0488c534f35b22e1ff074e3941d19c199f958e3c0d3d9d4",
+    "files": [
+      "hud/gui/intro/textures/gui/intro/frame233.png",
+      "hud/gui/intro/textures/gui/intro/frame234.png"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "910be161dcafe3b35bc3b6612cb9e1ddd95ec2c88e2f4d58470645ee19220f3c",
+    "files": [
+      "gun/rifle/sks/sounds/guns/rifle/sks/rack.ogg",
+      "gun/rifle/svt40/sounds/guns/rifle/svt40/rack.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "93940a133dc6879a1318a70b041df0db19bb1f9de1cd3e22d1a31420f0118eab",
+    "files": [
+      "gun/rifle/vz58/sounds/guns/rifle/vz58/magOut.ogg",
+      "gun/rifle/xm177/sounds/guns/rifle/xm177/magOut.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "9499eb0b85c6eb5a010fd9a5b9ad0ce094f17c3ff000a0d967b73c5a4cb75740",
+    "files": [
+      "gun/rocket/m79/sounds/guns/rocket/m79/magOut.ogg",
+      "gun/rocket/mglml1l/sounds/guns/rocket/mglml1l/magOut.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "973d71dae92cb9f33564e83d53b77ac36e0d224d5a66485e168d7e88ddecb2b3",
+    "files": [
+      "mob/model/mob/human/textures/model/entities/mob/human/blood4.png",
+      "mob/model/mob/human/textures/model/entities/mob/human/blood5.png"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "9a9fc8ad5fceba1a9ac2e51cc521a79f06c0e1ac21539c53801eaa4085477069",
+    "files": [
+      "gun/rifle/acr/sounds/guns/rifle/acr/rack.ogg",
+      "gun/rifle/aug1/sounds/guns/rifle/aug1/rack.ogg",
+      "gun/rifle/aug3/sounds/guns/rifle/aug3/rack.ogg",
+      "gun/rifle/aug3para/sounds/guns/rifle/aug3para/rack.ogg",
+      "gun/rifle/m16a1/sounds/guns/rifle/m16a1/rack.ogg",
+      "gun/rifle/m16a2/sounds/guns/rifle/m16a2/rack.ogg",
+      "gun/rifle/m231/sounds/guns/rifle/m231/rack.ogg",
+      "gun/rifle/m4a4/sounds/guns/rifle/m4a4/rack.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "9cdb496db19b224844301f96c391138efa853a7d8559c80410f560ba3ad34d1f",
+    "files": [
+      "gun/rifle/m14/sounds/guns/rifle/m14/fire_suppressed.ogg",
+      "gun/rifle/m1garand/sounds/guns/rifle/m1garand/fire_suppressed.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "a03323f03b9f45789df56c6288529d613ee9e2ada06dcd4ba66999bb035d3232",
+    "files": [
+      "gun/shotgun/aa12/sounds/guns/shotgun/aa12/magOut.ogg",
+      "gun/sound/m249/sounds/guns/shotgun/crossbow/magOut.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "a05f2c1db789bcfe6862d3ac0d06ef2e2387b7098a3b3612ded4bf8ebbb28cf4",
+    "files": [
+      "gun/pistol/browninghp/sounds/guns/pistol/browninghp/rack.ogg",
+      "gun/pistol/makarov/sounds/guns/pistol/makarov/rack.ogg",
+      "visual/model/guns/usp/sounds/guns/pistol/usp/rack.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "a510408f136d6a07ace3fd07751f5407aa847e9b84d5065d2f90df45368c8de9",
+    "files": [
+      "mob/model/mob/human/textures/model/entities/mob/human/blood0.png",
+      "mob/model/mob/human/textures/model/entities/mob/human/blood1.png"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "a5e487270ee94f7dbb1dbae9300143ca7202264d06a53f1b268443127f839345",
+    "files": [
+      "gun/smg/mp40/sounds/guns/smg/mp40/fire_suppressed.ogg",
+      "gun/smg/mp7/sounds/guns/smg/mp7/fire_suppressed.ogg",
+      "gun/smg/p90/sounds/guns/smg/p90/fire_suppressed.ogg",
+      "gun/smg/thompson/sounds/guns/smg/thompson/fire_suppressed.ogg",
+      "gun/smg/thompsoni/sounds/guns/smg/thompsoni/fire_suppressed.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "a5eda7bc3726661857dad86d9de835191a1433c0d251228aee2a04bb5821233a",
+    "files": [
+      "gun/pistol/aps/sounds/guns/pistol/aps/magOut.ogg",
+      "gun/pistol/colt/sounds/guns/pistol/colt/magOut.ogg",
+      "gun/pistol/glock17/sounds/guns/pistol/glock17/magOut.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "a6e16650b066beb0c2569aa429a7d8f57db3d0f70dc40cba4d4a9ebef680c89d",
+    "files": [
+      "gun/mg/m1919a6/sounds/guns/mg/m1919a6/magIn.ogg",
+      "gun/mg/m240/sounds/guns/mg/m240/magIn.ogg",
+      "gun/mg/m60/sounds/guns/mg/m60/magIn.ogg",
+      "gun/mg/pkm/sounds/guns/mg/pkm/magIn.ogg",
+      "gun/rifle/fnscarhamr/sounds/guns/rifle/fnscarhamr/magIn.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "a850839955b5f9132f6ec829c0c32eb8048c465f07282306dcc3a46b12440752",
+    "files": [
+      "gun/smg/mp40/sounds/guns/smg/mp40/magOut.ogg",
+      "gun/smg/mp7/sounds/guns/smg/mp7/magOut.ogg",
+      "gun/smg/p90/sounds/guns/smg/p90/magOut.ogg",
+      "gun/smg/thompson/sounds/guns/smg/thompson/magOut.ogg",
+      "gun/smg/ump45/sounds/guns/smg/ump45/magOut.ogg",
+      "gun/smg/uzi/sounds/guns/smg/uzi/magOut.ogg",
+      "gun/smg/vz24/sounds/guns/smg/vz24/magOut.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "a9b2777b13373ab634fb0405de8cd5e9759b34322294f72b3e1b5d26765863bc",
+    "files": [
+      "gun/crossbow/crotchbow/textures/model/guns/crossbow/crotchbow/crotchbow.png",
+      "mob/model/projectile/textures/model/entities/projectile/crossbow_bolt.png"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "aaa585c508ff2124c5858d0ffc7ac807b2ee9330b64b602dc46dd329306b92b0",
+    "files": [
+      "gun/pistol/deagle/sounds/guns/pistol/deagle/fire_suppressed.ogg",
+      "gun/pistol/makarov/sounds/guns/pistol/makarov/fire_suppressed.ogg",
+      "visual/model/guns/usp/sounds/guns/pistol/usp/fire_suppressed.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "ac9fc47d3dbffe7413c7c61c4ec72cfa6549d85b16bc7ba65297c114ee62e9d5",
+    "files": [
+      "gun/rocket/m79/sounds/guns/rocket/m79/magIn.ogg",
+      "gun/rocket/mglml1l/sounds/guns/rocket/mglml1l/magIn.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "ad4be9ce5383ea9eb00856269dd4ae4522dcd1ebdda387ec5b98786bfcfd69b3",
+    "files": [
+      "gun/rifle/fnscarsc/sounds/guns/rifle/fnscarsc/fire.ogg",
+      "gun/rifle/fnscarssr/sounds/guns/rifle/fnscarssr/fire.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "ae362f2490ee687d88b94f1248b0d771a1636fa66f22cfb1918c92545be2fd94",
+    "files": [
+      "gun/rifle/fal/sounds/guns/rifle/fal/fire_suppressed.ogg",
+      "gun/rifle/parafal/sounds/guns/rifle/parafal/fire_suppressed.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "aeb20cf04589dab8709c6a0634c77c1faaab1c46e54e6bf3bf18da8bdffa225c",
+    "files": [
+      "ambiance/sound/night/sounds/environment/ambience/night/night3.ogg",
+      "ambiance/sound/night/sounds/environment/biome/plains/night3.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "b11d56e9806a736e8fc98a526df39ec3f55f5cfe2384d47f2b759d088f7ee78d",
+    "files": [
+      "gun/shotgun/dbarrel/sounds/guns/shotgun/dbarrel/pump_back.ogg",
+      "gun/shotgun/dbarrels/sounds/guns/shotgun/dbarrels/pump_back.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "b1f4d3b9a6d53956b9b4e7391bc115cf8c3d175373ac50a298c10b9b82d01a61",
+    "files": [
+      "gun/rifle/fal/sounds/guns/rifle/fal/magOut.ogg",
+      "gun/rifle/parafal/sounds/guns/rifle/parafal/magOut.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "b27fa0f03719de5b42c196cdd6d16752e14f827a06597f3f011d4afe862c8844",
+    "files": [
+      "gun/mg/m1919a6/sounds/guns/mg/m1919a6/rack.ogg",
+      "gun/mg/m240/sounds/guns/mg/m240/rack.ogg",
+      "gun/mg/m60/sounds/guns/mg/m60/rack.ogg",
+      "gun/mg/pkm/sounds/guns/mg/pkm/rack.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "b3f33630f738ce595953ac9f1ccba617070eab99f326d678d98f6b0c7f5e6003",
+    "files": [
+      "gun/rocket/rpg18/sounds/guns/rocket/rpg18/magIn.ogg",
+      "gun/rocket/rpg7/sounds/guns/rocket/rpg7/magIn.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "b4b82b017468774a1473e3aec5429e64e46b72a79cef2e6dd78e7deef56fe416",
+    "files": [
+      "gun/shotgun/benellim4/sounds/guns/shotgun/benellim4/pump_back.ogg",
+      "gun/shotgun/ks23/sounds/guns/shotgun/ks23/pump_back.ogg",
+      "gun/shotgun/r870/sounds/guns/shotgun/r870/pump_back.ogg",
+      "gun/shotgun/spas12/sounds/guns/shotgun/spas12/pump_back.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "b6a95c5253032d161bad1c29ab844ad538d0959bcd6555f09518df2a03a60432",
+    "files": [
+      "gun/shotgun/benellim4/sounds/guns/shotgun/benellim4/fire.ogg",
+      "gun/shotgun/ks23/sounds/guns/shotgun/ks23/fire.ogg",
+      "gun/shotgun/r870/sounds/guns/shotgun/r870/fire.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "b755dbf58bfdd0861e4fca1e5120f37ecdce40ec0ff90a52ef16f110e7ccfd80",
+    "files": [
+      "gun/rifle/sks/sounds/guns/rifle/sks/magIn.ogg",
+      "gun/rifle/svt40/sounds/guns/rifle/svt40/magIn.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "b96ce57be03089a38cee2540830edd0048d6a366f9853b422b758e034bd5ad89",
+    "files": [
+      "ambiance/sound/night/sounds/environment/ambience/night/night7.ogg",
+      "ambiance/sound/night/sounds/environment/biome/plains/night7.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "b97f4834374198852610075ac91e2e2bbbe0dcc3ef0681a86219ccbf43e4c34f",
+    "files": [
+      "gun/revolver/model642/sounds/guns/revolver/model642/magIn.ogg",
+      "gun/revolver/ragingbull/sounds/guns/revolver/ragingbull/magIn.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "b98b7fc9704b63be1ca00adf32d986f84ebe1ed101c679ff3873726fb559093e",
+    "files": [
+      "block/cardboardboxes1/textures/model/blocks/props/cardboardboxes1.png",
+      "block/cardboardboxes2/textures/model/blocks/props/cardboardboxes2.png",
+      "block/cardboardboxes3/textures/model/blocks/props/cardboardboxes3.png"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "be1fa42a5e92cb068906bbc7b0d547f9aea2f9089a867d9e0e3395a5bb55916e",
+    "files": [
+      "ambiance/sound/evening/sounds/environment/ambience/evening/evening4.ogg",
+      "ambiance/sound/evening/sounds/environment/biome/plains/evening4.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "c1f855ce878633dd20c41b9801dd884ea2c1f0fe0b245c9b8f5ba1df8828cedb",
+    "files": [
+      "gun/rifle/acr/sounds/guns/rifle/acr/magIn.ogg",
+      "gun/rifle/aug1/sounds/guns/rifle/aug1/magIn.ogg",
+      "gun/rifle/aug3/sounds/guns/rifle/aug3/magIn.ogg",
+      "gun/rifle/aug3para/sounds/guns/rifle/aug3para/magIn.ogg",
+      "gun/rifle/famas/sounds/guns/rifle/famas/magIn.ogg",
+      "gun/rifle/m16a1/sounds/guns/rifle/m16a1/magIn.ogg",
+      "gun/rifle/m16a2/sounds/guns/rifle/m16a2/magIn.ogg",
+      "gun/rifle/m231/sounds/guns/rifle/m231/magIn.ogg",
+      "gun/rifle/m4a4/sounds/guns/rifle/m4a4/magIn.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "c25079d2f197688e0c32949be741ab3239c6e2c1681dad629eaa35afbd3edd4e",
+    "files": [
+      "gun/pistol/aps/sounds/guns/pistol/aps/rack.ogg",
+      "gun/pistol/colt/sounds/guns/pistol/colt/rack.ogg",
+      "gun/pistol/glock17/sounds/guns/pistol/glock17/rack.ogg",
+      "gun/pistol/m1934/sounds/guns/pistol/m1934/rack.ogg",
+      "gun/revolver/model642/sounds/guns/revolver/model642/rack.ogg",
+      "gun/revolver/ragingbull/sounds/guns/revolver/ragingbull/rack.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "c308b9d2671bbf2166489e632ecad34978060760591ce41f8de00f8b638a7ade",
+    "files": [
+      "block/streetlightmiddle/textures/model/blocks/props/streetlightmiddle.png",
+      "visual/model/blocks/trafficlights/textures/model/blocks/props/trafficlights.png",
+      "visual/model/blocks/trafficlightsmiddle/textures/model/blocks/props/trafficlightsmiddle.png"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "c50b38c0aee66d80d498398182420760035d338ddb394b0b13c988f97994b457",
+    "files": [
+      "gun/shotgun/benellim4/sounds/guns/shotgun/benellim4/insert_shell.ogg",
+      "gun/shotgun/dbarrel/sounds/guns/shotgun/dbarrel/insert_shell.ogg",
+      "gun/shotgun/dbarrels/sounds/guns/shotgun/dbarrels/insert_shell.ogg",
+      "gun/shotgun/ks23/sounds/guns/shotgun/ks23/insert_shell.ogg",
+      "gun/shotgun/r870/sounds/guns/shotgun/r870/insert_shell.ogg",
+      "gun/shotgun/spas12/sounds/guns/shotgun/spas12/insert_shell.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "c6a538a3f7e32ecbdb02ee4c2a643ccdd5d2cd63d98946d741f43068fa3e44b3",
+    "files": [
+      "gun/rifle/jng90/sounds/guns/rifle/jng90/fire_suppressed.ogg",
+      "gun/rifle/l115a3/sounds/guns/rifle/l115a3/fire_suppressed.ogg",
+      "gun/rifle/mosinnagant/sounds/guns/rifle/mosinnagant/fire_suppressed.ogg",
+      "gun/rifle/sv98/sounds/guns/rifle/sv98/fire_suppressed.ogg",
+      "gun/rifle/svd/sounds/guns/rifle/svd/fire_suppressed.ogg",
+      "gun/rifle/vz52/sounds/guns/rifle/vz52/fire_suppressed.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "c8441d8544f64e522826c1e6cd58c3cef455ffe064c12bc78236c7e49595ae14",
+    "files": [
+      "gun/mg/minigun/sounds/guns/mg/minigun/magIn.ogg",
+      "gun/mg/pkp/sounds/guns/mg/pkp/magIn.ogg",
+      "gun/mg/rpd/sounds/guns/mg/rpd/magIn.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "c885785ee3cc5e10697cfbce3fdb3656a0cef9563e90fad0769b6df47df7a427",
+    "files": [
+      "projectile/casings/intermediate/textures/model/bullets/intermediate/38special.png",
+      "projectile/casings/intermediate/textures/model/bullets/intermediate/50bmg.png"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "ccf56245c748c5b23fa85a5e5bcd946fa875908abfa88dfa47d713a18e5989ca",
+    "files": [
+      "gun/rifle/ak74/sounds/guns/rifle/ak74/fire_distant.ogg",
+      "gun/rifle/akm/sounds/guns/rifle/akm/fire_distant.ogg",
+      "gun/rifle/akms/sounds/guns/rifle/akms/fire_distant.ogg",
+      "gun/rifle/aks74/sounds/guns/rifle/aks74/fire_distant.ogg",
+      "gun/rifle/aks74u/sounds/guns/rifle/aks74u/fire_distant.ogg",
+      "gun/rifle/kms72/sounds/guns/rifle/kms72/fire_distant.ogg",
+      "gun/rifle/m110/sounds/guns/rifle/m110/fire_distant.ogg",
+      "gun/rifle/mpt76/sounds/guns/rifle/mpt76/fire_distant.ogg",
+      "gun/rifle/rpk/sounds/guns/rifle/rpk/fire_distant.ogg",
+      "gun/rifle/rpk74/sounds/guns/rifle/rpk74/fire_distant.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "cd3fb840ac60ec1ddfc0ea196997cd9bfe2c53b04e333520a78693750c6f7c06",
+    "files": [
+      "gun/rifle/fal/sounds/guns/rifle/fal/rack.ogg",
+      "gun/rifle/parafal/sounds/guns/rifle/parafal/rack.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "cda57aeb8f91d41c3622d15dde7c0af01e80058217eccbd23594b12b55a37bac",
+    "files": [
+      "attachment/barrel/mg_suppressor/textures/model/attachments/barrel/mgSuppressor.png",
+      "attachment/barrel/shotgun_suppressor/textures/model/attachments/barrel/shotgunSuppressor.png",
+      "attachment/barrel/smg_suppressor/textures/model/attachments/barrel/smgSuppressor.png"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "ce026f2143c90aee611ede0c0450e82ccd604e3f98a3542858d81f4cf5a9dba2",
+    "files": [
+      "gun/rifle/l115a3/sounds/guns/rifle/l115a3/fire_distant.ogg",
+      "gun/rifle/vz52/sounds/guns/rifle/vz52/fire_distant.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "d284735dbad737fbe650b633790b2d734e45c4e13192d260bc56bea19372a17f",
+    "files": [
+      "attachment/grip/flashlight/textures/model/attachments/grip/flashlight.png",
+      "attachment/grip/foregrip/textures/model/attachments/grip/foregrip.png",
+      "attachment/grip/laser/textures/model/attachments/grip/laser.png"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "d286146fa927986e6018a700298b48a54c8ccbd5f46b8cf182090b26816818d2",
+    "files": [
+      "gun/pistol/aps/sounds/guns/pistol/aps/magIn.ogg",
+      "gun/pistol/colt/sounds/guns/pistol/colt/magIn.ogg",
+      "gun/pistol/glock17/sounds/guns/pistol/glock17/magIn.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "d36840232c499f04e3fa83551bb8dcb444fd4dc7665de84d0a058c307f76f68b",
+    "files": [
+      "gun/crossbow/crotchbow/sounds/guns/crossbow/crotchbow/rack.ogg",
+      "gun/rocket/rpg18/sounds/guns/rocket/rpg18/rack.ogg",
+      "gun/rocket/rpg7/sounds/guns/rocket/rpg7/rack.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "d532f859a103e4aa369ff706ef0b00117646dfc831fa88bdb99a0bd15efe551c",
+    "files": [
+      "projectile/casings/intermediate/textures/model/bullets/intermediate/9x18mm.png",
+      "projectile/casings/intermediate/textures/model/bullets/intermediate/9x39mm.png"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "d657361f6419c44ba4de694baecd18215ee27559e8ca60c6eb9d76f13c047501",
+    "files": [
+      "ambiance/sound/evening/sounds/environment/ambience/evening/evening3.ogg",
+      "ambiance/sound/evening/sounds/environment/biome/plains/evening3.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "d8a74a4ac8f81eb02ba467ea5027bc0e9a842b5ce68ff6d84652276136f5d390",
+    "files": [
+      "gun/rifle/fnscar/sounds/guns/rifle/fnscar/rack.ogg",
+      "gun/rifle/fnscarhamr/sounds/guns/rifle/fnscarhamr/rack.ogg",
+      "gun/rifle/fnscarl/sounds/guns/rifle/fnscarl/rack.ogg",
+      "gun/rifle/fnscarsc/sounds/guns/rifle/fnscarsc/rack.ogg",
+      "gun/rifle/fnscarssr/sounds/guns/rifle/fnscarssr/rack.ogg",
+      "gun/smg/mpi40/sounds/guns/smg/mpi40/rack.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "dbb6994e78f5ef97b2a13d4d15d82475c80fda5c938eb17d5100a4b8185830d5",
+    "files": [
+      "gun/rifle/ar15/sounds/guns/rifle/ar15/fire_distant.ogg",
+      "gun/rifle/ar15beowulf/sounds/guns/rifle/ar15beowulf/fire_distant.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "de6222b9af6299e8322ef47ea31afc0403e9d50f96db644b2de27e9c1fe546f1",
+    "files": [
+      "gun/smg/kp31/sounds/guns/smg/kp31/fire_suppressed.ogg",
+      "gun/smg/vz24/sounds/guns/smg/vz24/fire_suppressed.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "dfecc392afa43b7f73bfb9ece853c09ee2a1e29724e5c1ab6d59c041a9d1821f",
+    "files": [
+      "gun/smg/kp31/sounds/guns/smg/kp31/fire_distant.ogg",
+      "gun/smg/ump45/sounds/guns/smg/ump45/fire_distant.ogg",
+      "gun/smg/uzi/sounds/guns/smg/uzi/fire_distant.ogg",
+      "gun/smg/vz24/sounds/guns/smg/vz24/fire_distant.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "e087a49d9562ffb762862d1a3388bf2dc2e695f4eb9b82e3432af8939b40855b",
+    "files": [
+      "gun/mg/mk48/sounds/guns/mg/mk48/magIn.ogg",
+      "gun/sound/m249/sounds/guns/mg/m249/magIn.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "e16da4e92b7bc1ea00f1a7673480c098f28f7d4c0ee3f7d6a62b85e04962b063",
+    "files": [
+      "hud/gui/intro/textures/gui/intro/frame0.png",
+      "hud/gui/intro/textures/gui/intro/frame1.png",
+      "hud/gui/intro/textures/gui/intro/frame235.png",
+      "hud/gui/intro/textures/gui/intro/frame236.png",
+      "hud/gui/intro/textures/gui/intro/frame237.png",
+      "hud/gui/intro/textures/gui/intro/frame238.png",
+      "hud/gui/intro/textures/gui/intro/frame239.png",
+      "hud/gui/intro/textures/gui/intro/frame240.png",
+      "hud/gui/intro/textures/gui/intro/frame241.png",
+      "hud/gui/intro/textures/gui/intro/frame242.png",
+      "hud/gui/intro/textures/gui/intro/frame243.png",
+      "hud/gui/intro/textures/gui/intro/frame244.png",
+      "hud/gui/intro/textures/gui/intro/frame245.png",
+      "hud/gui/intro/textures/gui/intro/frame246.png",
+      "hud/gui/intro/textures/gui/intro/frame247.png",
+      "hud/gui/intro/textures/gui/intro/frame248.png",
+      "hud/gui/intro/textures/gui/intro/frame249.png",
+      "hud/gui/intro/textures/gui/intro/frame250.png",
+      "hud/gui/intro/textures/gui/intro/frame251.png",
+      "hud/gui/intro/textures/gui/intro/frame252.png",
+      "hud/gui/intro/textures/gui/intro/frame253.png",
+      "hud/gui/intro/textures/gui/intro/frame254.png",
+      "hud/gui/intro/textures/gui/intro/frame255.png",
+      "hud/gui/intro/textures/gui/intro/frame256.png",
+      "hud/gui/intro/textures/gui/intro/frame257.png",
+      "hud/gui/intro/textures/gui/intro/frame258.png",
+      "hud/gui/intro/textures/gui/intro/frame259.png",
+      "hud/gui/intro/textures/gui/intro/frame260.png",
+      "hud/gui/intro/textures/gui/intro/frame261.png",
+      "hud/gui/intro/textures/gui/intro/frame262.png",
+      "hud/gui/intro/textures/gui/intro/frame263.png",
+      "hud/gui/intro/textures/gui/intro/frame264.png",
+      "hud/gui/intro/textures/gui/intro/frame265.png",
+      "hud/gui/intro/textures/gui/intro/frame266.png",
+      "hud/gui/intro/textures/gui/intro/frame267.png",
+      "hud/gui/intro/textures/gui/intro/frame268.png",
+      "hud/gui/intro/textures/gui/intro/frame269.png",
+      "hud/gui/intro/textures/gui/intro/frame270.png",
+      "hud/gui/intro/textures/gui/intro/frame271.png",
+      "hud/gui/intro/textures/gui/intro/frame272.png",
+      "hud/gui/intro/textures/gui/intro/frame273.png",
+      "hud/gui/intro/textures/gui/intro/frame274.png",
+      "hud/gui/intro/textures/gui/intro/frame275.png",
+      "hud/gui/intro/textures/gui/intro/frame276.png",
+      "hud/gui/intro/textures/gui/intro/frame277.png",
+      "hud/gui/intro/textures/gui/intro/frame278.png",
+      "hud/gui/intro/textures/gui/intro/frame279.png",
+      "hud/gui/intro/textures/gui/intro/frame280.png"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "e1cbd11a0e83d909159f5da6eb2f699d29b5678d428ed0bec5bb3b5b6538c4f0",
+    "files": [
+      "gun/rocket/m79/sounds/guns/rocket/m79/fire_distant.ogg",
+      "gun/rocket/mglml1l/sounds/guns/rocket/mglml1l/fire_distant.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "e228ec26a0cfbd2ae4c471ab9ef5d73b4399dda611da60f6338d1ab798a185e6",
+    "files": [
+      "projectile/casings/intermediate/textures/model/bullets/intermediate/357.png",
+      "projectile/casings/intermediate/textures/model/bullets/intermediate/sp6.png"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "e331234936fa7cdcbb0adeecbdf5d64860fe276f8c9ff1bf7cf2f75453db3cab",
+    "files": [
+      "gun/rifle/fal/sounds/guns/rifle/fal/magIn.ogg",
+      "gun/rifle/parafal/sounds/guns/rifle/parafal/magIn.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "e450796fd09e8d13cd8ccc1c284ef5c11463e5dc365f1af67a5945e8d4645327",
+    "files": [
+      "gun/rifle/g3a3/sounds/guns/rifle/g3a3/rack.ogg",
+      "gun/rifle/g3a4/sounds/guns/rifle/g3a4/rack.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "e4fddffd990c47ab5d2ebd3fc5ed15e7bbfc5a63b312f0277072ae457c43c3f9",
+    "files": [
+      "gun/rifle/vz58/sounds/guns/rifle/vz58/magIn.ogg",
+      "gun/rifle/xm177/sounds/guns/rifle/xm177/magIn.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "e7b941e11dfee529b5704c8c5752fd27e8a512fb32f8c6880d5d127fbcfd1e4b",
+    "files": [
+      "block/officechair/textures/model/blocks/props/officechair.png",
+      "visual/model/blocks/officechair2/textures/model/blocks/props/officechair2.png",
+      "visual/model/blocks/officechair3/textures/model/blocks/props/officechair3.png"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "ea550970772a4eec2d6eef3a050563768f50b9957e27c68c0ea5047f059b3a19",
+    "files": [
+      "gun/rifle/fnscar/sounds/guns/rifle/fnscar/fire_suppressed.ogg",
+      "gun/rifle/fnscarhamr/sounds/guns/rifle/fnscarhamr/fire_suppressed.ogg",
+      "gun/rifle/fnscarl/sounds/guns/rifle/fnscarl/fire_suppressed.ogg",
+      "gun/rifle/fnscarsc/sounds/guns/rifle/fnscarsc/fire_suppressed.ogg",
+      "gun/rifle/fnscarssr/sounds/guns/rifle/fnscarssr/fire_suppressed.ogg",
+      "gun/smg/mpi40/sounds/guns/smg/mpi40/fire_suppressed.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "f1dfb2ca2f34151aee9d9a2e59e480a61b2b8d8a55b15fdc1b27204d72a60669",
+    "files": [
+      "gun/rifle/fnscar/sounds/guns/rifle/fnscar/fire_distant.ogg",
+      "gun/rifle/fnscarhamr/sounds/guns/rifle/fnscarhamr/fire_distant.ogg",
+      "gun/rifle/fnscarl/sounds/guns/rifle/fnscarl/fire_distant.ogg",
+      "gun/rifle/fnscarsc/sounds/guns/rifle/fnscarsc/fire_distant.ogg",
+      "gun/rifle/fnscarssr/sounds/guns/rifle/fnscarssr/fire_distant.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "f239c4ae8ccb8e2ab33dcf88ef906dcf8fc528a6ed70e09606909908858b79c5",
+    "files": [
+      "hud/gui/ingame/textures/gui/ingame/icon_bottlecapgold.png",
+      "item/items/shared/bottlecapgold/textures/items/bottlecapgold.png"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "f37ad6d82ba551824e536c9faeacf5c1c845de5c4b79c62405b2453f9c75a455",
+    "files": [
+      "gun/rifle/acr/sounds/guns/rifle/acr/fire_suppressed.ogg",
+      "gun/rifle/aug1/sounds/guns/rifle/aug1/fire_suppressed.ogg",
+      "gun/rifle/aug3/sounds/guns/rifle/aug3/fire_suppressed.ogg",
+      "gun/rifle/aug3para/sounds/guns/rifle/aug3para/fire_suppressed.ogg",
+      "gun/rifle/m16a1/sounds/guns/rifle/m16a1/fire_suppressed.ogg",
+      "gun/rifle/m16a2/sounds/guns/rifle/m16a2/fire_suppressed.ogg",
+      "gun/rifle/m231/sounds/guns/rifle/m231/fire_suppressed.ogg",
+      "gun/rifle/m4a4/sounds/guns/rifle/m4a4/fire_suppressed.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "f3cc82cca46f950b5ce1f804c834fe10f6490d611522f3eb204c5dfeb7e1031d",
+    "files": [
+      "gun/rifle/fnscar/sounds/guns/rifle/fnscar/magIn.ogg",
+      "gun/rifle/fnscarl/sounds/guns/rifle/fnscarl/magIn.ogg",
+      "gun/rifle/fnscarsc/sounds/guns/rifle/fnscarsc/magIn.ogg",
+      "gun/rifle/fnscarssr/sounds/guns/rifle/fnscarssr/magIn.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "f4372b098a1b596cfb4782c2254686901f7942c2a96530832fde555b3d935140",
+    "files": [
+      "hud/gui/ingame/textures/gui/ingame/icon_bottlecap.png",
+      "item/items/shared/bottlecap/textures/items/bottlecap.png"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "f57b1634559007ec59ba1d699a250e705116739c81d32ca16e2ee17b1e13e43c",
+    "files": [
+      "gun/rifle/galil/sounds/guns/rifle/galil/fire.ogg",
+      "gun/rifle/galilsar/sounds/guns/rifle/galilsar/fire.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "f5a2a00179f7c668d4fa878bcd99bfd5e198d77d3f4f4159bf2febc32ef979f8",
+    "files": [
+      "gun/pistol/aps/sounds/guns/pistol/aps/fire_distant.ogg",
+      "gun/pistol/cz52/sounds/guns/pistol/cz52/fire_distant.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "f869d5b0321975365816ede41d334164bd68ee387c3e8e0e1b79d309049245ca",
+    "files": [
+      "gun/rifle/famas/sounds/guns/rifle/famas/rack.ogg",
+      "gun/rifle/famasi/sounds/guns/rifle/famasi/rack.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "f989ef7d832a1d9ae9d092c35ecef498b0efabd547875d4c334cb436899ef10f",
+    "files": [
+      "block/blocks/shared/door_blue_lower_1/textures/blocks/door_blue_lower_1.png",
+      "block/blocks/shared/door_blue_lower_3/textures/blocks/door_blue_lower_3.png"
+    ],
+    "disposition": "retained_object_local_ownership"
+  },
+  {
+    "sha256": "fefb2bff0197decd57734c208e1565ae211bc8b739f114972fa7eb21c0c723af",
+    "files": [
+      "ambiance/sound/night/sounds/environment/ambience/night/night8.ogg",
+      "ambiance/sound/night/sounds/environment/biome/plains/night8.ogg"
+    ],
+    "disposition": "retained_object_local_ownership"
+  }
+]

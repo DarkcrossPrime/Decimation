@@ -1,0 +1,42 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "ambiance/sound/scary",
+  "type": "ambiance",
+  "assets": [
+    "sounds/ambience/scary/scary1.ogg",
+    "sounds/scary_extra1.ogg",
+    "sounds/scary_extra2.ogg",
+    "sounds/scary_extra3.ogg",
+    "sounds/scary_extra4.ogg",
+    "sounds/scary_extra5.ogg",
+    "sounds/jumpscare1.ogg",
+    "sounds/jumpscare2.ogg",
+    "sounds/jumpscare3.ogg",
+    "sounds/jumpscare4.ogg",
+    "sounds/jumpscare5.ogg",
+    "sounds/scary/scary1.ogg",
+    "sounds/scary2.ogg",
+    "sounds/scary3.ogg",
+    "sounds/scary4.ogg",
+    "sounds/scarybeat.ogg"
+  ],
+  "legacy_sources": [
+    "sounds/environment/ambience/scary/scary1.ogg",
+    "sounds/environment/ambience/scary/scary_extra1.ogg",
+    "sounds/environment/ambience/scary/scary_extra2.ogg",
+    "sounds/environment/ambience/scary/scary_extra3.ogg",
+    "sounds/environment/ambience/scary/scary_extra4.ogg",
+    "sounds/environment/ambience/scary/scary_extra5.ogg",
+    "sounds/environment/scary/jumpscare1.ogg",
+    "sounds/environment/scary/jumpscare2.ogg",
+    "sounds/environment/scary/jumpscare3.ogg",
+    "sounds/environment/scary/jumpscare4.ogg",
+    "sounds/environment/scary/jumpscare5.ogg",
+    "sounds/environment/scary/scary1.ogg",
+    "sounds/environment/scary/scary2.ogg",
+    "sounds/environment/scary/scary3.ogg",
+    "sounds/environment/scary/scary4.ogg",
+    "sounds/environment/scary/scarybeat.ogg"
+  ]
+}

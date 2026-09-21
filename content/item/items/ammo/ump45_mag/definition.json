@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/ump45_mag",
+  "type": "item",
+  "assets": [
+    "textures/item/ump45Mag.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/mag/ump45Mag.png"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/sound/concertina",
+  "type": "item",
+  "assets": [
+    "sounds/place.ogg"
+  ],
+  "legacy_sources": [
+    "sounds/items/kits/concertina/place.ogg"
+  ]
+}

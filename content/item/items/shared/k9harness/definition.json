@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/k9harness",
+  "type": "item",
+  "assets": [
+    "textures/item/k9harness.png"
+  ],
+  "legacy_sources": [
+    "textures/items/k9harness.png"
+  ]
+}

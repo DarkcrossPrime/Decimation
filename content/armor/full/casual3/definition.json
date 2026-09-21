@@ -1,0 +1,15 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "armor/full/casual3",
+  "type": "armor",
+  "assets": [
+    "models/casual3.mtl",
+    "models/casual3.obj",
+    "textures/model/casual3.png"
+  ],
+  "legacy_sources": [
+    "models/armor/full/casual3.bmodel",
+    "textures/model/armor/casual3.png"
+  ]
+}

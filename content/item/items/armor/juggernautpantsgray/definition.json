@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/armor/juggernautpantsgray",
+  "type": "item",
+  "assets": [
+    "textures/item/juggernautpantsgray.png"
+  ],
+  "legacy_sources": [
+    "textures/items/armor/juggernautpantsgray.png"
+  ]
+}

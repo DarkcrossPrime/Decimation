@@ -1,0 +1,2409 @@
+{
+  "block.acidpit.use": {
+    "category": "block",
+    "sounds": [
+      "decimation:content/visual/model/blocks/acidpit/sounds/blocks/acidpit/use"
+    ]
+  },
+  "block.cantrap.tinhit": {
+    "category": "block",
+    "sounds": [
+      "decimation:content/visual/model/blocks/cantrap/sounds/blocks/cantrap/tinhit0",
+      "decimation:content/visual/model/blocks/cantrap/sounds/blocks/cantrap/tinhit1",
+      "decimation:content/visual/model/blocks/cantrap/sounds/blocks/cantrap/tinhit2",
+      "decimation:content/visual/model/blocks/cantrap/sounds/blocks/cantrap/tinhit3"
+    ]
+  },
+  "block.keycard.success": {
+    "category": "block",
+    "sounds": [
+      "decimation:content/block/sound/keycard/sounds/blocks/keycard/success"
+    ]
+  },
+  "block.keycard.fail": {
+    "category": "block",
+    "sounds": [
+      "decimation:content/block/sound/keycard/sounds/blocks/keycard/fail"
+    ]
+  },
+  "block.alarmbell.bell": {
+    "category": "block",
+    "sounds": [
+      "decimation:content/visual/model/blocks/alarmbell/sounds/blocks/alarmbell/bell"
+    ]
+  },
+  "block.piano.note": {
+    "category": "block",
+    "sounds": [
+      "decimation:content/block/sound/piano/sounds/blocks/piano/note"
+    ]
+  },
+  "block.piano.note.high": {
+    "category": "block",
+    "sounds": [
+      "decimation:content/block/sound/piano/sounds/blocks/piano/note_high"
+    ]
+  },
+  "item.backpack.zip": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/item/sound/backpack/sounds/items/backpack/zip1",
+      "decimation:content/item/sound/backpack/sounds/items/backpack/zip2",
+      "decimation:content/item/sound/backpack/sounds/items/backpack/zip3"
+    ]
+  },
+  "block.alarmbell.bell.distant": {
+    "category": "block",
+    "sounds": [
+      "decimation:content/visual/model/blocks/alarmbell/sounds/blocks/alarmbell/bell_distant"
+    ]
+  },
+  "block.door.locked": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/block/sound/door/sounds/blocks/door/locked"
+    ]
+  },
+  "block.door.open.metal": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/block/sound/door/sounds/blocks/door/open_metal1",
+      "decimation:content/block/sound/door/sounds/blocks/door/open_metal2",
+      "decimation:content/block/sound/door/sounds/blocks/door/open_metal3"
+    ]
+  },
+  "block.door.open.scrap": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/block/sound/door/sounds/blocks/door/open_scrap1",
+      "decimation:content/block/sound/door/sounds/blocks/door/open_scrap2"
+    ]
+  },
+  "block.door.open.wood": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/block/sound/door/sounds/blocks/door/open_wood1",
+      "decimation:content/block/sound/door/sounds/blocks/door/open_wood2",
+      "decimation:content/block/sound/door/sounds/blocks/door/open_wood3"
+    ]
+  },
+  "block.electricbox.idle1": {
+    "category": "block",
+    "sounds": [
+      "decimation:content/block/sound/electricbox/sounds/blocks/electricbox/idle1"
+    ]
+  },
+  "block.electricbox.idle2": {
+    "category": "block",
+    "sounds": [
+      "decimation:content/block/sound/electricbox/sounds/blocks/electricbox/idle2"
+    ]
+  },
+  "block.elevator.beep": {
+    "category": "block",
+    "sounds": [
+      "decimation:content/block/blocks/shared/elevator/sounds/blocks/elevator/beep"
+    ]
+  },
+  "block.elevator.start": {
+    "category": "block",
+    "sounds": [
+      "decimation:content/block/blocks/shared/elevator/sounds/blocks/elevator/start"
+    ]
+  },
+  "block.elevator.stop": {
+    "category": "block",
+    "sounds": [
+      "decimation:content/block/blocks/shared/elevator/sounds/blocks/elevator/stop"
+    ]
+  },
+  "block.exitlight.idle": {
+    "category": "block",
+    "sounds": [
+      "decimation:content/visual/model/blocks/exitlight/sounds/blocks/exitlight/idle"
+    ]
+  },
+  "block.hazard.idle": {
+    "category": "block",
+    "sounds": [
+      "decimation:content/block/sound/hazard/sounds/blocks/hazard/idle"
+    ]
+  },
+  "block.light.idle": {
+    "category": "block",
+    "sounds": [
+      "decimation:content/block/sound/hazard/sounds/blocks/light/idle"
+    ]
+  },
+  "block.militaryradio.chatter": {
+    "category": "block",
+    "sounds": [
+      "decimation:content/block/militaryradio/sounds/blocks/militaryradio/chatter"
+    ]
+  },
+  "block.militaryradio.chatter2": {
+    "category": "block",
+    "sounds": [
+      "decimation:content/block/militaryradio/sounds/blocks/militaryradio/chatter2"
+    ]
+  },
+  "block.powergenerator.charge": {
+    "category": "block",
+    "sounds": [
+      "decimation:content/visual/model/blocks/powergenerator/sounds/blocks/powergenerator/charge"
+    ]
+  },
+  "block.powergenerator.engine": {
+    "category": "block",
+    "sounds": [
+      "decimation:content/visual/model/blocks/powergenerator/sounds/blocks/powergenerator/engine"
+    ]
+  },
+  "block.radio.idle": {
+    "category": "block",
+    "sounds": [
+      {
+        "name": "decimation:content/item/items/shared/radio/sounds/blocks/radio/radio0",
+        "stream": true
+      },
+      {
+        "name": "decimation:content/hud/gui/tip/sounds/blocks/radio/radio1",
+        "stream": true
+      },
+      {
+        "name": "decimation:content/hud/gui/tip/sounds/blocks/radio/radio2",
+        "stream": true
+      }
+    ]
+  },
+  "block.rope.climb": {
+    "category": "block",
+    "sounds": [
+      "decimation:content/block/blocks/shared/rope/sounds/blocks/rope/climb1",
+      "decimation:content/block/blocks/shared/rope/sounds/blocks/rope/climb2",
+      "decimation:content/block/blocks/shared/rope/sounds/blocks/rope/climb3"
+    ]
+  },
+  "block.stereo.music.1": {
+    "category": "block",
+    "sounds": [
+      {
+        "name": "decimation:content/visual/model/blocks/stereo/sounds/blocks/stereo/music1",
+        "stream": true
+      }
+    ]
+  },
+  "block.stereo.music.2": {
+    "category": "block",
+    "sounds": [
+      {
+        "name": "decimation:content/visual/model/blocks/stereo/sounds/blocks/stereo/music2",
+        "stream": true
+      }
+    ]
+  },
+  "block.stereo.music.3": {
+    "category": "block",
+    "sounds": [
+      {
+        "name": "decimation:content/visual/model/blocks/stereo/sounds/blocks/stereo/music3",
+        "stream": true
+      }
+    ]
+  },
+  "block.stereo.music.4": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "decimation:content/visual/model/blocks/stereo/sounds/blocks/stereo/music4",
+        "stream": true
+      }
+    ]
+  },
+  "block.stereo.tuning": {
+    "category": "music",
+    "sounds": [
+      "decimation:content/visual/model/blocks/stereo/sounds/blocks/stereo/tuning1",
+      "decimation:content/visual/model/blocks/stereo/sounds/blocks/stereo/tuning2",
+      "decimation:content/visual/model/blocks/stereo/sounds/blocks/stereo/tuning3",
+      "decimation:content/visual/model/blocks/stereo/sounds/blocks/stereo/tuning4",
+      "decimation:content/visual/model/blocks/stereo/sounds/blocks/stereo/tuning5"
+    ]
+  },
+  "block.supplydrop.drop": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/block/blocks/shared/supplydrop/sounds/blocks/supplydrop/drop0",
+      "decimation:content/block/blocks/shared/supplydrop/sounds/blocks/supplydrop/drop1",
+      "decimation:content/block/blocks/shared/supplydrop/sounds/blocks/supplydrop/drop2",
+      "decimation:content/block/blocks/shared/supplydrop/sounds/blocks/supplydrop/drop3"
+    ]
+  },
+  "block.supplydrop.open": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/block/blocks/shared/supplydrop/sounds/blocks/supplydrop/open0",
+      "decimation:content/block/blocks/shared/supplydrop/sounds/blocks/supplydrop/open1",
+      "decimation:content/block/blocks/shared/supplydrop/sounds/blocks/supplydrop/open2",
+      "decimation:content/block/blocks/shared/supplydrop/sounds/blocks/supplydrop/open3"
+    ]
+  },
+  "block.target.ding": {
+    "category": "block",
+    "sounds": [
+      "decimation:content/visual/model/blocks/target/sounds/blocks/target/ding"
+    ]
+  },
+  "block.target.error": {
+    "category": "block",
+    "sounds": [
+      "decimation:content/visual/model/blocks/target/sounds/blocks/target/error"
+    ]
+  },
+  "block.vendingmachine.idle": {
+    "category": "block",
+    "sounds": [
+      "decimation:content/block/sound/hazard/sounds/blocks/vendingmachine/idle"
+    ]
+  },
+  "block.vent.idle": {
+    "category": "block",
+    "sounds": [
+      "decimation:content/block/sound/hazard/sounds/blocks/vent/idle"
+    ]
+  },
+  "block.washingmachine.idle": {
+    "category": "block",
+    "sounds": [
+      "decimation:content/block/sound/hazard/sounds/blocks/washingmachine/idle"
+    ]
+  },
+  "block.waterpump.drip": {
+    "category": "block",
+    "sounds": [
+      "decimation:content/visual/model/blocks/waterpump/sounds/blocks/waterpump/drip1",
+      "decimation:content/visual/model/blocks/waterpump/sounds/blocks/waterpump/drip2",
+      "decimation:content/visual/model/blocks/waterpump/sounds/blocks/waterpump/drip3"
+    ]
+  },
+  "block.waterpump.use": {
+    "category": "block",
+    "sounds": [
+      "decimation:content/visual/model/blocks/waterpump/sounds/blocks/waterpump/use"
+    ]
+  },
+  "block.worklight.engine": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/block/sound/worklight/sounds/blocks/worklight/engine"
+    ]
+  },
+  "bullet.bounce": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/bullet_bounce1",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/bullet_bounce2",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/bullet_bounce3",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/bullet_bounce4",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/bullet_bounce5"
+    ]
+  },
+  "bullet.bounce.dirt": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/bounce_dirt1",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/bounce_dirt2",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/bounce_dirt3",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/bounce_dirt4"
+    ]
+  },
+  "bullet.bounce.glass": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/bounce_glass1",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/bounce_glass2",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/bounce_glass3",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/bounce_glass4"
+    ]
+  },
+  "bullet.bounce.metal": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/bounce_metal1",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/bounce_metal2",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/bounce_metal3",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/bounce_metal4"
+    ]
+  },
+  "bullet.bounce.stone": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/bounce_stone1",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/bounce_stone2",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/bounce_stone3",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/bounce_stone4"
+    ]
+  },
+  "bullet.bounce.water": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/bounce_water1",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/bounce_water2",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/bounce_water3",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/bounce_water4"
+    ]
+  },
+  "bullet.bounce.wood": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/bounce_wood1",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/bounce_wood2",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/bounce_wood3",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/bounce_wood4"
+    ]
+  },
+  "bullet.drop": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/drop0",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/drop1",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/drop2",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/drop3",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/drop4",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/drop5"
+    ]
+  },
+  "bullet.in": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/bullet_in_1",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/bullet_in_2",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/bullet_in_3",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/bullet_in_4"
+    ]
+  },
+  "bullet.pass": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/pass1",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/pass2",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/pass3",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/pass4",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/pass5"
+    ]
+  },
+  "bullet.snap": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/snap1",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/snap2",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/snap3",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/snap4",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/snap5",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/snap6"
+    ]
+  },
+  "bullet.snap.distant": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/snapdistant1",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/snapdistant2",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/snapdistant3",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/snapdistant4"
+    ]
+  },
+  "entity.shell.impact": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/entity/sound/shell/sounds/entity/shell/impact0",
+      "decimation:content/entity/sound/shell/sounds/entity/shell/impact1",
+      "decimation:content/entity/sound/shell/sounds/entity/shell/impact2",
+      "decimation:content/entity/sound/shell/sounds/entity/shell/impact3",
+      "decimation:content/entity/sound/shell/sounds/entity/shell/impact4"
+    ]
+  },
+  "entity.shell.fire": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/entity/sound/mortar/sounds/entity/shell/fire"
+    ]
+  },
+  "entity.shell.fire.distant": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/entity/sound/shell/sounds/entity/shell/firedistant"
+    ]
+  },
+  "entity.barbedwire": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/entity/sound/entity/sounds/entity/barbedwire1",
+      "decimation:content/entity/sound/entity/sounds/entity/barbedwire2",
+      "decimation:content/entity/sound/entity/sounds/entity/barbedwire3",
+      "decimation:content/entity/sound/entity/sounds/entity/barbedwire4"
+    ]
+  },
+  "loot.garbage": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/sound/sound/loot/sounds/misc/loot/garbage"
+    ]
+  },
+  "loot.wood": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/sound/sound/loot/sounds/misc/loot/wood"
+    ]
+  },
+  "loot.metal": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/sound/sound/loot/sounds/misc/loot/metal"
+    ]
+  },
+  "entity.barbedwire.pliers": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/entity/sound/entity/sounds/entity/barbedwirepliers"
+    ]
+  },
+  "gui.intro.decimation": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/hud/sound/intro/sounds/gui/intro/decimation"
+    ]
+  },
+  "entity.campfire": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/item/items/shared/campfire/sounds/entity/campfire"
+    ]
+  },
+  "entity.fuel.ignite": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/entity/sound/entity/sounds/entity/ignite1",
+      "decimation:content/entity/sound/entity/sounds/entity/ignite2"
+    ]
+  },
+  "entity.landmine": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/item/items/shared/landmine/sounds/entity/landmine"
+    ]
+  },
+  "entity.mortar.conceal": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:missing/entity/mortar/conceal"
+    ]
+  },
+  "entity.mortar.deploy": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/entity/sound/mortar/sounds/entity/mortar/deploy"
+    ]
+  },
+  "entity.mortar.fire": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/entity/sound/mortar/sounds/entity/mortar/fire"
+    ]
+  },
+  "entity.mortar.fire.distant": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/entity/sound/mortar/sounds/entity/mortar/fire_distant1",
+      "decimation:content/entity/sound/mortar/sounds/entity/mortar/fire_distant2",
+      "decimation:content/entity/sound/mortar/sounds/entity/mortar/fire_distant3"
+    ]
+  },
+  "entity.mortar.prepare": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/entity/sound/mortar/sounds/entity/mortar/prepare"
+    ]
+  },
+  "entity.mortar.round.explode": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/entity/sound/round/sounds/entity/mortar/round/explode1",
+      "decimation:content/entity/sound/round/sounds/entity/mortar/round/explode2",
+      "decimation:content/entity/sound/round/sounds/entity/mortar/round/explode3"
+    ]
+  },
+  "entity.mortar.round.explode.distant": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/entity/sound/round/sounds/entity/mortar/round/explode_distant1",
+      "decimation:content/entity/sound/round/sounds/entity/mortar/round/explode_distant2",
+      "decimation:content/entity/sound/round/sounds/entity/mortar/round/explode_distant3"
+    ]
+  },
+  "entity.mortar.round.fall": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/entity/sound/round/sounds/entity/mortar/round/fall1",
+      "decimation:content/entity/sound/round/sounds/entity/mortar/round/fall2",
+      "decimation:content/entity/sound/round/sounds/entity/mortar/round/fall3"
+    ]
+  },
+  "entity.mortar.round.fall.distant": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/entity/sound/round/sounds/entity/mortar/round/fall_distant1",
+      "decimation:content/entity/sound/round/sounds/entity/mortar/round/fall_distant2",
+      "decimation:content/entity/sound/round/sounds/entity/mortar/round/fall_distant3"
+    ]
+  },
+  "entity.rocket.nuclearwarhead.explode": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/entity/sound/nuclearwarhead/sounds/entity/rocket/nuclearwarhead/explode"
+    ]
+  },
+  "entity.propellertrap.swing": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/block/blocks/shared/propellertrap/sounds/entity/propellertrap/swing"
+    ]
+  },
+  "entity.trader.guitar": {
+    "category": "hostile",
+    "sounds": [
+      "decimation:content/hud/gui/ingame/sounds/entity/trader/guitar0",
+      "decimation:content/hud/gui/ingame/sounds/entity/trader/guitar1",
+      "decimation:content/hud/gui/ingame/sounds/entity/trader/guitar2",
+      "decimation:content/hud/gui/ingame/sounds/entity/trader/guitar3",
+      "decimation:content/hud/gui/ingame/sounds/entity/trader/guitar4",
+      "decimation:content/hud/gui/ingame/sounds/entity/trader/guitar5",
+      "decimation:content/hud/gui/ingame/sounds/entity/trader/guitar6",
+      "decimation:content/hud/gui/ingame/sounds/entity/trader/guitar7"
+    ]
+  },
+  "entity.turret.detect": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/misc/turret/sounds/entity/turret/detect"
+    ]
+  },
+  "entity.turret.empty": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/misc/turret/sounds/entity/turret/empty"
+    ]
+  },
+  "entity.turret.move": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/misc/turret/sounds/entity/turret/move"
+    ]
+  },
+  "entity.turret.searching": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/misc/turret/sounds/entity/turret/searching"
+    ]
+  },
+  "entity.turret.shoot": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/misc/turret/sounds/entity/turret/shoot"
+    ]
+  },
+  "entity.vehicle.door_close": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/entity/sound/vehicle/sounds/entity/vehicle/door_close"
+    ]
+  },
+  "entity.vehicle.door_open": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/entity/sound/vehicle/sounds/entity/vehicle/door_open"
+    ]
+  },
+  "environment.ambience.evening": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/ambiance/sound/evening/sounds/environment/ambience/evening/evening1",
+      "decimation:content/ambiance/sound/evening/sounds/environment/ambience/evening/evening2",
+      "decimation:content/ambiance/sound/evening/sounds/environment/ambience/evening/evening3",
+      "decimation:content/ambiance/sound/evening/sounds/environment/ambience/evening/evening4"
+    ]
+  },
+  "environment.ambience.explode": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/entity/sound/nuclearwarhead/sounds/environment/explode"
+    ]
+  },
+  "environment.ambience.indoors": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/ambiance/sound/indoors/sounds/environment/ambience/indoors/indoors1",
+      "decimation:content/ambiance/sound/indoors/sounds/environment/ambience/indoors/indoors2",
+      "decimation:content/ambiance/sound/indoors/sounds/environment/ambience/indoors/indoors3",
+      "decimation:content/ambiance/sound/indoors/sounds/environment/ambience/indoors/indoors4",
+      "decimation:content/ambiance/sound/indoors/sounds/environment/ambience/indoors/indoors5",
+      "decimation:content/ambiance/sound/indoors/sounds/environment/ambience/indoors/indoors6",
+      "decimation:content/ambiance/sound/indoors/sounds/environment/ambience/indoors/indoors7"
+    ]
+  },
+  "environment.ambience.night": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/ambiance/sound/night/sounds/environment/ambience/night/night1",
+      "decimation:content/ambiance/sound/night/sounds/environment/ambience/night/night2",
+      "decimation:content/ambiance/sound/night/sounds/environment/ambience/night/night3",
+      "decimation:content/ambiance/sound/night/sounds/environment/ambience/night/night4",
+      "decimation:content/ambiance/sound/night/sounds/environment/ambience/night/night5",
+      "decimation:content/ambiance/sound/night/sounds/environment/ambience/night/night6",
+      "decimation:content/ambiance/sound/night/sounds/environment/ambience/night/night7",
+      "decimation:content/ambiance/sound/night/sounds/environment/ambience/night/night8"
+    ]
+  },
+  "environment.ambience.scary": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/ambiance/sound/scary/sounds/environment/ambience/scary/scary1"
+    ]
+  },
+  "environment.ambience.scary.extra": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/ambiance/sound/scary/sounds/environment/ambience/scary/scary_extra1",
+      "decimation:content/ambiance/sound/scary/sounds/environment/ambience/scary/scary_extra2",
+      "decimation:content/ambiance/sound/scary/sounds/environment/ambience/scary/scary_extra3",
+      "decimation:content/ambiance/sound/scary/sounds/environment/ambience/scary/scary_extra4",
+      "decimation:content/ambiance/sound/scary/sounds/environment/ambience/scary/scary_extra5"
+    ]
+  },
+  "environment.desert.day": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/ambiance/sound/desert/sounds/environment/biome/desert/day1",
+      "decimation:content/ambiance/sound/desert/sounds/environment/biome/desert/day2",
+      "decimation:content/ambiance/sound/desert/sounds/environment/biome/desert/day3",
+      "decimation:content/ambiance/sound/desert/sounds/environment/biome/desert/day4"
+    ]
+  },
+  "environment.desert.night": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/ambiance/sound/night/sounds/environment/biome/desert/night1",
+      "decimation:content/ambiance/sound/night/sounds/environment/biome/desert/night2",
+      "decimation:content/ambiance/sound/night/sounds/environment/biome/desert/night3",
+      "decimation:content/ambiance/sound/night/sounds/environment/biome/desert/night4",
+      "decimation:content/ambiance/sound/night/sounds/environment/biome/desert/night5",
+      "decimation:content/ambiance/sound/night/sounds/environment/biome/desert/night6",
+      "decimation:content/ambiance/sound/night/sounds/environment/biome/desert/night7"
+    ]
+  },
+  "environment.forest.day": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/ambiance/sound/desert/sounds/environment/biome/forest/day1",
+      "decimation:content/ambiance/sound/forest/sounds/environment/biome/forest/day10",
+      "decimation:content/ambiance/sound/desert/sounds/environment/biome/forest/day2",
+      "decimation:content/ambiance/sound/desert/sounds/environment/biome/forest/day3",
+      "decimation:content/ambiance/sound/desert/sounds/environment/biome/forest/day4",
+      "decimation:content/ambiance/sound/forest/sounds/environment/biome/forest/day5",
+      "decimation:content/ambiance/sound/forest/sounds/environment/biome/forest/day6",
+      "decimation:content/ambiance/sound/forest/sounds/environment/biome/forest/day7",
+      "decimation:content/ambiance/sound/forest/sounds/environment/biome/forest/day8",
+      "decimation:content/ambiance/sound/forest/sounds/environment/biome/forest/day9"
+    ]
+  },
+  "environment.forest.evening": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/ambiance/sound/evening/sounds/environment/biome/forest/evening1",
+      "decimation:content/ambiance/sound/evening/sounds/environment/biome/forest/evening2",
+      "decimation:content/ambiance/sound/evening/sounds/environment/biome/forest/evening3",
+      "decimation:content/ambiance/sound/evening/sounds/environment/biome/forest/evening4"
+    ]
+  },
+  "environment.forest.night": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/ambiance/sound/night/sounds/environment/biome/forest/night1",
+      "decimation:content/ambiance/sound/night/sounds/environment/biome/forest/night2",
+      "decimation:content/ambiance/sound/night/sounds/environment/biome/forest/night3",
+      "decimation:content/ambiance/sound/night/sounds/environment/biome/forest/night4",
+      "decimation:content/ambiance/sound/night/sounds/environment/biome/forest/night5",
+      "decimation:content/ambiance/sound/night/sounds/environment/biome/forest/night6"
+    ]
+  },
+  "environment.jumpscare": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/ambiance/sound/scary/sounds/environment/scary/jumpscare1",
+      "decimation:content/ambiance/sound/scary/sounds/environment/scary/jumpscare2",
+      "decimation:content/ambiance/sound/scary/sounds/environment/scary/jumpscare3",
+      "decimation:content/ambiance/sound/scary/sounds/environment/scary/jumpscare4",
+      "decimation:content/ambiance/sound/scary/sounds/environment/scary/jumpscare5"
+    ]
+  },
+  "environment.plains.day": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/ambiance/sound/desert/sounds/environment/biome/plains/day1",
+      "decimation:content/ambiance/sound/desert/sounds/environment/biome/plains/day2",
+      "decimation:content/ambiance/sound/desert/sounds/environment/biome/plains/day3",
+      "decimation:content/ambiance/sound/desert/sounds/environment/biome/plains/day4",
+      "decimation:content/ambiance/sound/forest/sounds/environment/biome/plains/day5",
+      "decimation:content/ambiance/sound/forest/sounds/environment/biome/plains/day6",
+      "decimation:content/ambiance/sound/forest/sounds/environment/biome/plains/day7",
+      "decimation:content/ambiance/sound/forest/sounds/environment/biome/plains/day8"
+    ]
+  },
+  "environment.plains.evening": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/ambiance/sound/evening/sounds/environment/biome/plains/evening1",
+      "decimation:content/ambiance/sound/evening/sounds/environment/biome/plains/evening2",
+      "decimation:content/ambiance/sound/evening/sounds/environment/biome/plains/evening3",
+      "decimation:content/ambiance/sound/evening/sounds/environment/biome/plains/evening4"
+    ]
+  },
+  "environment.plains.night": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/ambiance/sound/night/sounds/environment/biome/plains/night1",
+      "decimation:content/ambiance/sound/night/sounds/environment/biome/plains/night2",
+      "decimation:content/ambiance/sound/night/sounds/environment/biome/plains/night3",
+      "decimation:content/ambiance/sound/night/sounds/environment/biome/plains/night4",
+      "decimation:content/ambiance/sound/night/sounds/environment/biome/plains/night5",
+      "decimation:content/ambiance/sound/night/sounds/environment/biome/plains/night6",
+      "decimation:content/ambiance/sound/night/sounds/environment/biome/plains/night7",
+      "decimation:content/ambiance/sound/night/sounds/environment/biome/plains/night8"
+    ]
+  },
+  "environment.scary": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/ambiance/sound/scary/sounds/environment/scary/scary1",
+      "decimation:content/ambiance/sound/scary/sounds/environment/scary/scary2",
+      "decimation:content/ambiance/sound/scary/sounds/environment/scary/scary3",
+      "decimation:content/ambiance/sound/scary/sounds/environment/scary/scary4"
+    ]
+  },
+  "environment.scarybeat": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/ambiance/sound/scary/sounds/environment/scary/scarybeat"
+    ]
+  },
+  "environment.weather.rain": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/ambiance/sound/weather/sounds/environment/weather/rain1",
+      "decimation:content/ambiance/sound/weather/sounds/environment/weather/rain2",
+      "decimation:content/ambiance/sound/weather/sounds/environment/weather/rain3",
+      "decimation:content/ambiance/sound/weather/sounds/environment/weather/rain4"
+    ]
+  },
+  "environment.weather.thunder": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/ambiance/sound/weather/sounds/environment/weather/thunder1",
+      "decimation:content/ambiance/sound/weather/sounds/environment/weather/thunder2",
+      "decimation:content/ambiance/sound/weather/sounds/environment/weather/thunder3",
+      "decimation:content/ambiance/sound/weather/sounds/environment/weather/thunder4"
+    ]
+  },
+  "explosion": {
+    "category": "block",
+    "sounds": [
+      "decimation:content/sound/sound/misc/sounds/misc/explosion1",
+      "decimation:content/sound/sound/misc/sounds/misc/explosion2",
+      "decimation:content/sound/sound/misc/sounds/misc/explosion3",
+      "decimation:content/sound/sound/misc/sounds/misc/explosion4",
+      "decimation:content/sound/sound/misc/sounds/misc/explosion5"
+    ]
+  },
+  "explosion.distant": {
+    "category": "block",
+    "sounds": [
+      "decimation:content/sound/sound/misc/sounds/misc/explosiondistant1",
+      "decimation:content/sound/sound/misc/sounds/misc/explosiondistant2",
+      "decimation:content/sound/sound/misc/sounds/misc/explosiondistant3",
+      "decimation:content/sound/sound/misc/sounds/misc/explosiondistant4",
+      "decimation:content/sound/sound/misc/sounds/misc/explosiondistant5"
+    ]
+  },
+  "gui.button.hover": {
+    "category": "master",
+    "sounds": [
+      "decimation:content/hud/sound/menu/sounds/gui/menu/button_hover"
+    ]
+  },
+  "gui.button.press": {
+    "category": "master",
+    "sounds": [
+      "decimation:content/hud/sound/menu/sounds/gui/menu/button_press"
+    ]
+  },
+  "gui.inventory.slot.click": {
+    "category": "master",
+    "sounds": [
+      "decimation:content/hud/gui/container/sounds/gui/inventory/slot_click"
+    ]
+  },
+  "gui.inventory.slot.hover": {
+    "category": "master",
+    "sounds": [
+      "decimation:content/hud/gui/container/sounds/gui/inventory/slot_hover"
+    ]
+  },
+  "gui.menu.intro": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "decimation:content/hud/sound/menu/sounds/gui/menu/intro",
+        "stream": true
+      }
+    ]
+  },
+  "gui.menu.outro": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "decimation:content/hud/sound/menu/sounds/gui/menu/outro",
+        "stream": true
+      }
+    ]
+  },
+  "gui.menu.article_hover": {
+    "category": "master",
+    "sounds": [
+      "decimation:content/hud/sound/menu/sounds/gui/menu/article_hover0",
+      "decimation:content/hud/sound/menu/sounds/gui/menu/article_hover1"
+    ]
+  },
+  "gui.menu.download": {
+    "category": "master",
+    "sounds": [
+      "decimation:content/hud/sound/menu/sounds/gui/menu/download"
+    ]
+  },
+  "gui.menu.music": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "decimation:content/hud/sound/menu/sounds/gui/menu/music0",
+        "stream": true
+      }
+    ]
+  },
+  "gui.menu.music_battlegrounds": {
+    "category": "music",
+    "sounds": [
+      "decimation:missing/gui/menu/music_battlegrounds"
+    ]
+  },
+  "gui.menu.notification.close": {
+    "category": "master",
+    "sounds": [
+      "decimation:content/hud/sound/menu/sounds/gui/menu/notification_close"
+    ]
+  },
+  "gui.menu.notification.open": {
+    "category": "master",
+    "sounds": [
+      "decimation:content/hud/sound/menu/sounds/gui/menu/notification_open"
+    ]
+  },
+  "gui.menu.update": {
+    "category": "master",
+    "sounds": [
+      "decimation:content/hud/sound/menu/sounds/gui/menu/update"
+    ]
+  },
+  "gui.note.drone": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "decimation:content/hud/sound/gui/sounds/gui/notedrone",
+        "stream": true
+      }
+    ]
+  },
+  "gui.note.read": {
+    "category": "master",
+    "sounds": [
+      "decimation:content/hud/sound/gui/sounds/gui/note0",
+      "decimation:content/hud/sound/gui/sounds/gui/note1",
+      "decimation:content/hud/sound/gui/sounds/gui/note2"
+    ]
+  },
+  "gui.notification.newturf": {
+    "category": "master",
+    "sounds": [
+      "decimation:content/hud/gui/shared/sounds/gui/notification/newturf"
+    ]
+  },
+  "gui.notification.popup": {
+    "category": "master",
+    "sounds": [
+      "decimation:content/hud/gui/shared/sounds/gui/notification/popup"
+    ]
+  },
+  "gui.notification.safezone": {
+    "category": "master",
+    "sounds": [
+      "decimation:content/hud/gui/shared/sounds/gui/notification/safezone"
+    ]
+  },
+  "gui.statistics.close": {
+    "category": "master",
+    "sounds": [
+      "decimation:content/hud/sound/statistics/sounds/gui/statistics/close"
+    ]
+  },
+  "gui.statistics.open": {
+    "category": "master",
+    "sounds": [
+      "decimation:content/hud/sound/statistics/sounds/gui/statistics/open"
+    ]
+  },
+  "gui.tip.close": {
+    "category": "master",
+    "sounds": [
+      "decimation:content/hud/sound/statistics/sounds/gui/tip/close"
+    ]
+  },
+  "gui.tip.open": {
+    "category": "master",
+    "sounds": [
+      "decimation:content/hud/sound/statistics/sounds/gui/tip/open"
+    ]
+  },
+  "gun.butt": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/gun/sound/guns/sounds/guns/butt1",
+      "decimation:content/gun/sound/guns/sounds/guns/butt2",
+      "decimation:content/gun/sound/guns/sounds/guns/butt3",
+      "decimation:content/gun/sound/guns/sounds/guns/butt4",
+      "decimation:content/gun/sound/guns/sounds/guns/butt5"
+    ]
+  },
+  "gun.swing": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/gun/sound/guns/sounds/guns/swing1",
+      "decimation:content/gun/sound/guns/sounds/guns/swing2",
+      "decimation:content/gun/sound/guns/sounds/guns/swing3",
+      "decimation:content/gun/sound/guns/sounds/guns/swing4",
+      "decimation:content/gun/sound/guns/sounds/guns/swing5"
+    ]
+  },
+  "gun.bayonet": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/gun/sound/guns/sounds/guns/bayonet1",
+      "decimation:content/gun/sound/guns/sounds/guns/bayonet2",
+      "decimation:content/gun/sound/guns/sounds/guns/bayonet3",
+      "decimation:content/gun/sound/guns/sounds/guns/bayonet4",
+      "decimation:content/gun/sound/guns/sounds/guns/bayonet5"
+    ]
+  },
+  "gun.corebass.close": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassclose/bass0",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassclose/bass1",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassclose/bass10",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassclose/bass11",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassclose/bass12",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassclose/bass13",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassclose/bass14",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassclose/bass15",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassclose/bass16",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassclose/bass17",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassclose/bass18",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassclose/bass19",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassclose/bass2",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassclose/bass20",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassclose/bass3",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassclose/bass4",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassclose/bass5",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassclose/bass6",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassclose/bass7",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassclose/bass8",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassclose/bass9"
+    ]
+  },
+  "gun.corebass.distant": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassdistant/bass0",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassdistant/bass1",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassdistant/bass10",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassdistant/bass11",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassdistant/bass12",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassdistant/bass13",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassdistant/bass14",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassdistant/bass15",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassdistant/bass16",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassdistant/bass17",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassdistant/bass18",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassdistant/bass19",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassdistant/bass2",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassdistant/bass20",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassdistant/bass3",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassdistant/bass4",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassdistant/bass5",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassdistant/bass6",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassdistant/bass7",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassdistant/bass8",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassdistant/bass9"
+    ]
+  },
+  "gun.corebassstereo.close": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassstereoclose/bass0",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassstereoclose/bass1",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassstereoclose/bass10",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassstereoclose/bass2",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassstereoclose/bass3",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassstereoclose/bass4",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassstereoclose/bass5",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassstereoclose/bass6",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassstereoclose/bass7",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassstereoclose/bass8",
+      "decimation:content/gun/sound/corebassclose/sounds/guns/shared/corebassstereoclose/bass9"
+    ]
+  },
+  "gun.echo.close": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/hud/sound/statistics/sounds/guns/shared/echo/close/echo0",
+      "decimation:content/hud/sound/statistics/sounds/guns/shared/echo/close/echo1",
+      "decimation:content/hud/sound/statistics/sounds/guns/shared/echo/close/echo2"
+    ]
+  },
+  "gun.echo.distant": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/gun/sound/distant/sounds/guns/shared/echo/distant/echo0",
+      "decimation:content/gun/sound/distant/sounds/guns/shared/echo/distant/echo1",
+      "decimation:content/gun/sound/distant/sounds/guns/shared/echo/distant/echo2"
+    ]
+  },
+  "gun.empty": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/gun/sound/guns/sounds/guns/empty"
+    ]
+  },
+  "gun.layers.indoors.close": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/gun/sound/guns/sounds/guns/shared/layers/indoors"
+    ]
+  },
+  "gun.layers.indoors.distant": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/gun/sound/layers/sounds/guns/shared/layers/indoors_distant"
+    ]
+  },
+  "gun.layers.outdoors.close": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/gun/sound/layers/sounds/guns/shared/layers/outdoors"
+    ]
+  },
+  "gun.layers.outdoors.distant": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/gun/sound/layers/sounds/guns/shared/layers/outdoors_distant"
+    ]
+  },
+  "item.partyhorn.use": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/item/items/shared/partyhorn/sounds/items/partyhorn/horn0",
+      "decimation:content/item/items/shared/partyhorn/sounds/items/partyhorn/horn1"
+    ]
+  },
+  "item.bandage.use": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/item/items/shared/bandage/sounds/items/bandage/use1",
+      "decimation:content/item/items/shared/bandage/sounds/items/bandage/use2",
+      "decimation:content/item/items/shared/bandage/sounds/items/bandage/use3"
+    ]
+  },
+  "item.bolt.hit": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/item/sound/bolt/sounds/items/bolt/hit"
+    ]
+  },
+  "item.bottle.open": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/hud/sound/statistics/sounds/items/bottle/open"
+    ]
+  },
+  "item.can.open": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/hud/sound/statistics/sounds/items/can/open"
+    ]
+  },
+  "item.chainsaw.attack": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/item/items/shared/chainsaw/sounds/items/chainsaw/attack1",
+      "decimation:content/item/items/shared/chainsaw/sounds/items/chainsaw/attack2",
+      "decimation:content/item/items/shared/chainsaw/sounds/items/chainsaw/attack3"
+    ]
+  },
+  "item.chainsaw.idle": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/block/sound/hazard/sounds/items/chainsaw/idle"
+    ]
+  },
+  "item.chainsaw.start": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/item/items/shared/chainsaw/sounds/items/chainsaw/start"
+    ]
+  },
+  "item.chainsaw.stop": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/item/items/shared/chainsaw/sounds/items/chainsaw/stop"
+    ]
+  },
+  "item.glider.glide": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/item/items/shared/glider/sounds/items/glider/glide"
+    ]
+  },
+  "item.molotov.explode": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/entity/sound/nuclearwarhead/sounds/items/molotov/explode"
+    ]
+  },
+  "item.molotov.explode.stereo": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/item/items/shared/molotov/sounds/items/molotov/explode_stereo"
+    ]
+  },
+  "item.molotov.flame": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/item/items/shared/molotov/sounds/items/molotov/flame"
+    ]
+  },
+  "item.grenade.bounce": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/item/sound/grenade/sounds/items/grenade/bounce1",
+      "decimation:content/item/sound/grenade/sounds/items/grenade/bounce2",
+      "decimation:content/item/sound/grenade/sounds/items/grenade/bounce3",
+      "decimation:content/item/sound/grenade/sounds/items/grenade/bounce4"
+    ]
+  },
+  "item.grenade.smoke.drain": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/item/sound/smoke/sounds/items/grenade/smoke/drain"
+    ]
+  },
+  "item.grenade.smoke.explode": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/entity/sound/nuclearwarhead/sounds/items/grenade/smoke/explode"
+    ]
+  },
+  "item.grenade.stun.drain": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/item/sound/smoke/sounds/items/grenade/stun/drain"
+    ]
+  },
+  "item.grenade.stun.explode": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/entity/sound/nuclearwarhead/sounds/items/grenade/stun/explode"
+    ]
+  },
+  "item.grenade.throw": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/item/sound/grenade/sounds/items/grenade/throw0",
+      "decimation:content/item/sound/grenade/sounds/items/grenade/throw1",
+      "decimation:content/item/sound/grenade/sounds/items/grenade/throw2",
+      "decimation:content/item/sound/grenade/sounds/items/grenade/throw3"
+    ]
+  },
+  "item.guitar.pling": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/item/guitar/sounds/items/guitar/pling"
+    ]
+  },
+  "item.guitar.vrum": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/item/guitar/sounds/items/guitar/vrum"
+    ]
+  },
+  "item.gun.close": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/gun/sound/guns/sounds/guns/close1",
+      "decimation:content/gun/sound/guns/sounds/guns/close2",
+      "decimation:content/gun/sound/guns/sounds/guns/close3",
+      "decimation:content/gun/sound/guns/sounds/guns/close4",
+      "decimation:content/gun/sound/guns/sounds/guns/close5"
+    ]
+  },
+  "item.gun.empty": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/gun/sound/guns/sounds/guns/empty"
+    ]
+  },
+  "item.gun.far": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/gun/sound/guns/sounds/guns/far1",
+      "decimation:content/gun/sound/guns/sounds/guns/far2",
+      "decimation:content/gun/sound/guns/sounds/guns/far3",
+      "decimation:content/gun/sound/guns/sounds/guns/far4",
+      "decimation:content/gun/sound/guns/sounds/guns/far5"
+    ]
+  },
+  "item.kit.concertina.place": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/item/sound/concertina/sounds/items/kits/concertina/place"
+    ]
+  },
+  "item.kit.metalwall.place": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/block/blocks/shared/metalwall/sounds/items/kits/metalwall/place1",
+      "decimation:content/block/blocks/shared/metalwall/sounds/items/kits/metalwall/place2"
+    ]
+  },
+  "item.lockpick.fail": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/item/items/shared/lockpick/sounds/items/lockpick/pinfail"
+    ]
+  },
+  "item.lockpick.open": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/item/items/shared/lockpick/sounds/items/lockpick/lockopen"
+    ]
+  },
+  "item.lockpick.pinmatch": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/item/items/shared/lockpick/sounds/items/lockpick/pinmatch1",
+      "decimation:content/item/items/shared/lockpick/sounds/items/lockpick/pinmatch2"
+    ]
+  },
+  "item.m1garand.ping": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/gun/rifle/m1garand/sounds/guns/rifle/m1garand/ping"
+    ]
+  },
+  "item.nvgoggles.toggle": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/armor/mask/nv_goggles/sounds/items/nvgoggles/toggle"
+    ]
+  },
+  "item.nvgoggles.toggleoff": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/armor/mask/nv_goggles/sounds/items/nvgoggles/toggleoff"
+    ]
+  },
+  "item.packet.open": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/hud/sound/statistics/sounds/items/packet/open"
+    ]
+  },
+  "item.parachute.conceal": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/item/items/shared/parachute/sounds/items/parachute/conceal"
+    ]
+  },
+  "item.parachute.deploy": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/entity/sound/mortar/sounds/items/parachute/deploy"
+    ]
+  },
+  "item.rocket.hit": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:missing/items/rocket/hit"
+    ]
+  },
+  "item.supplydropradio.radio": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/item/items/shared/radio/sounds/items/supplydropradio/radio"
+    ]
+  },
+  "item.supplydropradio.radio.error": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/item/items/shared/supplydropradio/sounds/items/supplydropradio/error"
+    ]
+  },
+  "item.supplydropradio.radio.open": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/hud/sound/statistics/sounds/items/supplydropradio/open"
+    ]
+  },
+  "item.syringe.open": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/hud/sound/statistics/sounds/items/syringe/open"
+    ]
+  },
+  "item.syringe.use": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/item/sound/syringe/sounds/items/syringe/use"
+    ]
+  },
+  "item.tin.open": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/hud/sound/statistics/sounds/items/tin/open"
+    ]
+  },
+  "item.vestdetonator.beep": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/item/items/shared/vestdetonator/sounds/items/vestdetonator/beep"
+    ]
+  },
+  "item.vestdetonator.click": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/item/items/shared/vestdetonator/sounds/items/vestdetonator/click"
+    ]
+  },
+  "misc.armor.equip": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/sound/sound/misc/sounds/misc/armorequip0",
+      "decimation:content/sound/sound/misc/sounds/misc/armorequip1",
+      "decimation:content/sound/sound/misc/sounds/misc/armorequip2",
+      "decimation:content/sound/sound/misc/sounds/misc/armorequip3",
+      "decimation:content/sound/sound/misc/sounds/misc/armorequip4",
+      "decimation:content/sound/sound/misc/sounds/misc/armorequip5",
+      "decimation:content/sound/sound/misc/sounds/misc/armorequip6"
+    ]
+  },
+  "misc.fart": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/sound/sound/misc/sounds/misc/fart0"
+    ]
+  },
+  "misc.bottlecap.drop": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/item/items/shared/bottlecap/sounds/misc/bottlecap/drop"
+    ]
+  },
+  "misc.bottlecap.pickup": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/item/items/shared/bottlecap/sounds/misc/bottlecap/pickup"
+    ]
+  },
+  "misc.bottlecap.pickupgold": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/item/items/shared/bottlecap/sounds/misc/bottlecap/pickupgold"
+    ]
+  },
+  "misc.effect.flashed": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/sound/sound/effect/sounds/misc/effect/flashed"
+    ]
+  },
+  "misc.effect.irradiated": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/sound/sound/effect/sounds/misc/effect/irradiated1",
+      "decimation:content/sound/sound/effect/sounds/misc/effect/irradiated2",
+      "decimation:content/sound/sound/effect/sounds/misc/effect/irradiated3",
+      "decimation:content/sound/sound/effect/sounds/misc/effect/irradiated4"
+    ]
+  },
+  "misc.level.levelup": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/sound/sound/level/sounds/misc/level/levelup"
+    ]
+  },
+  "misc.motion.falling": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/sound/sound/motion/sounds/misc/motion/falling1",
+      "decimation:content/sound/sound/motion/sounds/misc/motion/falling2",
+      "decimation:content/sound/sound/motion/sounds/misc/motion/falling3"
+    ]
+  },
+  "misc.motion.falling.scream": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/sound/sound/motion/sounds/misc/motion/fall_scream1",
+      "decimation:content/sound/sound/motion/sounds/misc/motion/fall_scream2"
+    ]
+  },
+  "mob.bandit.aggressive": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/aggressiveinv0",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/aggressiveinv1",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/aggressiveinv10",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/aggressiveinv2",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/aggressiveinv3",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/aggressiveinv4",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/aggressiveinv5",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/aggressiveinv6",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/aggressiveinv7",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/aggressiveinv8",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/aggressiveinv9"
+    ]
+  },
+  "mob.gawker.stare": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/mob/model/mob/infected/sounds/mob/gawker/stare"
+    ]
+  },
+  "mob.gawker.tease": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/mob/model/mob/infected/sounds/mob/gawker/tease0",
+      "decimation:content/mob/model/mob/infected/sounds/mob/gawker/tease1",
+      "decimation:content/mob/model/mob/infected/sounds/mob/gawker/tease2",
+      "decimation:content/mob/model/mob/infected/sounds/mob/gawker/tease3",
+      "decimation:content/mob/model/mob/infected/sounds/mob/gawker/tease4",
+      "decimation:content/mob/model/mob/infected/sounds/mob/gawker/tease5",
+      "decimation:content/mob/model/mob/infected/sounds/mob/gawker/tease6",
+      "decimation:content/mob/model/mob/infected/sounds/mob/gawker/tease7",
+      "decimation:content/mob/model/mob/infected/sounds/mob/gawker/tease8",
+      "decimation:content/mob/model/mob/infected/sounds/mob/gawker/tease9",
+      "decimation:content/mob/model/mob/infected/sounds/mob/gawker/tease10"
+    ]
+  },
+  "mob.gawker.scream": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/mob/model/mob/infected/sounds/mob/gawker/scream"
+    ]
+  },
+  "mob.bandit.fire": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/fire0",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/fire1",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/fire10",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/fire2",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/fire3",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/fire4",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/fire5",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/fire6",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/fire7",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/fire8",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/fire9"
+    ]
+  },
+  "mob.bandit.heard": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/heard0",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/heard1",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/heard10",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/heard2",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/heard3",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/heard4",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/heard5",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/heard6",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/heard7",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/heard8",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/heard9"
+    ]
+  },
+  "mob.bandit.idle": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/idle0",
+      "decimation:content/block/sound/electricbox/sounds/mob/bandit/idle1",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/idle10",
+      "decimation:content/block/sound/electricbox/sounds/mob/bandit/idle2",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/idle3",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/idle4",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/idle5",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/idle6",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/idle7",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/idle8",
+      "decimation:content/armor/full/bandit/sounds/mob/bandit/idle9"
+    ]
+  },
+  "mob.bird.hurt": {
+    "category": "neutral",
+    "sounds": [
+      "decimation:content/mob/sound/bird/sounds/mob/bird/hurt"
+    ]
+  },
+  "mob.bird.say": {
+    "category": "neutral",
+    "sounds": [
+      "decimation:content/mob/sound/bird/sounds/mob/bird/say1",
+      "decimation:content/mob/sound/bird/sounds/mob/bird/say2",
+      "decimation:content/mob/sound/bird/sounds/mob/bird/say3",
+      "decimation:content/mob/sound/bird/sounds/mob/bird/say4",
+      "decimation:content/mob/sound/bird/sounds/mob/bird/say5",
+      "decimation:content/mob/sound/bird/sounds/mob/bird/say6",
+      "decimation:content/mob/sound/bird/sounds/mob/bird/say7"
+    ]
+  },
+  "mob.boar.hurt": {
+    "category": "neutral",
+    "sounds": [
+      "decimation:content/mob/model/mob/boar/sounds/mob/boar/hurt1",
+      "decimation:content/mob/model/mob/boar/sounds/mob/boar/hurt2",
+      "decimation:content/mob/model/mob/boar/sounds/mob/boar/hurt3",
+      "decimation:content/mob/model/mob/boar/sounds/mob/boar/hurt4",
+      "decimation:content/mob/model/mob/boar/sounds/mob/boar/hurt5"
+    ]
+  },
+  "mob.boar.say": {
+    "category": "neutral",
+    "sounds": [
+      "decimation:content/mob/sound/bird/sounds/mob/boar/say1",
+      "decimation:content/mob/sound/bird/sounds/mob/boar/say2",
+      "decimation:content/mob/sound/bird/sounds/mob/boar/say3",
+      "decimation:content/mob/sound/bird/sounds/mob/boar/say4",
+      "decimation:content/mob/sound/bird/sounds/mob/boar/say5"
+    ]
+  },
+  "mob.deer.hurt": {
+    "category": "neutral",
+    "sounds": [
+      "decimation:content/mob/model/mob/deer/sounds/mob/deer/hurt1",
+      "decimation:content/mob/model/mob/deer/sounds/mob/deer/hurt2",
+      "decimation:content/mob/model/mob/deer/sounds/mob/deer/hurt3"
+    ]
+  },
+  "mob.deer.say": {
+    "category": "neutral",
+    "sounds": [
+      "decimation:content/mob/sound/bird/sounds/mob/deer/say1",
+      "decimation:content/mob/sound/bird/sounds/mob/deer/say2",
+      "decimation:content/mob/sound/bird/sounds/mob/deer/say3",
+      "decimation:content/mob/sound/bird/sounds/mob/deer/say4"
+    ]
+  },
+  "mob.doggo.bark": {
+    "category": "neutral",
+    "sounds": [
+      "decimation:content/hud/gui/ingame/sounds/mob/doggo/bark1",
+      "decimation:content/hud/gui/ingame/sounds/mob/doggo/bark2",
+      "decimation:content/hud/gui/ingame/sounds/mob/doggo/bark3"
+    ]
+  },
+  "mob.doggo.death": {
+    "category": "neutral",
+    "sounds": [
+      "decimation:content/hud/gui/ingame/sounds/mob/doggo/death"
+    ]
+  },
+  "mob.doggo.growl": {
+    "category": "neutral",
+    "sounds": [
+      "decimation:content/hud/gui/ingame/sounds/mob/doggo/growl1",
+      "decimation:content/hud/gui/ingame/sounds/mob/doggo/growl2",
+      "decimation:content/hud/gui/ingame/sounds/mob/doggo/growl3"
+    ]
+  },
+  "mob.doggo.howl": {
+    "category": "neutral",
+    "sounds": [
+      "decimation:content/hud/gui/ingame/sounds/mob/doggo/howl1",
+      "decimation:content/hud/gui/ingame/sounds/mob/doggo/howl2"
+    ]
+  },
+  "mob.doggo.hurt": {
+    "category": "neutral",
+    "sounds": [
+      "decimation:content/hud/gui/ingame/sounds/mob/doggo/hurt1",
+      "decimation:content/hud/gui/ingame/sounds/mob/doggo/hurt2",
+      "decimation:content/hud/gui/ingame/sounds/mob/doggo/hurt3"
+    ]
+  },
+  "mob.doggo.mad": {
+    "category": "neutral",
+    "sounds": [
+      "decimation:content/hud/gui/ingame/sounds/mob/doggo/mad1",
+      "decimation:content/hud/gui/ingame/sounds/mob/doggo/mad2",
+      "decimation:content/hud/gui/ingame/sounds/mob/doggo/mad3",
+      "decimation:content/hud/gui/ingame/sounds/mob/doggo/mad4",
+      "decimation:content/hud/gui/ingame/sounds/mob/doggo/mad5",
+      "decimation:content/hud/gui/ingame/sounds/mob/doggo/mad6",
+      "decimation:content/hud/gui/ingame/sounds/mob/doggo/mad7"
+    ]
+  },
+  "mob.doggo.panting": {
+    "category": "neutral",
+    "sounds": [
+      "decimation:content/hud/gui/ingame/sounds/mob/doggo/panting"
+    ]
+  },
+  "mob.doggo.shake": {
+    "category": "neutral",
+    "sounds": [
+      "decimation:content/hud/gui/ingame/sounds/mob/doggo/shake"
+    ]
+  },
+  "mob.doggo.whine": {
+    "category": "neutral",
+    "sounds": [
+      "decimation:content/hud/gui/ingame/sounds/mob/doggo/whine"
+    ]
+  },
+  "mob.frail.ambience": {
+    "category": "hostile",
+    "sounds": [
+      "decimation:content/mob/model/mob/infected/sounds/mob/frail/ambience1"
+    ]
+  },
+  "mob.frail.cry": {
+    "category": "hostile",
+    "sounds": [
+      "decimation:content/mob/model/mob/infected/sounds/mob/frail/cry1",
+      "decimation:content/mob/model/mob/infected/sounds/mob/frail/cry2",
+      "decimation:content/mob/model/mob/infected/sounds/mob/frail/cry3",
+      "decimation:content/mob/model/mob/infected/sounds/mob/frail/cry4",
+      "decimation:content/mob/model/mob/infected/sounds/mob/frail/cry5"
+    ]
+  },
+  "mob.frail.scream": {
+    "category": "hostile",
+    "sounds": [
+      "decimation:content/mob/model/mob/infected/sounds/mob/frail/scream1",
+      "decimation:content/mob/model/mob/infected/sounds/mob/frail/scream2",
+      "decimation:content/mob/model/mob/infected/sounds/mob/frail/scream3",
+      "decimation:content/mob/model/mob/infected/sounds/mob/frail/scream4",
+      "decimation:content/mob/model/mob/infected/sounds/mob/frail/scream5"
+    ]
+  },
+  "mob.hazmat.death": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/armor/full/hazmat/sounds/mob/soldier/hazmat/death0"
+    ]
+  },
+  "mob.hazmat.heard": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/mob/sound/mech/sounds/mob/soldier/hazmat/heard0",
+      "decimation:content/mob/sound/mech/sounds/mob/soldier/hazmat/heard1",
+      "decimation:content/mob/sound/mech/sounds/mob/soldier/hazmat/heard2",
+      "decimation:content/mob/sound/mech/sounds/mob/soldier/hazmat/heard3"
+    ]
+  },
+  "mob.hazmat.hurt": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/mob/sound/mech/sounds/mob/soldier/hazmat/hurt0",
+      "decimation:content/mob/sound/human/sounds/mob/soldier/hazmat/hurt1"
+    ]
+  },
+  "mob.hazmat.idle": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/mob/sound/mech/sounds/mob/soldier/hazmat/idle0",
+      "decimation:content/block/sound/electricbox/sounds/mob/soldier/hazmat/idle1",
+      "decimation:content/block/sound/electricbox/sounds/mob/soldier/hazmat/idle2",
+      "decimation:content/mob/sound/hulk/sounds/mob/soldier/hazmat/idle3"
+    ]
+  },
+  "mob.hulk.death": {
+    "category": "hostile",
+    "sounds": [
+      "decimation:content/mob/sound/human/sounds/mob/infected/hulk/death1",
+      "decimation:content/mob/sound/human/sounds/mob/infected/hulk/death2",
+      "decimation:content/mob/sound/human/sounds/mob/infected/hulk/death3"
+    ]
+  },
+  "mob.hulk.hurt": {
+    "category": "hostile",
+    "sounds": [
+      "decimation:content/mob/sound/human/sounds/mob/infected/hulk/hurt1",
+      "decimation:content/mob/sound/human/sounds/mob/infected/hulk/hurt2"
+    ]
+  },
+  "mob.hulk.idle": {
+    "category": "hostile",
+    "sounds": [
+      "decimation:content/block/sound/electricbox/sounds/mob/infected/hulk/idle1",
+      "decimation:content/block/sound/electricbox/sounds/mob/infected/hulk/idle2",
+      "decimation:content/mob/sound/hulk/sounds/mob/infected/hulk/idle3"
+    ]
+  },
+  "mob.hulk.step": {
+    "category": "hostile",
+    "sounds": [
+      "decimation:content/mob/sound/grass/sounds/mob/infected/hulk/step1",
+      "decimation:content/mob/sound/grass/sounds/mob/infected/hulk/step2",
+      "decimation:content/mob/sound/grass/sounds/mob/infected/hulk/step3"
+    ]
+  },
+  "mob.human.beep": {
+    "category": "player",
+    "sounds": [
+      "decimation:missing/mob/human/beep"
+    ]
+  },
+  "mob.human.bulletimpact": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/mob/sound/human/sounds/mob/human/bulletimpact1",
+      "decimation:content/mob/sound/human/sounds/mob/human/bulletimpact2",
+      "decimation:content/mob/sound/human/sounds/mob/human/bulletimpact3",
+      "decimation:content/mob/sound/human/sounds/mob/human/bulletimpact4"
+    ]
+  },
+  "mob.human.clap": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/mob/sound/human/sounds/mob/human/clap1",
+      "decimation:content/mob/sound/human/sounds/mob/human/clap10",
+      "decimation:content/mob/sound/human/sounds/mob/human/clap2",
+      "decimation:content/mob/sound/human/sounds/mob/human/clap3",
+      "decimation:content/mob/sound/human/sounds/mob/human/clap4",
+      "decimation:content/mob/sound/human/sounds/mob/human/clap5",
+      "decimation:content/mob/sound/human/sounds/mob/human/clap6",
+      "decimation:missing/mob/human/clap7",
+      "decimation:content/mob/sound/human/sounds/mob/human/clap8",
+      "decimation:content/mob/sound/human/sounds/mob/human/clap9"
+    ]
+  },
+  "mob.human.climb": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/mob/sound/human/sounds/mob/human/climb1",
+      "decimation:content/mob/sound/human/sounds/mob/human/climb2",
+      "decimation:content/mob/sound/human/sounds/mob/human/climb3",
+      "decimation:content/mob/sound/human/sounds/mob/human/climb4",
+      "decimation:content/mob/sound/human/sounds/mob/human/climb5"
+    ]
+  },
+  "mob.human.death": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/mob/sound/human/sounds/mob/human/death1",
+      "decimation:content/mob/sound/human/sounds/mob/human/death10",
+      "decimation:content/mob/sound/human/sounds/mob/human/death2",
+      "decimation:content/mob/sound/human/sounds/mob/human/death3",
+      "decimation:content/mob/sound/human/sounds/mob/human/death4",
+      "decimation:content/mob/sound/human/sounds/mob/human/death5",
+      "decimation:content/mob/sound/human/sounds/mob/human/death6",
+      "decimation:content/mob/sound/human/sounds/mob/human/death7",
+      "decimation:content/mob/sound/human/sounds/mob/human/death8",
+      "decimation:content/mob/sound/human/sounds/mob/human/death9"
+    ]
+  },
+  "mob.human.death.distant": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/mob/sound/human/sounds/mob/human/death10_distant",
+      "decimation:content/mob/sound/human/sounds/mob/human/death1_distant",
+      "decimation:content/mob/sound/human/sounds/mob/human/death2_distant",
+      "decimation:content/mob/sound/human/sounds/mob/human/death3_distant",
+      "decimation:content/mob/sound/human/sounds/mob/human/death4_distant",
+      "decimation:content/mob/sound/human/sounds/mob/human/death5_distant",
+      "decimation:content/mob/sound/human/sounds/mob/human/death6_distant",
+      "decimation:content/mob/sound/human/sounds/mob/human/death7_distant",
+      "decimation:content/mob/sound/human/sounds/mob/human/death8_distant",
+      "decimation:content/mob/sound/human/sounds/mob/human/death9_distant"
+    ]
+  },
+  "mob.human.gasmask": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/mob/sound/human/sounds/mob/human/gasmask1",
+      "decimation:content/mob/sound/human/sounds/mob/human/gasmask2",
+      "decimation:content/mob/sound/human/sounds/mob/human/gasmask3"
+    ]
+  },
+  "mob.human.headshot.helmet": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/mob/sound/human/sounds/mob/human/headshothelmet0",
+      "decimation:content/mob/sound/human/sounds/mob/human/headshothelmet1",
+      "decimation:content/mob/sound/human/sounds/mob/human/headshothelmet2",
+      "decimation:content/mob/sound/human/sounds/mob/human/headshothelmet3"
+    ]
+  },
+  "mob.human.heartbeat": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/mob/sound/human/sounds/mob/human/heartbeat"
+    ]
+  },
+  "mob.human.hurt": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/mob/sound/human/sounds/mob/human/hurt1",
+      "decimation:content/mob/sound/human/sounds/mob/human/hurt2",
+      "decimation:content/mob/sound/human/sounds/mob/human/hurt3",
+      "decimation:content/mob/sound/human/sounds/mob/human/hurt4",
+      "decimation:content/mob/sound/human/sounds/mob/human/hurt5"
+    ]
+  },
+  "mob.human.juggernaut.walk": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/mob/sound/human/sounds/mob/human/juggernaut_walk1",
+      "decimation:content/mob/sound/human/sounds/mob/human/juggernaut_walk2",
+      "decimation:content/mob/sound/human/sounds/mob/human/juggernaut_walk3",
+      "decimation:content/mob/sound/human/sounds/mob/human/juggernaut_walk4"
+    ]
+  },
+  "mob.human.legbreak": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/mob/sound/human/sounds/mob/human/legbreak1",
+      "decimation:content/mob/sound/human/sounds/mob/human/legbreak2"
+    ]
+  },
+  "mob.human.movement": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/mob/sound/human/sounds/mob/human/movement1",
+      "decimation:content/mob/sound/human/sounds/mob/human/movement2",
+      "decimation:content/mob/sound/human/sounds/mob/human/movement3",
+      "decimation:content/mob/sound/human/sounds/mob/human/movement4",
+      "decimation:content/mob/sound/human/sounds/mob/human/movement5"
+    ]
+  },
+  "mob.human.step.grass": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/grass/step1",
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/grass/step2",
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/grass/step3",
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/grass/step4",
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/grass/step5"
+    ]
+  },
+  "mob.human.step.gravel": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/gravel/step1",
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/gravel/step2",
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/gravel/step3",
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/gravel/step4",
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/gravel/step5"
+    ]
+  },
+  "mob.human.step.metal": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/metal/step1",
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/metal/step2",
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/metal/step3",
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/metal/step4",
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/metal/step5"
+    ]
+  },
+  "mob.human.step.metalsheet": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/metalsheet/step1",
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/metalsheet/step2",
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/metalsheet/step3",
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/metalsheet/step4",
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/metalsheet/step5"
+    ]
+  },
+  "mob.human.step.sand": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/sand/step1",
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/sand/step2",
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/sand/step3",
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/sand/step4",
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/sand/step5"
+    ]
+  },
+  "mob.human.step.snow": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/snow/step1",
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/snow/step2",
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/snow/step3",
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/snow/step4",
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/snow/step5"
+    ]
+  },
+  "mob.human.step.stone": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/stone/step1",
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/stone/step2",
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/stone/step3",
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/stone/step4",
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/stone/step5"
+    ]
+  },
+  "mob.human.step.wood": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/wood/step1",
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/wood/step2",
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/wood/step3",
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/wood/step4",
+      "decimation:content/mob/sound/grass/sounds/mob/human/step/wood/step5"
+    ]
+  },
+  "mob.human.whistle": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/mob/sound/human/sounds/mob/human/whistle1",
+      "decimation:content/mob/sound/human/sounds/mob/human/whistle2",
+      "decimation:content/mob/sound/human/sounds/mob/human/whistle3"
+    ]
+  },
+  "mob.impact": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/entity/sound/shell/sounds/mob/impact1",
+      "decimation:content/entity/sound/shell/sounds/mob/impact2",
+      "decimation:content/entity/sound/shell/sounds/mob/impact3",
+      "decimation:content/entity/sound/shell/sounds/mob/impact4",
+      "decimation:content/mob/sound/mob/sounds/mob/impact5"
+    ]
+  },
+  "mob.infected.death": {
+    "category": "hostile",
+    "sounds": [
+      "decimation:content/mob/sound/human/sounds/mob/infected/death1",
+      "decimation:content/mob/sound/human/sounds/mob/infected/death2",
+      "decimation:content/mob/sound/human/sounds/mob/infected/death3",
+      "decimation:content/mob/sound/human/sounds/mob/infected/death4"
+    ]
+  },
+  "mob.infected.death.military": {
+    "category": "hostile",
+    "sounds": [
+      "decimation:content/mob/sound/infected/sounds/mob/infected/death1_military",
+      "decimation:content/mob/sound/infected/sounds/mob/infected/death2_military",
+      "decimation:content/mob/sound/infected/sounds/mob/infected/death3_military",
+      "decimation:content/mob/sound/infected/sounds/mob/infected/death4_military"
+    ]
+  },
+  "mob.infected.horde": {
+    "category": "hostile",
+    "sounds": [
+      "decimation:content/mob/sound/infected/sounds/mob/infected/horde"
+    ]
+  },
+  "mob.mech.step": {
+    "category": "hostile",
+    "sounds": [
+      "decimation:content/mob/sound/mech/sounds/mob/mech/step"
+    ]
+  },
+  "mob.mech.alarm": {
+    "category": "hostile",
+    "sounds": [
+      "decimation:content/block/sound/airlock/sounds/mob/mech/alarm"
+    ]
+  },
+  "mob.mech.reload": {
+    "category": "hostile",
+    "sounds": [
+      "decimation:content/mob/sound/mech/sounds/mob/mech/reload"
+    ]
+  },
+  "mob.mech.hurt": {
+    "category": "hostile",
+    "sounds": [
+      "decimation:content/mob/sound/mech/sounds/mob/mech/hurt0",
+      "decimation:content/mob/sound/human/sounds/mob/mech/hurt1",
+      "decimation:content/mob/sound/human/sounds/mob/mech/hurt2",
+      "decimation:content/mob/sound/human/sounds/mob/mech/hurt3",
+      "decimation:content/mob/sound/human/sounds/mob/mech/hurt4"
+    ]
+  },
+  "mob.mech.shoot": {
+    "category": "hostile",
+    "sounds": [
+      "decimation:content/mob/sound/mech/sounds/mob/mech/shoot"
+    ]
+  },
+  "mob.mech.shoot.distant": {
+    "category": "hostile",
+    "sounds": [
+      "decimation:content/mob/sound/mech/sounds/mob/mech/shootdistant"
+    ]
+  },
+  "mob.mech.heard": {
+    "category": "hostile",
+    "sounds": [
+      "decimation:content/mob/sound/mech/sounds/mob/mech/heard0",
+      "decimation:content/mob/sound/mech/sounds/mob/mech/heard1",
+      "decimation:content/mob/sound/mech/sounds/mob/mech/heard2",
+      "decimation:content/mob/sound/mech/sounds/mob/mech/heard3"
+    ]
+  },
+  "mob.mech.idle": {
+    "category": "hostile",
+    "sounds": [
+      "decimation:content/mob/sound/mech/sounds/mob/mech/idle0",
+      "decimation:content/block/sound/electricbox/sounds/mob/mech/idle1",
+      "decimation:content/block/sound/electricbox/sounds/mob/mech/idle2"
+    ]
+  },
+  "mob.demon.wing": {
+    "category": "hostile",
+    "sounds": [
+      "decimation:content/mob/model/mob/demon/sounds/mob/demon/wing"
+    ]
+  },
+  "mob.demon.idle": {
+    "category": "hostile",
+    "sounds": [
+      "decimation:content/mob/model/mob/demon/sounds/mob/demon/idle0",
+      "decimation:content/block/sound/electricbox/sounds/mob/demon/idle1",
+      "decimation:content/block/sound/electricbox/sounds/mob/demon/idle2",
+      "decimation:content/mob/model/mob/demon/sounds/mob/demon/idle3"
+    ]
+  },
+  "mob.demon.hurt": {
+    "category": "hostile",
+    "sounds": [
+      "decimation:content/mob/model/mob/demon/sounds/mob/demon/hurt0",
+      "decimation:content/mob/model/mob/demon/sounds/mob/demon/hurt1"
+    ]
+  },
+  "mob.demon.death": {
+    "category": "hostile",
+    "sounds": [
+      "decimation:content/mob/model/mob/demon/sounds/mob/demon/death"
+    ]
+  },
+  "mob.infected.hurt": {
+    "category": "hostile",
+    "sounds": [
+      "decimation:content/mob/sound/human/sounds/mob/infected/hurt1",
+      "decimation:content/mob/sound/human/sounds/mob/infected/hurt2",
+      "decimation:content/mob/sound/human/sounds/mob/infected/hurt3",
+      "decimation:content/mob/sound/human/sounds/mob/infected/hurt4"
+    ]
+  },
+  "mob.infected.hurt.military": {
+    "category": "hostile",
+    "sounds": [
+      "decimation:content/mob/sound/infected/sounds/mob/infected/hurt1_military",
+      "decimation:content/mob/sound/infected/sounds/mob/infected/hurt2_military",
+      "decimation:content/mob/sound/infected/sounds/mob/infected/hurt3_military",
+      "decimation:content/mob/sound/infected/sounds/mob/infected/hurt4_military"
+    ]
+  },
+  "mob.infected.idle": {
+    "category": "hostile",
+    "sounds": [
+      "decimation:content/block/sound/electricbox/sounds/mob/infected/idle1",
+      "decimation:content/block/sound/electricbox/sounds/mob/infected/idle2",
+      "decimation:content/mob/sound/hulk/sounds/mob/infected/idle3",
+      "decimation:content/mob/sound/infected/sounds/mob/infected/idle4",
+      "decimation:content/mob/sound/infected/sounds/mob/infected/idle5",
+      "decimation:content/mob/sound/infected/sounds/mob/infected/idle6"
+    ]
+  },
+  "mob.infected.idle.military": {
+    "category": "hostile",
+    "sounds": [
+      "decimation:content/mob/sound/infected/sounds/mob/infected/idle1_military",
+      "decimation:content/mob/sound/infected/sounds/mob/infected/idle2_military",
+      "decimation:content/mob/sound/infected/sounds/mob/infected/idle3_military",
+      "decimation:content/mob/sound/infected/sounds/mob/infected/idle4_military",
+      "decimation:content/mob/sound/infected/sounds/mob/infected/idle5_military",
+      "decimation:content/mob/sound/infected/sounds/mob/infected/idle6_military"
+    ]
+  },
+  "mob.soldier.heard": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/mob/sound/mech/sounds/mob/soldier/heard0",
+      "decimation:content/mob/sound/mech/sounds/mob/soldier/heard1",
+      "decimation:content/mob/sound/mech/sounds/mob/soldier/heard2",
+      "decimation:content/mob/sound/mech/sounds/mob/soldier/heard3",
+      "decimation:content/mob/model/mob/human/sounds/mob/soldier/heard4",
+      "decimation:content/mob/model/mob/human/sounds/mob/soldier/heard5",
+      "decimation:content/mob/model/mob/human/sounds/mob/soldier/heard6",
+      "decimation:content/mob/model/mob/human/sounds/mob/soldier/heard7"
+    ]
+  },
+  "mob.soldier.idle": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/mob/sound/mech/sounds/mob/soldier/idle0",
+      "decimation:content/block/sound/electricbox/sounds/mob/soldier/idle1",
+      "decimation:content/block/sound/electricbox/sounds/mob/soldier/idle2",
+      "decimation:content/mob/sound/hulk/sounds/mob/soldier/idle3",
+      "decimation:content/mob/sound/infected/sounds/mob/soldier/idle4",
+      "decimation:content/mob/sound/infected/sounds/mob/soldier/idle5",
+      "decimation:content/mob/sound/infected/sounds/mob/soldier/idle6",
+      "decimation:content/mob/model/mob/human/sounds/mob/soldier/idle7"
+    ]
+  },
+  "mob.trader.idle": {
+    "category": "hostile",
+    "sounds": [
+      "decimation:content/block/sound/electricbox/sounds/mob/trader/idle1",
+      "decimation:content/block/sound/electricbox/sounds/mob/trader/idle2",
+      "decimation:content/mob/sound/hulk/sounds/mob/trader/idle3"
+    ]
+  },
+  "mob.trader.witch.laugh": {
+    "category": "hostile",
+    "sounds": [
+      "decimation:content/hud/gui/ingame/sounds/mob/trader/witch/laugh"
+    ]
+  },
+  "shell.drop": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/shelldrop0",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/shelldrop1",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/shelldrop2",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/shelldrop3",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/shelldrop4",
+      "decimation:content/gun/sound/bullet/sounds/guns/bullet/shelldrop5"
+    ]
+  },
+  "soundblock.scary.lab": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab1",
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab10",
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab11",
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab12",
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab13",
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab14",
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab15",
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab16",
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab17",
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab18",
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab19",
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab2",
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab20",
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab21",
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab22",
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab23",
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab24",
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab25",
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab26",
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab27",
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab28",
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab29",
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab3",
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab4",
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab5",
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab6",
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab7",
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab8",
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab9"
+    ]
+  },
+  "soundblock.street.alarm": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/alarm1"
+    ]
+  },
+  "soundblock.street.caralarm": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/car_alarm1",
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/car_alarm2",
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/car_alarm3",
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/car_alarm4"
+    ]
+  },
+  "soundblock.street.range": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/range1",
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/range2",
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/range3",
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/range4"
+    ]
+  },
+  "soundblock.morsecode.bukovka": {
+    "category": "ambient",
+    "sounds": [
+      "decimation:content/sound/sound/soundblock/sounds/soundblock/morsecode_bukovka"
+    ]
+  },
+  "vehicle.atv.horn": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/mob/model/vehicle/sounds/vehicle/atv/horn"
+    ]
+  },
+  "vehicle.atv.idle": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/block/sound/hazard/sounds/vehicle/atv/idle"
+    ]
+  },
+  "vehicle.atv.throttle": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/mob/model/vehicle/sounds/vehicle/atv/throttle"
+    ]
+  },
+  "vehicle.buggy.horn": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/vehicle/buggy/sounds/vehicle/buggy/horn"
+    ]
+  },
+  "vehicle.buggy.idle": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/block/sound/hazard/sounds/vehicle/buggy/idle"
+    ]
+  },
+  "vehicle.buggy.throttle": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/vehicle/buggy/sounds/vehicle/buggy/throttle"
+    ]
+  },
+  "vehicle.engine.off": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/vehicle/sound/vehicle/sounds/vehicle/engineoff"
+    ]
+  },
+  "vehicle.engine.on": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/vehicle/sound/vehicle/sounds/vehicle/engineon"
+    ]
+  },
+  "vehicle.hummer.horn": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/vehicle/hummer/sounds/vehicle/hummer/horn"
+    ]
+  },
+  "vehicle.hummer.idle": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/block/sound/hazard/sounds/vehicle/hummer/idle"
+    ]
+  },
+  "vehicle.hummer.throttle": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/vehicle/hummer/sounds/vehicle/hummer/throttle"
+    ]
+  },
+  "vehicle.lights.off": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/vehicle/sound/vehicle/sounds/vehicle/lights_off"
+    ]
+  },
+  "vehicle.lights.on": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/vehicle/sound/vehicle/sounds/vehicle/lights_on"
+    ]
+  },
+  "vehicle.m35.horn": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/vehicle/m35/sounds/vehicle/m35/horn"
+    ]
+  },
+  "vehicle.m35.idle": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/block/sound/hazard/sounds/vehicle/m35/idle"
+    ]
+  },
+  "vehicle.m35.reverse": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/vehicle/m35/sounds/vehicle/m35/reverse"
+    ]
+  },
+  "vehicle.m35.throttle": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/vehicle/m35/sounds/vehicle/m35/throttle"
+    ]
+  },
+  "vehicle.btr70.horn": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/vehicle/btr70/sounds/vehicle/btr70/horn"
+    ]
+  },
+  "vehicle.btr70.idle": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/block/sound/hazard/sounds/vehicle/btr70/idle"
+    ]
+  },
+  "vehicle.btr70.reverse": {
+    "category": "player",
+    "sounds": [
+      "decimation:missing/vehicle/btr70/reverse"
+    ]
+  },
+  "vehicle.btr70.throttle": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/vehicle/btr70/sounds/vehicle/btr70/throttle"
+    ]
+  },
+  "vehicle.tire.screech": {
+    "category": "player",
+    "sounds": [
+      "decimation:content/vehicle/sound/vehicle/sounds/vehicle/tireScreech"
+    ]
+  }
+}

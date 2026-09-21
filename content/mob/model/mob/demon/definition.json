@@ -1,0 +1,24 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "mob/model/mob/demon",
+  "type": "mob",
+  "assets": [
+    "sounds/death.ogg",
+    "sounds/hurt0.ogg",
+    "sounds/hurt1.ogg",
+    "sounds/idle0.ogg",
+    "sounds/idle3.ogg",
+    "sounds/wing.ogg",
+    "textures/model/demon.png"
+  ],
+  "legacy_sources": [
+    "sounds/mob/demon/death.ogg",
+    "sounds/mob/demon/hurt0.ogg",
+    "sounds/mob/demon/hurt1.ogg",
+    "sounds/mob/demon/idle0.ogg",
+    "sounds/mob/demon/idle3.ogg",
+    "sounds/mob/demon/wing.ogg",
+    "textures/model/entities/mob/demon/demon.png"
+  ]
+}

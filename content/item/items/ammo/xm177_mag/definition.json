@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/ammo/xm177_mag",
+  "type": "item",
+  "assets": [
+    "textures/item/xm177Mag.png"
+  ],
+  "legacy_sources": [
+    "textures/items/ammo/mag/xm177Mag.png"
+  ]
+}

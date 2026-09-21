@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/carepackage",
+  "type": "visual",
+  "assets": [
+    "textures/model/carepackage.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/props/carepackage.png"
+  ]
+}

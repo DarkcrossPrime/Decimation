@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/cannedpeach",
+  "type": "item",
+  "assets": [
+    "textures/item/cannedpeach.png"
+  ],
+  "legacy_sources": [
+    "textures/items/cannedpeach.png"
+  ]
+}

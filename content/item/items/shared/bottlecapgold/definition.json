@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/bottlecapgold",
+  "type": "item",
+  "assets": [
+    "textures/item/bottlecapgold.png"
+  ],
+  "legacy_sources": [
+    "textures/items/bottlecapgold.png"
+  ]
+}

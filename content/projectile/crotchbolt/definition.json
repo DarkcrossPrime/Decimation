@@ -1,0 +1,13 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "projectile/crotchbolt",
+  "type": "projectile",
+  "assets": [
+    "models/crotchbolt.mtl",
+    "models/crotchbolt.obj"
+  ],
+  "legacy_sources": [
+    "models/bullets/crotchbolt.bmodel"
+  ]
+}

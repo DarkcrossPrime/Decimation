@@ -1,0 +1,26 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/sound/m249",
+  "type": "gun",
+  "assets": [
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "sounds/shotgun/crossbow/fire_suppressed.ogg",
+    "sounds/shotgun/crossbow/magIn.ogg",
+    "sounds/shotgun/crossbow/magOut.ogg",
+    "sounds/shotgun/crossbow/rack.ogg"
+  ],
+  "legacy_sources": [
+    "sounds/guns/mg/m249/fire_suppressed.ogg",
+    "sounds/guns/mg/m249/magIn.ogg",
+    "sounds/guns/mg/m249/magOut.ogg",
+    "sounds/guns/mg/m249/rack.ogg",
+    "sounds/guns/shotgun/crossbow/fire_suppressed.ogg",
+    "sounds/guns/shotgun/crossbow/magIn.ogg",
+    "sounds/guns/shotgun/crossbow/magOut.ogg",
+    "sounds/guns/shotgun/crossbow/rack.ogg"
+  ]
+}

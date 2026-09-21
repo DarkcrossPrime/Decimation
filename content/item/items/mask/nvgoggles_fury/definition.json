@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/mask/nvgoggles_fury",
+  "type": "item",
+  "assets": [
+    "textures/item/nvgoggles_fury.png",
+    "textures/model/nvgoggles_fury.png"
+  ],
+  "legacy_sources": [
+    "textures/items/mask/nvgoggles_fury.png",
+    "textures/model/masks/nvgoggles_fury.png"
+  ]
+}

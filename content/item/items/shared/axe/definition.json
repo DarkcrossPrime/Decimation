@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/axe",
+  "type": "item",
+  "assets": [
+    "textures/item/axe.png",
+    "textures/model/axe.png"
+  ],
+  "legacy_sources": [
+    "textures/items/axe.png",
+    "textures/model/items/axe.png"
+  ]
+}

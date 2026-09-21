@@ -1,0 +1,21 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/guitar",
+  "type": "item",
+  "assets": [
+    "models/guitar.mtl",
+    "models/guitar.obj",
+    "sounds/pling.ogg",
+    "sounds/vrum.ogg",
+    "textures/item/guitar.png",
+    "textures/model/guitar.png"
+  ],
+  "legacy_sources": [
+    "models/items/guitar.bmodel",
+    "sounds/items/guitar/pling.ogg",
+    "sounds/items/guitar/vrum.ogg",
+    "textures/items/guitar.png",
+    "textures/model/items/guitar.png"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/electricbox2",
+  "type": "block",
+  "assets": [
+    "models/electricbox2.mtl",
+    "models/electricbox2.obj",
+    "textures/model/electricbox2.png"
+  ],
+  "legacy_sources": [
+    "models/props/electricbox2.bmodel",
+    "textures/model/blocks/props/electricbox2.png"
+  ]
+}

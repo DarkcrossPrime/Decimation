@@ -1,0 +1,13 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/wreckagepolice2",
+  "type": "block",
+  "assets": [
+    "models/wreckagepolice2.mtl",
+    "models/wreckagepolice2.obj"
+  ],
+  "legacy_sources": [
+    "models/props/wreckagepolice2.bmodel"
+  ]
+}

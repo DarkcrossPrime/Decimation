@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/roadsign_stop",
+  "type": "visual",
+  "assets": [
+    "textures/model/roadsign_stop.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/props/roadsign_stop.png"
+  ]
+}

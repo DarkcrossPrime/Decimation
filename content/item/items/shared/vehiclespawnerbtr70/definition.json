@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/vehiclespawnerbtr70",
+  "type": "item",
+  "assets": [
+    "textures/item/vehiclespawnerbtr70.png"
+  ],
+  "legacy_sources": [
+    "textures/items/vehiclespawnerbtr70.png"
+  ]
+}

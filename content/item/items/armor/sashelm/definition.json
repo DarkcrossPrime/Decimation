@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/armor/sashelm",
+  "type": "item",
+  "assets": [
+    "textures/item/sashelm.png"
+  ],
+  "legacy_sources": [
+    "textures/items/armor/sashelm.png"
+  ]
+}

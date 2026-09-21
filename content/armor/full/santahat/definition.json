@@ -1,0 +1,17 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "armor/full/santahat",
+  "type": "armor",
+  "assets": [
+    "models/santahat.mtl",
+    "models/santahat.obj",
+    "textures/item/santahat.png",
+    "textures/model/santahat.png"
+  ],
+  "legacy_sources": [
+    "models/armor/full/santahat.bmodel",
+    "textures/items/armor/santahat.png",
+    "textures/model/armor/santahat.png"
+  ]
+}

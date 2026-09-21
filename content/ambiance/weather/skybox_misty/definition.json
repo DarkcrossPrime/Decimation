@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "ambiance/weather/skybox_misty",
+  "type": "ambiance",
+  "assets": [
+    "textures/skybox_misty.png"
+  ],
+  "legacy_sources": [
+    "textures/weather/skybox_misty.png"
+  ]
+}

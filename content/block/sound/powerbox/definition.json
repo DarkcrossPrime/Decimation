@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/sound/powerbox",
+  "type": "block",
+  "assets": [
+    "sounds/powerbox.ogg"
+  ],
+  "legacy_sources": [
+    "sounds/blocks/powerbox/powerbox.ogg"
+  ]
+}

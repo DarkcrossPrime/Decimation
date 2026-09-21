@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/backpacks/item_hiking_pack_tan",
+  "type": "visual",
+  "assets": [
+    "textures/model/ItemHikingPack_Tan.png"
+  ],
+  "legacy_sources": [
+    "textures/model/backpacks/ItemHikingPack_Tan.png"
+  ]
+}

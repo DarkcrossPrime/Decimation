@@ -1,0 +1,20 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "sound/sound/effect",
+  "type": "sound",
+  "assets": [
+    "sounds/flashed.ogg",
+    "sounds/irradiated1.ogg",
+    "sounds/irradiated2.ogg",
+    "sounds/irradiated3.ogg",
+    "sounds/irradiated4.ogg"
+  ],
+  "legacy_sources": [
+    "sounds/misc/effect/flashed.ogg",
+    "sounds/misc/effect/irradiated1.ogg",
+    "sounds/misc/effect/irradiated2.ogg",
+    "sounds/misc/effect/irradiated3.ogg",
+    "sounds/misc/effect/irradiated4.ogg"
+  ]
+}

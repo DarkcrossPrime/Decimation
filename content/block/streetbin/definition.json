@@ -1,0 +1,15 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/streetbin",
+  "type": "block",
+  "assets": [
+    "models/streetbin.mtl",
+    "models/streetbin.obj",
+    "textures/model/streetbin.png"
+  ],
+  "legacy_sources": [
+    "models/props/streetbin.bmodel",
+    "textures/model/blocks/props/streetbin.png"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/emptycan",
+  "type": "item",
+  "assets": [
+    "textures/item/emptycan.png"
+  ],
+  "legacy_sources": [
+    "textures/items/emptycan.png"
+  ]
+}

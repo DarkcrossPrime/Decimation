@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/rawboar",
+  "type": "item",
+  "assets": [
+    "textures/item/rawboar.png"
+  ],
+  "legacy_sources": [
+    "textures/items/rawboar.png"
+  ]
+}

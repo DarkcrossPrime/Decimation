@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/prop_woodtable",
+  "type": "block",
+  "assets": [
+    "textures/prop_woodtable.png"
+  ],
+  "legacy_sources": [
+    "textures/blocks/prop_woodtable.png"
+  ]
+}

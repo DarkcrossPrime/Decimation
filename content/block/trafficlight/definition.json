@@ -1,0 +1,13 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/trafficlight",
+  "type": "block",
+  "assets": [
+    "models/trafficlight.mtl",
+    "models/trafficlight.obj"
+  ],
+  "legacy_sources": [
+    "models/props/trafficlight.bmodel"
+  ]
+}

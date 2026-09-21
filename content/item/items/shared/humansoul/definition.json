@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/humansoul",
+  "type": "item",
+  "assets": [
+    "textures/item/humansoul.png"
+  ],
+  "legacy_sources": [
+    "textures/items/humansoul.png"
+  ]
+}

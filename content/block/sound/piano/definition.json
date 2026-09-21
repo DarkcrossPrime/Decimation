@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/sound/piano",
+  "type": "block",
+  "assets": [
+    "sounds/note.ogg",
+    "sounds/note_high.ogg"
+  ],
+  "legacy_sources": [
+    "sounds/blocks/piano/note.ogg",
+    "sounds/blocks/piano/note_high.ogg"
+  ]
+}

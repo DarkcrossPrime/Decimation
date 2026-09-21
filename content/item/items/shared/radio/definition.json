@@ -1,0 +1,18 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/radio",
+  "type": "item",
+  "assets": [
+    "sounds/radio0.ogg",
+    "sounds/supplydropradio/radio.ogg",
+    "textures/item/radio.png",
+    "textures/model/radio.png"
+  ],
+  "legacy_sources": [
+    "sounds/blocks/radio/radio0.ogg",
+    "sounds/items/supplydropradio/radio.ogg",
+    "textures/items/radio.png",
+    "textures/model/items/radio.png"
+  ]
+}

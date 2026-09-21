@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/fannypack_green",
+  "type": "item",
+  "assets": [
+    "textures/item/fannypack_green.png"
+  ],
+  "legacy_sources": [
+    "textures/items/fannypack_green.png"
+  ]
+}

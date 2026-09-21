@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "visual/model/blocks/graffiti_4",
+  "type": "visual",
+  "assets": [
+    "textures/model/graffiti_4.png"
+  ],
+  "legacy_sources": [
+    "textures/model/blocks/props/graffiti_4.png"
+  ]
+}

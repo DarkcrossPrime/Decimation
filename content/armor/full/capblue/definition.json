@@ -1,0 +1,17 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "armor/full/capblue",
+  "type": "armor",
+  "assets": [
+    "models/capblue.mtl",
+    "models/capblue.obj",
+    "textures/item/capblue.png",
+    "textures/model/capblue.png"
+  ],
+  "legacy_sources": [
+    "models/armor/full/capblue.bmodel",
+    "textures/items/armor/capblue.png",
+    "textures/model/armor/capblue.png"
+  ]
+}

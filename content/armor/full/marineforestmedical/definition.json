@@ -1,0 +1,15 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "armor/full/marineforestmedical",
+  "type": "armor",
+  "assets": [
+    "models/marineforestmedical.mtl",
+    "models/marineforestmedical.obj",
+    "textures/model/marineforestmedical.png"
+  ],
+  "legacy_sources": [
+    "models/armor/full/marineforestmedical.bmodel",
+    "textures/model/armor/marineforestmedical.png"
+  ]
+}

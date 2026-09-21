@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/pistol/barettam9",
+  "type": "gun",
+  "assets": [
+    "animations/barettam9_fire.danim.json",
+    "animations/barettam9_rack.danim.json",
+    "animations/barettam9_reload1.danim.json",
+    "animations/barettam9_slide_back.danim.json",
+    "models/barettam9.mtl",
+    "models/barettam9.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/barettam9.png",
+    "textures/model/barettam9.png"
+  ],
+  "legacy_sources": [
+    "animations/barettam9/barettam9Fire.anib",
+    "animations/barettam9/barettam9Rack.anib",
+    "animations/barettam9/barettam9Reload1.anib",
+    "animations/barettam9/barettam9SlideBack.anib",
+    "models/guns/pistol/barettam9.bmodel",
+    "sounds/guns/pistol/barettam9/fire.ogg",
+    "sounds/guns/pistol/barettam9/fire_distant.ogg",
+    "sounds/guns/pistol/barettam9/fire_suppressed.ogg",
+    "sounds/guns/pistol/barettam9/magIn.ogg",
+    "sounds/guns/pistol/barettam9/magOut.ogg",
+    "sounds/guns/pistol/barettam9/rack.ogg",
+    "textures/items/gun/pistol/barettam9.png",
+    "textures/model/guns/pistol/barettam9/barettam9.png"
+  ]
+}

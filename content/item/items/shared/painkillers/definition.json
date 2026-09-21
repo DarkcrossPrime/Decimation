@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/painkillers",
+  "type": "item",
+  "assets": [
+    "textures/item/painkillers.png"
+  ],
+  "legacy_sources": [
+    "textures/items/painkillers.png"
+  ]
+}

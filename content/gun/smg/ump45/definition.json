@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/smg/ump45",
+  "type": "gun",
+  "assets": [
+    "animations/ump45_fire.danim.json",
+    "animations/ump45_rack.danim.json",
+    "animations/ump45_reload1.danim.json",
+    "animations/ump45_slide_back.danim.json",
+    "models/ump45.mtl",
+    "models/ump45.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/ump45.png",
+    "textures/model/ump45.png"
+  ],
+  "legacy_sources": [
+    "animations/ump45/ump45Fire.anib",
+    "animations/ump45/ump45Rack.anib",
+    "animations/ump45/ump45Reload1.anib",
+    "animations/ump45/ump45SlideBack.anib",
+    "models/guns/smg/ump45.bmodel",
+    "sounds/guns/smg/ump45/fire.ogg",
+    "sounds/guns/smg/ump45/fire_distant.ogg",
+    "sounds/guns/smg/ump45/fire_suppressed.ogg",
+    "sounds/guns/smg/ump45/magIn.ogg",
+    "sounds/guns/smg/ump45/magOut.ogg",
+    "sounds/guns/smg/ump45/rack.ogg",
+    "textures/items/gun/smg/ump45.png",
+    "textures/model/guns/smg/ump45/ump45.png"
+  ]
+}

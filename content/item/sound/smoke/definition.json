@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/sound/smoke",
+  "type": "item",
+  "assets": [
+    "sounds/drain.ogg",
+    "sounds/stun/drain.ogg"
+  ],
+  "legacy_sources": [
+    "sounds/items/grenade/smoke/drain.ogg",
+    "sounds/items/grenade/stun/drain.ogg"
+  ]
+}

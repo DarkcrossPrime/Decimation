@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/butcherknife",
+  "type": "item",
+  "assets": [
+    "textures/item/butcherknife.png",
+    "textures/model/butcherknife.png"
+  ],
+  "legacy_sources": [
+    "textures/items/butcherknife.png",
+    "textures/model/items/butcherknife.png"
+  ]
+}

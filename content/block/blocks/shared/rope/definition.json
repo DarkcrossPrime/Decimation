@@ -1,0 +1,18 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "block/blocks/shared/rope",
+  "type": "block",
+  "assets": [
+    "sounds/climb1.ogg",
+    "sounds/climb2.ogg",
+    "sounds/climb3.ogg",
+    "textures/rope.png"
+  ],
+  "legacy_sources": [
+    "sounds/blocks/rope/climb1.ogg",
+    "sounds/blocks/rope/climb2.ogg",
+    "sounds/blocks/rope/climb3.ogg",
+    "textures/blocks/rope.png"
+  ]
+}

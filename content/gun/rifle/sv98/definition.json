@@ -1,0 +1,37 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/sv98",
+  "type": "gun",
+  "assets": [
+    "animations/sv98_fire.danim.json",
+    "animations/sv98_rack.danim.json",
+    "animations/sv98_reload1.danim.json",
+    "animations/sv98_slide_back.danim.json",
+    "models/sv98.mtl",
+    "models/sv98.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/sv98.png",
+    "textures/model/sv98.png"
+  ],
+  "legacy_sources": [
+    "animations/sv98/sv98Fire.anib",
+    "animations/sv98/sv98Rack.anib",
+    "animations/sv98/sv98Reload1.anib",
+    "animations/sv98/sv98SlideBack.anib",
+    "models/guns/rifle/sv98.bmodel",
+    "sounds/guns/rifle/sv98/fire.ogg",
+    "sounds/guns/rifle/sv98/fire_distant.ogg",
+    "sounds/guns/rifle/sv98/fire_suppressed.ogg",
+    "sounds/guns/rifle/sv98/magIn.ogg",
+    "sounds/guns/rifle/sv98/magOut.ogg",
+    "sounds/guns/rifle/sv98/rack.ogg",
+    "textures/items/gun/rifle/sv98.png",
+    "textures/model/guns/rifle/sv98/sv98.png"
+  ]
+}

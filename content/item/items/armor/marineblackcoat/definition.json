@@ -1,0 +1,12 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/armor/marineblackcoat",
+  "type": "item",
+  "assets": [
+    "textures/item/marineblackcoat.png"
+  ],
+  "legacy_sources": [
+    "textures/items/armor/marineblackcoat.png"
+  ]
+}

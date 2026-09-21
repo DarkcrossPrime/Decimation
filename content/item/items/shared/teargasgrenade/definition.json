@@ -1,0 +1,14 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "item/items/shared/teargasgrenade",
+  "type": "item",
+  "assets": [
+    "textures/item/teargasgrenade.png",
+    "textures/model/teargasgrenade.png"
+  ],
+  "legacy_sources": [
+    "textures/items/teargasgrenade.png",
+    "textures/model/entities/projectile/teargasgrenade.png"
+  ]
+}

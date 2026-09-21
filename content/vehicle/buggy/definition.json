@@ -1,0 +1,19 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "vehicle/buggy",
+  "type": "vehicle",
+  "assets": [
+    "models/buggy.mtl",
+    "models/buggy.obj",
+    "sounds/horn.ogg",
+    "sounds/throttle.ogg",
+    "textures/model/buggy.png"
+  ],
+  "legacy_sources": [
+    "models/vehicles/buggy.bmodel",
+    "sounds/vehicle/buggy/horn.ogg",
+    "sounds/vehicle/buggy/throttle.ogg",
+    "textures/model/entities/vehicle/buggy.png"
+  ]
+}

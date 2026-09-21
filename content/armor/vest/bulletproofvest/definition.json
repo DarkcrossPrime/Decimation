@@ -1,0 +1,17 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "armor/vest/bulletproofvest",
+  "type": "armor",
+  "assets": [
+    "models/bulletproofvest.mtl",
+    "models/bulletproofvest.obj",
+    "textures/item/bulletproofvest.png",
+    "textures/model/bulletproofvest.png"
+  ],
+  "legacy_sources": [
+    "models/armor/vest/bulletproofvest.bmodel",
+    "textures/items/vest/bulletproofvest.png",
+    "textures/model/vests/bulletproofvest.png"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/shotgun/ks23",
+  "type": "gun",
+  "assets": [
+    "animations/ks23_fire.danim.json",
+    "animations/ks23_rack.danim.json",
+    "animations/ks23_reload1.danim.json",
+    "models/ks23.mtl",
+    "models/ks23.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/insert_shell.ogg",
+    "sounds/pump.ogg",
+    "sounds/pump_back.ogg",
+    "textures/item/ks23.png",
+    "textures/model/ks23.png"
+  ],
+  "legacy_sources": [
+    "animations/ks23/ks23Fire.anib",
+    "animations/ks23/ks23Rack.anib",
+    "animations/ks23/ks23Reload1.anib",
+    "models/guns/shotgun/ks23.bmodel",
+    "sounds/guns/shotgun/ks23/fire.ogg",
+    "sounds/guns/shotgun/ks23/fire_distant.ogg",
+    "sounds/guns/shotgun/ks23/fire_suppressed.ogg",
+    "sounds/guns/shotgun/ks23/insert_shell.ogg",
+    "sounds/guns/shotgun/ks23/pump.ogg",
+    "sounds/guns/shotgun/ks23/pump_back.ogg",
+    "textures/items/gun/shotgun/ks23.png",
+    "textures/model/guns/shotgun/ks23/ks23.png"
+  ]
+}

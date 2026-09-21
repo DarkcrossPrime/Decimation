@@ -1,0 +1,13 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "backpack/huge_military_pack",
+  "type": "backpack",
+  "assets": [
+    "models/huge_military_pack.mtl",
+    "models/huge_military_pack.obj"
+  ],
+  "legacy_sources": [
+    "models/backpacks/hugeMilitaryPack.bmodel"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "armor/full/marineforesthat",
+  "type": "armor",
+  "assets": [
+    "models/marineforesthat.mtl",
+    "models/marineforesthat.obj",
+    "textures/item/marineforesthat.png",
+    "textures/model/marineforesthat.png"
+  ],
+  "legacy_sources": [
+    "models/armor/full/marineforesthat.bmodel",
+    "textures/items/armor/marineforesthat.png",
+    "textures/model/armor/marineforesthat.png"
+  ]
+}
