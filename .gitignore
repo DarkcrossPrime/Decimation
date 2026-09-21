@@ -3,8 +3,9 @@
 .gradle-wrapper/
 build/
 
-# IntelliJ IDEA
+# IDE
 .idea/
+.vscode/
 *.iml
 *.ipr
 *.iws

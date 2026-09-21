@@ -1,138 +1,82 @@
-# The Last of Craft
+# Decimation — Fabric 1.20.1 clean foundation
 
-**Decimation** is the internal development name for *The Last of Craft*, a Fabric mod targeting Minecraft 1.20.1.
+This is a new Fabric project built from the supplied Decimation asset archive. The
+legacy obfuscated Java/classes are deliberately excluded. Only reusable assets and
+format knowledge were carried forward.
 
-## Baseline
+## Layout
 
-- Minecraft 1.20.1
-- Fabric
-- Java 17
-- Package root: `dev.decimation`
-- Mod id: `decimation`
-- Public name: *The Last of Craft*
+- `content/` — canonical authoring tree. Every object owns its model, material,
+  textures, animations, audio, and `definition.json` in one directory.
+- `src/` — clean Java 17 Fabric code, split into common and client source sets.
+- `tools/` — permanent `.bmodel`/`.anib` converters, legacy importer, runtime
+  resource compiler, and structural auditor.
+- `build/generated/resources/` — generated conventional Minecraft resource layout;
+  never edit this directory directly.
 
-## Project scope
+The module scaffold covers ambiance, guns, vehicles, HUD, blocks, and mobs without
+making any one subsystem the identity of the mod.
 
-The project is intentionally broader than its current weapon milestone. First-class areas include:
+## Weapons
 
-- environment, fog and atmospheric presentation
-- player-side presentation, including a rendered first-person body/view system
-- ambience and world feel
-- blocks, items and survival/world interaction
-- vehicles
-- weapons and combat
-- shared content/asset tooling
+The weapon module is the production architecture, not a temporary test-item layer.
+The first playable catalogue entries are the recovered **AAC Honey Badger PDW**,
+**FAMAS**, and **TAC-15 Crossbow**. Their canonical `definition.json` files own both
+their recovered assets and their gameplay data; adding another gun does not require
+a one-off Java item class.
 
-Weapons are being completed first because they give us a useful vertical slice across input, networking, item state, server authority and custom assets. They remain one subsystem of the project rather than the root architecture.
-
-See `docs/architecture/project-systems.md`.
-
-## Content architecture
-
-The content tree is object-oriented: **one content object = one directory**.
-
-```text
-content/
-├── weapons/<type>/<weapon>/
-│   ├── definition.json
-│   ├── model.glb
-│   ├── animations/
-│   ├── textures/
-│   └── sounds/
-├── vehicles/<vehicle>/...
-├── attachments/<type>/<attachment>/...
-├── armor/<type>/<piece>/...
-├── backpacks/<backpack>/...
-├── items/<item>/...
-├── projectiles/...
-├── props/<prop>/...
-├── placeables/<placeable>/...
-├── blocks/<block>/...
-├── _shared/
-└── migration/
-```
-
-Unique files live with the object that owns them. Genuinely shared or byte-identical files remain once under `content/_shared/`.
-
-`src/main/resources/assets/decimation/` is reserved for mod-global Minecraft resources and runtime resources that do not yet have a clear object owner. Compiler output lives only in `build/generated/decimation-resources/`.
-
-## Current milestone — 0.2.6 real weapon packs
-
-The development-only guns and ammunition have been removed. The runtime is now exercised by three real converted content packs:
-
-```text
-decimation:glock17   9x19mm      SEMI
-decimation:m4a4      5.56mm      SEMI / AUTO
-decimation:akm       7.62x39mm   SEMI / AUTO
-```
-
-Each active gun is compiled from its existing object directory containing the actual GLB, texture, animation set and sounds. `.dweapon` v5 now carries runtime references to that complete asset pack, ready for the renderer/audio milestones.
+The server owns trigger cadence, chamber/magazine state, fire modes, reload timing,
+ammo consumption, spread, raycasts/projectiles, penetration, falloff, hit location,
+and damage. Clients send input intent and locally render the recovered OBJ/DANIM
+assets from synchronized weapon events. Weapon NBT persists magazine, chamber, and
+selected fire mode on each individual stack.
 
 Default controls:
 
-```text
-Left mouse  Trigger
-R           Reload
-B           Cycle fire mode
-```
+- `Left mouse` — trigger
+- `Right mouse` — aim down sights
+- `R` — reload
+- `B` — cycle fire mode
 
-`R` and `B` are proper Minecraft key bindings and can be rebound.
+For a quick creative test, take the three weapons and their matching magazines or
+bolts from the Combat tab. Creative players do not consume reload items.
 
-Weapon cadence is entirely Decimation-owned; the vanilla item cooldown overlay is not used. Guns keep their ammo count in the tooltip but have no item bar. Detachable magazines use the green bar for their own round count.
+## Build
 
-Hold right-click on a magazine to load **one loose round per game tick**. Sneak-right-click still unloads it.
-
-Pipeline:
-
-```text
-content/weapons/<type>/<weapon>/
-    -> definition + GLB + animations + textures + sounds
-    -> asset compiler
-    -> .dweapon v5 + staged runtime assets
-    -> WeaponCatalog
-    -> generic WeaponItem / WeaponState
-    -> WeaponRuntimeHandler
-    -> WeaponFireHandler
-```
-
-## Creative inventory
-
-Creative pages remain category-specific. The Weapons page is visible because weapon content exists. Other category pages are registered as their content systems come online; weapons are not intended to become the primary identity/page of the finished mod.
-
-## Asset inventory
-
-The 0.2.2 normalization remains intact:
-
-- 197 GLB models
-- 98 weapon animation sets
-- 30 deduplicated animation clips
-- 232 converted asset definitions
-- 1,732 PNG textures
-- 1,241 OGG sounds
-
-See `docs/asset-inventory.md` and `content/migration/0.2.2_reorganization_report.json`.
-
-## Build / run
+Requires Java 17.
 
 ```bash
-./gradlew compileAssets
+./gradlew auditContent
+./gradlew build
 ./gradlew runClient
 ```
 
-`runClient` and `build` invoke `compileAssets` automatically.
+Gradle compiles the object-centric `content/` tree into runtime resources before
+`processResources`, so canonical assets remain grouped by object while Fabric sees
+the paths it expects.
 
-Never edit:
+## Re-import supplied legacy assets
 
-```text
-build/generated/decimation-resources/
+```bash
+python3 tools/import_legacy_assets.py /path/to/assets/deci content --replace
+python3 tools/audit_assets.py content
 ```
 
-## Architecture documents
+Standalone conversion:
 
-- `docs/architecture/project-systems.md`
-- `docs/architecture/content.md`
-- `docs/architecture/assets.md`
-- `docs/architecture/asset-pipeline.md`
-- `docs/architecture/weapon-runtime.md`
-- `docs/dweapon/README.md`
-- `docs/asset-inventory.md`
+```bash
+python3 tools/bmodel_to_obj.py model.bmodel model.obj --texture texture.png
+python3 tools/anib_to_danim.py animation.anib animation.danim.json
+```
+
+## Conversion status
+
+- 232 `.bmodel` files converted to OBJ/MTL.
+- 386 `.anib` files converted to versioned DANIM JSON.
+- 25,219 model parts, 201,808 vertices, and 151,356 quads audited.
+- 1,290 canonical content objects.
+- Zero legacy `.bmodel` or `.anib` files remain in `content/`.
+
+Six audio names referenced by the old `sounds.json` were not present in the supplied
+archive and are recorded as unresolved in `content/_meta/import_summary.json`; no
+replacement audio was invented.
