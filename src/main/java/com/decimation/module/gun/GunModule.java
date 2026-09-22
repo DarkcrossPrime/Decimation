@@ -6,8 +6,10 @@ import com.decimation.module.gun.data.WeaponCatalog;
 import com.decimation.module.gun.data.WeaponDefinition;
 import com.decimation.module.gun.network.WeaponPackets;
 import java.util.Collections;
+import java.util.LinkedHashSet;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Set;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.event.player.AttackBlockCallback;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
@@ -30,13 +32,18 @@ public final class GunModule implements DecimationModule {
 
     public void initialize() {
         catalog = WeaponCatalog.load();
+        Set<Identifier> soundIds = new LinkedHashSet<>();
         for (WeaponDefinition definition : catalog.definitions().values()) {
             WeaponItem weapon = Registry.register(Registries.ITEM, definition.id(), new WeaponItem(definition));
             WEAPONS.put(definition.id(), weapon);
             AMMUNITION.computeIfAbsent(definition.ammo().itemId(), ammoId ->
                 Registry.register(Registries.ITEM, ammoId, new AmmoItem()));
-            Identifier soundId = new Identifier(Decimation.MOD_ID, "weapon." + definition.id().getPath() + ".fire");
-            Registry.register(Registries.SOUND_EVENT, soundId, SoundEvent.of(soundId));
+            soundIds.addAll(definition.audio().sounds().values());
+        }
+        for (Identifier soundId : soundIds) {
+            if (Decimation.MOD_ID.equals(soundId.getNamespace()) && !Registries.SOUND_EVENT.containsId(soundId)) {
+                Registry.register(Registries.SOUND_EVENT, soundId, SoundEvent.of(soundId));
+            }
         }
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {

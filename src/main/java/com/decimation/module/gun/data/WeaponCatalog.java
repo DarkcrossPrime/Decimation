@@ -11,6 +11,7 @@ import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.EnumMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -75,13 +76,26 @@ public final class WeaponCatalog {
             handlingJson.get("recoil_yaw").getAsFloat());
         JsonObject assetsJson = json.getAsJsonObject("assets");
         WeaponAssets assets = new WeaponAssets(identifier(assetsJson, "model"),
-            identifier(assetsJson, "texture"), identifier(assetsJson, "fire_animation"),
-            identifier(assetsJson, "reload_animation"), identifier(assetsJson, "fire_sound"));
+            identifier(assetsJson, "texture"), identifier(assetsJson, "item_texture"),
+            identifier(assetsJson, "fire_animation"), identifier(assetsJson, "reload_animation"));
+        JsonObject audioJson = json.getAsJsonObject("audio");
+        Map<WeaponSound, Identifier> sounds = new EnumMap<>(WeaponSound.class);
+        for (Map.Entry<String, JsonElement> entry : audioJson.getAsJsonObject("sounds").entrySet()) {
+            sounds.put(WeaponSound.parse(entry.getKey()), new Identifier(entry.getValue().getAsString()));
+        }
+        List<WeaponSoundCue> reloadCues = new ArrayList<>();
+        for (JsonElement element : audioJson.getAsJsonArray("reload_cues")) {
+            JsonObject cue = element.getAsJsonObject();
+            reloadCues.add(new WeaponSoundCue(cue.get("tick").getAsInt(),
+                WeaponSound.parse(cue.get("sound").getAsString())));
+        }
+        WeaponAudio audio = new WeaponAudio(WeaponSound.parse(audioJson.get("shot").getAsString()),
+            audioJson.get("distant_threshold").getAsFloat(), sounds, reloadCues);
         return new WeaponDefinition(id, json.get("content_id").getAsString(),
             json.get("display_name").getAsString(), WeaponMechanism.parse(json.get("mechanism").getAsString()),
             ammo, modes, json.has("burst_size") ? json.get("burst_size").getAsInt() : 1,
             json.get("rate_of_fire").getAsInt(), json.get("reload_ticks").getAsInt(),
-            ballistics, handling, assets);
+            ballistics, handling, assets, audio);
     }
 
     private static float optionalFloat(JsonObject json, String name, float fallback) {

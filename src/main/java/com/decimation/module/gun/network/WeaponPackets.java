@@ -8,6 +8,7 @@ import net.minecraft.util.Identifier;
 public final class WeaponPackets {
     public static final Identifier ACTION = new Identifier(Decimation.MOD_ID, "weapon/action");
     public static final Identifier EVENT = new Identifier(Decimation.MOD_ID, "weapon/event");
+    public static final Identifier SOUND = new Identifier(Decimation.MOD_ID, "weapon/sound");
 
     private WeaponPackets() { }
 

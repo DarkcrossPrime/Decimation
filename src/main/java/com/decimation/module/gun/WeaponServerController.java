@@ -2,11 +2,15 @@ package com.decimation.module.gun;
 
 import com.decimation.module.gun.data.FireMode;
 import com.decimation.module.gun.data.WeaponDefinition;
+import com.decimation.module.gun.data.WeaponSound;
+import com.decimation.module.gun.data.WeaponSoundCue;
 import com.decimation.module.gun.network.WeaponAction;
 import com.decimation.module.gun.network.WeaponEvent;
 import com.decimation.module.gun.network.WeaponPackets;
 import java.util.HashMap;
+import java.util.LinkedHashSet;
 import java.util.Map;
+import java.util.Set;
 import java.util.UUID;
 import net.fabricmc.fabric.api.networking.v1.PlayerLookup;
 import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
@@ -16,8 +20,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvent;
 
 public final class WeaponServerController {
     private static final double TICKS_PER_MINUTE = 20.0 * 60.0;
@@ -62,8 +64,12 @@ public final class WeaponServerController {
         if (control.reloading) {
             if (control.reloadStack != stack || !control.reloadWeapon.equals(definition.id())) {
                 cancelReload(player, control);
-            } else if (player.getWorld().getTime() >= control.reloadEndsAt) {
-                completeReload(player, stack, definition, control);
+            } else {
+                emitReloadSounds(player, definition,
+                    player.getWorld().getTime() - control.reloadStartedAt, control);
+                if (player.getWorld().getTime() >= control.reloadEndsAt) {
+                    completeReload(player, stack, definition, control);
+                }
             }
         }
         if (control.reloading) {
@@ -90,6 +96,7 @@ public final class WeaponServerController {
         control.fireBudget -= 1.0;
         if (!state.consumeShot()) {
             control.burstRemaining = 0;
+            sendSound(player, definition, WeaponSound.DRY_FIRE);
             sendEvent(player, definition, state, WeaponEvent.DRY_FIRE);
             return;
         }
@@ -98,10 +105,7 @@ public final class WeaponServerController {
         float aimProgress = control.aiming
             ? Math.min(1.0f, control.aimTicks / (float) Math.max(1, definition.handling().adsTicks())) : 0;
         ShotResolver.resolve(player, definition, aimProgress);
-        player.getWorld().playSound(null, player.getX(), player.getEyeY(), player.getZ(),
-            SoundEvent.of(new net.minecraft.util.Identifier(com.decimation.Decimation.MOD_ID,
-                "weapon." + definition.id().getPath() + ".fire")),
-            SoundCategory.PLAYERS, 1.0f, 1.0f);
+        sendShotSound(player, definition);
         sendEvent(player, definition, state, WeaponEvent.FIRED);
     }
 
@@ -114,10 +118,25 @@ public final class WeaponServerController {
         control.reloading = true;
         control.reloadStack = stack;
         control.reloadWeapon = definition.id();
+        control.reloadStartedAt = player.getWorld().getTime();
         control.reloadEndsAt = player.getWorld().getTime() + definition.reloadTicks();
+        control.reloadCueIndex = 0;
+        control.reloadNeedsRack = !state.chambered() && definition.ammo().chamberCapacity() > 0;
         control.triggerHeld = false;
         control.burstRemaining = 0;
         sendEvent(player, definition, state, WeaponEvent.RELOAD_STARTED);
+    }
+
+    private static void emitReloadSounds(ServerPlayerEntity player, WeaponDefinition definition,
+                                         long elapsed, ControlState control) {
+        while (control.reloadCueIndex < definition.audio().reloadCues().size()) {
+            WeaponSoundCue cue = definition.audio().reloadCues().get(control.reloadCueIndex);
+            if (cue.tick() > elapsed) return;
+            if (cue.sound() != WeaponSound.RACK || control.reloadNeedsRack) {
+                sendSound(player, definition, cue.sound());
+            }
+            control.reloadCueIndex++;
+        }
     }
 
     private void completeReload(ServerPlayerEntity player, ItemStack stack,
@@ -140,6 +159,7 @@ public final class WeaponServerController {
         WeaponState state = WeaponState.read(stack, definition);
         state.cycleFireMode(definition);
         state.write(stack, definition);
+        sendSound(player, definition, WeaponSound.FIRE_MODE);
         sendEvent(player, definition, state, WeaponEvent.FIRE_MODE_CHANGED);
     }
 
@@ -168,6 +188,37 @@ public final class WeaponServerController {
                 WeaponEvent.RELOAD_CANCELLED);
         }
         control.clearReload();
+    }
+
+    private static void sendShotSound(ServerPlayerEntity owner, WeaponDefinition definition) {
+        for (ServerPlayerEntity recipient : soundRecipients(owner)) {
+            WeaponSound cue = definition.audio().shotForDistance(recipient.distanceTo(owner));
+            sendSoundPacket(recipient, owner, definition, cue);
+        }
+    }
+
+    private static void sendSound(ServerPlayerEntity owner, WeaponDefinition definition, WeaponSound cue) {
+        for (ServerPlayerEntity recipient : soundRecipients(owner)) {
+            sendSoundPacket(recipient, owner, definition, cue);
+        }
+    }
+
+    private static Set<ServerPlayerEntity> soundRecipients(ServerPlayerEntity owner) {
+        Set<ServerPlayerEntity> recipients = new LinkedHashSet<>(PlayerLookup.tracking(owner));
+        recipients.add(owner);
+        return recipients;
+    }
+
+    private static void sendSoundPacket(ServerPlayerEntity recipient, ServerPlayerEntity source,
+                                        WeaponDefinition definition, WeaponSound cue) {
+        if (definition.audio().sound(cue) == null) return;
+        PacketByteBuf buffer = PacketByteBufs.create();
+        buffer.writeIdentifier(definition.id());
+        buffer.writeVarInt(cue.ordinal());
+        buffer.writeDouble(source.getX());
+        buffer.writeDouble(source.getEyeY());
+        buffer.writeDouble(source.getZ());
+        ServerPlayNetworking.send(recipient, WeaponPackets.SOUND, buffer);
     }
 
     private static void sendEvent(ServerPlayerEntity owner, WeaponDefinition definition,
@@ -200,13 +251,19 @@ public final class WeaponServerController {
         private boolean reloading;
         private ItemStack reloadStack;
         private net.minecraft.util.Identifier reloadWeapon;
+        private long reloadStartedAt;
         private long reloadEndsAt;
+        private int reloadCueIndex;
+        private boolean reloadNeedsRack;
 
         private void clearReload() {
             reloading = false;
             reloadStack = null;
             reloadWeapon = null;
+            reloadStartedAt = 0;
             reloadEndsAt = 0;
+            reloadCueIndex = 0;
+            reloadNeedsRack = false;
         }
 
         private void resetInput() {
