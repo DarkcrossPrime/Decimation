@@ -14,6 +14,7 @@
       "spawn_loaded": true
     },
     "fire_modes": ["semi", "automatic"],
+    "shot_sound": "fire_suppressed",
     "rate_of_fire": 800,
     "reload_ticks": 57,
     "ballistics": {
