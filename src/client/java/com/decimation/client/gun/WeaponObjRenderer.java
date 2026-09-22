@@ -32,6 +32,10 @@ public final class WeaponObjRenderer implements BuiltinItemRendererRegistry.Dyna
     @Override
     public void render(ItemStack stack, ModelTransformationMode mode, MatrixStack matrices,
                        VertexConsumerProvider consumers, int light, int overlay) {
+        if (mode == ModelTransformationMode.GUI) {
+            renderInventoryIcon(matrices, consumers, light, overlay);
+            return;
+        }
         ObjModel model = ClientContentManager.INSTANCE.models().get(definition.assets().model());
         if (model == null) return;
         matrices.push();
@@ -50,6 +54,25 @@ public final class WeaponObjRenderer implements BuiltinItemRendererRegistry.Dyna
             matrices.pop();
         }
         matrices.pop();
+    }
+
+    private void renderInventoryIcon(MatrixStack matrices, VertexConsumerProvider consumers,
+                                     int light, int overlay) {
+        VertexConsumer vertices = consumers.getBuffer(
+            RenderLayer.getEntityCutoutNoCull(definition.assets().itemTexture()));
+        MatrixStack.Entry matrix = matrices.peek();
+        Matrix4f position = matrix.getPositionMatrix();
+        Matrix3f normal = matrix.getNormalMatrix();
+        iconVertex(vertices, position, normal, 0, 1, 0, 0, light, overlay);
+        iconVertex(vertices, position, normal, 1, 1, 1, 0, light, overlay);
+        iconVertex(vertices, position, normal, 1, 0, 1, 1, light, overlay);
+        iconVertex(vertices, position, normal, 0, 0, 0, 1, light, overlay);
+    }
+
+    private static void iconVertex(VertexConsumer vertices, Matrix4f position, Matrix3f normal,
+                                   float x, float y, float u, float v, int light, int overlay) {
+        vertices.vertex(position, x, y, 0.5f).color(255, 255, 255, 255)
+            .texture(u, v).overlay(overlay).light(light).normal(normal, 0, 0, 1).next();
     }
 
     private DanimAnimation activeAnimation() {

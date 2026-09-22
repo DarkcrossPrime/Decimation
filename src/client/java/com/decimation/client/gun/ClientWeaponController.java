@@ -1,8 +1,10 @@
 package com.decimation.client.gun;
 
+import com.decimation.module.gun.GunModule;
 import com.decimation.module.gun.WeaponItem;
 import com.decimation.module.gun.WeaponState;
 import com.decimation.module.gun.data.WeaponDefinition;
+import com.decimation.module.gun.data.WeaponSound;
 import com.decimation.module.gun.network.WeaponAction;
 import com.decimation.module.gun.network.WeaponEvent;
 import com.decimation.module.gun.network.WeaponPackets;
@@ -16,6 +18,9 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.item.ItemStack;
+import net.minecraft.registry.Registries;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 
 public final class ClientWeaponController {
@@ -47,6 +52,16 @@ public final class ClientWeaponController {
                 if (eventOrdinal < 0 || eventOrdinal >= WeaponEvent.values().length) return;
                 client.execute(() -> accept(client, owner, weapon, WeaponEvent.values()[eventOrdinal],
                     ammunition, mode, serverTick));
+            });
+        ClientPlayNetworking.registerGlobalReceiver(WeaponPackets.SOUND,
+            (client, handler, buffer, responseSender) -> {
+                Identifier weapon = buffer.readIdentifier();
+                int cueOrdinal = buffer.readVarInt();
+                double x = buffer.readDouble();
+                double y = buffer.readDouble();
+                double z = buffer.readDouble();
+                if (cueOrdinal < 0 || cueOrdinal >= WeaponSound.values().length) return;
+                client.execute(() -> playSound(client, weapon, WeaponSound.values()[cueOrdinal], x, y, z));
             });
     }
 
@@ -111,6 +126,23 @@ public final class ClientWeaponController {
             case RELOAD_CANCELLED -> animation = null;
             default -> { }
         }
+    }
+
+    private static void playSound(MinecraftClient client, Identifier weaponId, WeaponSound cue,
+                                  double x, double y, double z) {
+        if (client.world == null) return;
+        WeaponDefinition definition = GunModule.catalog().get(weaponId);
+        if (definition == null) return;
+        Identifier soundId = definition.audio().sound(cue);
+        if (soundId == null || !Registries.SOUND_EVENT.containsId(soundId)) return;
+        SoundEvent sound = Registries.SOUND_EVENT.get(soundId);
+        float volume = switch (cue) {
+            case FIRE_DISTANT -> 8.0f;
+            case FIRE -> 4.0f;
+            case FIRE_SUPPRESSED -> 2.0f;
+            default -> 1.0f;
+        };
+        client.world.playSound(x, y, z, sound, SoundCategory.PLAYERS, volume, 1.0f, false);
     }
 
     private static void send(WeaponAction action) {
