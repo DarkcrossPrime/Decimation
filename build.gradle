@@ -60,6 +60,9 @@ tasks.register("auditContent", Exec) {
 processResources {
     dependsOn tasks.named("prepareContentResources")
     doNotTrackState("Generated resources may live on a synchronized workspace filesystem")
+    doFirst {
+        delete destinationDir
+    }
     inputs.property "version", project.version
     filesMatching("fabric.mod.json") {
         expand "version": project.version
