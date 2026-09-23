@@ -11,6 +11,12 @@
     "main": ["com.decimation.Decimation"],
     "client": ["com.decimation.client.DecimationClient"]
   },
+  "mixins": [
+    {
+      "config": "decimation.client.mixins.json",
+      "environment": "client"
+    }
+  ],
   "depends": {
     "fabricloader": ">=0.15.0",
     "minecraft": "~1.20.1",
@@ -18,4 +24,3 @@
     "fabric-api": "*"
   }
 }
-
