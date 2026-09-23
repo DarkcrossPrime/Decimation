@@ -3,6 +3,7 @@ package com.decimation.client.gun;
 import com.decimation.client.content.ClientContentManager;
 import com.decimation.client.content.DanimAnimation;
 import com.decimation.client.content.ObjModel;
+import com.decimation.client.firstperson.FirstPersonRenderState;
 import com.decimation.module.gun.WeaponItem;
 import com.decimation.module.gun.data.WeaponDefinition;
 import net.fabricmc.fabric.api.client.rendering.v1.BuiltinItemRendererRegistry;
@@ -95,6 +96,14 @@ public final class WeaponObjRenderer implements BuiltinItemRendererRegistry.Dyna
             matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(controller.recoilYaw()));
             matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(180));
             matrices.scale(0.03f, 0.03f, 0.03f);
+        } else if (FirstPersonRenderState.isRenderingBody()) {
+            ClientWeaponController controller = ClientWeaponController.INSTANCE;
+            float ads = controller.adsProgress();
+            matrices.translate(0.48, 0.50 - 0.04 * ads, 0.50 - 0.04 * ads);
+            matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(-controller.recoilPitch()));
+            matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(controller.recoilYaw()));
+            matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(180));
+            matrices.scale(0.025f, 0.025f, 0.025f);
         } else {
             matrices.translate(0.5, 0.5, 0.5);
             matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(180));
