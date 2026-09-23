@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "com.decimation.client.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "client": [
+    "ArmorFeatureRendererMixin",
+    "HeadFeatureRendererMixin",
+    "HeldItemRendererMixin",
+    "PlayerEntityRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
