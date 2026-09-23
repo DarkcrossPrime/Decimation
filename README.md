@@ -38,6 +38,19 @@ Default controls:
 - `R` — reload
 - `B` — cycle fire mode
 
+## First-person body
+
+First person uses the local player's real articulated model instead of Minecraft's
+floating arms. The skin, slim/classic arm geometry, skin overlays, limb animation,
+crouching, held items, and body armor therefore share the same rig as third person.
+The head, hat layer, helmet, and head-mounted items are omitted only during the
+local first-person render. Spectator, sleeping, and third-person views retain
+vanilla rendering.
+
+Firearms use a two-handed body pose and are rendered from the character's held-item
+attachment. The current transform is the common baseline; per-weapon grip, support
+hand, hip, and sight anchors are the next tuning layer.
+
 For a quick creative test, take the three weapons and their matching magazines or
 bolts from the Combat tab. Creative players do not consume reload items.
 
