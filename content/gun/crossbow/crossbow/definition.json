@@ -1,0 +1,98 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/crossbow/crossbow",
+  "type": "gun",
+  "weapon": {
+    "registry_id": "crossbow",
+    "display_name": "TAC-15 Crossbow",
+    "mechanism": "projectile",
+    "ammo": {
+      "item": "ammo_boltrounds_bullet",
+      "capacity": 0,
+      "chamber_capacity": 1,
+      "spawn_loaded": true
+    },
+    "fire_modes": ["semi"],
+    "rate_of_fire": 60,
+    "reload_ticks": 57,
+    "ballistics": {
+      "damage": 14.0,
+      "range": 120.0,
+      "falloff_start": 120.0,
+      "minimum_multiplier": 1.0,
+      "head_multiplier": 1.5,
+      "penetration_count": 0,
+      "penetration_retention": 1.0,
+      "projectile_speed": 3.15,
+      "projectile_divergence": 0.15
+    },
+    "handling": {
+      "hip_spread": 3.0,
+      "ads_spread": 0.1,
+      "ads_ticks": 8,
+      "recoil_pitch": 2.2,
+      "recoil_yaw": 0.2
+    },
+    "presentation": {
+      "first_person": {
+        "hip": {
+          "translation": [0.50, 0.47, 0.50],
+          "rotation": [0.0, 0.0, -2.0],
+          "scale": 0.035,
+          "arms": {
+            "main_hand": [-72.0, -16.0, 0.0],
+            "off_hand": [-74.0, 34.0, 0.0]
+          }
+        },
+        "ads": {
+          "translation": [0.50, 0.43, 0.46],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": 0.035,
+          "arms": {
+            "main_hand": [-84.27, -17.19, 0.0],
+            "off_hand": [-85.94, 36.0, 0.0]
+          }
+        }
+      },
+      "third_person": {
+        "translation": [0.50, 0.50, 0.50],
+        "rotation": [0.0, 0.0, 0.0],
+        "scale": 0.025
+      }
+    }
+  },
+  "assets": [
+    "animations/crossbow_fire.danim.json",
+    "animations/crossbow_rack.danim.json",
+    "animations/crossbow_reload1.danim.json",
+    "animations/crossbow_slide_back.danim.json",
+    "models/crossbow.mtl",
+    "models/crossbow.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/insert_shell.ogg",
+    "sounds/magIn.ogg",
+    "sounds/magOut.ogg",
+    "sounds/rack.ogg",
+    "textures/item/crossbow.png",
+    "textures/model/crossbow.png"
+  ],
+  "legacy_sources": [
+    "animations/crossbow/crossbowFire.anib",
+    "animations/crossbow/crossbowRack.anib",
+    "animations/crossbow/crossbowReload1.anib",
+    "animations/crossbow/crossbowSlideBack.anib",
+    "models/guns/crossbow/crossbow.bmodel",
+    "sounds/guns/crossbow/crossbow/fire.ogg",
+    "sounds/guns/crossbow/crossbow/fire_distant.ogg",
+    "sounds/guns/crossbow/crossbow/fire_suppressed.ogg",
+    "sounds/guns/crossbow/crossbow/insert_shell.ogg",
+    "sounds/guns/crossbow/crossbow/magIn.ogg",
+    "sounds/guns/crossbow/crossbow/magOut.ogg",
+    "sounds/guns/crossbow/crossbow/rack.ogg",
+    "textures/items/gun/crossbow/crossbow.png",
+    "textures/model/guns/crossbow/crossbow/crossbow.png"
+  ]
+}

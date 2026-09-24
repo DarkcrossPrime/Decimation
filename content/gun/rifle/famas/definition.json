@@ -32,6 +32,33 @@
       "ads_ticks": 6,
       "recoil_pitch": 1.25,
       "recoil_yaw": 0.55
+    },
+    "presentation": {
+      "first_person": {
+        "hip": {
+          "translation": [0.52, 0.48, 0.50],
+          "rotation": [0.0, 0.0, -2.0],
+          "scale": 0.036,
+          "arms": {
+            "main_hand": [-68.0, -14.0, 0.0],
+            "off_hand": [-72.0, 30.0, 0.0]
+          }
+        },
+        "ads": {
+          "translation": [0.52, 0.44, 0.46],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": 0.036,
+          "arms": {
+            "main_hand": [-84.27, -17.19, 0.0],
+            "off_hand": [-85.94, 34.38, 0.0]
+          }
+        }
+      },
+      "third_person": {
+        "translation": [0.50, 0.50, 0.50],
+        "rotation": [0.0, 0.0, 0.0],
+        "scale": 0.025
+      }
     }
   },
   "assets": [

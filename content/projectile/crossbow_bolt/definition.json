@@ -1,0 +1,13 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "projectile/crossbow_bolt",
+  "type": "projectile",
+  "assets": [
+    "models/crossbow_bolt.mtl",
+    "models/crossbow_bolt.obj"
+  ],
+  "legacy_sources": [
+    "models/bullets/crossbow_bolt.bmodel"
+  ]
+}

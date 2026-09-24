@@ -1,7 +1,7 @@
-# Converted from Decimation Beardie model: crotchbow.bmodel
+# Converted from Decimation Beardie model: crossbow.bmodel
 # Coordinates retain the original Beardie model units.
-mtllib crotchbow.mtl
-usemtl crotchbow_material
+mtllib crossbow.mtl
+usemtl crossbow_material
 o gunModel0
 v 1.849999 3.25 -0.55
 v 8.499999 3.25 -0.55

@@ -1,7 +1,7 @@
 {
   "format": "decimation:danim",
   "version": 1,
-  "source": "crotchbowFire.anib",
+  "source": "crossbowRack.anib",
   "static": false,
   "length": 1,
   "hand": 1,
@@ -11,8 +11,8 @@
       "transforms": {
         "OffHand": {
           "position": [
-            -1.600003,
-            -5.960464e-08,
+            0,
+            0,
             0
           ],
           "rotation": [

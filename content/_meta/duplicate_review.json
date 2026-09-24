@@ -135,7 +135,7 @@
   {
     "sha256": "26e292de293a9fcc9f50b6ed5facbabfa58a1a14122419da0ba0522e2d6df8cd",
     "files": [
-      "gun/crossbow/crotchbow/sounds/guns/crossbow/crotchbow/fire_suppressed.ogg",
+      "gun/crossbow/crossbow/sounds/guns/crossbow/crossbow/fire_suppressed.ogg",
       "gun/rifle/ak12/sounds/guns/rifle/ak12/fire_suppressed.ogg",
       "gun/rifle/ak74/sounds/guns/rifle/ak74/fire_suppressed.ogg",
       "gun/rifle/akm/sounds/guns/rifle/akm/fire_suppressed.ogg",
@@ -791,7 +791,7 @@
   {
     "sha256": "a9b2777b13373ab634fb0405de8cd5e9759b34322294f72b3e1b5d26765863bc",
     "files": [
-      "gun/crossbow/crotchbow/textures/model/guns/crossbow/crotchbow/crotchbow.png",
+      "gun/crossbow/crossbow/textures/model/guns/crossbow/crossbow/crossbow.png",
       "mob/model/projectile/textures/model/entities/projectile/crossbow_bolt.png"
     ],
     "disposition": "retained_object_local_ownership"
@@ -1070,7 +1070,7 @@
   {
     "sha256": "d36840232c499f04e3fa83551bb8dcb444fd4dc7665de84d0a058c307f76f68b",
     "files": [
-      "gun/crossbow/crotchbow/sounds/guns/crossbow/crotchbow/rack.ogg",
+      "gun/crossbow/crossbow/sounds/guns/crossbow/crossbow/rack.ogg",
       "gun/rocket/rpg18/sounds/guns/rocket/rpg18/rack.ogg",
       "gun/rocket/rpg7/sounds/guns/rocket/rpg7/rack.ogg"
     ],

@@ -1,19 +1,31 @@
 {
   "format": "decimation:danim",
   "version": 1,
-  "source": "crotchbowRack.anib",
-  "static": false,
+  "source": "crossbowSlideBack.anib",
+  "static": true,
   "length": 1,
-  "hand": 1,
+  "hand": 0,
   "frames": [
     {
       "index": 0,
       "transforms": {
-        "OffHand": {
+        "AmmoModel0": {
           "position": [
+            0,
+            1000,
+            0
+          ],
+          "rotation": [
             0,
             0,
             0
+          ]
+        },
+        "OffHand": {
+          "position": [
+            -9.536743e-07,
+            0.08000183,
+            9.536743e-07
           ],
           "rotation": [
             0,
@@ -35,8 +47,5 @@
         }
       }
     }
-  ],
-  "directives": [
-    "NO-Y HIP"
   ]
 }
