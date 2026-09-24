@@ -74,6 +74,7 @@ public final class WeaponCatalog {
             handlingJson.get("hip_spread").getAsFloat(), handlingJson.get("ads_spread").getAsFloat(),
             handlingJson.get("ads_ticks").getAsInt(), handlingJson.get("recoil_pitch").getAsFloat(),
             handlingJson.get("recoil_yaw").getAsFloat());
+        WeaponPresentation presentation = parsePresentation(json.getAsJsonObject("presentation"));
         JsonObject assetsJson = json.getAsJsonObject("assets");
         WeaponAssets assets = new WeaponAssets(identifier(assetsJson, "model"),
             identifier(assetsJson, "texture"), identifier(assetsJson, "item_texture"),
@@ -95,7 +96,55 @@ public final class WeaponCatalog {
             json.get("display_name").getAsString(), WeaponMechanism.parse(json.get("mechanism").getAsString()),
             ammo, modes, json.has("burst_size") ? json.get("burst_size").getAsInt() : 1,
             json.get("rate_of_fire").getAsInt(), json.get("reload_ticks").getAsInt(),
-            ballistics, handling, assets, audio);
+            ballistics, handling, presentation, assets, audio);
+    }
+
+    private static WeaponPresentation parsePresentation(JsonObject json) {
+        if (json == null || !json.has("first_person")) {
+            WeaponTransform hip = new WeaponTransform(0.48f, 0.50f, 0.50f, 0, 0, 0, 0.025f);
+            WeaponTransform ads = new WeaponTransform(0.48f, 0.46f, 0.46f, 0, 0, 0, 0.025f);
+            WeaponTransform thirdPerson = new WeaponTransform(0.5f, 0.5f, 0.5f, 0, 0, 0, 0.025f);
+            WeaponArmPose hipArms = new WeaponArmPose(
+                new ArmRotation(-68, -14, 0), new ArmRotation(-72, 30, 0));
+            WeaponArmPose adsArms = new WeaponArmPose(
+                new ArmRotation(-84.27f, -17.19f, 0), new ArmRotation(-85.94f, 34.38f, 0));
+            return new WeaponPresentation(hip, ads, hipArms, adsArms, thirdPerson);
+        }
+        JsonObject firstPerson = json.getAsJsonObject("first_person");
+        JsonObject hip = firstPerson.getAsJsonObject("hip");
+        JsonObject ads = firstPerson.getAsJsonObject("ads");
+        return new WeaponPresentation(
+            parseTransform(hip), parseTransform(ads),
+            parseArmPose(hip.getAsJsonObject("arms")),
+            parseArmPose(ads.getAsJsonObject("arms")),
+            parseTransform(json.getAsJsonObject("third_person")));
+    }
+
+    private static WeaponArmPose parseArmPose(JsonObject json) {
+        return new WeaponArmPose(
+            parseArmRotation(json.getAsJsonArray("main_hand")),
+            parseArmRotation(json.getAsJsonArray("off_hand")));
+    }
+
+    private static ArmRotation parseArmRotation(JsonArray json) {
+        if (json == null || json.size() != 3) {
+            throw new IllegalArgumentException("weapon arm rotations must contain three values");
+        }
+        return new ArmRotation(json.get(0).getAsFloat(), json.get(1).getAsFloat(),
+            json.get(2).getAsFloat());
+    }
+
+    private static WeaponTransform parseTransform(JsonObject json) {
+        JsonArray translation = json.getAsJsonArray("translation");
+        JsonArray rotation = json.getAsJsonArray("rotation");
+        if (translation.size() != 3 || rotation.size() != 3) {
+            throw new IllegalArgumentException("weapon presentation vectors must contain three values");
+        }
+        return new WeaponTransform(
+            translation.get(0).getAsFloat(), translation.get(1).getAsFloat(),
+            translation.get(2).getAsFloat(), rotation.get(0).getAsFloat(),
+            rotation.get(1).getAsFloat(), rotation.get(2).getAsFloat(),
+            json.get("scale").getAsFloat());
     }
 
     private static float optionalFloat(JsonObject json, String name, float fallback) {

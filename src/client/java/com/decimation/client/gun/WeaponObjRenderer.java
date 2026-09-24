@@ -6,6 +6,7 @@ import com.decimation.client.content.ObjModel;
 import com.decimation.client.firstperson.FirstPersonRenderState;
 import com.decimation.module.gun.WeaponItem;
 import com.decimation.module.gun.data.WeaponDefinition;
+import com.decimation.module.gun.data.WeaponTransform;
 import net.fabricmc.fabric.api.client.rendering.v1.BuiltinItemRendererRegistry;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.RenderLayer;
@@ -20,6 +21,8 @@ import org.joml.Matrix3f;
 import org.joml.Matrix4f;
 
 public final class WeaponObjRenderer implements BuiltinItemRendererRegistry.DynamicItemRenderer {
+    /** Converts the recovered Decimation model axis (+X forward) to Minecraft held-item forward. */
+    private static final float MODEL_FORWARD_YAW = 90.0f;
     private final WeaponDefinition definition;
 
     private WeaponObjRenderer(WeaponDefinition definition) {
@@ -41,7 +44,8 @@ public final class WeaponObjRenderer implements BuiltinItemRendererRegistry.Dyna
         if (model == null) return;
         matrices.push();
         applyViewTransform(matrices, mode);
-        VertexConsumer vertices = consumers.getBuffer(RenderLayer.getEntityCutout(definition.assets().texture()));
+        VertexConsumer vertices = consumers.getBuffer(
+            RenderLayer.getEntityCutoutNoCull(definition.assets().texture()));
         DanimAnimation animation = activeAnimation();
         int frame = ClientWeaponController.INSTANCE.animation() == null ? 0
             : ClientWeaponController.INSTANCE.animation().frame(MinecraftClient.getInstance());
@@ -82,33 +86,37 @@ public final class WeaponObjRenderer implements BuiltinItemRendererRegistry.Dyna
         return ClientContentManager.INSTANCE.animations().get(active.id());
     }
 
-    private static void applyViewTransform(MatrixStack matrices, ModelTransformationMode mode) {
-        if (mode == ModelTransformationMode.GUI) {
-            matrices.translate(0.5, 0.45, 0.0);
-            matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(140));
-            matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(-18));
-            matrices.scale(0.035f, 0.035f, 0.035f);
+    private void applyViewTransform(MatrixStack matrices, ModelTransformationMode mode) {
+        if (FirstPersonRenderState.isRenderingBody()) {
+            ClientWeaponController controller = ClientWeaponController.INSTANCE;
+            WeaponTransform transform = WeaponTransform.interpolate(
+                definition.presentation().firstPersonHip(),
+                definition.presentation().firstPersonAds(),
+                controller.adsProgress());
+            applyTransform(matrices, transform, controller.recoilPitch(), controller.recoilYaw());
         } else if (mode.isFirstPerson()) {
             ClientWeaponController controller = ClientWeaponController.INSTANCE;
             float ads = controller.adsProgress();
             matrices.translate(0.55 - 0.27 * ads, 0.35 - 0.08 * ads, -0.55 - 0.2 * ads);
             matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(-controller.recoilPitch()));
             matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(controller.recoilYaw()));
-            matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(180));
+            matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(MODEL_FORWARD_YAW));
             matrices.scale(0.03f, 0.03f, 0.03f);
-        } else if (FirstPersonRenderState.isRenderingBody()) {
-            ClientWeaponController controller = ClientWeaponController.INSTANCE;
-            float ads = controller.adsProgress();
-            matrices.translate(0.48, 0.50 - 0.04 * ads, 0.50 - 0.04 * ads);
-            matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(-controller.recoilPitch()));
-            matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(controller.recoilYaw()));
-            matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(180));
-            matrices.scale(0.025f, 0.025f, 0.025f);
         } else {
-            matrices.translate(0.5, 0.5, 0.5);
-            matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(180));
-            matrices.scale(0.025f, 0.025f, 0.025f);
+            applyTransform(matrices, definition.presentation().thirdPerson(), 0, 0);
         }
+    }
+
+    private static void applyTransform(MatrixStack matrices, WeaponTransform transform,
+                                       float recoilPitch, float recoilYaw) {
+        matrices.translate(transform.x(), transform.y(), transform.z());
+        matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(-recoilPitch));
+        matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(recoilYaw));
+        matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(transform.pitch()));
+        matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(transform.yaw()));
+        matrices.multiply(RotationAxis.POSITIVE_Z.rotationDegrees(transform.roll()));
+        matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(MODEL_FORWARD_YAW));
+        matrices.scale(transform.scale(), transform.scale(), transform.scale());
     }
 
     private static void applyAnimationTransform(MatrixStack matrices, DanimSampler.Transform transform) {
@@ -124,22 +132,50 @@ public final class WeaponObjRenderer implements BuiltinItemRendererRegistry.Dyna
                                  VertexConsumer consumer, int light, int overlay) {
         int[] indices = face.vertexIndices();
         if (indices.length < 3) return;
+        Vec3d normal = faceNormal(model, face);
+        if (normal.lengthSquared() < 1.0E-12) return;
+
+        // Minecraft's entity render layers use DrawMode.QUADS. The recovered weapon OBJs are
+        // quad-based too, so submit their four vertices directly. Feeding two three-vertex
+        // triangles into this buffer makes the fourth vertex of one primitive consume the first
+        // vertex of the next, which joins unrelated model parts into the shredded geometry seen
+        // on screen.
+        if (indices.length == 4) {
+            for (int corner = 0; corner < 4; corner++) {
+                emitVertex(model, face, corner, matrix, consumer, light, overlay, normal);
+            }
+            return;
+        }
+
+        // Keep arbitrary OBJ polygons safe on a quad buffer. Repeating the final triangle vertex
+        // creates a degenerate fourth corner without allowing primitives to cross face boundaries.
         for (int corner = 1; corner < indices.length - 1; corner++) {
-            emitTriangle(model, face, matrix, consumer, light, overlay, 0, corner, corner + 1);
+            emitVertex(model, face, 0, matrix, consumer, light, overlay, normal);
+            emitVertex(model, face, corner, matrix, consumer, light, overlay, normal);
+            emitVertex(model, face, corner + 1, matrix, consumer, light, overlay, normal);
+            emitVertex(model, face, corner + 1, matrix, consumer, light, overlay, normal);
         }
     }
 
-    private static void emitTriangle(ObjModel model, ObjModel.Face face, MatrixStack.Entry matrix,
-                                     VertexConsumer consumer, int light, int overlay, int a, int b, int c) {
-        ObjModel.Vertex va = model.vertices().get(face.vertexIndices()[a]);
-        ObjModel.Vertex vb = model.vertices().get(face.vertexIndices()[b]);
-        ObjModel.Vertex vc = model.vertices().get(face.vertexIndices()[c]);
-        Vec3d ab = new Vec3d(vb.x() - va.x(), vb.y() - va.y(), vb.z() - va.z());
-        Vec3d ac = new Vec3d(vc.x() - va.x(), vc.y() - va.y(), vc.z() - va.z());
-        Vec3d normal = ab.crossProduct(ac).normalize();
-        emitVertex(model, face, a, matrix, consumer, light, overlay, normal);
-        emitVertex(model, face, b, matrix, consumer, light, overlay, normal);
-        emitVertex(model, face, c, matrix, consumer, light, overlay, normal);
+    /**
+     * Computes one normal for the original OBJ polygon instead of one normal per emitted triangle.
+     * The converted Beardie models contain slightly non-planar quads; lighting each half separately
+     * exposes their triangulation as dark wedges. Newell's method keeps the legacy quad visually flat.
+     */
+    private static Vec3d faceNormal(ObjModel model, ObjModel.Face face) {
+        int[] indices = face.vertexIndices();
+        double x = 0;
+        double y = 0;
+        double z = 0;
+        for (int index = 0; index < indices.length; index++) {
+            ObjModel.Vertex current = model.vertices().get(indices[index]);
+            ObjModel.Vertex next = model.vertices().get(indices[(index + 1) % indices.length]);
+            x += (current.y() - next.y()) * (current.z() + next.z());
+            y += (current.z() - next.z()) * (current.x() + next.x());
+            z += (current.x() - next.x()) * (current.y() + next.y());
+        }
+        Vec3d normal = new Vec3d(x, y, z);
+        return normal.lengthSquared() < 1.0E-12 ? Vec3d.ZERO : normal.normalize();
     }
 
     private static void emitVertex(ObjModel model, ObjModel.Face face, int corner, MatrixStack.Entry matrix,

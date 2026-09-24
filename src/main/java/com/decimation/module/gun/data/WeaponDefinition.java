@@ -7,7 +7,8 @@ public record WeaponDefinition(Identifier id, String contentId, String displayNa
                                WeaponMechanism mechanism, AmmoDefinition ammo,
                                List<FireMode> fireModes, int burstSize, int rateOfFire,
                                int reloadTicks, BallisticsDefinition ballistics,
-                               HandlingDefinition handling, WeaponAssets assets,
+                               HandlingDefinition handling, WeaponPresentation presentation,
+                               WeaponAssets assets,
                                WeaponAudio audio) {
     public WeaponDefinition {
         fireModes = List.copyOf(fireModes);

@@ -6,6 +6,8 @@
     "ArmorFeatureRendererMixin",
     "HeadFeatureRendererMixin",
     "HeldItemRendererMixin",
+    "MinecraftClientMixin",
+    "PlayerEntityModelMixin",
     "PlayerEntityRendererMixin"
   ],
   "injectors": {
