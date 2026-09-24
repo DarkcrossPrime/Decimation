@@ -48,8 +48,11 @@ local first-person render. Spectator, sleeping, and third-person views retain
 vanilla rendering.
 
 Firearms use a two-handed body pose and are rendered from the character's held-item
-attachment. The current transform is the common baseline; per-weapon grip, support
-hand, hip, and sight anchors are the next tuning layer.
+attachment. Each weapon owns its hip, ADS, and third-person model transforms plus
+its main-hand and support-hand rotations under `weapon.presentation` in its canonical
+`definition.json`; the renderer smoothly interpolates the first-person weapon and arm
+poses using that weapon's ADS timing. Vanilla attacks and block breaking are suppressed
+while a weapon is held, so the trigger input does not also play Minecraft's punch swing.
 
 For a quick creative test, take the three weapons and their matching magazines or
 bolts from the Combat tab. Creative players do not consume reload items.
