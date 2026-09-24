@@ -78,6 +78,49 @@ def audit_danim(path: Path, errors: list[str], totals: Counter) -> None:
     totals["synthetic_frames"] += sum(bool(frame.get("synthetic")) for frame in frames)
 
 
+def audit_weapon_transform(value, location: str, errors: list[str]) -> None:
+    if not isinstance(value, dict):
+        errors.append(f"{location}: transform must be an object")
+        return
+    for name in ("translation", "rotation"):
+        vector = value.get(name)
+        if (not isinstance(vector, list) or len(vector) != 3
+                or any(not isinstance(component, (int, float)) for component in vector)):
+            errors.append(f"{location}: {name} must contain three numbers")
+    scale = value.get("scale")
+    if not isinstance(scale, (int, float)) or scale <= 0:
+        errors.append(f"{location}: scale must be a positive number")
+
+
+def audit_weapon_arm_pose(value, location: str, errors: list[str]) -> None:
+    if not isinstance(value, dict):
+        errors.append(f"{location}: arms must be an object")
+        return
+    for name in ("main_hand", "off_hand"):
+        rotation = value.get(name)
+        if (not isinstance(rotation, list) or len(rotation) != 3
+                or any(not isinstance(component, (int, float)) for component in rotation)):
+            errors.append(f"{location}: {name} must contain three numbers")
+
+
+def audit_weapon_presentation(value, definition_path: Path, errors: list[str]) -> None:
+    location = f"{definition_path}: weapon presentation"
+    if not isinstance(value, dict):
+        errors.append(f"{location} is missing")
+        return
+    first_person = value.get("first_person")
+    if not isinstance(first_person, dict):
+        errors.append(f"{location}.first_person must be an object")
+    else:
+        for pose_name in ("hip", "ads"):
+            pose = first_person.get(pose_name)
+            pose_location = f"{location}.first_person.{pose_name}"
+            audit_weapon_transform(pose, pose_location, errors)
+            if isinstance(pose, dict):
+                audit_weapon_arm_pose(pose.get("arms"), f"{pose_location}.arms", errors)
+    audit_weapon_transform(value.get("third_person"), f"{location}.third_person", errors)
+
+
 def run(root: Path) -> tuple[dict, list[str]]:
     root = root.resolve()
     errors: list[str] = []
@@ -120,6 +163,7 @@ def run(root: Path) -> tuple[dict, list[str]]:
             modes = weapon.get("fire_modes", [])
             if not modes or any(mode not in {"semi", "burst", "automatic"} for mode in modes):
                 errors.append(f"{definition_path}: invalid weapon fire modes")
+            audit_weapon_presentation(weapon.get("presentation"), definition_path, errors)
         for relative_name in definition.get("assets", []):
             asset = (definition_path.parent / relative_name).resolve()
             try:
