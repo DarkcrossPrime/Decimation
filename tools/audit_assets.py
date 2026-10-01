@@ -112,7 +112,8 @@ def audit_weapon_presentation(value, definition_path: Path, errors: list[str]) -
     if not isinstance(first_person, dict):
         errors.append(f"{location}.first_person must be an object")
     else:
-        for pose_name in ("hip", "ads"):
+        pose_names = ("hip", "ads", "sprint") if "sprint" in first_person else ("hip", "ads")
+        for pose_name in pose_names:
             pose = first_person.get(pose_name)
             pose_location = f"{location}.first_person.{pose_name}"
             audit_weapon_transform(pose, pose_location, errors)
