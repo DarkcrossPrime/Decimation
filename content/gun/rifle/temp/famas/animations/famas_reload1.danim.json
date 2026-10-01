@@ -1,0 +1,744 @@
+{
+  "format": "decimation:danim",
+  "version": 1,
+  "static": false,
+  "hand": 0,
+  "length": 43,
+  "source": "famas.animation.json:animation.model.reload",
+  "frames": [
+    {
+      "index": 0,
+      "transforms": {
+        "magazine": {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 1,
+      "transforms": {
+        "magazine": {
+          "position": [
+            -0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 2,
+      "transforms": {
+        "magazine": {
+          "position": [
+            -0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 3,
+      "transforms": {
+        "magazine": {
+          "position": [
+            -0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 4,
+      "transforms": {
+        "magazine": {
+          "position": [
+            -0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 5,
+      "transforms": {
+        "magazine": {
+          "position": [
+            -0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 6,
+      "transforms": {
+        "magazine": {
+          "position": [
+            -0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 7,
+      "transforms": {
+        "magazine": {
+          "position": [
+            -0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 8,
+      "transforms": {
+        "magazine": {
+          "position": [
+            -0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 9,
+      "transforms": {
+        "magazine": {
+          "position": [
+            -0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "sound": "MagOut"
+    },
+    {
+      "index": 10,
+      "transforms": {
+        "magazine": {
+          "position": [
+            -0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 11,
+      "transforms": {
+        "magazine": {
+          "position": [
+            -0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 12,
+      "transforms": {
+        "magazine": {
+          "position": [
+            0.01665,
+            -0.7013812500000001,
+            0.024975
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 13,
+      "transforms": {
+        "magazine": {
+          "position": [
+            0.041650000000000034,
+            -1.7545062500000015,
+            0.062475000000000044
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 14,
+      "transforms": {
+        "magazine": {
+          "position": [
+            1.06875,
+            -3.15125,
+            -0.03749999999999999
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 15,
+      "transforms": {
+        "magazine": {
+          "position": [
+            1.8839673913043473,
+            -2.6930416041979015,
+            -0.34109820089955006
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 16,
+      "transforms": {
+        "magazine": {
+          "position": [
+            2.63125,
+            -0.9012500000000001,
+            -0.9125
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 17,
+      "transforms": {
+        "magazine": {
+          "position": [
+            2.6303129685157423,
+            -0.5273744377811098,
+            -0.8750187406296852
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 18,
+      "transforms": {
+        "magazine": {
+          "position": [
+            2.63,
+            -0.027781320330082515,
+            -0.874990622655664
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 19,
+      "transforms": {
+        "magazine": {
+          "position": [
+            2.63,
+            0.5348593398349581,
+            -0.893745311327832
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 20,
+      "transforms": {
+        "magazine": {
+          "position": [
+            2.63,
+            1.0975,
+            -0.9125
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 21,
+      "transforms": {
+        "magazine": {
+          "position": [
+            2.63,
+            1.0975,
+            -0.9125
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 22,
+      "transforms": {
+        "magazine": {
+          "position": [
+            2.63,
+            1.0975,
+            -0.9125
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 23,
+      "transforms": {
+        "magazine": {
+          "position": [
+            2.63,
+            1.0975,
+            -0.9125
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 24,
+      "transforms": {
+        "magazine": {
+          "position": [
+            2.228558722674669,
+            0.005579725675099345,
+            -0.9125
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 25,
+      "transforms": {
+        "magazine": {
+          "position": [
+            1.6257940420060009,
+            -1.6339402057436774,
+            -0.9125
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 26,
+      "transforms": {
+        "magazine": {
+          "position": [
+            1.023029361337333,
+            -3.273460137162454,
+            -0.9125
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 27,
+      "transforms": {
+        "magazine": {
+          "position": [
+            0.42026468066866496,
+            -4.912980068581231,
+            -0.9125
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 28,
+      "transforms": {
+        "magazine": {
+          "position": [
+            -0.1825000000000001,
+            -6.5525,
+            -0.9125
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "sound": "MagIn"
+    },
+    {
+      "index": 29,
+      "transforms": {
+        "magazine": {
+          "position": [
+            -0.1825,
+            -6.5525,
+            -0.9124999999999999
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 30,
+      "transforms": {
+        "magazine": {
+          "position": [
+            -0.16846153846153847,
+            -6.048461538461538,
+            -0.8423076923076922
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 31,
+      "transforms": {
+        "magazine": {
+          "position": [
+            -0.1544230769230769,
+            -5.544423076923077,
+            -0.7721153846153845
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 32,
+      "transforms": {
+        "magazine": {
+          "position": [
+            -0.14038461538461539,
+            -5.040384615384616,
+            -0.7019230769230769
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 33,
+      "transforms": {
+        "magazine": {
+          "position": [
+            -0.12634615384615386,
+            -4.5363461538461545,
+            -0.6317307692307692
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 34,
+      "transforms": {
+        "magazine": {
+          "position": [
+            -0.1123076923076923,
+            -4.032307692307692,
+            -0.5615384615384615
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 35,
+      "transforms": {
+        "magazine": {
+          "position": [
+            -0.09826923076923076,
+            -3.5282692307692307,
+            -0.4913461538461539
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 36,
+      "transforms": {
+        "magazine": {
+          "position": [
+            -0.08423076923076923,
+            -3.024230769230769,
+            -0.4211538461538461
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 37,
+      "transforms": {
+        "magazine": {
+          "position": [
+            -0.07019230769230769,
+            -2.520192307692308,
+            -0.35096153846153844
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "sound": "Rack"
+    },
+    {
+      "index": 38,
+      "transforms": {
+        "magazine": {
+          "position": [
+            -0.05615384615384615,
+            -2.016153846153846,
+            -0.28076923076923077
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 39,
+      "transforms": {
+        "magazine": {
+          "position": [
+            -0.04211538461538462,
+            -1.5121153846153845,
+            -0.21057692307692305
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 40,
+      "transforms": {
+        "magazine": {
+          "position": [
+            -0.028076923076923076,
+            -1.008076923076923,
+            -0.14038461538461539
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 41,
+      "transforms": {
+        "magazine": {
+          "position": [
+            -0.014038461538461538,
+            -0.5040384615384615,
+            -0.07019230769230769
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 42,
+      "transforms": {
+        "magazine": {
+          "position": [
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    }
+  ]
+}

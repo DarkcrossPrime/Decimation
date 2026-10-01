@@ -1,4 +1,6 @@
 {
+  "itemGroup.decimation.weapons": "Decimation Weapons",
+  "itemGroup.decimation.ammunition": "Decimation Ammunition",
   "item.ItemSelectionTool.name": "Wand of Selection",
   "item.ItemBottlecap.name": "Bottle Cap",
   "item.ItemBottlecapGold.name": "Gold Bottle Cap",

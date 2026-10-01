@@ -1,0 +1,5 @@
+newmtl famas_material
+Ka 0.08 0.08 0.08
+Kd 1 1 1
+illum 1
+map_Kd ../textures/model/famas.png

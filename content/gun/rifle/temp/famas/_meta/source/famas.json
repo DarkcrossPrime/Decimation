@@ -1,0 +1,51 @@
+{
+  "name" : "famas",
+  "type": "Gun",
+  "maxAmmoCapacity" : 32,
+  "compatibleAmmo" : ["ammocreative", "sample_ammo"],
+  "damage" : 10.0,
+  "rpm" : 400,
+  "fireModes" : ["SINGLE", "AUTOMATIC", "BURST"],
+  "fireSound" : "fire.ogg",
+  "drawCooldownDuration" : 650,
+  "aimingZoom" : 0.25,
+  "gunRecoilInitialAmplitude" : 0.8,
+  "shakeRecoilAmplitude" : 0.35,
+  "shakeRecoilSpeed" : 2,
+  "viewRecoilAmplitude" : 2,
+  "inspectCooldownDuration": 3700,
+  "phasedReloads": [
+    {
+      "phase": "RELOADING",
+      
+      "duration": 1640,
+      "animation": "animation.model.reload",						
+      "shakeEffects": [
+        {
+          "start": 0,
+          "duration": 1500,
+          "initialAmplitude": 0.2,
+          "rateOfAmplitudeDecay": 0.8
+        },
+        {
+          "start": 600,
+          "duration": 1000,
+          "initialAmplitude": 0.15,
+          "rateOfAmplitudeDecay": 0.5
+        },
+        {
+          "start": 900,
+          "duration": 800,
+          "initialAmplitude": 0.17,
+          "rateOfAmplitudeDecay": 0.5
+        },
+        {
+          "start": 1000,
+          "duration": 400,
+          "initialAmplitude": 0.22,
+          "rateOfAmplitudeDecay": 0.6
+        }
+      ]
+    }
+  ]
+}

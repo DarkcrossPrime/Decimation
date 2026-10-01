@@ -1,0 +1,123 @@
+{
+  "format": "decimation:content_object",
+  "version": 1,
+  "id": "gun/rifle/temp/famas",
+  "type": "gun",
+  "weapon": {
+    "registry_id": "famas_custom",
+    "display_name": "Custom FAMAS",
+    "mechanism": "hitscan",
+    "ammo": {
+      "item": "famas_mag",
+      "capacity": 32,
+      "chamber_capacity": 1,
+      "spawn_loaded": true
+    },
+    "fire_modes": [
+      "semi",
+      "automatic",
+      "burst"
+    ],
+    "burst_size": 3,
+    "rate_of_fire": 400,
+    "reload_ticks": 43,
+    "ballistics": {
+      "damage": 10.0,
+      "range": 150.0,
+      "falloff_start": 42.0,
+      "minimum_multiplier": 0.5,
+      "head_multiplier": 1.8,
+      "penetration_count": 1,
+      "penetration_retention": 0.68
+    },
+    "handling": {
+      "hip_spread": 2.5,
+      "ads_spread": 0.28,
+      "ads_ticks": 6,
+      "recoil_pitch": 1.25,
+      "recoil_yaw": 0.55
+    },
+    "presentation": {
+      "first_person": {
+        "hip": {
+          "translation": [
+            0.52,
+            0.48,
+            0.5
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            -2.0
+          ],
+          "scale": 0.036,
+          "arms": {
+            "main_hand": [
+              -68.0,
+              -14.0,
+              0.0
+            ],
+            "off_hand": [
+              -72.0,
+              30.0,
+              0.0
+            ]
+          }
+        },
+        "ads": {
+          "translation": [
+            0.52,
+            0.44,
+            0.46
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": 0.036,
+          "arms": {
+            "main_hand": [
+              -84.27,
+              -17.19,
+              0.0
+            ],
+            "off_hand": [
+              -85.94,
+              34.38,
+              0.0
+            ]
+          }
+        }
+      },
+      "third_person": {
+        "translation": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": 0.025
+      }
+    },
+    "shot_sound": "fire"
+  },
+  "assets": [
+    "animations/famas_fire.danim.json",
+    "animations/famas_reload1.danim.json",
+    "models/famas.mtl",
+    "models/famas.obj",
+    "sounds/fire.ogg",
+    "sounds/fire_suppressed.ogg",
+    "sounds/fire_distant.ogg",
+    "sounds/magOut.ogg",
+    "sounds/magIn.ogg",
+    "sounds/rack.ogg",
+    "textures/item/famas.png",
+    "textures/model/famas.png"
+  ]
+}

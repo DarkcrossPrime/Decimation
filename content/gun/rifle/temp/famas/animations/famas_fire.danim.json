@@ -1,0 +1,78 @@
+{
+  "format": "decimation:danim",
+  "version": 1,
+  "static": false,
+  "hand": 0,
+  "length": 4,
+  "source": "famas.bbmodel (recoil)",
+  "frames": [
+    {
+      "index": 0,
+      "transforms": {
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "index": 1,
+      "transforms": {
+        "Model": {
+          "position": [
+            0,
+            -0.11,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            -1.21
+          ]
+        }
+      }
+    },
+    {
+      "index": 2,
+      "transforms": {
+        "Model": {
+          "position": [
+            0,
+            -0.055,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            -0.605
+          ]
+        }
+      }
+    },
+    {
+      "index": 3,
+      "transforms": {
+        "Model": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    }
+  ]
+}
