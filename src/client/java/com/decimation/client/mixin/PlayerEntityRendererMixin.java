@@ -17,15 +17,16 @@ public abstract class PlayerEntityRendererMixin {
     @Inject(method = "setModelPose", at = @At("TAIL"))
     private void decimation$prepareFirstPersonBody(AbstractClientPlayerEntity player,
                                                     CallbackInfo callback) {
-        if (!FirstPersonRenderState.isRenderingBody()) return;
+        if (!FirstPersonRenderState.isRenderingPlayer(player)) return;
 
         PlayerEntityModel<AbstractClientPlayerEntity> model =
             ((PlayerEntityRenderer) (Object) this).getModel();
         model.head.visible = false;
         model.hat.visible = false;
 
-        if (!(player.getMainHandStack().getItem() instanceof WeaponItem)) return;
         boolean rightHanded = player.getMainArm() == Arm.RIGHT;
+        FirstPersonRenderState.registerPlayerParts(model, rightHanded);
+        if (!(player.getMainHandStack().getItem() instanceof WeaponItem)) return;
         model.rightArmPose = rightHanded
             ? BipedEntityModel.ArmPose.CROSSBOW_HOLD : BipedEntityModel.ArmPose.EMPTY;
         model.leftArmPose = rightHanded

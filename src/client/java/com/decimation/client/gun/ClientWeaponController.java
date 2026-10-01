@@ -1,5 +1,6 @@
 package com.decimation.client.gun;
 
+import com.decimation.client.content.ClientContentManager;
 import com.decimation.module.gun.GunModule;
 import com.decimation.module.gun.WeaponItem;
 import com.decimation.module.gun.WeaponState;
@@ -8,6 +9,8 @@ import com.decimation.module.gun.data.WeaponSound;
 import com.decimation.module.gun.network.WeaponAction;
 import com.decimation.module.gun.network.WeaponEvent;
 import com.decimation.module.gun.network.WeaponPackets;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
@@ -17,6 +20,7 @@ import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
+import net.minecraft.client.world.ClientWorld;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.sound.SoundCategory;
@@ -31,10 +35,14 @@ public final class ClientWeaponController {
         "key.decimation.fire_mode", InputUtil.Type.KEYSYM, 66, "key.categories.decimation"));
     private boolean triggerSent;
     private boolean aimSent;
-    private ActiveAnimation animation;
+    private final Map<UUID, ActiveAnimation> animations = new HashMap<>();
+    private ClientWorld animationWorld;
     private float recoilPitch;
     private float recoilYaw;
     private float adsProgress;
+    private float previousAdsProgress;
+    private float sprintProgress;
+    private float previousSprintProgress;
 
     private ClientWeaponController() { }
 
@@ -82,15 +90,19 @@ public final class ClientWeaponController {
     }
 
     private void tick(MinecraftClient client) {
+        syncWorld(client.world);
         if (client.player == null || client.getNetworkHandler() == null) {
             triggerSent = false;
             aimSent = false;
+            adsProgress = previousAdsProgress = 0;
+            sprintProgress = previousSprintProgress = 0;
             return;
         }
         ItemStack stack = client.player.getMainHandStack();
         boolean holdingWeapon = stack.getItem() instanceof WeaponItem;
         boolean trigger = holdingWeapon && client.options.attackKey.isPressed();
-        boolean aiming = holdingWeapon && client.options.useKey.isPressed();
+        boolean sprinting = holdingWeapon && client.player.isSprinting();
+        boolean aiming = holdingWeapon && client.options.useKey.isPressed() && !sprinting;
         if (trigger != triggerSent) {
             send(trigger ? WeaponAction.TRIGGER_DOWN : WeaponAction.TRIGGER_UP);
             triggerSent = trigger;
@@ -103,27 +115,47 @@ public final class ClientWeaponController {
         while (fireMode.wasPressed()) if (holdingWeapon) send(WeaponAction.CYCLE_FIRE_MODE);
         int adsTicks = holdingWeapon ? ((WeaponItem) stack.getItem()).definition().handling().adsTicks() : 1;
         float adsStep = 1.0f / Math.max(1, adsTicks);
+        previousAdsProgress = adsProgress;
+        previousSprintProgress = sprintProgress;
         adsProgress = Math.max(0, Math.min(1, adsProgress + (aiming ? adsStep : -adsStep)));
+        sprintProgress = Math.max(0, Math.min(1,
+            sprintProgress + (sprinting ? 0.25f : -0.25f)));
         recoilPitch *= 0.72f;
         recoilYaw *= 0.65f;
-        if (animation != null && animation.finished(client)) animation = null;
+        animations.values().removeIf(animation -> animation.finished(client));
     }
 
     private void accept(MinecraftClient client, UUID owner, Identifier weaponId, WeaponEvent event,
                         int ammunition, int mode, long serverTick) {
-        if (client.player == null || !client.player.getUuid().equals(owner)) return;
-        ItemStack stack = client.player.getMainHandStack();
-        if (!(stack.getItem() instanceof WeaponItem weapon) || !weapon.definition().id().equals(weaponId)) return;
-        WeaponDefinition definition = weapon.definition();
+        if (client.player == null || client.world == null) return;
+        syncWorld(client.world);
+        WeaponDefinition definition = GunModule.catalog().get(weaponId);
+        if (definition == null) return;
+        boolean local = client.player.getUuid().equals(owner);
+        if (local) {
+            ItemStack stack = client.player.getMainHandStack();
+            if (!(stack.getItem() instanceof WeaponItem weapon)
+                || !weapon.definition().id().equals(weaponId)) return;
+        }
+        // Local presentation starts when the event arrives; catching up to the server tick
+        // used to skip the opening frames of reloads on a network round trip.
+        long startTick = local ? client.world.getTime() : Math.min(client.world.getTime(), serverTick);
         switch (event) {
             case FIRED -> {
-                animation = new ActiveAnimation(definition.assets().fireAnimation(), client.world.getTime(), 2);
-                recoilPitch += definition.handling().recoilPitch();
-                recoilYaw += (client.world.random.nextBoolean() ? 1 : -1) * definition.handling().recoilYaw();
+                var fire = ClientContentManager.INSTANCE.animations().get(
+                    definition.assets().fireAnimation());
+                animations.put(owner, new ActiveAnimation(weaponId,
+                    definition.assets().fireAnimation(), startTick,
+                    fire == null ? 2 : Math.max(1, fire.length())));
+                if (local) {
+                    recoilPitch += definition.handling().recoilPitch();
+                    recoilYaw += (client.world.random.nextBoolean() ? 1 : -1)
+                        * definition.handling().recoilYaw();
+                }
             }
-            case RELOAD_STARTED -> animation = new ActiveAnimation(
-                definition.assets().reloadAnimation(), client.world.getTime(), definition.reloadTicks());
-            case RELOAD_CANCELLED -> animation = null;
+            case RELOAD_STARTED -> animations.put(owner, new ActiveAnimation(weaponId,
+                definition.assets().reloadAnimation(), startTick, definition.reloadTicks()));
+            case RELOAD_CANCELLED, RELOAD_COMPLETED -> animations.remove(owner);
             default -> { }
         }
     }
@@ -151,14 +183,40 @@ public final class ClientWeaponController {
         ClientPlayNetworking.send(WeaponPackets.ACTION, buffer);
     }
 
-    public ActiveAnimation animation() { return animation; }
+    public ActiveAnimation animation(UUID owner, Identifier weaponId) {
+        if (owner == null) return null;
+        ActiveAnimation active = animations.get(owner);
+        return active != null && active.weaponId().equals(weaponId) ? active : null;
+    }
+
+    private void syncWorld(ClientWorld world) {
+        if (animationWorld != world) {
+            animations.clear();
+            animationWorld = world;
+        }
+    }
+
     public float recoilPitch() { return recoilPitch; }
     public float recoilYaw() { return recoilYaw; }
     public float adsProgress() { return adsProgress; }
+    public float adsProgress(float tickDelta) {
+        return previousAdsProgress + (adsProgress - previousAdsProgress) * clamp(tickDelta);
+    }
+    public float sprintProgress(float tickDelta) {
+        return previousSprintProgress + (sprintProgress - previousSprintProgress) * clamp(tickDelta);
+    }
 
-    public record ActiveAnimation(Identifier id, long startTick, int length) {
+    private static float clamp(float value) {
+        return Math.max(0, Math.min(1, value));
+    }
+
+    public record ActiveAnimation(Identifier weaponId, Identifier id, long startTick, int length) {
         public int frame(MinecraftClient client) {
             return (int) Math.max(0, client.world.getTime() - startTick);
+        }
+
+        public float frame(MinecraftClient client, float tickDelta) {
+            return Math.max(0, client.world.getTime() - startTick + clamp(tickDelta));
         }
 
         public boolean finished(MinecraftClient client) {

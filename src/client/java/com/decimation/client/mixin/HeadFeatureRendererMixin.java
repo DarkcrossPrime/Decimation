@@ -20,6 +20,6 @@ public abstract class HeadFeatureRendererMixin {
                                                       float limbDistance, float tickDelta,
                                                       float animationProgress, float headYaw,
                                                       float headPitch, CallbackInfo callback) {
-        if (FirstPersonRenderState.isRenderingBody()) callback.cancel();
+        if (FirstPersonRenderState.isRenderingPlayer(entity)) callback.cancel();
     }
 }

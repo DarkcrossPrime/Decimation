@@ -4,9 +4,12 @@ import com.decimation.client.content.ClientContentManager;
 import com.decimation.client.content.DanimAnimation;
 import com.decimation.client.content.ObjModel;
 import com.decimation.client.firstperson.FirstPersonRenderState;
+import com.decimation.client.firstperson.FirstPersonSupportArmSolver;
 import com.decimation.module.gun.WeaponItem;
 import com.decimation.module.gun.data.WeaponDefinition;
 import com.decimation.module.gun.data.WeaponTransform;
+import java.util.HashMap;
+import java.util.Map;
 import net.fabricmc.fabric.api.client.rendering.v1.BuiltinItemRendererRegistry;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.RenderLayer;
@@ -23,7 +26,15 @@ import org.joml.Matrix4f;
 public final class WeaponObjRenderer implements BuiltinItemRendererRegistry.DynamicItemRenderer {
     /** Converts the recovered Decimation model axis (+X forward) to Minecraft held-item forward. */
     private static final float MODEL_FORWARD_YAW = 90.0f;
+    private static final double FIRST_PERSON_TOWARD_PLAYER = 3.0 / 11.0;
+    private static final float FIRST_PERSON_SIZE_MULTIPLIER = 1.32f;
+    private static final float SUPPORT_HAND_FORWARD_PIXELS = 1.0f;
+    private static final float SUPPORT_HAND_LOWER_PIXELS = 2.5f;
     private final WeaponDefinition definition;
+    private ObjModel gripModel;
+    private FirstPersonSupportArmSolver.Grip supportGrip;
+    private float supportGripAdvance;
+    private float supportGripDrop;
 
     private WeaponObjRenderer(WeaponDefinition definition) {
         this.definition = definition;
@@ -46,14 +57,33 @@ public final class WeaponObjRenderer implements BuiltinItemRendererRegistry.Dyna
         applyViewTransform(matrices, mode);
         VertexConsumer vertices = consumers.getBuffer(
             RenderLayer.getEntityCutoutNoCull(definition.assets().texture()));
-        DanimAnimation animation = activeAnimation();
-        int frame = ClientWeaponController.INSTANCE.animation() == null ? 0
-            : ClientWeaponController.INSTANCE.animation().frame(MinecraftClient.getInstance());
+        ClientWeaponController.ActiveAnimation active = activeAnimation();
+        DanimAnimation animation = active == null ? null
+            : ClientContentManager.INSTANCE.animations().get(active.id());
+        MinecraftClient client = MinecraftClient.getInstance();
+        float frame = active == null ? 0 : active.frame(client, client.getTickDelta());
+        DanimSampler.Transform modelTransform = animation == null ? DanimSampler.Transform.IDENTITY
+            : DanimSampler.sample(animation, "Model", frame);
+        if (FirstPersonRenderState.isRigPass() && !FirstPersonRenderState.isSupportPass()) {
+            if (gripModel != model) {
+                gripModel = model;
+                supportGrip = FirstPersonSupportArmSolver.midBarrelGrip(model);
+            }
+            matrices.push();
+            if (animation != null) applyAnimationTransform(matrices, modelTransform);
+            FirstPersonSupportArmSolver.Grip adjustedGrip = supportGrip == null ? null
+                : new FirstPersonSupportArmSolver.Grip(supportGrip.x() + supportGripAdvance,
+                    supportGrip.y() - supportGripDrop, supportGrip.z());
+            FirstPersonRenderState.captureSupportGrip(stack, matrices, adjustedGrip);
+            matrices.pop();
+        }
+        Map<String, DanimSampler.Transform> partTransforms = new HashMap<>();
         for (ObjModel.Face face : model.faces()) {
             matrices.push();
             if (animation != null) {
-                applyAnimationTransform(matrices, DanimSampler.sample(animation, "Model", frame));
-                applyAnimationTransform(matrices, DanimSampler.sample(animation, face.object(), frame));
+                applyAnimationTransform(matrices, modelTransform);
+                applyAnimationTransform(matrices, partTransforms.computeIfAbsent(face.object(),
+                    name -> DanimSampler.sample(animation, name, frame)));
             }
             emitFace(model, face, matrices.peek(), vertices, light, overlay);
             matrices.pop();
@@ -80,23 +110,47 @@ public final class WeaponObjRenderer implements BuiltinItemRendererRegistry.Dyna
             .texture(u, v).overlay(overlay).light(light).normal(normal, 0, 0, 1).next();
     }
 
-    private DanimAnimation activeAnimation() {
-        ClientWeaponController.ActiveAnimation active = ClientWeaponController.INSTANCE.animation();
-        if (active == null) return null;
-        return ClientContentManager.INSTANCE.animations().get(active.id());
+    private ClientWeaponController.ActiveAnimation activeAnimation() {
+        return ClientWeaponController.INSTANCE.animation(WeaponRenderContext.owner(), definition.id());
     }
 
     private void applyViewTransform(MatrixStack matrices, ModelTransformationMode mode) {
         if (FirstPersonRenderState.isRenderingBody()) {
             ClientWeaponController controller = ClientWeaponController.INSTANCE;
-            WeaponTransform transform = WeaponTransform.interpolate(
+            float tickDelta = MinecraftClient.getInstance().getTickDelta();
+            WeaponTransform held = WeaponTransform.interpolate(
                 definition.presentation().firstPersonHip(),
                 definition.presentation().firstPersonAds(),
-                controller.adsProgress());
-            applyTransform(matrices, transform, controller.recoilPitch(), controller.recoilYaw());
+                controller.adsProgress(tickDelta));
+            WeaponTransform transform = WeaponTransform.interpolate(held,
+                definition.presentation().firstPersonSprint(), controller.sprintProgress(tickDelta));
+            float hipWeight = (1.0f - controller.adsProgress(tickDelta))
+                * (1.0f - controller.sprintProgress(tickDelta));
+            matrices.translate(FirstPersonRenderState.HIP_WEAPON_RIGHT * hipWeight,
+                -FirstPersonRenderState.HIP_WEAPON_LOWER * hipWeight,
+                FIRST_PERSON_TOWARD_PLAYER
+                    + FirstPersonRenderState.HIP_WEAPON_BACKSET * hipWeight);
+            // The firing arm owns local recoil so the support hand can follow it.
+            applyTransform(matrices, transform, 0, 0,
+                FirstPersonRenderState.HIP_WEAPON_PITCH * hipWeight);
+            float size = FIRST_PERSON_SIZE_MULTIPLIER
+                * (1.0f + (FirstPersonRenderState.HIP_WEAPON_SCALE - 1.0f) * hipWeight);
+            // OBJ +Y is up. Convert model pixels to OBJ units before lowering
+            // the grip, keeping the drop constant as weapon presentation scale changes.
+            supportGripDrop = SUPPORT_HAND_LOWER_PIXELS / (16.0f * transform.scale() * size);
+            matrices.scale(size, size, size);
+            // The recovered OBJ points down +X. Match the original hip view's
+            // shorter barrel axis without changing the receiver's width or height.
+            float lengthScale = 1.0f
+                + (FirstPersonRenderState.HIP_WEAPON_LENGTH_SCALE - 1.0f) * hipWeight;
+            // OBJ +X points toward the muzzle; compensate for barrel shortening
+            // so the hand advances by the same model pixel at every presentation scale.
+            supportGripAdvance = SUPPORT_HAND_FORWARD_PIXELS
+                / (16.0f * transform.scale() * size * lengthScale);
+            matrices.scale(lengthScale, 1.0f, 1.0f);
         } else if (mode.isFirstPerson()) {
             ClientWeaponController controller = ClientWeaponController.INSTANCE;
-            float ads = controller.adsProgress();
+            float ads = controller.adsProgress(MinecraftClient.getInstance().getTickDelta());
             matrices.translate(0.55 - 0.27 * ads, 0.35 - 0.08 * ads, -0.55 - 0.2 * ads);
             matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(-controller.recoilPitch()));
             matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(controller.recoilYaw()));
@@ -109,10 +163,15 @@ public final class WeaponObjRenderer implements BuiltinItemRendererRegistry.Dyna
 
     private static void applyTransform(MatrixStack matrices, WeaponTransform transform,
                                        float recoilPitch, float recoilYaw) {
+        applyTransform(matrices, transform, recoilPitch, recoilYaw, 0);
+    }
+
+    private static void applyTransform(MatrixStack matrices, WeaponTransform transform,
+                                       float recoilPitch, float recoilYaw, float extraPitch) {
         matrices.translate(transform.x(), transform.y(), transform.z());
         matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(-recoilPitch));
         matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(recoilYaw));
-        matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(transform.pitch()));
+        matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(transform.pitch() + extraPitch));
         matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(transform.yaw()));
         matrices.multiply(RotationAxis.POSITIVE_Z.rotationDegrees(transform.roll()));
         matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(MODEL_FORWARD_YAW));

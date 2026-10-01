@@ -1,33 +1,57 @@
 package com.decimation.client.gun;
 
 import com.decimation.client.content.DanimAnimation;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
+import java.util.List;
 
+/** Interpolates sparse DANIM keys at fractional render frames. */
 public final class DanimSampler {
     private DanimSampler() { }
 
-    public static Transform sample(DanimAnimation animation, String object, int requestedFrame) {
-        JsonArray frames = animation.data().getAsJsonArray("frames");
-        int frame = Math.min(Math.max(requestedFrame, 0), frames.size() - 1);
-        for (int index = frame; index >= 0; index--) {
-            JsonObject value = frames.get(index).getAsJsonObject();
-            if (!value.has("transforms")) continue;
-            JsonObject transforms = value.getAsJsonObject("transforms");
-            JsonElement candidate = transforms.get(object);
-            if (candidate == null && "default".equals(object)) candidate = transforms.get("Model");
-            if (candidate == null) continue;
-            JsonObject transform = candidate.getAsJsonObject();
-            return new Transform(vector(transform, "position"), vector(transform, "rotation"));
+    public static Transform sample(DanimAnimation animation, String object, float requestedFrame) {
+        List<DanimAnimation.Keyframe> keys = animation.tracks().get(object);
+        if (keys == null || keys.isEmpty()) return Transform.IDENTITY;
+
+        float frame = Math.max(0, Math.min(requestedFrame, animation.length()));
+        DanimAnimation.Keyframe first = keys.get(0);
+        if (frame < first.frame()) {
+            int spacing = keys.size() > 1 ? keys.get(1).frame() - first.frame() : 1;
+            int start = Math.max(0, first.frame() - Math.max(1, spacing));
+            return interpolate(Transform.IDENTITY, transform(first), progress(start, first.frame(), frame));
         }
-        return Transform.IDENTITY;
+        for (int index = 1; index < keys.size(); index++) {
+            DanimAnimation.Keyframe next = keys.get(index);
+            if (frame <= next.frame()) {
+                DanimAnimation.Keyframe previous = keys.get(index - 1);
+                return interpolate(transform(previous), transform(next),
+                    progress(previous.frame(), next.frame(), frame));
+            }
+        }
+
+        DanimAnimation.Keyframe last = keys.get(keys.size() - 1);
+        if (animation.isStatic() || last.frame() >= animation.length()) return transform(last);
+        int spacing = keys.size() > 1 ? last.frame() - keys.get(keys.size() - 2).frame() : 1;
+        int end = Math.min(animation.length(), last.frame() + Math.max(1, spacing));
+        return interpolate(transform(last), Transform.IDENTITY, progress(last.frame(), end, frame));
     }
 
-    private static float[] vector(JsonObject json, String name) {
-        if (!json.has(name)) return new float[] {0, 0, 0};
-        JsonArray values = json.getAsJsonArray(name);
-        return new float[] {values.get(0).getAsFloat(), values.get(1).getAsFloat(), values.get(2).getAsFloat()};
+    private static Transform transform(DanimAnimation.Keyframe key) {
+        return new Transform(key.position(), key.rotation());
+    }
+
+    private static float progress(int from, int to, float frame) {
+        return to == from ? 1.0f : Math.max(0, Math.min(1, (frame - from) / (to - from)));
+    }
+
+    private static Transform interpolate(Transform from, Transform to, float amount) {
+        float[] position = new float[3];
+        float[] rotation = new float[3];
+        for (int axis = 0; axis < 3; axis++) {
+            position[axis] = from.position()[axis]
+                + (to.position()[axis] - from.position()[axis]) * amount;
+            float difference = (to.rotation()[axis] - from.rotation()[axis] + 540.0f) % 360.0f - 180.0f;
+            rotation[axis] = from.rotation()[axis] + difference * amount;
+        }
+        return new Transform(position, rotation);
     }
 
     public record Transform(float[] position, float[] rotation) {

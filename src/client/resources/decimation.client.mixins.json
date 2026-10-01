@@ -4,9 +4,14 @@
   "compatibilityLevel": "JAVA_17",
   "client": [
     "ArmorFeatureRendererMixin",
+    "BipedEntityModelMixin",
+    "EntityRenderDispatcherMixin",
+    "FramebufferMixin",
     "HeadFeatureRendererMixin",
+    "HeldItemFeatureRendererMixin",
     "HeldItemRendererMixin",
     "MinecraftClientMixin",
+    "ModelPartMixin",
     "PlayerEntityModelMixin",
     "PlayerEntityRendererMixin"
   ],

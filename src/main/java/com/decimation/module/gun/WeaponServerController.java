@@ -60,7 +60,8 @@ public final class WeaponServerController {
             return;
         }
         WeaponDefinition definition = weapon.definition();
-        if (control.aiming) control.aimTicks++;
+        if (control.aiming && !player.isSprinting()) control.aimTicks++;
+        else control.aimTicks = 0;
         if (control.reloading) {
             if (control.reloadStack != stack || !control.reloadWeapon.equals(definition.id())) {
                 cancelReload(player, control);
@@ -102,7 +103,7 @@ public final class WeaponServerController {
         }
         if (mode == FireMode.BURST) control.burstRemaining--;
         state.write(stack, definition);
-        float aimProgress = control.aiming
+        float aimProgress = control.aiming && !player.isSprinting()
             ? Math.min(1.0f, control.aimTicks / (float) Math.max(1, definition.handling().adsTicks())) : 0;
         ShotResolver.resolve(player, definition, aimProgress);
         sendShotSound(player, definition);

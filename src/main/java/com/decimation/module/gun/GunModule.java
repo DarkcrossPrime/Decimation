@@ -1,6 +1,7 @@
 package com.decimation.module.gun;
 
 import com.decimation.Decimation;
+import com.decimation.module.DecimationItemGroups;
 import com.decimation.module.DecimationModule;
 import com.decimation.module.gun.data.WeaponCatalog;
 import com.decimation.module.gun.data.WeaponDefinition;
@@ -13,9 +14,7 @@ import java.util.Set;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.event.player.AttackBlockCallback;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.SoundEvent;
@@ -46,10 +45,8 @@ public final class GunModule implements DecimationModule {
             }
         }
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
-            WEAPONS.values().forEach(entries::add);
-            AMMUNITION.values().forEach(entries::add);
-        });
+        DecimationItemGroups.register("weapons", WEAPONS.values());
+        DecimationItemGroups.register("ammunition", AMMUNITION.values());
         WeaponServerController controller = new WeaponServerController();
         WeaponPackets.registerServerReceivers(controller);
         ServerTickEvents.END_SERVER_TICK.register(controller::tick);

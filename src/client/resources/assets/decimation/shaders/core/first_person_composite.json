@@ -1,0 +1,8 @@
+{
+  "blend": {"func": "add", "srcrgb": "one", "dstrgb": "1-srcalpha"},
+  "vertex": "decimation:first_person_composite",
+  "fragment": "decimation:first_person_composite",
+  "attributes": ["Position", "UV0"],
+  "samplers": [{"name": "RigColor"}, {"name": "RigDepth"}, {"name": "BodyDepth"}],
+  "uniforms": []
+}

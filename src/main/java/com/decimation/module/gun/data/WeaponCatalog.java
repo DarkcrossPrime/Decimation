@@ -105,18 +105,20 @@ public final class WeaponCatalog {
             WeaponTransform ads = new WeaponTransform(0.48f, 0.46f, 0.46f, 0, 0, 0, 0.025f);
             WeaponTransform thirdPerson = new WeaponTransform(0.5f, 0.5f, 0.5f, 0, 0, 0, 0.025f);
             WeaponArmPose hipArms = new WeaponArmPose(
-                new ArmRotation(-68, -14, 0), new ArmRotation(-72, 30, 0));
+                new ArmRotation(-98, -14, 0), new ArmRotation(-103, 30, 0));
             WeaponArmPose adsArms = new WeaponArmPose(
-                new ArmRotation(-84.27f, -17.19f, 0), new ArmRotation(-85.94f, 34.38f, 0));
-            return new WeaponPresentation(hip, ads, hipArms, adsArms, thirdPerson);
+                new ArmRotation(-104, -17.19f, 0), new ArmRotation(-107, 34.38f, 0));
+            return new WeaponPresentation(hip, ads, hip, hipArms, adsArms, hipArms, thirdPerson);
         }
         JsonObject firstPerson = json.getAsJsonObject("first_person");
         JsonObject hip = firstPerson.getAsJsonObject("hip");
         JsonObject ads = firstPerson.getAsJsonObject("ads");
+        JsonObject sprint = firstPerson.has("sprint") ? firstPerson.getAsJsonObject("sprint") : hip;
         return new WeaponPresentation(
-            parseTransform(hip), parseTransform(ads),
+            parseTransform(hip), parseTransform(ads), parseTransform(sprint),
             parseArmPose(hip.getAsJsonObject("arms")),
             parseArmPose(ads.getAsJsonObject("arms")),
+            parseArmPose(sprint.getAsJsonObject("arms")),
             parseTransform(json.getAsJsonObject("third_person")));
     }
 

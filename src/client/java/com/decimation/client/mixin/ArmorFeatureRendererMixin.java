@@ -21,7 +21,7 @@ public abstract class ArmorFeatureRendererMixin {
                                                    LivingEntity entity, EquipmentSlot slot,
                                                    int light, BipedEntityModel<?> model,
                                                    CallbackInfo callback) {
-        if (FirstPersonRenderState.isRenderingBody() && slot == EquipmentSlot.HEAD) {
+        if (FirstPersonRenderState.isRenderingPlayer(entity) && slot == EquipmentSlot.HEAD) {
             callback.cancel();
         }
     }
