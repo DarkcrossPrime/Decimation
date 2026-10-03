@@ -1,4 +1,4 @@
-# Decimation — Fabric 1.20.1
+# Decimation — Fabric 26.3
 
 This is a new Fabric project built from the supplied Decimation asset archive. The
 legacy obfuscated Java/classes are deliberately excluded. Only reusable assets and
