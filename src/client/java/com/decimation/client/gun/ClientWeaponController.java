@@ -1,226 +1,141 @@
 package com.decimation.client.gun;
 
-import com.decimation.client.content.ClientContentManager;
 import com.decimation.module.gun.GunModule;
 import com.decimation.module.gun.WeaponItem;
 import com.decimation.module.gun.WeaponState;
-import com.decimation.module.gun.data.WeaponDefinition;
-import com.decimation.module.gun.data.WeaponSound;
-import com.decimation.module.gun.network.WeaponAction;
+import com.decimation.module.gun.network.WeaponCatalogPayload;
 import com.decimation.module.gun.network.WeaponEvent;
-import com.decimation.module.gun.network.WeaponPackets;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
+import com.decimation.module.gun.network.WeaponEventPayload;
+import com.decimation.module.gun.network.WeaponInputPayload;
+import com.decimation.module.gun.network.WeaponCarryPayload;
+import com.mojang.blaze3d.platform.InputConstants;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
-import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
+import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
+import net.fabricmc.fabric.api.client.keymapping.v1.KeyMappingHelper;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
-import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
-import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.option.KeyBinding;
-import net.minecraft.client.util.InputUtil;
-import net.minecraft.client.world.ClientWorld;
-import net.minecraft.item.ItemStack;
-import net.minecraft.registry.Registries;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvent;
-import net.minecraft.util.Identifier;
+import net.minecraft.ChatFormatting;
+import net.minecraft.client.KeyMapping;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.multiplayer.ClientLevel;
+import net.minecraft.network.chat.Component;
 
+/** Poll vanilla key mappings (SDL3); transmit changes and a one-second hold heartbeat. */
 public final class ClientWeaponController {
-    public static final ClientWeaponController INSTANCE = new ClientWeaponController();
-    private final KeyBinding reload = KeyBindingHelper.registerKeyBinding(new KeyBinding(
-        "key.decimation.reload", InputUtil.Type.KEYSYM, 82, "key.categories.decimation"));
-    private final KeyBinding fireMode = KeyBindingHelper.registerKeyBinding(new KeyBinding(
-        "key.decimation.fire_mode", InputUtil.Type.KEYSYM, 66, "key.categories.decimation"));
-    private boolean triggerSent;
-    private boolean aimSent;
-    private final Map<UUID, ActiveAnimation> animations = new HashMap<>();
-    private ClientWorld animationWorld;
-    private float recoilPitch;
-    private float recoilYaw;
-    private float adsProgress;
-    private float previousAdsProgress;
-    private float sprintProgress;
-    private float previousSprintProgress;
+    private static final int HEARTBEAT_TICKS = 20;
+    private final KeyMapping reload;
+    private final KeyMapping fireMode, relaxedCarry;
+    private static boolean relaxed;
+    public static boolean relaxed() { return relaxed; }
+    private boolean ready, reloading;
+    private WeaponItem lastWeapon;
+    private int lastSlot = -1, lastFlags, heartbeat;
+    private ClientLevel level;
+    private net.minecraft.client.player.LocalPlayer player;
 
-    private ClientWeaponController() { }
+    public ClientWeaponController() {
+        KeyMapping.Category category = KeyMapping.Category.register(net.minecraft.resources.Identifier.fromNamespaceAndPath("decimation", "controls"));
+        reload = KeyMappingHelper.registerKeyMapping(new KeyMapping("key.decimation.reload", InputConstants.Type.KEYBOARD, InputConstants.KEY_R, category));
+        fireMode = KeyMappingHelper.registerKeyMapping(new KeyMapping("key.decimation.fire_mode", InputConstants.Type.KEYBOARD, InputConstants.KEY_B, category));
+        relaxedCarry = KeyMappingHelper.registerKeyMapping(new KeyMapping("key.decimation.relaxed_carry", InputConstants.Type.KEYBOARD, InputConstants.KEY_G, category));
+    }
 
     public void register() {
-        ClientTickEvents.END_CLIENT_TICK.register(this::tick);
-        HudRenderCallback.EVENT.register((drawContext, tickDelta) -> renderHud(drawContext));
-        ClientPlayNetworking.registerGlobalReceiver(WeaponPackets.EVENT,
-            (client, handler, buffer, responseSender) -> {
-                UUID owner = buffer.readUuid();
-                Identifier weapon = buffer.readIdentifier();
-                int eventOrdinal = buffer.readVarInt();
-                int ammunition = buffer.readVarInt();
-                int mode = buffer.readVarInt();
-                long serverTick = buffer.readLong();
-                if (eventOrdinal < 0 || eventOrdinal >= WeaponEvent.values().length) return;
-                client.execute(() -> accept(client, owner, weapon, WeaponEvent.values()[eventOrdinal],
-                    ammunition, mode, serverTick));
-            });
-        ClientPlayNetworking.registerGlobalReceiver(WeaponPackets.SOUND,
-            (client, handler, buffer, responseSender) -> {
-                Identifier weapon = buffer.readIdentifier();
-                int cueOrdinal = buffer.readVarInt();
-                double x = buffer.readDouble();
-                double y = buffer.readDouble();
-                double z = buffer.readDouble();
-                if (cueOrdinal < 0 || cueOrdinal >= WeaponSound.values().length) return;
-                client.execute(() -> playSound(client, weapon, WeaponSound.values()[cueOrdinal], x, y, z));
-            });
-    }
-
-    private static void renderHud(net.minecraft.client.gui.DrawContext drawContext) {
-        MinecraftClient client = MinecraftClient.getInstance();
-        if (client.player == null || client.options.hudHidden) return;
-        ItemStack stack = client.player.getMainHandStack();
-        if (!(stack.getItem() instanceof WeaponItem weapon)) return;
-        WeaponState state = WeaponState.read(stack, weapon.definition());
-        String ammunition = Integer.toString(state.totalRounds());
-        String mode = state.fireMode(weapon.definition()).name();
-        int right = client.getWindow().getScaledWidth() - 12;
-        int baseline = client.getWindow().getScaledHeight() - 32;
-        drawContext.drawTextWithShadow(client.textRenderer, ammunition,
-            right - client.textRenderer.getWidth(ammunition), baseline, 0xF1F1F1);
-        drawContext.drawTextWithShadow(client.textRenderer, mode,
-            right - client.textRenderer.getWidth(mode), baseline - 11, 0xAAAAAA);
-    }
-
-    private void tick(MinecraftClient client) {
-        syncWorld(client.world);
-        if (client.player == null || client.getNetworkHandler() == null) {
-            triggerSent = false;
-            aimSent = false;
-            adsProgress = previousAdsProgress = 0;
-            sprintProgress = previousSprintProgress = 0;
-            return;
-        }
-        ItemStack stack = client.player.getMainHandStack();
-        boolean holdingWeapon = stack.getItem() instanceof WeaponItem;
-        boolean trigger = holdingWeapon && client.options.attackKey.isPressed();
-        boolean sprinting = holdingWeapon && client.player.isSprinting();
-        boolean aiming = holdingWeapon && client.options.useKey.isPressed() && !sprinting;
-        if (trigger != triggerSent) {
-            send(trigger ? WeaponAction.TRIGGER_DOWN : WeaponAction.TRIGGER_UP);
-            triggerSent = trigger;
-        }
-        if (aiming != aimSent) {
-            send(aiming ? WeaponAction.AIM_DOWN : WeaponAction.AIM_UP);
-            aimSent = aiming;
-        }
-        while (reload.wasPressed()) if (holdingWeapon) send(WeaponAction.RELOAD);
-        while (fireMode.wasPressed()) if (holdingWeapon) send(WeaponAction.CYCLE_FIRE_MODE);
-        int adsTicks = holdingWeapon ? ((WeaponItem) stack.getItem()).definition().handling().adsTicks() : 1;
-        float adsStep = 1.0f / Math.max(1, adsTicks);
-        previousAdsProgress = adsProgress;
-        previousSprintProgress = sprintProgress;
-        adsProgress = Math.max(0, Math.min(1, adsProgress + (aiming ? adsStep : -adsStep)));
-        sprintProgress = Math.max(0, Math.min(1,
-            sprintProgress + (sprinting ? 0.25f : -0.25f)));
-        recoilPitch *= 0.72f;
-        recoilYaw *= 0.65f;
-        animations.values().removeIf(animation -> animation.finished(client));
-    }
-
-    private void accept(MinecraftClient client, UUID owner, Identifier weaponId, WeaponEvent event,
-                        int ammunition, int mode, long serverTick) {
-        if (client.player == null || client.world == null) return;
-        syncWorld(client.world);
-        WeaponDefinition definition = GunModule.catalog().get(weaponId);
-        if (definition == null) return;
-        boolean local = client.player.getUuid().equals(owner);
-        if (local) {
-            ItemStack stack = client.player.getMainHandStack();
-            if (!(stack.getItem() instanceof WeaponItem weapon)
-                || !weapon.definition().id().equals(weaponId)) return;
-        }
-        // Local presentation starts when the event arrives; catching up to the server tick
-        // used to skip the opening frames of reloads on a network round trip.
-        long startTick = local ? client.world.getTime() : Math.min(client.world.getTime(), serverTick);
-        switch (event) {
-            case FIRED -> {
-                var fire = ClientContentManager.INSTANCE.animations().get(
-                    definition.assets().fireAnimation());
-                animations.put(owner, new ActiveAnimation(weaponId,
-                    definition.assets().fireAnimation(), startTick,
-                    fire == null ? 2 : Math.max(1, fire.length())));
-                if (local) {
-                    recoilPitch += definition.handling().recoilPitch();
-                    recoilYaw += (client.world.random.nextBoolean() ? 1 : -1)
-                        * definition.handling().recoilYaw();
-                }
+        ClientPlayNetworking.registerGlobalReceiver(WeaponCatalogPayload.TYPE, (payload, context) -> {
+            if (payload.protocol() != WeaponCatalogPayload.PROTOCOL || !payload.fingerprint().equals(GunModule.catalog().fingerprint())) {
+                ready = false;
+                context.client().getConnection().getConnection().disconnect(Component.literal(
+                    "Decimation weapon definitions differ. Install the same build on client and server."));
+                return;
             }
-            case RELOAD_STARTED -> animations.put(owner, new ActiveAnimation(weaponId,
-                definition.assets().reloadAnimation(), startTick, definition.reloadTicks()));
-            case RELOAD_CANCELLED, RELOAD_COMPLETED -> animations.remove(owner);
-            default -> { }
+            ClientPlayNetworking.send(new WeaponCatalogPayload(WeaponCatalogPayload.PROTOCOL, GunModule.catalog().fingerprint()));
+            ready = true;
+        });
+        ClientPlayNetworking.registerGlobalReceiver(WeaponEventPayload.TYPE, (payload, context) -> accept(context.client(), payload));
+        ClientPlayNetworking.registerGlobalReceiver(WeaponCarryPayload.TYPE, (payload, context) -> ClientWeaponPresentation.acceptCarry(context.client(), payload));
+        ClientPlayConnectionEvents.DISCONNECT.register((handler, client) -> reset());
+        ClientTickEvents.END_CLIENT_TICK.register(this::tick);
+        ItemTooltipCallback.EVENT.register((stack, context, flags, tooltip) -> {
+            if (stack.getItem() instanceof WeaponItem weapon) {
+                WeaponState state = weapon.state(stack);
+                tooltip.add(Component.literal(state.totalRounds() + " / "
+                    + ((long) weapon.definition().ammo().capacity() + weapon.definition().ammo().chamberCapacity())).withStyle(ChatFormatting.GRAY));
+                tooltip.add(Component.translatable("tooltip.decimation.fire_mode", state.fireMode(weapon.definition()).name()).withStyle(ChatFormatting.DARK_GRAY));
+            }
+        });
+    }
+
+    private void tick(Minecraft client) {
+        boolean reloadPressed = false, modePressed = false, carryPressed = false;
+        while (reload.consumeClick()) reloadPressed = true;
+        while (fireMode.consumeClick()) modePressed = true;
+        while (relaxedCarry.consumeClick()) carryPressed = true;
+        if (client.level != level || client.player != player) {
+            lastWeapon = null;lastSlot = -1;lastFlags = -1;heartbeat = 0;reloading = relaxed = false;level = client.level;player = client.player;
         }
-    }
-
-    private static void playSound(MinecraftClient client, Identifier weaponId, WeaponSound cue,
-                                  double x, double y, double z) {
-        if (client.world == null) return;
-        WeaponDefinition definition = GunModule.catalog().get(weaponId);
-        if (definition == null) return;
-        Identifier soundId = definition.audio().sound(cue);
-        if (soundId == null || !Registries.SOUND_EVENT.containsId(soundId)) return;
-        SoundEvent sound = Registries.SOUND_EVENT.get(soundId);
-        float volume = switch (cue) {
-            case FIRE_DISTANT -> 8.0f;
-            case FIRE -> 4.0f;
-            case FIRE_SUPPRESSED -> 2.0f;
-            default -> 1.0f;
-        };
-        client.world.playSound(x, y, z, sound, SoundCategory.PLAYERS, volume, 1.0f, false);
-    }
-
-    private static void send(WeaponAction action) {
-        var buffer = PacketByteBufs.create();
-        buffer.writeVarInt(action.ordinal());
-        ClientPlayNetworking.send(WeaponPackets.ACTION, buffer);
-    }
-
-    public ActiveAnimation animation(UUID owner, Identifier weaponId) {
-        if (owner == null) return null;
-        ActiveAnimation active = animations.get(owner);
-        return active != null && active.weaponId().equals(weaponId) ? active : null;
-    }
-
-    private void syncWorld(ClientWorld world) {
-        if (animationWorld != world) {
-            animations.clear();
-            animationWorld = world;
+        if (!ready || client.player == null || client.getConnection() == null || client.isPaused()) {
+            ClientWeaponPresentation.tick(client, ready);return;
         }
-    }
-
-    public float recoilPitch() { return recoilPitch; }
-    public float recoilYaw() { return recoilYaw; }
-    public float adsProgress() { return adsProgress; }
-    public float adsProgress(float tickDelta) {
-        return previousAdsProgress + (adsProgress - previousAdsProgress) * clamp(tickDelta);
-    }
-    public float sprintProgress(float tickDelta) {
-        return previousSprintProgress + (sprintProgress - previousSprintProgress) * clamp(tickDelta);
-    }
-
-    private static float clamp(float value) {
-        return Math.max(0, Math.min(1, value));
-    }
-
-    public record ActiveAnimation(Identifier weaponId, Identifier id, long startTick, int length) {
-        public int frame(MinecraftClient client) {
-            return (int) Math.max(0, client.world.getTime() - startTick);
+        var stack = client.player.getMainHandItem();
+        WeaponItem weapon = stack.getItem() instanceof WeaponItem held ? held : null;
+        int slot = client.player.getInventory().getSelectedSlot();
+        if (!client.player.isAlive() || client.player.isSpectator()) relaxed = false;
+        boolean playing = client.isWindowActive() && client.gui.screen() == null && client.player.isAlive() && !client.player.isSpectator() && !client.player.isSleeping();
+        if (weapon != lastWeapon || slot != lastSlot) {
+            if (lastWeapon != null) send(lastWeapon, lastSlot, 0);
+            lastWeapon = weapon;lastSlot = slot;lastFlags = -1;heartbeat = 0;reloading = relaxed = false;
         }
-
-        public float frame(MinecraftClient client, float tickDelta) {
-            return Math.max(0, client.world.getTime() - startTick + clamp(tickDelta));
+        if (playing && weapon != null && carryPressed) {
+            relaxed = !relaxed;
+            client.gui.hud.setOverlayMessage(Component.translatable(relaxed ? "hud.decimation.relaxed" : "hud.decimation.ready"), false);
         }
+        if (playing && weapon != null) relaxed = com.decimation.module.gun.WeaponCarry.preference(relaxed, client.options.keyAttack.isDown());
+        ClientWeaponPresentation.tick(client, ready);
+        if (weapon == null) return;
+        int flags = playing && weapon != null ? (client.options.keyAttack.isDown() ? WeaponInputPayload.TRIGGER : 0)
+            | (client.options.keyUse.isDown() && !client.player.isSprinting() ? WeaponInputPayload.AIM : 0) | (relaxed ? WeaponInputPayload.RELAXED : 0) : 0;
 
-        public boolean finished(MinecraftClient client) {
-            return client.world == null || frame(client) >= length;
+        int commands = playing ? (reloadPressed ? WeaponInputPayload.RELOAD : 0) | (modePressed ? WeaponInputPayload.CYCLE : 0) : 0;
+        boolean heartbeatDue = ++heartbeat >= HEARTBEAT_TICKS;
+        if (flags != lastFlags || commands != 0 || (flags != 0 && heartbeatDue)) {
+            send(weapon, slot, flags | commands);
+            lastFlags = flags;heartbeat = 0;
         }
+        if (heartbeatDue) { heartbeat = 0;showState(client, weapon, weapon.state(stack)); }
+    }
+
+    private static void send(WeaponItem weapon, int slot, int flags) {
+        var client = Minecraft.getInstance();
+        if (client.player != null && client.level != null && ClientPlayNetworking.canSend(WeaponInputPayload.TYPE))
+            ClientPlayNetworking.send(new WeaponInputPayload(slot, weapon.identifier(), flags, client.player.getId(), client.level.dimension().identifier()));
+    }
+
+    private void accept(Minecraft client, WeaponEventPayload event) {
+        if (!ClientWeaponPresentation.accept(client, event)) return;
+        if (client.player == null || !client.player.getUUID().equals(event.owner())) return;
+        var stack = client.player.getMainHandItem();
+        if (client.player.getInventory().getSelectedSlot() != event.slot() || !(stack.getItem() instanceof WeaponItem weapon)
+            || !weapon.identifier().equals(event.weapon())) return;
+        if (event.event() == WeaponEvent.RELOAD_STARTED) reloading = true;
+        if (event.event() == WeaponEvent.FIRED) relaxed = false;
+        if (event.event() == WeaponEvent.RELOAD_COMPLETED || event.event() == WeaponEvent.RELOAD_CANCELLED) reloading = false;
+        // Do not overwrite client stack components from presentation packets; vanilla sync owns those.
+        showState(client, weapon, event.state().normalized(weapon.definition()));
+    }
+
+    private void showState(Minecraft client, WeaponItem weapon, WeaponState state) {
+        Component message = Component.translatable("hud.decimation.weapon", state.totalRounds(), state.fireMode(weapon.definition()).name());
+        if (reloading) message = message.copy().append(Component.translatable("hud.decimation.reloading"));
+        client.gui.hud.setOverlayMessage(message, false);
+    }
+
+    private void reset() {
+        ready = reloading = relaxed = false;lastWeapon = null;lastSlot = -1;lastFlags = heartbeat = 0;level = null;player = null;
+        ClientWeaponPresentation.reset();
+    }
+
+    public static boolean suppressesVanillaInput() {
+        Minecraft client = Minecraft.getInstance();
+        return client.player != null && client.player.getMainHandItem().getItem() instanceof WeaponItem;
     }
 }

@@ -1,21 +1,8 @@
 {
   "required": true,
+  "minVersion": "0.8",
   "package": "com.decimation.client.mixin",
-  "compatibilityLevel": "JAVA_17",
-  "client": [
-    "ArmorFeatureRendererMixin",
-    "BipedEntityModelMixin",
-    "EntityRenderDispatcherMixin",
-    "FramebufferMixin",
-    "HeadFeatureRendererMixin",
-    "HeldItemFeatureRendererMixin",
-    "HeldItemRendererMixin",
-    "MinecraftClientMixin",
-    "ModelPartMixin",
-    "PlayerEntityModelMixin",
-    "PlayerEntityRendererMixin"
-  ],
-  "injectors": {
-    "defaultRequire": 1
-  }
+  "compatibilityLevel": "JAVA_25",
+  "client": ["MinecraftWeaponInputMixin", "FirstPersonWeaponRendererMixin", "PlayerRenderStateMixin", "AvatarRenderStateMixin", "AvatarRendererMixin", "AvatarRendererAccessor", "PlayerModelMixin", "EquipmentRendererAccessor", "FeatureDispatcherAccessor", "ItemEntityRenderStateMixin", "ItemEntityRendererMixin", "WeaponAdsCameraMixin"],
+  "injectors": {"defaultRequire": 1}
 }
