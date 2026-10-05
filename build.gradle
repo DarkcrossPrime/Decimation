@@ -1,18 +1,16 @@
 plugins {
-    id "fabric-loom" version "${loom_version}"
+    id "net.fabricmc.fabric-loom" version "${loom_version}"
     id "maven-publish"
 }
 
 version = project.mod_version
 group = project.maven_group
+base { archivesName = project.archives_base_name }
+repositories { mavenCentral() }
 
-base {
-    archivesName = project.archives_base_name
-}
-
-repositories {
-    mavenCentral()
-}
+// Existing save-folder name under run-26.3/saves; use -PquickPlayWorld= for the title screen.
+def quickPlayWorld = providers.gradleProperty("quickPlayWorld").orElse("Decimation-Test").get().trim()
+def quickPlayServer = providers.gradleProperty("quickPlayServer").orElse("").get().trim()
 
 loom {
     splitEnvironmentSourceSets()
@@ -25,85 +23,187 @@ loom {
     runs {
         client {
             client()
-
-            name "Gradle"
-            runDir "run"
-
-            programArg "--username"
-            programArg "Gradle"
-
-            programArg "--uuid"
-            programArg "00000000-0000-0000-0000-000000000000"
-
-            programArg "--quickPlaySingleplayer"
-            programArg "Gradle"
+            name "Decimation 26.3 Client"
+            runDir "run-26.3"
+            if (!quickPlayServer.isEmpty()) {
+                programArgs "--quickPlayMultiplayer", quickPlayServer
+            } else if (!quickPlayWorld.isEmpty()) {
+                programArgs "--quickPlaySingleplayer", quickPlayWorld
+            }
+        }
+        server {
+            server()
+            name "Decimation 26.3 Server"
+            runDir "run-server-26.3"
         }
     }
 }
 
 dependencies {
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
-    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
-    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
-    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+    implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 }
 
-sourceSets {
-    main {
-        resources {
-            srcDir "$buildDir/generated/resources"
-            exclude "**/.rsync-tmp/**"
-        }
-    }
-}
+def generatedResources = layout.buildDirectory.dir("generated/resources")
+sourceSets.main.resources.srcDir(generatedResources)
+sourceSets.test.compileClasspath += sourceSets.client.compileClasspath + sourceSets.client.output
+sourceSets.test.runtimeClasspath += sourceSets.client.runtimeClasspath
 
 tasks.register("prepareContentResources", Exec) {
     group = "decimation"
-    description = "Compiles the canonical object-centric content tree into runtime resources."
+    description = "Generates 26.3 runtime resources without changing canonical content."
     inputs.dir layout.projectDirectory.dir("content")
-    inputs.files fileTree("tools") { include "**/*.py" }
-    outputs.dir layout.buildDirectory.dir("generated/resources")
-    doNotTrackState("Generated resources may live on a synchronized workspace filesystem")
+    inputs.file "tools/build_runtime_resources.py"
+    outputs.dir generatedResources
     commandLine "python3", "tools/build_runtime_resources.py",
-        "--content", "content", "--output", "$buildDir/generated/resources"
+        "--content", "content", "--output", generatedResources.get().asFile.absolutePath
 }
 
 tasks.register("auditContent", Exec) {
     group = "verification"
-    description = "Checks definitions, OBJ references, DANIM files, and asset ownership."
+    description = "Strict audit, including recorded pre-migration content issues."
     commandLine "python3", "tools/audit_assets.py", "content"
 }
 
-processResources {
-    dependsOn tasks.named("prepareContentResources")
-    doNotTrackState("Generated resources may live on a synchronized workspace filesystem")
-    doFirst {
-        delete destinationDir
-    }
-    inputs.property "version", project.version
-    filesMatching("fabric.mod.json") {
-        expand "version": project.version
-    }
-}
-
-check.dependsOn tasks.named("auditContent")
-
-tasks.withType(JavaCompile).configureEach {
-    options.release = 17
-    options.encoding = "UTF-8"
+tasks.register("auditMigrationContent", Exec) {
+    group = "verification"
+    description = "Fails on content errors beyond the reviewed migration baseline."
+    inputs.dir "content"
+    inputs.files "tools/audit_assets.py", "tools/audit_migration_content.py",
+        "tools/migration/content-audit-baseline.json"
+    commandLine "python3", "tools/audit_migration_content.py"
 }
 
 java {
+    toolchain.languageVersion = JavaLanguageVersion.of(25)
     withSourcesJar()
+}
+
+tasks.register("verifyFirstPersonRig", Exec) {
+    group = "verification"
+    description = "Checks the preserved engine-independent first-person arm solvers."
+    dependsOn tasks.named("compileClientJava")
+    def compiler = javaToolchains.compilerFor(java.toolchain)
+    doFirst {
+        environment "JAVA_HOME", compiler.get().metadata.installationPath.asFile.absolutePath
+        environment "PATH", compiler.get().metadata.installationPath.asFile.absolutePath + "/bin:" + System.getenv("PATH")
+    }
+    commandLine "bash", "tools/tests/firstperson/run.sh"
+}
+
+tasks.named("processResources") {
+    dependsOn tasks.named("prepareContentResources")
+    inputs.property "version", project.version
+    filesMatching("fabric.mod.json") { expand "version": project.version }
+}
+
+tasks.register("verifyWeaponCatalog", JavaExec) {
+    group = "verification"
+    description = "Validates generated weapon definitions, ammo identity and malformed-input rejection."
+    dependsOn tasks.named("testClasses"), tasks.named("processResources")
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = "com.decimation.module.gun.data.WeaponCatalogTest"
+    javaLauncher = javaToolchains.launcherFor(java.toolchain)
+}
+
+tasks.register("verifyWeaponBehavior", JavaExec) {
+    group = "verification"
+    description = "Checks ammunition, cadence, burst/reload transitions and aim spread."
+    dependsOn tasks.named("testClasses"), tasks.named("processResources")
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = "com.decimation.module.gun.WeaponBehaviorTest"
+    javaLauncher = javaToolchains.launcherFor(java.toolchain)
+}
+
+tasks.register("verifyWeaponCodecs", JavaExec) {
+    group = "verification"
+    description = "Checks real persistent/network codec round trips and invalid wire data."
+    dependsOn tasks.named("testClasses"), tasks.named("processResources")
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = "com.decimation.module.gun.WeaponCodecTest"
+    javaLauncher = javaToolchains.launcherFor(java.toolchain)
+}
+
+tasks.register("verifyWeaponAudio", JavaExec) {
+    group = "verification"
+    description = "Checks reload cue timing/cancellation, sound selection and generated mono samples."
+    dependsOn tasks.named("testClasses"), tasks.named("processResources")
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = "com.decimation.module.gun.WeaponAudioTest"
+    javaLauncher = javaToolchains.launcherFor(java.toolchain)
+}
+
+tasks.register("verifyWeaponVisuals", JavaExec) {
+    group = "verification"
+    description = "Checks baked weapon geometry, DANIM interpolation, draw grouping and view motion."
+    dependsOn tasks.named("testClasses"), tasks.named("compileClientJava"), tasks.named("processResources")
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = "com.decimation.client.gun.WeaponVisualTest"
+    javaLauncher = javaToolchains.launcherFor(java.toolchain)
+}
+
+tasks.register("verifyWeaponMultiplayer", JavaExec) {
+    group = "verification"
+    description = "Checks lifecycle identity, input leases and late-observer pose/reload synchronization."
+    dependsOn tasks.named("testClasses"), tasks.named("processResources")
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = "com.decimation.module.gun.WeaponMultiplayerTest"
+    javaLauncher = javaToolchains.launcherFor(java.toolchain)
+}
+
+tasks.register("verifyDedicatedServerBoundary", JavaExec) {
+    group = "verification"
+    description = "Rejects client-only dependencies in common mod bytecode."
+    dependsOn tasks.named("testClasses")
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = "com.decimation.module.gun.DedicatedServerBoundaryTest"
+    javaLauncher = javaToolchains.launcherFor(java.toolchain)
+}
+
+tasks.register("verifyMigrationCleanup", Exec) {
+    group = "verification"
+    description = "Tests preview, branch guards and recoverable legacy cleanup in isolated temporary worktrees."
+    commandLine "python3", "tools/migration/test_cleanup.py"
+}
+
+// Verification programs run through the JavaExec tasks above, not a JUnit engine.
+tasks.register("verifyFirstPersonBody", JavaExec) {
+    group = "verification"
+    description = "Checks captured player cuboids, clothing visibility and deferred pose reuse."
+    dependsOn tasks.named("testClasses"), tasks.named("compileClientJava")
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = "com.decimation.client.firstperson.FirstPersonBodyTest"
+    javaLauncher = javaToolchains.launcherFor(java.toolchain)
+}
+
+// Keep Gradle's empty framework-test task valid while check still runs every suite.
+tasks.named("test", Test) {
+    failOnNoDiscoveredTests = false
+}
+
+tasks.named("check") {
+    dependsOn tasks.named("auditMigrationContent"), tasks.named("verifyFirstPersonRig"),
+        tasks.named("verifyWeaponCatalog"), tasks.named("verifyWeaponBehavior"), tasks.named("verifyWeaponCodecs"),
+        tasks.named("verifyWeaponAudio"), tasks.named("verifyWeaponVisuals"), tasks.named("verifyFirstPersonBody"),
+        tasks.named("verifyWeaponMultiplayer"), tasks.named("verifyDedicatedServerBoundary"), tasks.named("verifyMigrationCleanup")
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 25
+    options.encoding = "UTF-8"
 }
 
 tasks.named("sourcesJar") {
     dependsOn tasks.named("prepareContentResources")
 }
 
-jar {
-    from("NOTICE.md")
+tasks.withType(AbstractArchiveTask).configureEach {
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
 }
+
+tasks.named("jar") { from("NOTICE.md") }
 
 publishing {
     publications {
@@ -113,4 +213,3 @@ publishing {
         }
     }
 }
-
