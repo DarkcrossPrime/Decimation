@@ -1,0 +1,29 @@
+name: Migration 26.3
+
+on:
+  push:
+    branches: [migration]
+  pull_request:
+    branches: [migration]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '25'
+      - uses: gradle/actions/setup-gradle@v6
+        with:
+          cache-provider: basic
+      - name: Build and verify migration
+        run: |
+          chmod +x gradlew
+          ./gradlew build --no-daemon
