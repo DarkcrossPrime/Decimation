@@ -1,0 +1,134 @@
+[
+  {
+    "path": "src/client/java/com/decimation/client/content/ClientContentManager.java",
+    "sha256": "e43a8296e4da181e77ee1691f159aa3dfd8f77200fec128de7c5a0da99f4b665"
+  },
+  {
+    "path": "src/client/java/com/decimation/client/content/DanimAnimation.java",
+    "sha256": "0680b0d5cd607b6c66c36228734391f4f92f15c3230b2806ad162b40bcba58fe"
+  },
+  {
+    "path": "src/client/java/com/decimation/client/content/DanimLoader.java",
+    "sha256": "a88be44eb2f38941c88e2c7741fff3f3a239d4e414935d3e54c1af40c71f2f8c"
+  },
+  {
+    "path": "src/client/java/com/decimation/client/firstperson/FirstPersonRenderPass.java",
+    "sha256": "3113b5cfe2d92de92a2d91e5f52961d2aecc10ff27df6b4740b9f0eab9964686"
+  },
+  {
+    "path": "src/client/java/com/decimation/client/firstperson/FirstPersonRenderState.java",
+    "sha256": "fbc89079c06dfeed62ccc6483cd47106aeaa3e0fdc845f619bd886bfa5ff8d48"
+  },
+  {
+    "path": "src/client/java/com/decimation/client/firstperson/FirstPersonRigLayer.java",
+    "sha256": "81b374985b3391c1be6b7ab3b148eddb5011e841c04a29b7229e1d8831e4bc5c"
+  },
+  {
+    "path": "src/client/java/com/decimation/client/gun/DanimSampler.java",
+    "sha256": "3dc71e67e0e15fd20b9bb77bb02fc315e5eb31f5d30bfb70e97aeae3ed248b9c"
+  },
+  {
+    "path": "src/client/java/com/decimation/client/gun/WeaponObjRenderer.java",
+    "sha256": "f6f5d80cc439802dc5be9f758baf16dc7d3e060bdf9f8a91a3a47a875fd8f2c9"
+  },
+  {
+    "path": "src/client/java/com/decimation/client/gun/WeaponRenderContext.java",
+    "sha256": "39e1ea79a6855843a0467be2dacb2fd394d54b618150ce742a5de817859c5779"
+  },
+  {
+    "path": "src/client/java/com/decimation/client/mixin/ArmorFeatureRendererMixin.java",
+    "sha256": "214633134b0a6cefde833c3dafc9547d8879cdcaa043aa842192fab6e897306d"
+  },
+  {
+    "path": "src/client/java/com/decimation/client/mixin/BipedEntityModelMixin.java",
+    "sha256": "04b87ab40cc8f4595093c33d760bb7addaf844245197dc3cc9eb57efca24e77e"
+  },
+  {
+    "path": "src/client/java/com/decimation/client/mixin/EntityRenderDispatcherMixin.java",
+    "sha256": "f9ed30de273deefbe8434bd9c36868559fa136af7a809352f991dfcadc40676c"
+  },
+  {
+    "path": "src/client/java/com/decimation/client/mixin/FramebufferMixin.java",
+    "sha256": "50f702c874d116741934d76502d379c2c199df242fd4994dcc32ff4e38d722c4"
+  },
+  {
+    "path": "src/client/java/com/decimation/client/mixin/HeadFeatureRendererMixin.java",
+    "sha256": "63962967114193011e7b8afef467c13558e54cec2d3e9805d731226449b5a854"
+  },
+  {
+    "path": "src/client/java/com/decimation/client/mixin/HeldItemFeatureRendererMixin.java",
+    "sha256": "7785dbdc58fb26eb234519100648e346369eaab74aff6148037a358a9e104cde"
+  },
+  {
+    "path": "src/client/java/com/decimation/client/mixin/HeldItemRendererMixin.java",
+    "sha256": "436eef53925a0ee3f3dcca9685d17f4c02ce5180b6462a0de1e9f61ac3944d00"
+  },
+  {
+    "path": "src/client/java/com/decimation/client/mixin/MinecraftClientMixin.java",
+    "sha256": "0f6a720e580af1de2ba89dd743740f1cf59f6f02c8c51e8ddfcf1a60acf98130"
+  },
+  {
+    "path": "src/client/java/com/decimation/client/mixin/ModelPartMixin.java",
+    "sha256": "96c958b8b723e51651a004991cfeb7ab36664c7054aec8213903e84ce9babc11"
+  },
+  {
+    "path": "src/client/java/com/decimation/client/mixin/PlayerEntityModelMixin.java",
+    "sha256": "09e6c990f3fa74216f1c901a07e1500fd15bfcf48d216aee6e67c91acfcf80b9"
+  },
+  {
+    "path": "src/client/java/com/decimation/client/mixin/PlayerEntityRendererMixin.java",
+    "sha256": "a71c1f550e408dd0107acddc4fe97f69a829a06e0bb8b299c7ecb08d4af6cf9d"
+  },
+  {
+    "path": "src/client/resources/assets/decimation/shaders/core/first_person_composite.fsh",
+    "sha256": "c067599b368f4a509eea10c151d246dcdd0d2b6c3d42e6ac6a54730b68b2b92e"
+  },
+  {
+    "path": "src/client/resources/assets/decimation/shaders/core/first_person_composite.json",
+    "sha256": "ced3e6e4c5db6987b9cf77c9e6398ebadfae2e1e743e003c01ef4ebcd6c9973e"
+  },
+  {
+    "path": "src/client/resources/assets/decimation/shaders/core/first_person_composite.vsh",
+    "sha256": "5aad28dbcd5b806c76bc214f0a01f840c72e9e6e13a8e1bb19a9c0fc7cf1d374"
+  },
+  {
+    "path": "src/main/java/com/decimation/content/ContentType.java",
+    "sha256": "31e45dd42d2b9770191d49946af7514b08ad80cc9f72c808d79def6bf2772f61"
+  },
+  {
+    "path": "src/main/java/com/decimation/module/DecimationModule.java",
+    "sha256": "21d5fc4eb302a52bab6f8aac20009a37673b79a50c090b1e2574ea1ddb64717e"
+  },
+  {
+    "path": "src/main/java/com/decimation/module/ModuleRegistry.java",
+    "sha256": "a2e1cdd2982adbed10e1330ae092f7829c8e6e79d2a4b36b9ba681222106eb6f"
+  },
+  {
+    "path": "src/main/java/com/decimation/module/ambiance/AmbianceModule.java",
+    "sha256": "ed0198e62d36dd578d398c4dc1a7a129d4050bcc3b13817972cb29dce63e9af3"
+  },
+  {
+    "path": "src/main/java/com/decimation/module/block/BlockModule.java",
+    "sha256": "30c5937985e512abf50ad72bf47f01679639c923d93818087be1410c00916bd7"
+  },
+  {
+    "path": "src/main/java/com/decimation/module/gun/network/WeaponAction.java",
+    "sha256": "6adcbce7845edb10834a0f327cece203aa01c44f888fd8ae831ca3575c0747db"
+  },
+  {
+    "path": "src/main/java/com/decimation/module/hud/HudModule.java",
+    "sha256": "d9a85ab8b99e521d76165cda8575645b06e0816c3b5e112e5306c6aeb23dd264"
+  },
+  {
+    "path": "src/main/java/com/decimation/module/mob/MobModule.java",
+    "sha256": "855dbeda3417a45468987e0a816efa4d51a3aa68ec2b48635d6f1a6d08b3659f"
+  },
+  {
+    "path": "src/main/java/com/decimation/module/vehicle/VehicleModule.java",
+    "sha256": "f4754be3d090a7ffe299778a45512beeb748f5c7758ad43c0ead95c666224cb7"
+  },
+  {
+    "path": "src/main/resources/pack.mcmeta",
+    "sha256": "41de8b2f12f4f2c2babba22292f96e79965c0cf5f8452a31f06e52d8772fbbda"
+  }
+]

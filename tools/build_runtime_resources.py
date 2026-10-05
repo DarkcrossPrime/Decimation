@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Compile canonical object-owned content into Fabric resource-pack paths."""
+"""Compile canonical object-owned content into Minecraft 26.3 resource paths."""
 
 from __future__ import annotations
 
@@ -7,6 +7,7 @@ import argparse
 import json
 import re
 import shutil
+import subprocess
 from pathlib import Path
 
 
@@ -35,6 +36,22 @@ SOUND_EVENT_RE = re.compile(r"^[a-z0-9/._-]+$")
 def copy(source: Path, destination: Path) -> None:
     destination.parent.mkdir(parents=True, exist_ok=True)
     shutil.copy2(source, destination)
+
+
+def write_item_model(output: Path, identifier: str) -> None:
+    """Build the inventory icon; the client model-baking plugin supplies 3D weapon contexts."""
+    assets = output / "assets" / "decimation"
+    model = assets / "models" / "item" / f"{identifier}.json"
+    model.parent.mkdir(parents=True, exist_ok=True)
+    model.write_text(json.dumps({
+        "parent": "minecraft:item/generated",
+        "textures": {"layer0": f"decimation:item/{identifier}"},
+    }, indent=2) + "\n", encoding="utf-8")
+    item = assets / "items" / f"{identifier}.json"
+    item.parent.mkdir(parents=True, exist_ok=True)
+    item.write_text(json.dumps({
+        "model": {"type": "minecraft:model", "model": f"decimation:item/{identifier}"},
+    }, indent=2) + "\n", encoding="utf-8")
 
 
 def runtime_sound_relative(relative: Path) -> Path:
@@ -145,6 +162,58 @@ def validate_runtime_sound_events(events: dict, output: Path) -> None:
                         raise ValueError(f"missing runtime sound {sound_name} for {event_id}")
 
 
+def vorbis_channels(path: Path) -> int:
+    with path.open("rb") as stream:
+        header = stream.read(4096)
+    marker = header.find(b"\x01vorbis")
+    if marker < 0 or marker + 16 > len(header) or header[marker + 11] == 0:
+        raise ValueError(f"missing Ogg Vorbis identification header: {path}")
+    return header[marker + 11]
+
+
+def prepare_weapon_audio(events: dict, weapons: list[dict], output: Path) -> tuple[int, int]:
+    """Positional audio must be mono. Convert only disposable runtime copies."""
+    files: set[Path] = set()
+    for weapon in weapons:
+        for event_id in weapon["audio"]["sounds"].values():
+            namespace, event = event_id.split(":", 1)
+            if namespace != "decimation":
+                continue
+            definition = events.get(event)
+            if definition is None or not definition.get("sounds"):
+                raise ValueError(f"weapon {weapon['registry_id']} has no samples for {event_id}")
+            for entry in definition["sounds"]:
+                if isinstance(entry, dict) and entry.get("type", "file") != "file":
+                    raise ValueError(f"weapon sound {event_id} must reference direct audio samples")
+                name = entry if isinstance(entry, str) else entry["name"]
+                sample_namespace, sample = name.split(":", 1)
+                if sample_namespace == "decimation":
+                    files.add(output / "assets" / sample_namespace / "sounds" / f"{sample}.ogg")
+    downmixed = 0
+    for path in sorted(files):
+        if vorbis_channels(path) == 1:
+            continue
+        ffmpeg = shutil.which("ffmpeg")
+        if ffmpeg is None:
+            raise RuntimeError("Weapon positional audio requires ffmpeg to downmix generated copies. "
+                               "Install ffmpeg and rerun prepareContentResources.")
+        temporary = path.with_name(path.stem + ".mono.ogg")
+        try:
+            result = subprocess.run([
+                ffmpeg, "-hide_banner", "-loglevel", "error", "-nostdin", "-y",
+                "-i", str(path), "-ac", "1", "-c:a", "libvorbis", "-q:a", "5", str(temporary),
+            ], capture_output=True, text=True)
+            if result.returncode != 0:
+                raise RuntimeError(f"ffmpeg could not downmix {path}: {result.stderr.strip()}")
+            if vorbis_channels(temporary) != 1:
+                raise ValueError(f"ffmpeg output is not mono: {temporary}")
+            temporary.replace(path)
+        finally:
+            temporary.unlink(missing_ok=True)
+        downmixed += 1
+    return len(files), downmixed
+
+
 def animation_sound_cues(animation_path: Path) -> list[dict]:
     animation = json.loads(animation_path.read_text(encoding="utf-8"))
     cues: list[dict] = []
@@ -249,31 +318,28 @@ def build(content: Path, output: Path) -> dict:
             if icon is None:
                 raise ValueError(f"weapon {identifier} has no item icon")
             copy(icon, output / "assets" / "decimation" / "textures" / "item" / f"{registry_id}.png")
-            item_model = output / "assets" / "decimation" / "models" / "item" / f"{registry_id}.json"
-            item_model.parent.mkdir(parents=True, exist_ok=True)
-            item_model.write_text(json.dumps({"parent": "builtin/entity"}, indent=2) + "\n", encoding="utf-8")
+            write_item_model(output, registry_id)
 
             ammo_id = weapon["ammo"]["item"]
             ammo_definition = content / "item" / "items" / "ammo" / ammo_id / "definition.json"
+            if not ammo_definition.is_file():
+                raise ValueError(f"weapon {identifier} references missing ammunition {ammo_id}")
             if ammo_definition.is_file():
                 ammo_data = json.loads(ammo_definition.read_text(encoding="utf-8"))
                 ammo_root = ammo_definition.parent
-                ammo_icon_name = next(name for name in ammo_data["assets"]
-                                      if name.startswith("textures/item/") and name.endswith(".png"))
+                ammo_icon_name = next((name for name in ammo_data["assets"]
+                                      if name.startswith("textures/item/") and name.endswith(".png")), None)
+                if ammo_icon_name is None:
+                    raise ValueError(f"ammunition {ammo_id} has no item icon")
                 copy(ammo_root / ammo_icon_name,
                      output / "assets" / "decimation" / "textures" / "item" / f"{ammo_id}.png")
-                ammo_model = output / "assets" / "decimation" / "models" / "item" / f"{ammo_id}.json"
-                ammo_model.parent.mkdir(parents=True, exist_ok=True)
-                ammo_model.write_text(json.dumps({
-                    "parent": "minecraft:item/generated",
-                    "textures": {"layer0": f"decimation:item/{ammo_id}"},
-                }, indent=2) + "\n", encoding="utf-8")
+                write_item_model(output, ammo_id)
 
     system = content / "_system"
     if (system / "lang").exists():
         shutil.copytree(system / "lang", output / "assets" / "decimation" / "lang", dirs_exist_ok=True)
-    if (system / "shaders").exists():
-        shutil.copytree(system / "shaders", output / "assets" / "decimation" / "shaders", dirs_exist_ok=True)
+    # Keep legacy shaders in canonical content. They require a modern rendering port
+    # before being included in a 26.3 resource pack.
     if (system / "minecraft").exists():
         shutil.copytree(system / "minecraft", output / "assets" / "minecraft", dirs_exist_ok=True)
     sound_events_path = content / "_meta" / "sound_events.json"
@@ -306,6 +372,7 @@ def build(content: Path, output: Path) -> dict:
                 "sounds": [f"decimation:content/{content_id}/sounds/{runtime_name}"],
             }
     validate_runtime_sound_events(sound_events, output)
+    weapon_sound_files, weapon_sounds_downmixed = prepare_weapon_audio(sound_events, weapons, output)
     sounds_output = output / "assets" / "decimation" / "sounds.json"
     sounds_output.parent.mkdir(parents=True, exist_ok=True)
     sounds_output.write_text(json.dumps(sound_events, indent=2) + "\n", encoding="utf-8")
@@ -319,9 +386,43 @@ def build(content: Path, output: Path) -> dict:
     language["tooltip.decimation.fire_mode"] = "Fire mode: %s"
     language["key.categories.decimation"] = "Decimation"
     language["key.decimation.reload"] = "Reload weapon"
+    language["key.decimation.relaxed_carry"] = "Toggle relaxed carry"
+    language["hud.decimation.relaxed"] = "Relaxed carry"
+    language["hud.decimation.ready"] = "Weapon ready"
     language["key.decimation.fire_mode"] = "Cycle fire mode"
+    language["key.category.decimation.controls"] = "Decimation"
+    language["hud.decimation.weapon"] = "%s | %s"
+    language["hud.decimation.reloading"] = " | Reloading"
+    language["death.attack.decimation.bullet"] = "%1$s was shot by %2$s"
+    language["death.attack.decimation.bullet.player"] = "%1$s was shot by %2$s"
     language_path.parent.mkdir(parents=True, exist_ok=True)
     language_path.write_text(json.dumps(language, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+    # Bullets retain vanilla armor/PvP rules, but rapid fire must not be gated by
+    # vanilla melee invulnerability frames. All new resources are generated.
+    damage_type = output / "data" / "decimation" / "damage_type" / "bullet.json"
+    damage_type.parent.mkdir(parents=True, exist_ok=True)
+    damage_type.write_text(json.dumps({
+        "message_id": "decimation.bullet", "scaling": "when_caused_by_living_non_player",
+        "exhaustion": 0.1, "effects": "hurt",
+    }, indent=2) + "\n", encoding="utf-8")
+    cooldown_tag = output / "data" / "minecraft" / "tags" / "damage_type" / "bypasses_cooldown.json"
+    cooldown_tag.parent.mkdir(parents=True, exist_ok=True)
+    cooldown_tag.write_text(json.dumps({"replace": False, "values": ["decimation:bullet"]}, indent=2) + "\n", encoding="utf-8")
+
+    # Shared ammo items are registered once; magazine/chamber capacities remain
+    # weapon-specific (the two FAMAS definitions intentionally differ).
+    ammunition = []
+    seen_ammunition = set()
+    for weapon in weapons:
+        ammo_id = weapon["ammo"]["item"]
+        if ammo_id not in seen_ammunition:
+            seen_ammunition.add(ammo_id)
+            ammunition.append({
+                "registry_id": ammo_id,
+                "display_name": language[f"item.decimation.{ammo_id}"],
+                "max_stack_size": 16,
+            })
 
     index = {
         "format": "decimation:content_index",
@@ -337,11 +438,13 @@ def build(content: Path, output: Path) -> dict:
     weapon_index.parent.mkdir(parents=True, exist_ok=True)
     weapon_index.write_text(json.dumps({
         "format": "decimation:weapon_catalog",
-        "version": 1,
+        "version": 2,
         "weapons": weapons,
+        "ammunition": ammunition,
     }, indent=2) + "\n", encoding="utf-8")
     return {"objects": len(objects), "models": len(models), "animations": len(animations),
-            "weapons": len(weapons), "skipped_missing_sounds": skipped_missing_sounds}
+            "weapons": len(weapons), "skipped_missing_sounds": skipped_missing_sounds,
+            "weapon_sound_files": weapon_sound_files, "weapon_sounds_downmixed": weapon_sounds_downmixed}
 
 
 def main() -> None:
