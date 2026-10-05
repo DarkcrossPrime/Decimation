@@ -1,23 +1,27 @@
 package com.decimation.module.gun.network;
 
-import com.decimation.Decimation;
 import com.decimation.module.gun.WeaponServerController;
+import net.fabricmc.fabric.api.networking.v1.PayloadTypeRegistry;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
-import net.minecraft.util.Identifier;
 
 public final class WeaponPackets {
-    public static final Identifier ACTION = new Identifier(Decimation.MOD_ID, "weapon/action");
-    public static final Identifier EVENT = new Identifier(Decimation.MOD_ID, "weapon/event");
-    public static final Identifier SOUND = new Identifier(Decimation.MOD_ID, "weapon/sound");
-
     private WeaponPackets() { }
 
-    public static void registerServerReceivers(WeaponServerController controller) {
-        ServerPlayNetworking.registerGlobalReceiver(ACTION, (server, player, handler, buffer, responseSender) -> {
-            int ordinal = buffer.readVarInt();
-            if (ordinal < 0 || ordinal >= WeaponAction.values().length) return;
-            WeaponAction action = WeaponAction.values()[ordinal];
-            server.execute(() -> controller.handle(player, action));
-        });
+    public static void initialize(WeaponServerController controller) {
+        PayloadTypeRegistry.serverboundPlay().register(WeaponInputPayload.TYPE, WeaponInputPayload.CODEC);
+        PayloadTypeRegistry.serverboundPlay().register(WeaponCatalogPayload.TYPE, WeaponCatalogPayload.CODEC);
+        PayloadTypeRegistry.clientboundPlay().register(WeaponCatalogPayload.TYPE, WeaponCatalogPayload.CODEC);
+        PayloadTypeRegistry.clientboundPlay().register(WeaponEventPayload.TYPE, WeaponEventPayload.CODEC);
+        PayloadTypeRegistry.clientboundPlay().register(WeaponSoundPayload.TYPE, WeaponSoundPayload.CODEC);
+        PayloadTypeRegistry.clientboundPlay().register(WeaponCarryPayload.TYPE, WeaponCarryPayload.CODEC);
+        net.fabricmc.fabric.api.networking.v1.EntityTrackingEvents.START_TRACKING.register(controller::startTracking);
+        // Fabric typed play handlers already run on their logical game thread.
+        ServerPlayNetworking.registerGlobalReceiver(WeaponInputPayload.TYPE,
+            (payload, context) -> controller.handle(context.player(), payload));
+        ServerPlayNetworking.registerGlobalReceiver(WeaponCatalogPayload.TYPE,
+            (payload, context) -> controller.acceptCatalog(context.player(), payload));
+        ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> controller.join(handler.player));
+        ServerPlayConnectionEvents.DISCONNECT.register((handler, server) -> controller.disconnect(handler.player.getUUID()));
     }
 }

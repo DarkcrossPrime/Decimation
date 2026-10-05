@@ -1,57 +1,43 @@
 package com.decimation.module.gun;
 
 import com.decimation.module.gun.data.WeaponDefinition;
-import java.util.List;
-import net.minecraft.client.item.TooltipContext;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.text.Text;
-import net.minecraft.util.Hand;
-import net.minecraft.util.TypedActionResult;
-import net.minecraft.util.Formatting;
-import net.minecraft.world.World;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 
+/** Definition, identifier and default state are resolved once at registration. */
 public final class WeaponItem extends Item {
     private final WeaponDefinition definition;
+    private final Identifier identifier;
+    private final WeaponState initialState;
 
-    public WeaponItem(WeaponDefinition definition) {
-        super(new Settings().maxCount(1));
+    public WeaponItem(Properties properties, WeaponDefinition definition) {
+        this(properties, definition, WeaponState.initial(definition));
+    }
+
+    private WeaponItem(Properties properties, WeaponDefinition definition, WeaponState initialState) {
+        super(properties.component(WeaponComponents.STATE, initialState));
         this.definition = definition;
+        this.identifier = Identifier.parse(definition.id());
+        this.initialState = initialState;
     }
 
-    public WeaponDefinition definition() {
-        return definition;
+    public WeaponDefinition definition() { return definition; }
+    public Identifier identifier() { return identifier; }
+    public WeaponState state(ItemStack stack) {
+        return stack.getOrDefault(WeaponComponents.STATE, initialState).normalized(definition);
     }
+    public void writeState(ItemStack stack, WeaponState state) { stack.set(WeaponComponents.STATE, state.normalized(definition)); }
 
-    @Override
-    public TypedActionResult<ItemStack> use(World world, net.minecraft.entity.player.PlayerEntity user, Hand hand) {
-        return TypedActionResult.consume(user.getStackInHand(hand));
+    @Override public InteractionResult use(Level level, Player player, InteractionHand hand) { return InteractionResult.CONSUME; }
+    @Override public boolean isBarVisible(ItemStack stack) { return true; }
+    @Override public int getBarWidth(ItemStack stack) {
+        return Math.round(13.0f * state(stack).totalRounds()
+            / Math.max(1L, (long) definition.ammo().capacity() + definition.ammo().chamberCapacity()));
     }
-
-    @Override
-    public boolean isItemBarVisible(ItemStack stack) {
-        return true;
-    }
-
-    @Override
-    public int getItemBarStep(ItemStack stack) {
-        WeaponState state = WeaponState.read(stack, definition);
-        int maximum = Math.max(1, definition.ammo().capacity() + definition.ammo().chamberCapacity());
-        return Math.round(13.0f * state.totalRounds() / maximum);
-    }
-
-    @Override
-    public int getItemBarColor(ItemStack stack) {
-        return 0xD84A3A;
-    }
-
-    @Override
-    public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
-        WeaponState state = WeaponState.read(stack, definition);
-        tooltip.add(Text.literal(state.totalRounds() + " / "
-            + (definition.ammo().capacity() + definition.ammo().chamberCapacity()))
-            .formatted(Formatting.GRAY));
-        tooltip.add(Text.translatable("tooltip.decimation.fire_mode",
-            state.fireMode(definition).name()).formatted(Formatting.DARK_GRAY));
-    }
+    @Override public int getBarColor(ItemStack stack) { return 0xD84A3A; }
 }

@@ -1,6 +1,5 @@
 package com.decimation.module.gun.data;
 
-import com.decimation.Decimation;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -8,160 +7,248 @@ import com.google.gson.JsonParser;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.Reader;
 import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.EnumMap;
 import java.util.LinkedHashMap;
+import java.util.HexFormat;
 import java.util.List;
 import java.util.Map;
-import net.minecraft.util.Identifier;
 
+/** Small, immutable startup catalogue. Does not load geometry or touch registries. */
 public final class WeaponCatalog {
-    private static final String RESOURCE = "data/decimation/weapons/index.json";
-    private final Map<Identifier, WeaponDefinition> definitions;
+    public static final String RESOURCE = "data/decimation/weapons/index.json";
+    private final Map<String, WeaponDefinition> definitions;
+    private final Map<String, AmmunitionDefinition> ammunition;
+    private final String fingerprint;
 
-    private WeaponCatalog(Map<Identifier, WeaponDefinition> definitions) {
-        this.definitions = Collections.unmodifiableMap(definitions);
+    private WeaponCatalog(Map<String, WeaponDefinition> definitions,
+                          Map<String, AmmunitionDefinition> ammunition, String fingerprint) {
+        this.definitions = Collections.unmodifiableMap(new LinkedHashMap<>(definitions));
+        this.ammunition = Collections.unmodifiableMap(new LinkedHashMap<>(ammunition));
+        this.fingerprint = fingerprint;
     }
 
-    public static WeaponCatalog load() {
-        ClassLoader loader = WeaponCatalog.class.getClassLoader();
+    public static WeaponCatalog load(ClassLoader loader) {
         try (InputStream stream = loader.getResourceAsStream(RESOURCE)) {
-            if (stream == null) throw new IOException("missing " + RESOURCE);
-            JsonObject root = JsonParser.parseReader(
-                new InputStreamReader(stream, StandardCharsets.UTF_8)).getAsJsonObject();
-            if (!"decimation:weapon_catalog".equals(root.get("format").getAsString())
-                || root.get("version").getAsInt() != 1) {
-                throw new IOException("unsupported weapon catalog format");
-            }
-            Map<Identifier, WeaponDefinition> values = new LinkedHashMap<>();
-            for (JsonElement element : root.getAsJsonArray("weapons")) {
-                WeaponDefinition definition = parse(element.getAsJsonObject());
-                if (values.putIfAbsent(definition.id(), definition) != null) {
-                    throw new IOException("duplicate weapon " + definition.id());
+            if (stream == null) throw new IOException("missing generated " + RESOURCE);
+            WeaponCatalog catalog = read(new InputStreamReader(stream, StandardCharsets.UTF_8));
+            // Verify only resources needed by this catalogue; never parse OBJ/DANIM here.
+            for (WeaponDefinition definition : catalog.definitions.values()) {
+                WeaponAssets assets = definition.assets();
+                for (String id : List.of(assets.model(), assets.texture(), assets.itemTexture(),
+                                        assets.fireAnimation(), assets.reloadAnimation())) {
+                    requireResource(loader, id);
                 }
             }
-            if (values.isEmpty()) throw new IOException("weapon catalog is empty");
-            return new WeaponCatalog(values);
-        } catch (RuntimeException | IOException exception) {
-            throw new IllegalStateException("Cannot load Decimation weapon catalog", exception);
+            for (String id : catalog.ammunition.keySet()) {
+                requireResource(loader, "decimation:textures/item/" + id.substring(id.indexOf(':') + 1) + ".png");
+            }
+            return catalog;
+        } catch (IOException | RuntimeException exception) {
+            throw new IllegalStateException("Cannot load Decimation weapon catalog: " + exception.getMessage(), exception);
         }
     }
 
-    private static WeaponDefinition parse(JsonObject json) {
-        Identifier id = new Identifier(Decimation.MOD_ID, json.get("registry_id").getAsString());
-        JsonObject ammoJson = json.getAsJsonObject("ammo");
-        AmmoDefinition ammo = new AmmoDefinition(
-            new Identifier(Decimation.MOD_ID, ammoJson.get("item").getAsString()),
-            ammoJson.get("capacity").getAsInt(), ammoJson.get("chamber_capacity").getAsInt(),
-            ammoJson.has("spawn_loaded") && ammoJson.get("spawn_loaded").getAsBoolean());
+    private static void requireResource(ClassLoader loader, String id) throws IOException {
+        int colon = id.indexOf(':');
+        String path = "assets/" + id.substring(0, colon) + "/" + id.substring(colon + 1);
+        if (loader.getResource(path) == null) throw new IOException("missing weapon resource " + path);
+    }
 
+    public static WeaponCatalog read(Reader reader) {
+        JsonObject root = JsonParser.parseReader(reader).getAsJsonObject();
+        if (!"decimation:weapon_catalog".equals(string(root, "format")) || integer(root, "version") != 2) {
+            throw new IllegalArgumentException("unsupported weapon catalog format/version");
+        }
+        Map<String, WeaponDefinition> values = new LinkedHashMap<>();
+        for (JsonElement element : array(root, "weapons")) {
+            JsonObject json = element.getAsJsonObject();
+            String id = localId(string(json, "registry_id"));
+            try {
+                WeaponDefinition definition = parse(json, id);
+                if (values.putIfAbsent(id, definition) != null) {
+                    throw new IllegalArgumentException("duplicate weapon id");
+                }
+            } catch (RuntimeException exception) {
+                throw new IllegalArgumentException("weapon " + id + ": " + exception.getMessage(), exception);
+            }
+        }
+        if (values.isEmpty()) throw new IllegalArgumentException("weapon catalog is empty");
+        Map<String, AmmunitionDefinition> ammo = new LinkedHashMap<>();
+        for (JsonElement element : array(root, "ammunition")) {
+            JsonObject json = element.getAsJsonObject();
+            AmmunitionDefinition definition = new AmmunitionDefinition(localId(string(json, "registry_id")),
+                string(json, "display_name"), integer(json, "max_stack_size"));
+            if (ammo.putIfAbsent(definition.id(), definition) != null) {
+                throw new IllegalArgumentException("duplicate ammunition " + definition.id());
+            }
+            if (values.containsKey(definition.id())) {
+                throw new IllegalArgumentException("weapon/ammunition id collision: " + definition.id());
+            }
+        }
+        for (WeaponDefinition definition : values.values()) {
+            if (!ammo.containsKey(definition.ammo().itemId())) {
+                throw new IllegalArgumentException("weapon " + definition.id() + ": missing ammunition " + definition.ammo().itemId());
+            }
+        }
+        try {
+            String fingerprint = HexFormat.of().formatHex(MessageDigest.getInstance("SHA-256")
+                .digest(root.toString().getBytes(StandardCharsets.UTF_8)));
+            return new WeaponCatalog(values, ammo, fingerprint);
+        } catch (NoSuchAlgorithmException exception) {
+            throw new IllegalStateException("SHA-256 is unavailable", exception);
+        }
+    }
+
+    private static WeaponDefinition parse(JsonObject json, String id) {
+        JsonObject ammoJson = object(json, "ammo");
+        AmmoDefinition ammo = new AmmoDefinition(localId(string(ammoJson, "item")),
+            integer(ammoJson, "capacity"), integer(ammoJson, "chamber_capacity"),
+            ammoJson.has("spawn_loaded") && bool(ammoJson, "spawn_loaded"));
         List<FireMode> modes = new ArrayList<>();
-        for (JsonElement mode : json.getAsJsonArray("fire_modes")) modes.add(FireMode.parse(mode.getAsString()));
-        JsonObject ballisticsJson = json.getAsJsonObject("ballistics");
+        for (JsonElement mode : array(json, "fire_modes")) modes.add(FireMode.parse(stringValue(mode, "fire_modes")));
+        JsonObject b = object(json, "ballistics");
         BallisticsDefinition ballistics = new BallisticsDefinition(
-            ballisticsJson.get("damage").getAsFloat(), ballisticsJson.get("range").getAsDouble(),
-            ballisticsJson.get("falloff_start").getAsDouble(),
-            ballisticsJson.get("minimum_multiplier").getAsFloat(),
-            ballisticsJson.get("head_multiplier").getAsFloat(),
-            ballisticsJson.get("penetration_count").getAsInt(),
-            ballisticsJson.get("penetration_retention").getAsFloat(),
-            optionalFloat(ballisticsJson, "projectile_speed", 0),
-            optionalFloat(ballisticsJson, "projectile_divergence", 0));
-        JsonObject handlingJson = json.getAsJsonObject("handling");
-        HandlingDefinition handling = new HandlingDefinition(
-            handlingJson.get("hip_spread").getAsFloat(), handlingJson.get("ads_spread").getAsFloat(),
-            handlingJson.get("ads_ticks").getAsInt(), handlingJson.get("recoil_pitch").getAsFloat(),
-            handlingJson.get("recoil_yaw").getAsFloat());
-        WeaponPresentation presentation = parsePresentation(json.getAsJsonObject("presentation"));
-        JsonObject assetsJson = json.getAsJsonObject("assets");
-        WeaponAssets assets = new WeaponAssets(identifier(assetsJson, "model"),
-            identifier(assetsJson, "texture"), identifier(assetsJson, "item_texture"),
-            identifier(assetsJson, "fire_animation"), identifier(assetsJson, "reload_animation"));
-        JsonObject audioJson = json.getAsJsonObject("audio");
-        Map<WeaponSound, Identifier> sounds = new EnumMap<>(WeaponSound.class);
-        for (Map.Entry<String, JsonElement> entry : audioJson.getAsJsonObject("sounds").entrySet()) {
-            sounds.put(WeaponSound.parse(entry.getKey()), new Identifier(entry.getValue().getAsString()));
+            number(b, "damage"), doubleNumber(b, "range"), doubleNumber(b, "falloff_start"),
+            number(b, "minimum_multiplier"), number(b, "head_multiplier"), integer(b, "penetration_count"),
+            number(b, "penetration_retention"), optionalNumber(b, "projectile_speed", 0),
+            optionalNumber(b, "projectile_divergence", 0));
+        JsonObject h = object(json, "handling");
+        HandlingDefinition handling = new HandlingDefinition(number(h, "hip_spread"), number(h, "ads_spread"),
+            integer(h, "ads_ticks"), number(h, "recoil_pitch"), number(h, "recoil_yaw"));
+        WeaponPresentation presentation = parsePresentation(object(json, "presentation"));
+        JsonObject a = object(json, "assets");
+        WeaponAssets assets = new WeaponAssets(string(a, "model"), string(a, "texture"), string(a, "item_texture"),
+            string(a, "fire_animation"), string(a, "reload_animation"));
+        JsonObject audioJson = object(json, "audio");
+        Map<WeaponSound, String> sounds = new EnumMap<>(WeaponSound.class);
+        for (Map.Entry<String, JsonElement> entry : object(audioJson, "sounds").entrySet()) {
+            sounds.put(WeaponSound.parse(entry.getKey()), stringValue(entry.getValue(), "sound " + entry.getKey()));
         }
-        List<WeaponSoundCue> reloadCues = new ArrayList<>();
-        for (JsonElement element : audioJson.getAsJsonArray("reload_cues")) {
+        List<WeaponSoundCue> cues = new ArrayList<>();
+        for (JsonElement element : array(audioJson, "reload_cues")) {
             JsonObject cue = element.getAsJsonObject();
-            reloadCues.add(new WeaponSoundCue(cue.get("tick").getAsInt(),
-                WeaponSound.parse(cue.get("sound").getAsString())));
+            cues.add(new WeaponSoundCue(integer(cue, "tick"), WeaponSound.parse(string(cue, "sound"))));
         }
-        WeaponAudio audio = new WeaponAudio(WeaponSound.parse(audioJson.get("shot").getAsString()),
-            audioJson.get("distant_threshold").getAsFloat(), sounds, reloadCues);
-        return new WeaponDefinition(id, json.get("content_id").getAsString(),
-            json.get("display_name").getAsString(), WeaponMechanism.parse(json.get("mechanism").getAsString()),
-            ammo, modes, json.has("burst_size") ? json.get("burst_size").getAsInt() : 1,
-            json.get("rate_of_fire").getAsInt(), json.get("reload_ticks").getAsInt(),
-            ballistics, handling, presentation, assets, audio);
+        WeaponAudio audio = new WeaponAudio(WeaponSound.parse(string(audioJson, "shot")),
+            number(audioJson, "distant_threshold"), sounds, cues);
+        return new WeaponDefinition(id, string(json, "content_id"), string(json, "display_name"),
+            WeaponMechanism.parse(string(json, "mechanism")), ammo, modes,
+            json.has("burst_size") ? integer(json, "burst_size") : 1,
+            integer(json, "rate_of_fire"), integer(json, "reload_ticks"), ballistics, handling, presentation, assets, audio);
     }
 
     private static WeaponPresentation parsePresentation(JsonObject json) {
-        if (json == null || !json.has("first_person")) {
-            WeaponTransform hip = new WeaponTransform(0.48f, 0.50f, 0.50f, 0, 0, 0, 0.025f);
-            WeaponTransform ads = new WeaponTransform(0.48f, 0.46f, 0.46f, 0, 0, 0, 0.025f);
-            WeaponTransform thirdPerson = new WeaponTransform(0.5f, 0.5f, 0.5f, 0, 0, 0, 0.025f);
-            WeaponArmPose hipArms = new WeaponArmPose(
-                new ArmRotation(-98, -14, 0), new ArmRotation(-103, 30, 0));
-            WeaponArmPose adsArms = new WeaponArmPose(
-                new ArmRotation(-104, -17.19f, 0), new ArmRotation(-107, 34.38f, 0));
-            return new WeaponPresentation(hip, ads, hip, hipArms, adsArms, hipArms, thirdPerson);
-        }
-        JsonObject firstPerson = json.getAsJsonObject("first_person");
-        JsonObject hip = firstPerson.getAsJsonObject("hip");
-        JsonObject ads = firstPerson.getAsJsonObject("ads");
-        JsonObject sprint = firstPerson.has("sprint") ? firstPerson.getAsJsonObject("sprint") : hip;
-        return new WeaponPresentation(
-            parseTransform(hip), parseTransform(ads), parseTransform(sprint),
-            parseArmPose(hip.getAsJsonObject("arms")),
-            parseArmPose(ads.getAsJsonObject("arms")),
-            parseArmPose(sprint.getAsJsonObject("arms")),
-            parseTransform(json.getAsJsonObject("third_person")));
+        JsonObject firstPerson = object(json, "first_person");
+        JsonObject hip = object(firstPerson, "hip");
+        JsonObject ads = object(firstPerson, "ads");
+        JsonObject sprint = firstPerson.has("sprint") ? object(firstPerson, "sprint") : hip;
+        return new WeaponPresentation(parseTransform(hip), parseTransform(ads), parseTransform(sprint),
+            parseArmPose(object(hip, "arms")), parseArmPose(object(ads, "arms")),
+            parseArmPose(object(sprint, "arms")), parseTransform(object(json, "third_person")));
     }
 
     private static WeaponArmPose parseArmPose(JsonObject json) {
-        return new WeaponArmPose(
-            parseArmRotation(json.getAsJsonArray("main_hand")),
-            parseArmRotation(json.getAsJsonArray("off_hand")));
-    }
-
-    private static ArmRotation parseArmRotation(JsonArray json) {
-        if (json == null || json.size() != 3) {
-            throw new IllegalArgumentException("weapon arm rotations must contain three values");
-        }
-        return new ArmRotation(json.get(0).getAsFloat(), json.get(1).getAsFloat(),
-            json.get(2).getAsFloat());
+        float[] main = vector(json, "main_hand");
+        float[] off = vector(json, "off_hand");
+        return new WeaponArmPose(new ArmRotation(main[0], main[1], main[2]), new ArmRotation(off[0], off[1], off[2]));
     }
 
     private static WeaponTransform parseTransform(JsonObject json) {
-        JsonArray translation = json.getAsJsonArray("translation");
-        JsonArray rotation = json.getAsJsonArray("rotation");
-        if (translation.size() != 3 || rotation.size() != 3) {
-            throw new IllegalArgumentException("weapon presentation vectors must contain three values");
+        float[] position = vector(json, "translation");
+        float[] rotation = vector(json, "rotation");
+        return new WeaponTransform(position[0], position[1], position[2], rotation[0], rotation[1], rotation[2], number(json, "scale"));
+    }
+
+    private static float[] vector(JsonObject json, String name) {
+        JsonArray values = array(json, name);
+        if (values.size() != 3) throw new IllegalArgumentException(name + " must contain three numbers");
+        return new float[] {numberValue(values.get(0), name), numberValue(values.get(1), name), numberValue(values.get(2), name)};
+    }
+
+    private static JsonElement field(JsonObject json, String name) {
+        JsonElement value = json.get(name);
+        if (value == null || value.isJsonNull()) throw new IllegalArgumentException("missing " + name);
+        return value;
+    }
+
+    private static JsonObject object(JsonObject json, String name) {
+        JsonElement value = field(json, name);
+        if (!value.isJsonObject()) throw new IllegalArgumentException(name + " must be an object");
+        return value.getAsJsonObject();
+    }
+
+    private static JsonArray array(JsonObject json, String name) {
+        JsonElement value = field(json, name);
+        if (!value.isJsonArray()) throw new IllegalArgumentException(name + " must be an array");
+        return value.getAsJsonArray();
+    }
+
+    private static String string(JsonObject json, String name) { return stringValue(field(json, name), name); }
+
+    private static String stringValue(JsonElement value, String name) {
+        if (!value.isJsonPrimitive() || !value.getAsJsonPrimitive().isString() || value.getAsString().isBlank()) {
+            throw new IllegalArgumentException(name + " must be a nonempty string");
         }
-        return new WeaponTransform(
-            translation.get(0).getAsFloat(), translation.get(1).getAsFloat(),
-            translation.get(2).getAsFloat(), rotation.get(0).getAsFloat(),
-            rotation.get(1).getAsFloat(), rotation.get(2).getAsFloat(),
-            json.get("scale").getAsFloat());
+        return value.getAsString();
     }
 
-    private static float optionalFloat(JsonObject json, String name, float fallback) {
-        return json.has(name) ? json.get(name).getAsFloat() : fallback;
+    private static int integer(JsonObject json, String name) {
+        JsonElement value = field(json, name);
+        if (!value.isJsonPrimitive() || !value.getAsJsonPrimitive().isNumber()) {
+            throw new IllegalArgumentException(name + " must be an integer");
+        }
+        try { return value.getAsBigDecimal().intValueExact(); }
+        catch (ArithmeticException | NumberFormatException exception) {
+            throw new IllegalArgumentException(name + " must be a 32-bit integer", exception);
+        }
     }
 
-    private static Identifier identifier(JsonObject json, String name) {
-        return new Identifier(json.get(name).getAsString());
+    private static boolean bool(JsonObject json, String name) {
+        JsonElement value = field(json, name);
+        if (!value.isJsonPrimitive() || !value.getAsJsonPrimitive().isBoolean()) {
+            throw new IllegalArgumentException(name + " must be a boolean");
+        }
+        return value.getAsBoolean();
     }
 
-    public Map<Identifier, WeaponDefinition> definitions() {
-        return definitions;
+    private static float number(JsonObject json, String name) { return numberValue(field(json, name), name); }
+
+    private static double doubleNumber(JsonObject json, String name) {
+        JsonElement value = field(json, name);
+        if (!value.isJsonPrimitive() || !value.getAsJsonPrimitive().isNumber()) {
+            throw new IllegalArgumentException(name + " must be a number");
+        }
+        double result = value.getAsDouble();
+        if (!Double.isFinite(result)) throw new IllegalArgumentException(name + " must be finite");
+        return result;
     }
 
-    public WeaponDefinition get(Identifier id) {
-        return definitions.get(id);
+    private static float numberValue(JsonElement value, String name) {
+        if (!value.isJsonPrimitive() || !value.getAsJsonPrimitive().isNumber()) {
+            throw new IllegalArgumentException(name + " must be a number");
+        }
+        float result = value.getAsFloat();
+        if (!Float.isFinite(result)) throw new IllegalArgumentException(name + " must be finite");
+        return result;
     }
+
+    private static float optionalNumber(JsonObject json, String name, float fallback) {
+        return json.has(name) ? number(json, name) : fallback;
+    }
+
+    private static String localId(String path) {
+        DefinitionValidation.path(path, "registry id");
+        return "decimation:" + path;
+    }
+
+    public Map<String, WeaponDefinition> definitions() { return definitions; }
+    public Map<String, AmmunitionDefinition> ammunition() { return ammunition; }
+    public WeaponDefinition get(String id) { return definitions.get(id); }
+    public String fingerprint() { return fingerprint; }
 }

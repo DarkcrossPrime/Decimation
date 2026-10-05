@@ -1,278 +1,280 @@
 package com.decimation.module.gun;
 
-import com.decimation.module.gun.data.FireMode;
-import com.decimation.module.gun.data.WeaponDefinition;
-import com.decimation.module.gun.data.WeaponSound;
-import com.decimation.module.gun.data.WeaponSoundCue;
-import com.decimation.module.gun.network.WeaponAction;
+import com.decimation.module.gun.network.WeaponCatalogPayload;
 import com.decimation.module.gun.network.WeaponEvent;
-import com.decimation.module.gun.network.WeaponPackets;
+import com.decimation.module.gun.network.WeaponEventPayload;
+import com.decimation.module.gun.network.WeaponInputPayload;
+import com.decimation.module.gun.network.WeaponCarryPayload;
+import com.decimation.module.gun.network.WeaponSoundPayload;
+import com.decimation.module.gun.data.WeaponAudio;
+import com.decimation.module.gun.data.WeaponSound;
 import java.util.HashMap;
-import java.util.LinkedHashSet;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
 import net.fabricmc.fabric.api.networking.v1.PlayerLookup;
-import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
-import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.item.ItemStack;
-import net.minecraft.network.PacketByteBuf;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.item.ItemStack;
 
+/** All methods are called on the logical server thread. */
 public final class WeaponServerController {
-    private static final double TICKS_PER_MINUTE = 20.0 * 60.0;
-    private final Map<UUID, ControlState> controls = new HashMap<>();
+    private final Map<UUID, Session> sessions = new HashMap<>();
+    private final Set<UUID> verified = new HashSet<>();
 
-    public void handle(ServerPlayerEntity player, WeaponAction action) {
-        ControlState control = controls.computeIfAbsent(player.getUuid(), ignored -> new ControlState());
-        switch (action) {
-            case TRIGGER_DOWN -> {
-                if (!control.triggerHeld) control.triggerPressed = true;
-                control.triggerHeld = true;
+    public void join(ServerPlayer player) {
+        disconnect(player.getUUID());
+        if (!ServerPlayNetworking.canSend(player, WeaponCatalogPayload.TYPE)
+            || !ServerPlayNetworking.canSend(player, WeaponSoundPayload.TYPE)
+            || !ServerPlayNetworking.canSend(player, WeaponCarryPayload.TYPE)
+            || !ServerPlayNetworking.canSend(player, WeaponEventPayload.TYPE)) {
+            player.connection.disconnect(Component.literal("This server requires the matching Decimation 26.3 build."));
+            return;
+        }
+        ServerPlayNetworking.send(player, new WeaponCatalogPayload(WeaponCatalogPayload.PROTOCOL, GunModule.catalog().fingerprint()));
+    }
+
+    public void acceptCatalog(ServerPlayer player, WeaponCatalogPayload payload) {
+        if (payload.protocol() != WeaponCatalogPayload.PROTOCOL || !payload.fingerprint().equals(GunModule.catalog().fingerprint())) {
+            disconnect(player.getUUID());
+            player.connection.disconnect(Component.literal("Decimation weapon definitions differ. Install the same build on client and server."));
+            return;
+        }
+        if (!verified.add(player.getUUID())) return; // Repeated acknowledgements must not trigger snapshot sweeps.
+        for (var entry : sessions.entrySet()) {
+            var owner = player.level().getServer().getPlayerList().getPlayer(entry.getKey());
+            var session = entry.getValue();
+            if (owner != null && session.cycle != null && session.binding != null
+                && session.binding.matches(owner, owner.getMainHandItem(), owner.getInventory().getSelectedSlot(), owner.level())
+                && owner.isAlive() && !owner.isSpectator() && !owner.isSleeping()
+                && (owner == player || PlayerLookup.tracking(owner).contains(player))) sendCarryTo(player, owner, session);
+        }
+    }
+
+    public void handle(ServerPlayer player, WeaponInputPayload input) {
+        if (!verified.contains(player.getUUID()) || !player.isAlive() || player.isSpectator() || player.isSleeping()) return;
+        if (!input.matchesLifecycle(player.getId(), player.level().dimension().identifier())) return;
+        ItemStack stack = player.getMainHandItem();
+        if (input.slot() != player.getInventory().getSelectedSlot() || !(stack.getItem() instanceof WeaponItem weapon)
+            || !input.weapon().equals(weapon.identifier())) return;
+        long tick = now(player.level().getServer());
+        Session session = sessions.computeIfAbsent(player.getUUID(), ignored -> new Session());
+        bind(player, session, stack, weapon);
+        if (!session.input.accept(tick)) {
+            if (!input.trigger() && !input.aim()) session.cycle.stopInput();
+            return;
+        }
+        session.cycle.input(input.trigger(), input.aim(), input.relaxed());
+        WeaponState state = weapon.state(stack);
+        if (input.reload() && session.lastReloadRequest != tick && hasAmmo(player, weapon)) {
+            session.lastReloadRequest = tick;
+            if (session.cycle.beginReload(tick, state)) {
+                session.reloadAudio = new ReloadAudioTimeline(weapon.definition().audio(), tick,
+                    !state.chambered() && weapon.definition().ammo().chamberCapacity() > 0);
+                sendEvent(player, session, WeaponEvent.RELOAD_STARTED, state);
+                sendReloadCues(player, session, tick);
             }
-            case TRIGGER_UP -> control.triggerHeld = false;
-            case AIM_DOWN -> {
-                control.aiming = true;
-                control.aimTicks = 0;
-            }
-            case AIM_UP -> {
-                control.aiming = false;
-                control.aimTicks = 0;
-            }
-            case RELOAD -> startReload(player, control);
-            case CYCLE_FIRE_MODE -> cycleFireMode(player, control);
+        }
+        if (input.cycle() && session.lastModeRequest != tick && !session.cycle.reloading()) {
+            session.lastModeRequest = tick;
+            state = state.cycleFireMode(weapon.definition());
+            weapon.writeState(stack, state);
+            session.cycle.fireModeChanged();
+            sendEvent(player, session, WeaponEvent.FIRE_MODE_CHANGED, state);
+            sendSound(player, weapon, WeaponSound.FIRE_MODE);
         }
     }
 
     public void tick(MinecraftServer server) {
-        for (ServerPlayerEntity player : server.getPlayerManager().getPlayerList()) tickPlayer(player);
-        controls.keySet().removeIf(uuid -> server.getPlayerManager().getPlayer(uuid) == null);
-    }
-
-    private void tickPlayer(ServerPlayerEntity player) {
-        ControlState control = controls.computeIfAbsent(player.getUuid(), ignored -> new ControlState());
-        ItemStack stack = player.getMainHandStack();
-        if (!(stack.getItem() instanceof WeaponItem weapon)) {
-            cancelReload(player, control);
-            control.resetInput();
-            return;
-        }
-        WeaponDefinition definition = weapon.definition();
-        if (control.aiming && !player.isSprinting()) control.aimTicks++;
-        else control.aimTicks = 0;
-        if (control.reloading) {
-            if (control.reloadStack != stack || !control.reloadWeapon.equals(definition.id())) {
-                cancelReload(player, control);
-            } else {
-                emitReloadSounds(player, definition,
-                    player.getWorld().getTime() - control.reloadStartedAt, control);
-                if (player.getWorld().getTime() >= control.reloadEndsAt) {
-                    completeReload(player, stack, definition, control);
+        long tick = now(server);
+        // Only players who have used a weapon have a session; no online-player allocation sweep.
+        for (var iterator = sessions.entrySet().iterator(); iterator.hasNext();) {
+            var entry = iterator.next();
+            ServerPlayer player = server.getPlayerList().getPlayer(entry.getKey());
+            if (player == null) { iterator.remove(); continue; }
+            Session session = entry.getValue();
+            ItemStack stack = player.getMainHandItem();
+            if (!player.isAlive() || player.isSpectator() || player.isSleeping() || !(stack.getItem() instanceof WeaponItem weapon)) {
+                unbind(player, session);
+                continue;
+            }
+            bind(player, session, stack, weapon);
+            if (session.input.expired(tick)) session.cycle.stopInput();
+            session.cycle.advanceAim(player.isSprinting());
+            WeaponState state = weapon.state(stack);
+            sendReloadCues(player, session, tick);
+            if (session.cycle.reloadDue(tick)) {
+                boolean consumed = consumeAmmo(player, weapon);
+                session.cycle.endReload();
+                cancelReloadAudio(session);
+                if (consumed) {
+                    state = state.reloaded(weapon.definition());
+                    weapon.writeState(stack, state);
                 }
+                sendEvent(player, session, consumed ? WeaponEvent.RELOAD_COMPLETED : WeaponEvent.RELOAD_CANCELLED, state);
+            }
+            switch (session.cycle.pollShot(tick, state)) {
+                case FIRED -> {
+                    state = state.consumeShot(weapon.definition());
+                    weapon.writeState(stack, state);
+                    ShotResolver.resolve(player, stack, weapon.definition(), session.cycle.aimProgress());
+                    sendShotSound(player, weapon);
+                    sendEvent(player, session, WeaponEvent.FIRED, state);
+                }
+                case DRY_FIRE -> {
+                    sendSound(player, weapon, WeaponSound.DRY_FIRE);
+                    sendEvent(player, session, WeaponEvent.DRY_FIRE, state);
+                }
+                case NONE -> { }
+            }
+            if (session.sentCarry != session.cycle.loweredTicks() || session.sentAim != session.cycle.aimProgress()
+                || session.sentReload != session.cycle.reloading()) {
+                session.sentCarry = session.cycle.loweredTicks();session.sentAim = session.cycle.aimProgress();session.sentReload = session.cycle.reloading();
+                sendCarry(player, session);
             }
         }
-        if (control.reloading) {
-            control.triggerPressed = false;
-            return;
+    }
+
+    private void bind(ServerPlayer player, Session session, ItemStack stack, WeaponItem weapon) {
+        int slot = player.getInventory().getSelectedSlot();
+        if (session.binding != null && session.binding.matches(player, stack, slot, player.level())) return;
+        unbind(player, session);
+        session.binding = new WeaponBinding(player, stack, slot, player.level());session.stack = stack;session.weapon = weapon;session.slot = slot;
+        session.cycle = new WeaponCycle(weapon.definition(), session.nextShotTick);session.sentCarry = -1;session.sentAim = -1;session.sentReload = false;
+    }
+
+    private void unbind(ServerPlayer player, Session session) {
+        if (session.cycle != null) {
+            if (session.cycle.reloading()) sendEvent(player, session, WeaponEvent.RELOAD_CANCELLED, session.weapon.state(session.stack));
+            session.nextShotTick = session.cycle.nextShotTick();
         }
-
-        WeaponState state = WeaponState.read(stack, definition);
-        FireMode mode = state.fireMode(definition);
-        if (control.triggerPressed && mode == FireMode.BURST) control.burstRemaining = definition.burstSize();
-        boolean wantsShot = switch (mode) {
-            case SEMI -> control.triggerPressed;
-            case BURST -> control.burstRemaining > 0;
-            case AUTOMATIC -> control.triggerHeld;
-        };
-        control.triggerPressed = false;
-        if (!wantsShot) {
-            control.fireBudget = Math.min(1.0, control.fireBudget + definition.rateOfFire() / TICKS_PER_MINUTE);
-            return;
-        }
-
-        control.fireBudget = Math.min(1.0, control.fireBudget + definition.rateOfFire() / TICKS_PER_MINUTE);
-        if (control.fireBudget < 1.0) return;
-        control.fireBudget -= 1.0;
-        if (!state.consumeShot()) {
-            control.burstRemaining = 0;
-            sendSound(player, definition, WeaponSound.DRY_FIRE);
-            sendEvent(player, definition, state, WeaponEvent.DRY_FIRE);
-            return;
-        }
-        if (mode == FireMode.BURST) control.burstRemaining--;
-        state.write(stack, definition);
-        float aimProgress = control.aiming && !player.isSprinting()
-            ? Math.min(1.0f, control.aimTicks / (float) Math.max(1, definition.handling().adsTicks())) : 0;
-        ShotResolver.resolve(player, definition, aimProgress);
-        sendShotSound(player, definition);
-        sendEvent(player, definition, state, WeaponEvent.FIRED);
+        cancelReloadAudio(session);
+        session.input.release();session.binding = null;session.stack = null;session.weapon = null;session.cycle = null;
     }
 
-    private void startReload(ServerPlayerEntity player, ControlState control) {
-        ItemStack stack = player.getMainHandStack();
-        if (!(stack.getItem() instanceof WeaponItem weapon) || control.reloading) return;
-        WeaponDefinition definition = weapon.definition();
-        WeaponState state = WeaponState.read(stack, definition);
-        if (state.isFull(definition) || !hasAmmunition(player, definition)) return;
-        control.reloading = true;
-        control.reloadStack = stack;
-        control.reloadWeapon = definition.id();
-        control.reloadStartedAt = player.getWorld().getTime();
-        control.reloadEndsAt = player.getWorld().getTime() + definition.reloadTicks();
-        control.reloadCueIndex = 0;
-        control.reloadNeedsRack = !state.chambered() && definition.ammo().chamberCapacity() > 0;
-        control.triggerHeld = false;
-        control.burstRemaining = 0;
-        sendEvent(player, definition, state, WeaponEvent.RELOAD_STARTED);
+    private static boolean hasAmmo(ServerPlayer player, WeaponItem weapon) {
+        if (player.getAbilities().instabuild) return true;
+        AmmoItem ammo = GunModule.ammunition().get(weapon.definition().ammo().itemId());
+        Inventory inventory = player.getInventory();
+        for (int slot = 0; slot < inventory.getContainerSize(); slot++) if (inventory.getItem(slot).is(ammo)) return true;
+        return false;
     }
 
-    private static void emitReloadSounds(ServerPlayerEntity player, WeaponDefinition definition,
-                                         long elapsed, ControlState control) {
-        while (control.reloadCueIndex < definition.audio().reloadCues().size()) {
-            WeaponSoundCue cue = definition.audio().reloadCues().get(control.reloadCueIndex);
-            if (cue.tick() > elapsed) return;
-            if (cue.sound() != WeaponSound.RACK || control.reloadNeedsRack) {
-                sendSound(player, definition, cue.sound());
-            }
-            control.reloadCueIndex++;
+    private void sendReloadCues(ServerPlayer player, Session session, long tick) {
+        if (session.reloadAudio == null) return;
+        WeaponSound cue;
+        while ((cue = session.reloadAudio.nextDue(tick)) != null) sendSound(player, session.weapon, cue);
+    }
+
+    private static void cancelReloadAudio(Session session) {
+        if (session.reloadAudio != null) session.reloadAudio.cancel();
+        session.reloadAudio = null;
+    }
+
+    private void sendShotSound(ServerPlayer source, WeaponItem weapon) {
+        WeaponAudio audio = weapon.definition().audio();
+        WeaponSoundPayload primary = soundPayload(source, weapon, audio.shot());
+        WeaponSoundPayload distant = audio.shot() != WeaponSound.FIRE_SUPPRESSED
+            && audio.sound(WeaponSound.FIRE_DISTANT) != null
+            ? soundPayload(source, weapon, WeaponSound.FIRE_DISTANT) : primary;
+        for (ServerPlayer recipient : PlayerLookup.around(source.level(), source.position(), audio.maximumShotRange())) {
+            if (recipient == source) continue;
+            double distance = Math.sqrt(source.distanceToSqr(recipient));
+            WeaponSound cue = audio.shotForDistance(distance);
+            if (distance <= WeaponAudio.range(cue)) sendSoundTo(recipient, cue == WeaponSound.FIRE_DISTANT ? distant : primary);
+        }
+        sendSoundTo(source, primary);
+    }
+
+    private void sendSound(ServerPlayer source, WeaponItem weapon, WeaponSound cue) {
+        if (weapon.definition().audio().sound(cue) == null) return;
+        WeaponSoundPayload payload = soundPayload(source, weapon, cue);
+        for (ServerPlayer recipient : PlayerLookup.around(source.level(), source.position(), WeaponAudio.range(cue))) {
+            if (recipient != source) sendSoundTo(recipient, payload);
+        }
+        sendSoundTo(source, payload);
+    }
+
+    private void sendSoundTo(ServerPlayer recipient, WeaponSoundPayload payload) {
+        if (verified.contains(recipient.getUUID()) && ServerPlayNetworking.canSend(recipient, WeaponSoundPayload.TYPE)) {
+            ServerPlayNetworking.send(recipient, payload);
         }
     }
 
-    private void completeReload(ServerPlayerEntity player, ItemStack stack,
-                                WeaponDefinition definition, ControlState control) {
-        if (!consumeAmmunition(player, definition)) {
-            cancelReload(player, control);
-            return;
-        }
-        WeaponState state = WeaponState.read(stack, definition);
-        state.reload(definition);
-        state.write(stack, definition);
-        control.clearReload();
-        sendEvent(player, definition, state, WeaponEvent.RELOAD_COMPLETED);
+    private static WeaponSoundPayload soundPayload(ServerPlayer source, WeaponItem weapon, WeaponSound cue) {
+        var position = source.getEyePosition();
+        return new WeaponSoundPayload(weapon.identifier(), cue, source.level().dimension().identifier(),
+            position.x, position.y, position.z);
     }
 
-    private void cycleFireMode(ServerPlayerEntity player, ControlState control) {
-        ItemStack stack = player.getMainHandStack();
-        if (!(stack.getItem() instanceof WeaponItem weapon) || control.reloading) return;
-        WeaponDefinition definition = weapon.definition();
-        WeaponState state = WeaponState.read(stack, definition);
-        state.cycleFireMode(definition);
-        state.write(stack, definition);
-        sendSound(player, definition, WeaponSound.FIRE_MODE);
-        sendEvent(player, definition, state, WeaponEvent.FIRE_MODE_CHANGED);
-    }
-
-    private static boolean hasAmmunition(ServerPlayerEntity player, WeaponDefinition definition) {
-        return player.getAbilities().creativeMode
-            || player.getInventory().contains(new ItemStack(GunModule.ammo(definition.ammo().itemId())));
-    }
-
-    private static boolean consumeAmmunition(ServerPlayerEntity player, WeaponDefinition definition) {
-        if (player.getAbilities().creativeMode) return true;
-        PlayerInventory inventory = player.getInventory();
-        for (int slot = 0; slot < inventory.size(); slot++) {
-            ItemStack candidate = inventory.getStack(slot);
-            if (candidate.isOf(GunModule.ammo(definition.ammo().itemId()))) {
-                candidate.decrement(1);
-                return true;
+    private static boolean consumeAmmo(ServerPlayer player, WeaponItem weapon) {
+        if (player.getAbilities().instabuild) return true;
+        AmmoItem ammo = GunModule.ammunition().get(weapon.definition().ammo().itemId());
+        Inventory inventory = player.getInventory();
+        for (int slot = 0; slot < inventory.getContainerSize(); slot++) {
+            ItemStack candidate = inventory.getItem(slot);
+            if (!candidate.isEmpty() && candidate.is(ammo)) {
+                candidate.shrink(1);inventory.setChanged();return true;
             }
         }
         return false;
     }
 
-    private void cancelReload(ServerPlayerEntity player, ControlState control) {
-        if (!control.reloading) return;
-        if (control.reloadStack != null && control.reloadStack.getItem() instanceof WeaponItem weapon) {
-            sendEvent(player, weapon.definition(), WeaponState.read(control.reloadStack, weapon.definition()),
-                WeaponEvent.RELOAD_CANCELLED);
+    private void sendEvent(ServerPlayer owner, Session session, WeaponEvent event, WeaponState state) {
+        WeaponEventPayload payload = new WeaponEventPayload(owner.getUUID(), session.weapon.identifier(), session.slot, event, state,
+            now(owner.level().getServer()), owner.getId(), owner.level().dimension().identifier());
+        for (ServerPlayer recipient : PlayerLookup.tracking(owner)) {
+            if (recipient != owner && verified.contains(recipient.getUUID()) && ServerPlayNetworking.canSend(recipient, WeaponEventPayload.TYPE)) ServerPlayNetworking.send(recipient, payload);
         }
-        control.clearReload();
+        if (verified.contains(owner.getUUID()) && ServerPlayNetworking.canSend(owner, WeaponEventPayload.TYPE)) ServerPlayNetworking.send(owner, payload);
     }
 
-    private static void sendShotSound(ServerPlayerEntity owner, WeaponDefinition definition) {
-        for (ServerPlayerEntity recipient : soundRecipients(owner)) {
-            WeaponSound cue = definition.audio().shotForDistance(recipient.distanceTo(owner));
-            sendSoundPacket(recipient, owner, definition, cue);
-        }
+    public void startTracking(net.minecraft.world.entity.Entity entity, ServerPlayer observer) {
+        if (!(entity instanceof ServerPlayer owner)) return;
+        var session = sessions.get(owner.getUUID());
+        if (session != null && session.cycle != null && session.binding.matches(owner, owner.getMainHandItem(), owner.getInventory().getSelectedSlot(), owner.level())
+            && owner.isAlive() && !owner.isSpectator() && !owner.isSleeping()) sendCarryTo(observer, owner, session);
+    }
+    private void sendCarry(ServerPlayer owner, Session session) {
+        var payload = carryPayload(owner, session); // Reuse one immutable snapshot for every observer.
+        for (var observer : PlayerLookup.tracking(owner)) if (observer != owner) sendCarryTo(observer, payload);
+        sendCarryTo(owner, payload);
+    }
+    private void sendCarryTo(ServerPlayer observer, ServerPlayer owner, Session session) {
+        sendCarryTo(observer, carryPayload(owner, session));
+    }
+    private void sendCarryTo(ServerPlayer observer, WeaponCarryPayload payload) {
+        if (verified.contains(observer.getUUID()) && ServerPlayNetworking.canSend(observer, WeaponCarryPayload.TYPE))
+            ServerPlayNetworking.send(observer, payload);
+    }
+    private static WeaponCarryPayload carryPayload(ServerPlayer owner, Session session) {
+        long tick = now(owner.level().getServer());
+        int remaining = session.cycle.reloadRemaining(tick);
+        boolean rack = remaining > 0 && !session.weapon.state(session.stack).chambered() && session.weapon.definition().ammo().chamberCapacity() > 0;
+        return new WeaponCarryPayload(owner.getUUID(), session.weapon.identifier(), session.cycle.loweredTicks(), owner.getId(), session.slot,
+            owner.level().dimension().identifier(), session.cycle.aimProgress(), session.cycle.reloadElapsed(tick), remaining, rack, tick);
     }
 
-    private static void sendSound(ServerPlayerEntity owner, WeaponDefinition definition, WeaponSound cue) {
-        for (ServerPlayerEntity recipient : soundRecipients(owner)) {
-            sendSoundPacket(recipient, owner, definition, cue);
-        }
-    }
+    private static long now(MinecraftServer server) { return server.overworld().getLevelData().getGameTime(); }
+    public void disconnect(UUID player) { sessions.remove(player);verified.remove(player); }
+    public void clear() { sessions.clear();verified.clear(); }
 
-    private static Set<ServerPlayerEntity> soundRecipients(ServerPlayerEntity owner) {
-        Set<ServerPlayerEntity> recipients = new LinkedHashSet<>(PlayerLookup.tracking(owner));
-        recipients.add(owner);
-        return recipients;
-    }
-
-    private static void sendSoundPacket(ServerPlayerEntity recipient, ServerPlayerEntity source,
-                                        WeaponDefinition definition, WeaponSound cue) {
-        if (definition.audio().sound(cue) == null) return;
-        PacketByteBuf buffer = PacketByteBufs.create();
-        buffer.writeIdentifier(definition.id());
-        buffer.writeVarInt(cue.ordinal());
-        buffer.writeDouble(source.getX());
-        buffer.writeDouble(source.getEyeY());
-        buffer.writeDouble(source.getZ());
-        ServerPlayNetworking.send(recipient, WeaponPackets.SOUND, buffer);
-    }
-
-    private static void sendEvent(ServerPlayerEntity owner, WeaponDefinition definition,
-                                  WeaponState state, WeaponEvent event) {
-        for (ServerPlayerEntity recipient : PlayerLookup.tracking(owner)) {
-            ServerPlayNetworking.send(recipient, WeaponPackets.EVENT, eventBuffer(owner, definition, state, event));
-        }
-        ServerPlayNetworking.send(owner, WeaponPackets.EVENT, eventBuffer(owner, definition, state, event));
-    }
-
-    private static PacketByteBuf eventBuffer(ServerPlayerEntity owner, WeaponDefinition definition,
-                                             WeaponState state, WeaponEvent event) {
-        PacketByteBuf buffer = PacketByteBufs.create();
-        buffer.writeUuid(owner.getUuid());
-        buffer.writeIdentifier(definition.id());
-        buffer.writeVarInt(event.ordinal());
-        buffer.writeVarInt(state.totalRounds());
-        buffer.writeVarInt(state.fireMode(definition).ordinal());
-        buffer.writeLong(owner.getWorld().getTime());
-        return buffer;
-    }
-
-    private static final class ControlState {
-        private boolean triggerHeld;
-        private boolean triggerPressed;
-        private boolean aiming;
-        private int aimTicks;
-        private int burstRemaining;
-        private double fireBudget = 1.0;
-        private boolean reloading;
-        private ItemStack reloadStack;
-        private net.minecraft.util.Identifier reloadWeapon;
-        private long reloadStartedAt;
-        private long reloadEndsAt;
-        private int reloadCueIndex;
-        private boolean reloadNeedsRack;
-
-        private void clearReload() {
-            reloading = false;
-            reloadStack = null;
-            reloadWeapon = null;
-            reloadStartedAt = 0;
-            reloadEndsAt = 0;
-            reloadCueIndex = 0;
-            reloadNeedsRack = false;
-        }
-
-        private void resetInput() {
-            triggerHeld = false;
-            triggerPressed = false;
-            aiming = false;
-            aimTicks = 0;
-            burstRemaining = 0;
-        }
+    private static final class Session {
+        private ItemStack stack;
+        private WeaponBinding binding;
+        private WeaponItem weapon;
+        private int slot, sentCarry = -1;
+        private float sentAim = -1;
+        private boolean sentReload;
+        private final WeaponInputLease input = new WeaponInputLease();
+        private WeaponCycle cycle;
+        private ReloadAudioTimeline reloadAudio;
+        private double nextShotTick = Double.NEGATIVE_INFINITY;
+        private long lastReloadRequest = Long.MIN_VALUE, lastModeRequest = Long.MIN_VALUE;
     }
 }

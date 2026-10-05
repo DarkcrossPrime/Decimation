@@ -1,9 +1,15 @@
 package com.decimation.module.gun;
 
-import net.minecraft.item.Item;
+import com.decimation.module.gun.data.AmmunitionDefinition;
+import net.minecraft.world.item.Item;
 
 public final class AmmoItem extends Item {
-    public AmmoItem() {
-        super(new Settings().maxCount(16));
+    private final AmmunitionDefinition definition;
+
+    public AmmoItem(Properties properties, AmmunitionDefinition definition) {
+        super(properties);
+        this.definition = definition;
     }
+
+    public AmmunitionDefinition definition() { return definition; }
 }

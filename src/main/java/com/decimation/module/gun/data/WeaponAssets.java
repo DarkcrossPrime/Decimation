@@ -1,6 +1,11 @@
 package com.decimation.module.gun.data;
 
-import net.minecraft.util.Identifier;
 
-public record WeaponAssets(Identifier model, Identifier texture, Identifier itemTexture,
-                           Identifier fireAnimation, Identifier reloadAnimation) { }
+public record WeaponAssets(String model, String texture, String itemTexture,
+                           String fireAnimation, String reloadAnimation) {
+    public WeaponAssets {
+        for (String value : new String[] {model, texture, itemTexture, fireAnimation, reloadAnimation}) {
+            DefinitionValidation.identifier(value, "weapon asset");
+        }
+    }
+}
