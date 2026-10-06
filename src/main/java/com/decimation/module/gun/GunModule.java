@@ -1,73 +1,85 @@
 package com.decimation.module.gun;
 
-import com.decimation.Decimation;
 import com.decimation.module.DecimationItemGroups;
-import com.decimation.module.DecimationModule;
+import com.decimation.module.gun.data.AmmunitionDefinition;
 import com.decimation.module.gun.data.WeaponCatalog;
 import com.decimation.module.gun.data.WeaponDefinition;
 import com.decimation.module.gun.network.WeaponPackets;
 import java.util.Collections;
-import java.util.LinkedHashSet;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.Set;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.event.player.AttackBlockCallback;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
-import net.minecraft.item.Item;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.sound.SoundEvent;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.Identifier;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.InteractionResult;
 
-public final class GunModule implements DecimationModule {
-    private static final Identifier ID = new Identifier(Decimation.MOD_ID, "guns");
-    private static final Map<Identifier, WeaponItem> WEAPONS = new LinkedHashMap<>();
-    private static final Map<Identifier, AmmoItem> AMMUNITION = new LinkedHashMap<>();
+/** All common registration happens once after validating the complete catalogue. */
+public final class GunModule {
     private static WeaponCatalog catalog;
+    private static Map<String, WeaponItem> weapons = Map.of();
+    private static Map<String, AmmoItem> ammunition = Map.of();
 
-    public Identifier id() { return ID; }
+    private GunModule() { }
 
-    public void initialize() {
-        catalog = WeaponCatalog.load();
-        Set<Identifier> soundIds = new LinkedHashSet<>();
-        for (WeaponDefinition definition : catalog.definitions().values()) {
-            WeaponItem weapon = Registry.register(Registries.ITEM, definition.id(), new WeaponItem(definition));
-            WEAPONS.put(definition.id(), weapon);
-            AMMUNITION.computeIfAbsent(definition.ammo().itemId(), ammoId ->
-                Registry.register(Registries.ITEM, ammoId, new AmmoItem()));
-            soundIds.addAll(definition.audio().sounds().values());
+    public static void initialize() {
+        if (catalog != null) throw new IllegalStateException("Gun module already initialized");
+        WeaponCatalog loaded = WeaponCatalog.load(GunModule.class.getClassLoader());
+        // Preflight conflicts before modifying either registry.
+        for (String id : loaded.definitions().keySet()) requireAvailable(id);
+        for (String id : loaded.ammunition().keySet()) requireAvailable(id);
+        DecimationItemGroups.requireAvailable("weapons");
+        DecimationItemGroups.requireAvailable("ammunition");
+        WeaponComponents.initialize();
+        WeaponSounds.initialize(loaded);
+
+        Map<String, AmmoItem> ammoItems = new LinkedHashMap<>();
+        for (AmmunitionDefinition definition : loaded.ammunition().values()) {
+            ResourceKey<Item> key = itemKey(definition.id());
+            AmmoItem item = new AmmoItem(new Item.Properties().setId(key).stacksTo(definition.maxStackSize()), definition);
+            Registry.register(BuiltInRegistries.ITEM, key, item);
+            ammoItems.put(definition.id(), item);
         }
-        for (Identifier soundId : soundIds) {
-            if (Decimation.MOD_ID.equals(soundId.getNamespace()) && !Registries.SOUND_EVENT.containsId(soundId)) {
-                Registry.register(Registries.SOUND_EVENT, soundId, SoundEvent.of(soundId));
-            }
+        Map<String, WeaponItem> weaponItems = new LinkedHashMap<>();
+        for (WeaponDefinition definition : loaded.definitions().values()) {
+            ResourceKey<Item> key = itemKey(definition.id());
+            WeaponItem item = new WeaponItem(new Item.Properties().setId(key).stacksTo(1), definition);
+            Registry.register(BuiltInRegistries.ITEM, key, item);
+            weaponItems.put(definition.id(), item);
         }
-
-        DecimationItemGroups.register("weapons", WEAPONS.values());
-        DecimationItemGroups.register("ammunition", AMMUNITION.values());
+        ammunition = Collections.unmodifiableMap(ammoItems);
+        weapons = Collections.unmodifiableMap(weaponItems);
+        catalog = loaded;
+        DecimationItemGroups.register("weapons", weapons.values());
+        DecimationItemGroups.register("ammunition", ammunition.values());
         WeaponServerController controller = new WeaponServerController();
-        WeaponPackets.registerServerReceivers(controller);
+        WeaponPackets.initialize(controller);
         ServerTickEvents.END_SERVER_TICK.register(controller::tick);
-        AttackBlockCallback.EVENT.register((player, world, hand, position, direction) ->
-            player.getStackInHand(hand).getItem() instanceof WeaponItem ? ActionResult.FAIL : ActionResult.PASS);
-        AttackEntityCallback.EVENT.register((player, world, hand, entity, hitResult) ->
-            player.getStackInHand(hand).getItem() instanceof WeaponItem ? ActionResult.FAIL : ActionResult.PASS);
-        Decimation.LOGGER.info("Initialized {} production weapons and {} ammunition items",
-            WEAPONS.size(), AMMUNITION.size());
+        ServerLifecycleEvents.SERVER_STOPPED.register(server -> controller.clear());
+        AttackBlockCallback.EVENT.register((player, level, hand, position, direction) ->
+            player.getMainHandItem().getItem() instanceof WeaponItem ? InteractionResult.FAIL : InteractionResult.PASS);
+        AttackEntityCallback.EVENT.register((player, level, hand, entity, hit) ->
+            player.getMainHandItem().getItem() instanceof WeaponItem ? InteractionResult.FAIL : InteractionResult.PASS);
     }
 
-    public static Map<Identifier, WeaponItem> weapons() {
-        return Collections.unmodifiableMap(WEAPONS);
+    private static ResourceKey<Item> itemKey(String id) {
+        return ResourceKey.create(Registries.ITEM, Identifier.parse(id));
     }
 
-    public static Item ammo(Identifier id) {
-        Item item = AMMUNITION.get(id);
-        if (item == null) throw new IllegalArgumentException("Unknown ammunition item: " + id);
-        return item;
+    private static void requireAvailable(String id) {
+        if (BuiltInRegistries.ITEM.containsKey(Identifier.parse(id))) {
+            throw new IllegalStateException("Item already registered: " + id);
+        }
     }
 
+    public static Map<String, WeaponItem> weapons() { return weapons; }
+    public static Map<String, AmmoItem> ammunition() { return ammunition; }
     public static WeaponCatalog catalog() {
         if (catalog == null) throw new IllegalStateException("Gun module is not initialized");
         return catalog;

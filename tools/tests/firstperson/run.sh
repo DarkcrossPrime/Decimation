@@ -8,7 +8,7 @@ compiler=(javac)
 if ! command -v javac >/dev/null 2>&1; then
     compiler=(java com.sun.tools.javac.Main)
 fi
-"${compiler[@]}" --release 17 -d "$test_dir" \
+"${compiler[@]}" --release 25 -d "$test_dir" \
     "$source_dir/FirstPersonRigPose.java" \
     "$source_dir/FirstPersonRigSolver.java" \
     "$source_dir/FirstPersonSupportArmSolver.java" \

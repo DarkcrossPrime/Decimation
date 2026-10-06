@@ -1,102 +1,91 @@
 package com.decimation.module.gun;
 
+import com.decimation.Decimation;
 import com.decimation.module.gun.data.BallisticsDefinition;
 import com.decimation.module.gun.data.WeaponDefinition;
+import com.decimation.module.gun.data.WeaponMechanism;
+import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.Optional;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.projectile.ArrowEntity;
-import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.server.world.ServerWorld;
-import net.minecraft.util.hit.BlockHitResult;
-import net.minecraft.util.hit.HitResult;
-import net.minecraft.util.math.Box;
-import net.minecraft.util.math.Vec3d;
-import net.minecraft.world.RaycastContext;
+import java.util.List;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.damagesource.DamageType;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.arrow.AbstractArrow;
+import net.minecraft.world.entity.projectile.arrow.Arrow;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.ClipContext;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.phys.HitResult;
+import net.minecraft.world.phys.Vec3;
 
 public final class ShotResolver {
+    private static final ResourceKey<DamageType> BULLET = ResourceKey.create(Registries.DAMAGE_TYPE,
+        Identifier.fromNamespaceAndPath(Decimation.MOD_ID, "bullet"));
     private ShotResolver() { }
 
-    public static void resolve(ServerPlayerEntity player, WeaponDefinition definition, float aimProgress) {
-        if (definition.mechanism() == com.decimation.module.gun.data.WeaponMechanism.PROJECTILE) {
-            spawnProjectile(player, definition, aimProgress);
-        } else {
-            resolveHitscan(player, definition, aimProgress);
-        }
+    public static void resolve(ServerPlayer player, ItemStack stack, WeaponDefinition definition, float aimProgress) {
+        if (definition.mechanism() == WeaponMechanism.PROJECTILE) spawnProjectile(player, stack, definition, aimProgress);
+        else resolveHitscan(player, definition, aimProgress);
     }
 
-    private static void resolveHitscan(ServerPlayerEntity player, WeaponDefinition definition, float aimProgress) {
+    private static void resolveHitscan(ServerPlayer player, WeaponDefinition definition, float aimProgress) {
+        ServerLevel level = player.level();
         BallisticsDefinition ballistics = definition.ballistics();
-        Vec3d start = player.getCameraPosVec(1.0f);
-        Vec3d direction = spreadDirection(player, definition, aimProgress);
-        Vec3d maximumEnd = start.add(direction.multiply(ballistics.range()));
-        BlockHitResult blockHit = player.getWorld().raycast(new RaycastContext(start, maximumEnd,
-            RaycastContext.ShapeType.COLLIDER, RaycastContext.FluidHandling.NONE, player));
-        Vec3d end = blockHit.getType() == HitResult.Type.MISS ? maximumEnd : blockHit.getPos();
-
-        int remainingHits = ballistics.penetrationCount() + 1;
-        float retainedDamage = 1.0f;
-        Vec3d cursor = start;
-        while (remainingHits-- > 0) {
-            Optional<EntityHit> target = nearestEntity(player, cursor, end);
-            if (target.isEmpty()) break;
-            EntityHit hit = target.get();
-            double distance = start.distanceTo(hit.position());
-            float damage = ballistics.damage() * falloff(ballistics, distance) * retainedDamage;
-            if (isHeadshot(hit.entity(), hit.position())) damage *= ballistics.headMultiplier();
-            hit.entity().damage(player.getDamageSources().playerAttack(player), damage);
-            retainedDamage *= ballistics.penetrationRetention();
-            cursor = hit.position().add(direction.multiply(0.01));
+        Vec3 start = player.getEyePosition(), direction = spreadDirection(player, definition, aimProgress);
+        Vec3 maximumEnd = start.add(direction.scale(ballistics.range()));
+        var block = level.clip(new ClipContext(start, maximumEnd, ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, player));
+        Vec3 end = block.getType() == HitResult.Type.MISS ? maximumEnd : block.getLocation();
+        // One broad-phase query; each collision is considered exactly once.
+        List<EntityHit> hits = new ArrayList<>();
+        for (Entity entity : level.getEntities(player, new AABB(start, end).inflate(1),
+                candidate -> candidate instanceof LivingEntity && candidate.isAlive() && !candidate.isSpectator())) {
+            LivingEntity living = (LivingEntity) entity;
+            if (living instanceof Player target && !player.canHarmPlayer(target)) continue;
+            AABB box = living.getBoundingBox().inflate(0.2);
+            Vec3 position = box.contains(start) ? start : box.clip(start, end).orElse(null);
+            if (position != null) hits.add(new EntityHit(living, position, start.distanceToSqr(position)));
+        }
+        hits.sort(Comparator.comparingDouble(EntityHit::distanceSquared));
+        DamageSource source = new DamageSource(level.registryAccess().lookupOrThrow(Registries.DAMAGE_TYPE).getOrThrow(BULLET), player, player);
+        float retained = 1;
+        int count = (int) Math.min(hits.size(), (long) ballistics.penetrationCount() + 1);
+        for (int index = 0; index < count; index++) {
+            EntityHit hit = hits.get(index);
+            float damage = ballistics.damage() * ShotMath.falloff(ballistics, Math.sqrt(hit.distanceSquared())) * retained;
+            if (hit.position().y >= hit.entity().getBoundingBox().maxY - hit.entity().getBbHeight() * 0.22) {
+                damage *= ballistics.headMultiplier();
+            }
+            hit.entity().hurtServer(level, source, damage);
+            retained *= ballistics.penetrationRetention();
         }
     }
 
-    private static Optional<EntityHit> nearestEntity(ServerPlayerEntity player, Vec3d start, Vec3d end) {
-        Box search = player.getBoundingBox().stretch(end.subtract(start)).expand(1.0);
-        return player.getWorld().getOtherEntities(player, search,
-                entity -> entity instanceof LivingEntity living && living.isAlive() && !entity.isSpectator())
-            .stream()
-            .map(entity -> entity.getBoundingBox().expand(0.2).raycast(start, end)
-                .map(position -> new EntityHit((LivingEntity) entity, position)).orElse(null))
-            .filter(hit -> hit != null)
-            .min(Comparator.comparingDouble(hit -> start.squaredDistanceTo(hit.position())));
-    }
-
-    private static void spawnProjectile(ServerPlayerEntity player, WeaponDefinition definition, float aimProgress) {
-        ServerWorld world = player.getServerWorld();
-        ArrowEntity bolt = new ArrowEntity(world, player);
-        float spread = spread(definition, aimProgress);
-        bolt.setVelocity(player, player.getPitch(), player.getYaw(), 0,
+    private static void spawnProjectile(ServerPlayer player, ItemStack stack, WeaponDefinition definition, float aimProgress) {
+        Arrow bolt = new Arrow(player.level(), player, new ItemStack(Items.ARROW), stack);
+        bolt.shootFromRotation(player, player.getXRot(), player.getYRot(), 0,
             definition.ballistics().projectileSpeed(),
-            Math.max(definition.ballistics().projectileDivergence(), spread));
-        bolt.setDamage(definition.ballistics().damage());
-        bolt.setCritical(false);
-        world.spawnEntity(bolt);
+            Math.max(definition.ballistics().projectileDivergence(), ShotMath.spread(definition, aimProgress)));
+        bolt.setBaseDamage(definition.ballistics().damage());
+        bolt.setCritArrow(false);
+        // A bolt is backed by Decimation ammo; do not create recoverable vanilla arrows.
+        bolt.pickup = AbstractArrow.Pickup.DISALLOWED;
+        player.level().addFreshEntity(bolt);
     }
 
-    private static Vec3d spreadDirection(ServerPlayerEntity player, WeaponDefinition definition, float aimProgress) {
-        float spread = spread(definition, aimProgress);
-        float pitch = player.getPitch() + (float) (player.getRandom().nextGaussian() * spread * 0.35);
-        float yaw = player.getYaw() + (float) (player.getRandom().nextGaussian() * spread * 0.35);
-        return Vec3d.fromPolar(pitch, yaw);
+    private static Vec3 spreadDirection(ServerPlayer player, WeaponDefinition definition, float aimProgress) {
+        float spread = ShotMath.spread(definition, aimProgress);
+        float pitch = player.getXRot() + (float) (player.getRandom().nextGaussian() * spread * 0.35);
+        float yaw = player.getYRot() + (float) (player.getRandom().nextGaussian() * spread * 0.35);
+        return Vec3.directionFromRotation(pitch, yaw);
     }
 
-    private static float spread(WeaponDefinition definition, float aimProgress) {
-        float progress = Math.max(0, Math.min(1, aimProgress));
-        return definition.handling().hipSpread()
-            + (definition.handling().adsSpread() - definition.handling().hipSpread()) * progress;
-    }
-
-    private static float falloff(BallisticsDefinition definition, double distance) {
-        if (distance <= definition.falloffStart()) return 1.0f;
-        double length = Math.max(0.001, definition.range() - definition.falloffStart());
-        double progress = Math.min(1.0, (distance - definition.falloffStart()) / length);
-        return (float) (1.0 + (definition.minimumMultiplier() - 1.0) * progress);
-    }
-
-    private static boolean isHeadshot(LivingEntity entity, Vec3d impact) {
-        return impact.y >= entity.getBoundingBox().maxY - entity.getHeight() * 0.22;
-    }
-
-    private record EntityHit(LivingEntity entity, Vec3d position) { }
+    private record EntityHit(LivingEntity entity, Vec3 position, double distanceSquared) { }
 }

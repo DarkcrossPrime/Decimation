@@ -13,6 +13,11 @@ out/
 
 # Minecraft / development runtime
 run/
+run-26.3/
+run-server-26.3/
+.toolchains/
+__pycache__/
+*.pyc
 
 # Logs
 *.log
@@ -27,3 +32,4 @@ Thumbs.db
 *.temp
 *.swp
 *~
+.migration-backups/

@@ -4,37 +4,26 @@ package com.decimation.client.firstperson;
 public final class FirstPersonRigSolverTest {
     public static void main(String[] args) {
         FirstPersonRigPose neutral = solve(0.0f);
-        near(neutral.cameraPitch(), 0.0f, "neutral camera");
-        near(neutral.torsoPitch(), 0.0f, "neutral torso");
         near(neutral.shoulderPitch(), 0.0f, "neutral shoulder");
         near(neutral.shoulderForward(), 0.0f, "neutral shoulder translation");
-        near(neutral.cameraSafetyForward(), 0.0f, "neutral safety translation");
         near(neutral.cameraSafetyPitch(), 0.0f, "neutral safety rotation");
         for (int degrees = -90; degrees <= 90; degrees++) {
             FirstPersonRigPose pose = solve(degrees);
-            // The shoulder carries viewing pitch once; torso follow is deferred.
-            near(pose.torsoPitch() + pose.shoulderPitch(), pose.cameraPitch(), "pitch split");
-            near(pose.torsoPitch(), 0.0f, "torso remains neutral at every viewing angle");
+            near(pose.shoulderPitch(), (float) Math.toRadians(degrees), "shoulder carries viewing pitch once");
             if (Math.abs(degrees) <= 65) {
-                near(pose.cameraSafetyForward(), 0.0f, "normal-view safety translation");
                 near(pose.cameraSafetyPitch(), 0.0f, "normal-view safety rotation");
             }
             if (degrees >= 0) near(pose.shoulderForward(), 0.0f, "downward shoulder unchanged");
             require(pose.shoulderForward() >= 0.0f && pose.shoulderForward() <= 6.0f,
                 "upward shoulder travel stays within six pixels");
-            require(pose.cameraSafetyForward() >= 0.0f && pose.cameraSafetyForward() <= 1.0f,
-                "safety stays within one model pixel");
             require(Math.abs(pose.cameraSafetyPitch()) <= Math.toRadians(2.01),
                 "safety angle stays bounded");
-            near(pose.adsProgress(), 0.0f, "ADS reserved for later");
             FirstPersonRigPose mirrored = solve(-degrees);
-            near(mirrored.torsoPitch(), -pose.torsoPitch(), "symmetric torso follow");
             near(mirrored.shoulderPitch(), -pose.shoulderPitch(), "symmetric shoulder aim");
             if (degrees >= 0) {
-                near(pose.cameraSafetyForward(), 0.0f, "no downward clearance translation");
                 near(pose.cameraSafetyPitch(), 0.0f, "no downward clearance rotation");
             }
-            if (degrees != 0) require(pose.cameraSafetyPitch() * pose.cameraPitch() <= 0.0f,
+            if (degrees != 0) require(pose.cameraSafetyPitch() * pose.shoulderPitch() <= 0.0f,
                 "safety eases away from the extreme");
         }
         near(solve(-90).shoulderForward(), 6.0f, "full upward shoulder travel");
@@ -46,10 +35,8 @@ public final class FirstPersonRigSolverTest {
             require(travel >= previous, "upward shoulder advances monotonically");
             previous = travel;
         }
-        near(solve(90).torsoPitch(), 0.0f, "torso bend disabled");
-        require(solve(-65.01f).cameraSafetyForward() < 0.00001f,
+        require(solve(-65.01f).cameraSafetyPitch() < 0.00001f,
             "smooth safety entry");
-        near(solve(-90).cameraSafetyForward(), 0.0f, "no separate view-axis translation");
         require(solve(1000).equals(solve(90)), "positive clamp");
         require(solve(-1000).equals(solve(-90)), "negative clamp");
         for (float invalid : new float[] {Float.NaN, Float.POSITIVE_INFINITY, Float.NEGATIVE_INFINITY})
