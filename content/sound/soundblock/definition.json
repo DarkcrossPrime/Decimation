@@ -1,7 +1,7 @@
 {
   "format": "decimation:content_object",
   "version": 1,
-  "id": "sound/sound/soundblock",
+  "id": "sound/soundblock",
   "type": "sound",
   "assets": [
     "sounds/alarm1.ogg",

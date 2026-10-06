@@ -8,6 +8,7 @@ import json
 import re
 import shutil
 import subprocess
+import tempfile
 from pathlib import Path
 
 
@@ -247,8 +248,34 @@ def reload_sound_cues(object_root: Path, object_name: str, reload_ticks: int) ->
 def build(content: Path, output: Path) -> dict:
     content = content.resolve()
     output = output.resolve()
+    if not content.is_dir():
+        raise ValueError(f"missing canonical content directory: {content}")
+    if output.is_relative_to(content) or content.is_relative_to(output):
+        raise ValueError("runtime output must not overlap canonical content")
     if output.exists():
-        shutil.rmtree(output, ignore_errors=True)
+        index = output / "assets" / "decimation" / "content" / "index.json"
+        if any(output.iterdir()):
+            if not index.is_file() or json.loads(index.read_text(encoding="utf-8")).get("format") != "decimation:content_index":
+                raise ValueError(f"refusing to replace a non-generated directory: {output}")
+    output.parent.mkdir(parents=True, exist_ok=True)
+    # A failed conversion must preserve the last complete generated pack.
+    with tempfile.TemporaryDirectory(prefix=f".{output.name}-", dir=output.parent,
+                                     ignore_cleanup_errors=True) as temporary:
+        staged = Path(temporary) / "resources"
+        summary = compile_resources(content, staged)
+        previous = Path(temporary) / "previous"
+        if output.exists():
+            output.rename(previous)
+        try:
+            staged.rename(output)
+        except OSError:
+            if previous.exists():
+                previous.rename(output)
+            raise
+        return summary
+
+
+def compile_resources(content: Path, output: Path) -> dict:
     output.mkdir(parents=True, exist_ok=True)
 
     models: list[str] = []

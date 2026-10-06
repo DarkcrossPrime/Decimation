@@ -4,4 +4,4 @@ Kd 0.55 0.58 0.62
 Ks 0.15 0.15 0.15
 Ns 24
 illum 2
-map_Kd ../textures/items/gun/mg/m1919a6.png
+map_Kd ../textures/item/m1919a6.png

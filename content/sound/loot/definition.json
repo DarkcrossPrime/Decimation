@@ -1,7 +1,7 @@
 {
   "format": "decimation:content_object",
   "version": 1,
-  "id": "sound/sound/loot",
+  "id": "sound/loot",
   "type": "sound",
   "assets": [
     "sounds/garbage.ogg",

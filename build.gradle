@@ -167,6 +167,12 @@ tasks.register("verifyMigrationCleanup", Exec) {
     commandLine "python3", "tools/migration/test_cleanup.py"
 }
 
+tasks.register("verifyRuntimeResourceSafety", Exec) {
+    group = "verification"
+    description = "Checks resource generation cannot erase sources or a previously complete pack."
+    commandLine "python3", "tools/tests/test_runtime_resources.py"
+}
+
 // Verification programs run through the JavaExec tasks above, not a JUnit engine.
 tasks.register("verifyFirstPersonBody", JavaExec) {
     group = "verification"
@@ -183,10 +189,11 @@ tasks.named("test", Test) {
 }
 
 tasks.named("check") {
-    dependsOn tasks.named("auditMigrationContent"), tasks.named("verifyFirstPersonRig"),
+    dependsOn tasks.named("auditContent"), tasks.named("verifyFirstPersonRig"),
         tasks.named("verifyWeaponCatalog"), tasks.named("verifyWeaponBehavior"), tasks.named("verifyWeaponCodecs"),
         tasks.named("verifyWeaponAudio"), tasks.named("verifyWeaponVisuals"), tasks.named("verifyFirstPersonBody"),
-        tasks.named("verifyWeaponMultiplayer"), tasks.named("verifyDedicatedServerBoundary"), tasks.named("verifyMigrationCleanup")
+        tasks.named("verifyWeaponMultiplayer"), tasks.named("verifyDedicatedServerBoundary"), tasks.named("verifyMigrationCleanup"),
+        tasks.named("verifyRuntimeResourceSafety")
 }
 
 tasks.withType(JavaCompile).configureEach {

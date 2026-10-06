@@ -1,7 +1,7 @@
 {
   "format": "decimation:content_object",
   "version": 1,
-  "id": "sound/sound/motion",
+  "id": "sound/motion",
   "type": "sound",
   "assets": [
     "sounds/fall_scream1.ogg",

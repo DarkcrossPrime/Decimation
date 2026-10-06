@@ -446,19 +446,19 @@
   "loot.garbage": {
     "category": "ambient",
     "sounds": [
-      "decimation:content/sound/sound/loot/sounds/misc/loot/garbage"
+      "decimation:content/sound/loot/sounds/misc/loot/garbage"
     ]
   },
   "loot.wood": {
     "category": "ambient",
     "sounds": [
-      "decimation:content/sound/sound/loot/sounds/misc/loot/wood"
+      "decimation:content/sound/loot/sounds/misc/loot/wood"
     ]
   },
   "loot.metal": {
     "category": "ambient",
     "sounds": [
-      "decimation:content/sound/sound/loot/sounds/misc/loot/metal"
+      "decimation:content/sound/loot/sounds/misc/loot/metal"
     ]
   },
   "entity.barbedwire.pliers": {
@@ -816,21 +816,21 @@
   "explosion": {
     "category": "block",
     "sounds": [
-      "decimation:content/sound/sound/misc/sounds/misc/explosion1",
-      "decimation:content/sound/sound/misc/sounds/misc/explosion2",
-      "decimation:content/sound/sound/misc/sounds/misc/explosion3",
-      "decimation:content/sound/sound/misc/sounds/misc/explosion4",
-      "decimation:content/sound/sound/misc/sounds/misc/explosion5"
+      "decimation:content/sound/misc/sounds/misc/explosion1",
+      "decimation:content/sound/misc/sounds/misc/explosion2",
+      "decimation:content/sound/misc/sounds/misc/explosion3",
+      "decimation:content/sound/misc/sounds/misc/explosion4",
+      "decimation:content/sound/misc/sounds/misc/explosion5"
     ]
   },
   "explosion.distant": {
     "category": "block",
     "sounds": [
-      "decimation:content/sound/sound/misc/sounds/misc/explosiondistant1",
-      "decimation:content/sound/sound/misc/sounds/misc/explosiondistant2",
-      "decimation:content/sound/sound/misc/sounds/misc/explosiondistant3",
-      "decimation:content/sound/sound/misc/sounds/misc/explosiondistant4",
-      "decimation:content/sound/sound/misc/sounds/misc/explosiondistant5"
+      "decimation:content/sound/misc/sounds/misc/explosiondistant1",
+      "decimation:content/sound/misc/sounds/misc/explosiondistant2",
+      "decimation:content/sound/misc/sounds/misc/explosiondistant3",
+      "decimation:content/sound/misc/sounds/misc/explosiondistant4",
+      "decimation:content/sound/misc/sounds/misc/explosiondistant5"
     ]
   },
   "gui.button.hover": {
@@ -1412,19 +1412,19 @@
   "misc.armor.equip": {
     "category": "player",
     "sounds": [
-      "decimation:content/sound/sound/misc/sounds/misc/armorequip0",
-      "decimation:content/sound/sound/misc/sounds/misc/armorequip1",
-      "decimation:content/sound/sound/misc/sounds/misc/armorequip2",
-      "decimation:content/sound/sound/misc/sounds/misc/armorequip3",
-      "decimation:content/sound/sound/misc/sounds/misc/armorequip4",
-      "decimation:content/sound/sound/misc/sounds/misc/armorequip5",
-      "decimation:content/sound/sound/misc/sounds/misc/armorequip6"
+      "decimation:content/sound/misc/sounds/misc/armorequip0",
+      "decimation:content/sound/misc/sounds/misc/armorequip1",
+      "decimation:content/sound/misc/sounds/misc/armorequip2",
+      "decimation:content/sound/misc/sounds/misc/armorequip3",
+      "decimation:content/sound/misc/sounds/misc/armorequip4",
+      "decimation:content/sound/misc/sounds/misc/armorequip5",
+      "decimation:content/sound/misc/sounds/misc/armorequip6"
     ]
   },
   "misc.fart": {
     "category": "player",
     "sounds": [
-      "decimation:content/sound/sound/misc/sounds/misc/fart0"
+      "decimation:content/sound/misc/sounds/misc/fart0"
     ]
   },
   "misc.bottlecap.drop": {
@@ -1448,37 +1448,37 @@
   "misc.effect.flashed": {
     "category": "player",
     "sounds": [
-      "decimation:content/sound/sound/effect/sounds/misc/effect/flashed"
+      "decimation:content/sound/effect/sounds/misc/effect/flashed"
     ]
   },
   "misc.effect.irradiated": {
     "category": "player",
     "sounds": [
-      "decimation:content/sound/sound/effect/sounds/misc/effect/irradiated1",
-      "decimation:content/sound/sound/effect/sounds/misc/effect/irradiated2",
-      "decimation:content/sound/sound/effect/sounds/misc/effect/irradiated3",
-      "decimation:content/sound/sound/effect/sounds/misc/effect/irradiated4"
+      "decimation:content/sound/effect/sounds/misc/effect/irradiated1",
+      "decimation:content/sound/effect/sounds/misc/effect/irradiated2",
+      "decimation:content/sound/effect/sounds/misc/effect/irradiated3",
+      "decimation:content/sound/effect/sounds/misc/effect/irradiated4"
     ]
   },
   "misc.level.levelup": {
     "category": "player",
     "sounds": [
-      "decimation:content/sound/sound/level/sounds/misc/level/levelup"
+      "decimation:content/sound/level/sounds/misc/level/levelup"
     ]
   },
   "misc.motion.falling": {
     "category": "player",
     "sounds": [
-      "decimation:content/sound/sound/motion/sounds/misc/motion/falling1",
-      "decimation:content/sound/sound/motion/sounds/misc/motion/falling2",
-      "decimation:content/sound/sound/motion/sounds/misc/motion/falling3"
+      "decimation:content/sound/motion/sounds/misc/motion/falling1",
+      "decimation:content/sound/motion/sounds/misc/motion/falling2",
+      "decimation:content/sound/motion/sounds/misc/motion/falling3"
     ]
   },
   "misc.motion.falling.scream": {
     "category": "player",
     "sounds": [
-      "decimation:content/sound/sound/motion/sounds/misc/motion/fall_scream1",
-      "decimation:content/sound/sound/motion/sounds/misc/motion/fall_scream2"
+      "decimation:content/sound/motion/sounds/misc/motion/fall_scream1",
+      "decimation:content/sound/motion/sounds/misc/motion/fall_scream2"
     ]
   },
   "mob.bandit.aggressive": {
@@ -2213,65 +2213,65 @@
   "soundblock.scary.lab": {
     "category": "ambient",
     "sounds": [
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab1",
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab10",
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab11",
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab12",
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab13",
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab14",
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab15",
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab16",
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab17",
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab18",
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab19",
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab2",
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab20",
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab21",
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab22",
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab23",
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab24",
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab25",
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab26",
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab27",
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab28",
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab29",
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab3",
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab4",
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab5",
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab6",
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab7",
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab8",
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/scarylab9"
+      "decimation:content/sound/soundblock/sounds/soundblock/scarylab1",
+      "decimation:content/sound/soundblock/sounds/soundblock/scarylab10",
+      "decimation:content/sound/soundblock/sounds/soundblock/scarylab11",
+      "decimation:content/sound/soundblock/sounds/soundblock/scarylab12",
+      "decimation:content/sound/soundblock/sounds/soundblock/scarylab13",
+      "decimation:content/sound/soundblock/sounds/soundblock/scarylab14",
+      "decimation:content/sound/soundblock/sounds/soundblock/scarylab15",
+      "decimation:content/sound/soundblock/sounds/soundblock/scarylab16",
+      "decimation:content/sound/soundblock/sounds/soundblock/scarylab17",
+      "decimation:content/sound/soundblock/sounds/soundblock/scarylab18",
+      "decimation:content/sound/soundblock/sounds/soundblock/scarylab19",
+      "decimation:content/sound/soundblock/sounds/soundblock/scarylab2",
+      "decimation:content/sound/soundblock/sounds/soundblock/scarylab20",
+      "decimation:content/sound/soundblock/sounds/soundblock/scarylab21",
+      "decimation:content/sound/soundblock/sounds/soundblock/scarylab22",
+      "decimation:content/sound/soundblock/sounds/soundblock/scarylab23",
+      "decimation:content/sound/soundblock/sounds/soundblock/scarylab24",
+      "decimation:content/sound/soundblock/sounds/soundblock/scarylab25",
+      "decimation:content/sound/soundblock/sounds/soundblock/scarylab26",
+      "decimation:content/sound/soundblock/sounds/soundblock/scarylab27",
+      "decimation:content/sound/soundblock/sounds/soundblock/scarylab28",
+      "decimation:content/sound/soundblock/sounds/soundblock/scarylab29",
+      "decimation:content/sound/soundblock/sounds/soundblock/scarylab3",
+      "decimation:content/sound/soundblock/sounds/soundblock/scarylab4",
+      "decimation:content/sound/soundblock/sounds/soundblock/scarylab5",
+      "decimation:content/sound/soundblock/sounds/soundblock/scarylab6",
+      "decimation:content/sound/soundblock/sounds/soundblock/scarylab7",
+      "decimation:content/sound/soundblock/sounds/soundblock/scarylab8",
+      "decimation:content/sound/soundblock/sounds/soundblock/scarylab9"
     ]
   },
   "soundblock.street.alarm": {
     "category": "ambient",
     "sounds": [
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/alarm1"
+      "decimation:content/sound/soundblock/sounds/soundblock/alarm1"
     ]
   },
   "soundblock.street.caralarm": {
     "category": "ambient",
     "sounds": [
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/car_alarm1",
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/car_alarm2",
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/car_alarm3",
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/car_alarm4"
+      "decimation:content/sound/soundblock/sounds/soundblock/car_alarm1",
+      "decimation:content/sound/soundblock/sounds/soundblock/car_alarm2",
+      "decimation:content/sound/soundblock/sounds/soundblock/car_alarm3",
+      "decimation:content/sound/soundblock/sounds/soundblock/car_alarm4"
     ]
   },
   "soundblock.street.range": {
     "category": "ambient",
     "sounds": [
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/range1",
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/range2",
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/range3",
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/range4"
+      "decimation:content/sound/soundblock/sounds/soundblock/range1",
+      "decimation:content/sound/soundblock/sounds/soundblock/range2",
+      "decimation:content/sound/soundblock/sounds/soundblock/range3",
+      "decimation:content/sound/soundblock/sounds/soundblock/range4"
     ]
   },
   "soundblock.morsecode.bukovka": {
     "category": "ambient",
     "sounds": [
-      "decimation:content/sound/sound/soundblock/sounds/soundblock/morsecode_bukovka"
+      "decimation:content/sound/soundblock/sounds/soundblock/morsecode_bukovka"
     ]
   },
   "vehicle.atv.horn": {

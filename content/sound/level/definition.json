@@ -1,7 +1,7 @@
 {
   "format": "decimation:content_object",
   "version": 1,
-  "id": "sound/sound/level",
+  "id": "sound/level",
   "type": "sound",
   "assets": [
     "sounds/levelup.ogg"

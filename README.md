@@ -1,4 +1,4 @@
-# Decimation — Fabric 26.3 migration
+# Decimation — Fabric 26.3
 
 This branch registers four weapons and three shared ammunition items, with
 persistent stack components, server-owned firing/reloads, positional audio and typed networking.
@@ -6,15 +6,16 @@ Weapons now use baked OBJ geometry outside inventory views, with aiming/sprint
 transitions, confirmed-shot recoil and matching DANIM tracks. Checkpoint 6 restores
 the first-person body, skin/clothing and armor, with captured firing/support arm poses
 and a gun attachment owned by the firing arm. The final HUD remains pending;
-ammunition and mode use a temporary vanilla action-bar display. In-game placement
-and the new GPU layer still require client acceptance.
+ammunition and mode use a temporary vanilla action-bar display. The migrated
+placement and multiplayer behavior have been accepted by the developer.
 The first-person
 arm solvers and their regression tests survive unchanged because they do not
 reference Minecraft APIs. The known-good playable implementation lives on `1.20.1`.
 
 `main` remains the live version; all port work belongs on `migration`.
 
-Current checkpoint: **6.19**, the post-acceptance source/log cleanup over 6.18.
+Current base checkpoint: **6.19**, with the maintenance pass described in
+`docs/maintenance-2026-10-06.md`.
 LAN interruptions/mid-animation joins and server features have been accepted by
 the developer; further multiplayer work is deferred. See `docs/cleanup-6.19.md`
 for the removals and recoverable workspace cleanup. Flat rest/fire/ADS behavior
@@ -57,7 +58,7 @@ instead. See `docs/multiplayer-6.17.md` for IntelliJ and two-client acceptance.
 
 ## Layout
 
-- `content/`: unchanged canonical asset and definition tree.
+- `content/`: canonical assets and definitions; material links and sound ownership repaired during maintenance.
 - `src/main/`: common/server catalogue, registration and item classes; no client dependencies.
 - `src/client/`: input, audio, baked weapon models, presentation, extracted body/arm layers and retained arm maths.
 - `tools/`: content converters, resource compiler, audits and developer setup.
@@ -93,19 +94,27 @@ item metadata; canonical definition files keep their existing format and version
 ./gradlew verifyWeaponMultiplayer
 ./gradlew verifyDedicatedServerBoundary
 ./gradlew verifyMigrationCleanup
+./gradlew verifyRuntimeResourceSafety
 ./gradlew auditContent
 ```
 
 `build` runs catalogue, behavior, codec, audio, visual, arm, multiplayer-contract,
-common/server-boundary and cleanup-safety checks, plus the migration audit. These
+common/server-boundary, cleanup-safety and resource-generation-safety checks,
+plus the strict content audit. These
 do not replace a real dedicated-server/two-client acceptance session. Catalogue checks
 run without Minecraft bootstrap: shared ammo identity, per-weapon capacity,
 optional sprint fallback, invalid IDs/numbers, collisions and missing assets.
-The strict `auditContent` currently
-fails on **217 pre-existing findings** from the uploaded snapshot; see the migration
-document. The migration audit compares exact normalized diagnostics with a frozen
-baseline and fails on any new diagnostic. Resolved errors are accepted and reported.
-It does not silently redefine those legacy issues as valid content.
+The strict `auditContent` passes with **zero findings** after repairing 210 material
+texture links, six sound-object IDs and the stale duplicate inventory. It is now
+the content gate for `build`, so a reintroduced legacy error fails CI too.
+`auditMigrationContent` remains available for historical comparisons against the
+unchanged migration baseline; it reports all 217 original findings as resolved.
+
+Resource generation refuses output paths overlapping canonical content and refuses
+to replace nonempty directories without a generated content index. Conversion runs
+in a temporary sibling directory; failed conversions preserve the previous complete
+pack. A successful generation replaces it. Six genuinely absent legacy sound samples
+are still excluded from generated sound events; see the maintenance report.
 
 Only the generator script and canonical inputs invalidate resource generation;
 unchanged resources can remain up to date. Archives use reproducible ordering and

@@ -23,6 +23,8 @@ jobs:
       - uses: gradle/actions/setup-gradle@v6
         with:
           cache-provider: basic
+      - name: Install positional audio build dependency
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
       - name: Build and verify migration
         run: |
           chmod +x gradlew

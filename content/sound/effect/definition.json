@@ -1,7 +1,7 @@
 {
   "format": "decimation:content_object",
   "version": 1,
-  "id": "sound/sound/effect",
+  "id": "sound/effect",
   "type": "sound",
   "assets": [
     "sounds/flashed.ogg",

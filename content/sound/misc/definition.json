@@ -1,7 +1,7 @@
 {
   "format": "decimation:content_object",
   "version": 1,
-  "id": "sound/sound/misc",
+  "id": "sound/misc",
   "type": "sound",
   "assets": [
     "sounds/armorequip0.ogg",
