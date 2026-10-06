@@ -92,6 +92,33 @@ class CleanupTest(unittest.TestCase):
         self.assertNotEqual(self.run_cleanup().returncode, 0)
         self.assertTrue(self.source.exists())
 
+    def test_log_preview_backup_and_save_protection(self):
+        self.git('init', '-b', 'migration')
+        log = self.root / 'run-26.3/logs/latest.log'
+        log.parent.mkdir(parents=True);log.write_text('diagnostic')
+        compressed = log.with_name('old.log.gz');compressed.write_bytes(b'compressed diagnostic')
+        settings = self.root / 'run-26.3/options.txt';settings.write_text('settings')
+        save = self.root / 'run-26.3/saves/Test/level.dat'
+        save.parent.mkdir(parents=True);save.write_bytes(b'save')
+        ignored = log.with_name('keep.txt');ignored.write_text('not a log')
+        self.assertEqual(self.run_cleanup('--logs').returncode, 0)
+        self.assertTrue(log.exists())
+        self.assertEqual(self.run_cleanup('--apply', '--logs').returncode, 0)
+        self.assertFalse(log.exists());self.assertFalse(compressed.exists())
+        backup = next((self.root / '.migration-backups').iterdir())
+        self.assertEqual((backup / 'run-26.3/logs/latest.log').read_text(), 'diagnostic')
+        self.assertEqual((backup / 'run-26.3/logs/old.log.gz').read_bytes(), b'compressed diagnostic')
+        self.assertEqual(settings.read_text(), 'settings');self.assertEqual(save.read_bytes(), b'save')
+        self.assertTrue(ignored.exists())
+
+    def test_log_symlink_stops_whole_preflight(self):
+        self.git('init', '-b', 'migration')
+        logs = self.root / 'run/logs';logs.mkdir(parents=True)
+        (logs / 'latest.log').symlink_to(self.source)
+        self.assertNotEqual(self.run_cleanup('--apply', '--logs').returncode, 0)
+        self.assertTrue(self.source.exists())
+        self.assertFalse((self.root / '.migration-backups').exists())
+
 
 if __name__ == '__main__':
     unittest.main()
