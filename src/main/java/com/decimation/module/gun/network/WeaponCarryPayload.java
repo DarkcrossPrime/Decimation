@@ -13,9 +13,6 @@ import net.minecraft.resources.Identifier;
 public record WeaponCarryPayload(UUID owner, Identifier weapon, int loweredTicks, int entityId, int slot,
                                  Identifier dimension, float aim, int reloadElapsed, int reloadRemaining,
                                  boolean rack, long serverTick) implements CustomPacketPayload {
-    public WeaponCarryPayload(UUID owner, Identifier weapon, int loweredTicks) {
-        this(owner, weapon, loweredTicks, 0, 0, Identifier.parse("minecraft:overworld"), 0, 0, 0, false, 0);
-    }
     public static final Type<WeaponCarryPayload> TYPE = new Type<>(Identifier.fromNamespaceAndPath(Decimation.MOD_ID, "weapon/carry"));
     public static final StreamCodec<FriendlyByteBuf, WeaponCarryPayload> CODEC = StreamCodec.of(
         (buffer, value) -> {

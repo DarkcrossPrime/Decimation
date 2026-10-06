@@ -16,9 +16,8 @@ public final class FirstPersonRigSolver {
         float up = smoothstep(upDegrees / 90.0f);
         float danger = smoothstep((upDegrees - SAFETY_START) / (90.0f - SAFETY_START));
         // Torso follow stays deferred. Downward anchoring uses the measured render-time eye.
-        return new FirstPersonRigPose(radians(pitch), 0.0f, radians(pitch),
-            UPWARD_SHOULDER_FORWARD_PIXELS * up, 0.0f,
-            radians(SAFETY_PITCH_DEGREES * danger), 0.0f);
+        return new FirstPersonRigPose(radians(pitch), UPWARD_SHOULDER_FORWARD_PIXELS * up,
+            radians(SAFETY_PITCH_DEGREES * danger));
     }
 
     /** Shoulder position in the model's Y/Z plane, expressed in pixels. */

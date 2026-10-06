@@ -47,16 +47,4 @@ public record WeaponVisualData(WeaponDefinition definition, BakedObjMesh mesh,
         return Float.isFinite(minX) ? new FirstPersonSupportArmSolver.Grip((minX + maxX) / 2, (minY + maxY) / 2, minZ) : null;
     }
 
-    public WeaponVisualData(WeaponDefinition definition, BakedObjMesh mesh, DanimFrames fire, DanimFrames reload, DanimFrames rack,
-                            FirstPersonSupportArmSolver.Grip supportGrip, FirstPersonSupportArmSolver.Grip reloadGrip) {
-        this(definition, mesh, fire, reload, rack, supportGrip, reloadGrip, null);
-    }
-    public WeaponVisualData(WeaponDefinition definition, BakedObjMesh mesh, DanimFrames fire, DanimFrames reload, DanimFrames rack,
-                            FirstPersonSupportArmSolver.Grip supportGrip) {
-        this(definition, mesh, fire, reload, rack, supportGrip, null, null);
-    }
-
-    public WeaponVisualData(WeaponDefinition definition, BakedObjMesh mesh, DanimFrames fire, DanimFrames reload, DanimFrames rack) {
-        this(definition, mesh, fire, reload, rack, null, null, null);
-    }
 }

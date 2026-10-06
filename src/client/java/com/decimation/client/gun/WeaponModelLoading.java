@@ -30,7 +30,7 @@ public final class WeaponModelLoading {
         WeaponVisualData data = prepared.get(bake.itemId());
         if (data == null) return original;
         ItemModel model = new WeaponItemModel(original, data, bake.bakingContext().blockModelBaker().materials());
-        Decimation.LOGGER.info("Bound animated OBJ item model: {}", bake.itemId());
+        Decimation.LOGGER.debug("Bound animated OBJ item model: {}", bake.itemId());
         return model;
     }
 
@@ -50,7 +50,7 @@ public final class WeaponModelLoading {
                     var visual = WeaponVisualData.prepare(weapon, obj, fire, reload, rack);
                     var mesh = visual.mesh();
                     models.put(Identifier.parse(weapon.id()), visual);
-                    Decimation.LOGGER.info("Baked {}: {} faces, {} draw groups, {} degenerate faces skipped",
+                    Decimation.LOGGER.debug("Baked {}: {} faces, {} draw groups, {} degenerate faces skipped",
                         weapon.id(), mesh.sourceFaces(), mesh.parts().size(), mesh.skippedFaces());
                 }
             } catch (IOException failure) {

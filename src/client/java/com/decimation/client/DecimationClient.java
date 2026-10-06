@@ -1,6 +1,5 @@
 package com.decimation.client;
 
-import com.decimation.Decimation;
 import com.decimation.client.gun.ClientWeaponController;
 import com.decimation.client.gun.ClientWeaponAudio;
 import com.decimation.client.gun.WeaponModelLoading;
@@ -16,6 +15,5 @@ public final class DecimationClient implements ClientModInitializer {
         WeaponModelLoading.register();
         FirstPersonBodyRenderer.register();
         WeaponAdsPresentation.register();
-        Decimation.LOGGER.info("Decimation client initialized; weapon input, audio, OBJ visuals and captured body/arm rig ready");
     }
 }

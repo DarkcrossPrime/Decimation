@@ -13,9 +13,6 @@ import net.minecraft.resources.Identifier;
 /** Presentation notification; persistent state also uses vanilla stack synchronization. */
 public record WeaponEventPayload(UUID owner, Identifier weapon, int slot, WeaponEvent event,
                                  WeaponState state, long serverTick, int entityId, Identifier dimension) implements CustomPacketPayload {
-    public WeaponEventPayload(UUID owner, Identifier weapon, int slot, WeaponEvent event, WeaponState state, long serverTick) {
-        this(owner, weapon, slot, event, state, serverTick, 0, Identifier.parse("minecraft:overworld"));
-    }
     private static final WeaponEvent[] EVENTS = WeaponEvent.values();
     public static final Type<WeaponEventPayload> TYPE = new Type<>(Identifier.fromNamespaceAndPath(Decimation.MOD_ID, "weapon/event"));
     public static final StreamCodec<FriendlyByteBuf, WeaponEventPayload> CODEC = StreamCodec.of(

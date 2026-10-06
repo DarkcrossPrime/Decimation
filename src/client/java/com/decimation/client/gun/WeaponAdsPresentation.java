@@ -12,7 +12,6 @@ public final class WeaponAdsPresentation {
     public static float fieldOfView(float nativeFov, float progress) {
         return nativeFov * (1 - .1f * Math.clamp(Float.isFinite(progress) ? progress : 0, 0, 1));
     }
-    public static boolean hideCrosshair(float ignoredProgress) { return true; }
     public static float progress(Camera camera, float partialTick) {
         var client = Minecraft.getInstance();var player = client.player;
         if (player == null || camera.entity() != player || camera.isDetached() || !client.options.getCameraType().isFirstPerson()

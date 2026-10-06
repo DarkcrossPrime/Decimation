@@ -31,15 +31,15 @@ public final class WeaponCodecTest {
             JsonParser.parseString("{\"magazine\":0,\"chambered\":false,\"fire_mode\":-1}")).error().isPresent(), "negative persisted mode rejected");
         roundTrip(WeaponStateCodecs.STREAM_CODEC, state, 11);
         Identifier id = Identifier.parse("decimation:honeybadger");
-        for (int flags = 0; flags <= 31; flags++) roundTrip(WeaponInputPayload.CODEC, new WeaponInputPayload(8, id, flags), 132);
-        for (int lowered = 0; lowered <= WeaponCarry.RAISE_TICKS; lowered++)
-            roundTrip(WeaponCarryPayload.CODEC, new WeaponCarryPayload(new UUID(3, 4), id, lowered), 148);
-        expectFailure(() -> new WeaponCarryPayload(new UUID(1, 2), id, -1));
-        expectFailure(() -> new WeaponCarryPayload(new UUID(1, 2), id, 5));
-        expectFailure(() -> new WeaponCarryPayload(new UUID(1, 2), Identifier.parse("minecraft:stone"), 0));
-        for (WeaponEvent event : WeaponEvent.values()) roundTrip(WeaponEventPayload.CODEC,
-            new WeaponEventPayload(new UUID(1, 2), id, 4, event, state, 100), 168);
         Identifier dimension = Identifier.parse("minecraft:overworld");
+        for (int flags = 0; flags <= 31; flags++) roundTrip(WeaponInputPayload.CODEC, new WeaponInputPayload(8, id, flags, 0, dimension), 132);
+        for (int lowered = 0; lowered <= WeaponCarry.RAISE_TICKS; lowered++)
+            roundTrip(WeaponCarryPayload.CODEC, new WeaponCarryPayload(new UUID(3, 4), id, lowered, 0, 0, dimension, 0, 0, 0, false, 0), 148);
+        expectFailure(() -> new WeaponCarryPayload(new UUID(1, 2), id, -1, 0, 0, dimension, 0, 0, 0, false, 0));
+        expectFailure(() -> new WeaponCarryPayload(new UUID(1, 2), id, 5, 0, 0, dimension, 0, 0, 0, false, 0));
+        expectFailure(() -> new WeaponCarryPayload(new UUID(1, 2), Identifier.parse("minecraft:stone"), 0, 0, 0, dimension, 0, 0, 0, false, 0));
+        for (WeaponEvent event : WeaponEvent.values()) roundTrip(WeaponEventPayload.CODEC,
+            new WeaponEventPayload(new UUID(1, 2), id, 4, event, state, 100, 0, dimension), 168);
         for (int flags = 0; flags <= 31; flags++) roundTrip(WeaponInputPayload.CODEC,
             new WeaponInputPayload(8, id, flags, 1234, dimension), 280);
         roundTrip(WeaponInputPayload.CODEC, new WeaponInputPayload(8, Identifier.parse("decimation:" + "a".repeat(117)), 31,
@@ -61,9 +61,9 @@ public final class WeaponCodecTest {
         changed.getAsJsonArray("weapons").get(0).getAsJsonObject().getAsJsonObject("ballistics").addProperty("damage", 14.1);
         check(!catalog.fingerprint().equals(WeaponCatalog.read(new StringReader(changed.toString())).fingerprint()), "gameplay change changes fingerprint");
         roundTrip(WeaponCatalogPayload.CODEC, new WeaponCatalogPayload(WeaponCatalogPayload.PROTOCOL, catalog.fingerprint()), 70);
-        expectFailure(() -> new WeaponInputPayload(9, id, 0));
-        expectFailure(() -> new WeaponInputPayload(0, id, 32));
-        expectFailure(() -> new WeaponInputPayload(0, Identifier.parse("minecraft:stone"), 1));
+        expectFailure(() -> new WeaponInputPayload(9, id, 0, 0, dimension));
+        expectFailure(() -> new WeaponInputPayload(0, id, 32, 0, dimension));
+        expectFailure(() -> new WeaponInputPayload(0, Identifier.parse("minecraft:stone"), 1, 0, dimension));
         expectFailure(() -> new WeaponCatalogPayload(1, "bad"));
         expectFailure(() -> new WeaponSoundPayload(id, WeaponSound.FIRE, dimension, Double.NaN, 0, 0));
         expectFailure(() -> new WeaponSoundPayload(id, WeaponSound.FIRE, dimension, 0, Double.POSITIVE_INFINITY, 0));

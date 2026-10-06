@@ -868,7 +868,6 @@ public final class WeaponVisualTest {
             near(WeaponAdsPresentation.fieldOfView(fov, 1), fov * .9f, "full ADS modest zoom");
             near(WeaponAdsPresentation.fieldOfView(fov, Float.NaN), fov, "invalid ADS progress retains native FOV");
         }
-        check(WeaponAdsPresentation.hideCrosshair(0) && WeaponAdsPresentation.hideCrosshair(1), "crosshair is always hidden");
     }
 
     private static void near(float actual, float expected, String message) { check(Math.abs(actual - expected) < 0.0001f, message); }

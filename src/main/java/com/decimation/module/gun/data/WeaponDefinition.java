@@ -36,8 +36,4 @@ public record WeaponDefinition(String id, String contentId, String displayName,
             }
         }
     }
-
-    public FireMode firstFireMode() {
-        return fireModes.get(0);
-    }
 }

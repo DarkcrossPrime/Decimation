@@ -12,6 +12,6 @@ public final class Decimation implements ModInitializer {
     @Override
     public void onInitialize() {
         GunModule.initialize();
-        LOGGER.info("Decimation 26.3 migration foundation initialized");
+        LOGGER.info("Decimation initialized: {} weapons, {} ammunition types", GunModule.weapons().size(), GunModule.ammunition().size());
     }
 }

@@ -4,7 +4,6 @@ import com.decimation.module.gun.WeaponItem;
 import com.decimation.module.gun.network.WeaponEvent;
 import com.decimation.module.gun.network.WeaponEventPayload;
 import com.decimation.module.gun.network.WeaponCarryPayload;
-import com.decimation.module.gun.WeaponCarry;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;

@@ -42,7 +42,6 @@ public final class WeaponSounds {
             byWeapon.put(Identifier.parse(weapon.id()), Collections.unmodifiableMap(cues));
         }
         sounds = Collections.unmodifiableMap(byWeapon);
-        Decimation.LOGGER.info("Registered {} weapon sound events", events.size());
     }
 
     public static SoundEvent get(Identifier weapon, WeaponSound cue) {

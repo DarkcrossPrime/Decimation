@@ -1,6 +1,5 @@
 package com.decimation.module.gun;
 
-import com.decimation.Decimation;
 import com.decimation.module.DecimationItemGroups;
 import com.decimation.module.gun.data.AmmunitionDefinition;
 import com.decimation.module.gun.data.WeaponCatalog;
@@ -67,7 +66,6 @@ public final class GunModule {
             player.getMainHandItem().getItem() instanceof WeaponItem ? InteractionResult.FAIL : InteractionResult.PASS);
         AttackEntityCallback.EVENT.register((player, level, hand, entity, hit) ->
             player.getMainHandItem().getItem() instanceof WeaponItem ? InteractionResult.FAIL : InteractionResult.PASS);
-        Decimation.LOGGER.info("Registered {} weapons and {} ammunition items for 26.3", weapons.size(), ammunition.size());
     }
 
     private static ResourceKey<Item> itemKey(String id) {

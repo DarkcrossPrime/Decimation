@@ -8,9 +8,6 @@ import net.minecraft.resources.Identifier;
 
 /** Input only: no client position, damage, ammo count or cadence. */
 public record WeaponInputPayload(int slot, Identifier weapon, int flags, int entityId, Identifier dimension) implements CustomPacketPayload {
-    public WeaponInputPayload(int slot, Identifier weapon, int flags) {
-        this(slot, weapon, flags, 0, Identifier.parse("minecraft:overworld"));
-    }
     public static final int TRIGGER = 1, AIM = 2, RELOAD = 4, CYCLE = 8, RELAXED = 16;
     public static final Type<WeaponInputPayload> TYPE = new Type<>(Identifier.fromNamespaceAndPath(Decimation.MOD_ID, "weapon/input"));
     public static final StreamCodec<FriendlyByteBuf, WeaponInputPayload> CODEC = StreamCodec.of(
