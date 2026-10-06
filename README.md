@@ -14,9 +14,11 @@ reference Minecraft APIs. The known-good playable implementation lives on `1.20.
 
 `main` remains the live version; all port work belongs on `migration`.
 
-Current checkpoint: **6.18**, with a flat torso-relative rest hold and fire exiting
-rest while ADS retains the preference. See `docs/rest-lan-6.18.md` for the
-cumulative-overlay instructions and the two-player LAN acceptance test.
+Current checkpoint: **6.19**, the post-acceptance source/log cleanup over 6.18.
+LAN interruptions/mid-animation joins and server features have been accepted by
+the developer; further multiplayer work is deferred. See `docs/cleanup-6.19.md`
+for the removals and recoverable workspace cleanup. Flat rest/fire/ADS behavior
+is unchanged; menus are next after migration closeout.
 
 ## Development environment
 
@@ -119,7 +121,8 @@ For this checkpoint, launch a test world and check **Decimation Weapons** and
 and **B** cycles fire mode. Bindings can be changed under Controls → Decimation.
 Only the main-hand weapon is supported. Vanilla punching, mining and block use are
 suppressed while it is held. ADS changes server spread and now visibly moves the
-weapon toward the camera center. Scope/FOV visuals remain pending. Confirmed shots
+weapon onto the recovered sight line with a small FOV reduction. Dedicated scope
+optics remain separate work. Confirmed shots
 kick the weapon and play its fire animation; reloads play matching part/root tracks.
 
 Weapon state saves in `decimation:weapon_state`, synchronizes through vanilla stack
@@ -135,7 +138,7 @@ reload cues use the existing assets. Empty rifle reloads play the rack cue; tact
 reloads with a chambered round skip it. Switching weapons or dimensions cancels
 future reload cues. Playback uses the vanilla Players sound category and resource
 reload handling. No animation parsing, sound decoding or definition lookup runs
-per frame. Client and server must both use this checkpoint (weapon protocol 2).
+per frame. Client and server must both use this checkpoint (weapon protocol 4).
 
 Hitscan stops at solid blocks, sorts one entity-query result along the ray and applies
 configured entity penetration, falloff and head multipliers. Bullets keep vanilla
@@ -147,9 +150,10 @@ vanilla arrows. A custom bolt renderer/entity can follow with visuals.
 Honey Badger, FAMAS, Crossbow and Custom FAMAS keep their inventory icons and use
 their OBJ models when held/dropped/displayed. While holding a main-hand weapon,
 vanilla first-person hands are replaced by the captured body and arms. An occupied
-offhand keeps its normal item/arm pose and disables the support-grip solve. Existing animation tracks referencing absent OBJ
-parts are preserved (notably FAMAS magazine/slide); those parts cannot animate until
-their mappings are recovered. All weapons still receive confirmed-shot recoil.
+offhand keeps its normal item/arm pose and disables the support-grip solve.
+The recovered FAMAS magazine assembly mapping is applied during baking; source
+OBJ/DANIM files stay intact. Truly absent animated parts are still preserved
+without fabricated geometry. All weapons receive confirmed-shot recoil.
 Test aiming, firing, reload cancellation, left-hand settings, F5, drops, item frames
 and vanilla resource reload. See
 `docs/migration-26.3.md` for the multiplayer acceptance checklist.

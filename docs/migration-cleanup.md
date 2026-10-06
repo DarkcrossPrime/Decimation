@@ -12,8 +12,9 @@ data records whose bytes still match the old snapshot (`ArmRotation`,
 old bytes do not imply unused code. The revised manifest protects every current
 source path and retains only the 33 already-obsolete paths and their original hashes.
 
-Before cleanup, apply 6.17, verify your working changes, make a backup/commit and
-complete the multiplayer acceptance in `multiplayer-6.17.md`. Keep `main` and
+Before cleanup, apply 6.19, verify your working changes and make a backup/commit.
+Multiplayer/server acceptance has been confirmed by the developer; it is not a
+new blocker for this cleanup. Keep `main` and
 `1.20.1` untouched.
 
 ```bash
@@ -22,9 +23,17 @@ bash tools/migration/remove_legacy_sources.sh
 
 # Optional, only after reviewing the preview; requires branch migration.
 bash tools/migration/remove_legacy_sources.sh --apply
+
+# Include only .log/.log.gz files in known development log folders.
+# Quit the client/server first; preview before applying.
+bash tools/migration/remove_legacy_sources.sh --logs
+bash tools/migration/remove_legacy_sources.sh --apply --logs
 ```
 
 The wrapper name is retained for compatibility, but **apply moves, not deletes**.
+Log cleanup only covers files directly in `logs/`, `run/logs/`, `run-26.3/logs/`
+and `run-server-26.3/logs/`. It never traverses saves, settings, archives or backup
+directories. New log files will be produced normally on the next game launch.
 Every path/hash is checked before any source moves. Modified files, duplicate or
 escaping paths and source/ancestor symlinks stop cleanup. Eligible originals move
 to a unique `.migration-backups/<timestamp-id>/src/...` tree, with `recovery.json`.
@@ -44,7 +53,8 @@ directory removal or `git reset` is involved.
 | `.gradle/`, project JDK, wrapper and IDE project settings | Keep during migration; removing caches does not improve runtime performance |
 | `main`, `1.20.1`, local commits/branches | Preserve; this script never targets them |
 
-Finish profiling/parity and tag the accepted migration before considering further
-manual archive cleanup. Menus come first after migration; new vehicles, mobs,
+Keep the accepted migration checkpoint before considering further manual archive
+cleanup. Future multiplayer/profiling passes are separate work, not a reason to
+repeat accepted server tests now. Menus come first after migration; new vehicles, mobs,
 ambiance and other unfinished systems are separate feature work, not a reason to
 delete their reference material now.
